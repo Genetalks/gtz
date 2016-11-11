@@ -36,7 +36,7 @@ GTX Compressor可以在AWS C4.8xlarge机器（或同配置服务器），**以�
 
 ```
 USAGE: 
-./gtz  [-t] [-n <string>] [-l <string>] [-i] [-d] [-a] [-b] 
+./gtz  [-t] [-n <string>] [-l <number>] [-i] [-d] [-a] [-b] 
        [-g <number>] [-o <string>] [--] [--version] [-h] <file names> ... 
 
 ```
@@ -53,11 +53,28 @@ USAGE:
 
 解压选项说明：
 - -n：指定需要检索输出的行数，输出的行数为该值*4，负数为向后检索
-- -l：指定需检索的起始行，起始行在fastq中的位置为（该值-1)*4
+- -l num：指定需检索的起始行，起始行在fastq中的位置为（num - 1)*4
 - -o：指定输出文件名，使用-n或-l时需要指定该选项，否则不需要该选项
 - -t: 解压数据输出至标准输出
 - file_name：gtz格式的压缩文件
 
+在64GB内存，32核服务器的最佳实践：
+
+
+```
+gtz -b -g 8 -o fastq.gtz NA12878_1.fastq
+或
+gtz_for_haswell_cpu -b -g 8 -o fastq.gtz NA12878_1.fastq
+```
+解压:
+
+```
+gtz -d fastq.gtz
+或
+gtz_for_haswell_cpu -d fastq.gtz
+```
+
+32GB机器，建议将-g 参数调至4，以此类推。
 
 具体参考 doc目录中的使用说明文档。
 
