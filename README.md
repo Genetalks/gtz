@@ -1,4 +1,4 @@
-# GTX Compressor
+# GTX Compressor 
 
 Powered by GTXLab of Genetalks.
 
@@ -20,7 +20,12 @@ GTX Compressor可以在AWS C4.8xlarge机器（或同配置服务器），**以�
 
 
 ## 系统环境要求
+
+
+- 操作系统要求：
 64位 Linux 系统（推荐Ububtu 14.04及以上64位操作系统)
+
+- 硬件要求：
 4核以上，最小8GB内存的主机系统（若要达到最大并发性，推荐32核 64GB内存，或与AWS C4.8xlarge机器相同配置）
 
 
