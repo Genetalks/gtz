@@ -23,7 +23,15 @@ GTX Compressor可以在AWS C4.8xlarge机器（或同配置服务器），**以�
 
 
 - 操作系统要求：
-64位 Linux 系统（推荐Ububtu 14.04及以上64位操作系统)
+
+|         文件             |       操作系统要求       |
+|-------------------------|-------------------------|
+|/bin/gtz                 | Ubuntu 14.04 及以上版本  |
+|/bin/gtz_for_haswell_cpu | Ubuntu 14.04 及以上版本  |
+|/bin/gtz.so              | Ubuntu 14.04 及以上版本  |
+|/bin/gtz_centos_6        | CentOS 6.6             |
+
+
 
 - 硬件要求：
 4核以上，最小8GB内存的主机系统（若要达到最大并发性，推荐32核 64GB内存，或与AWS C4.8xlarge机器相同配置）
