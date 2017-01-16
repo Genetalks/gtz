@@ -5,6 +5,7 @@ Powered by GTXLab of Genetalks.
 下载： https://github.com/Genetalks/gtz/archive/0.1_tech_preview.zip
 
 ##系统简介
+
 GTX Compressor是Genetalks公司GTX Lab实验室开发的面向大型数据（数GB甚至数TB数据，尤其是生物信息数据）上云，而量身定制的复杂通用数据压缩打包系统，可以对任意基因测序数据以及数据目录进行高压缩率的快速打包，形成单个压缩数据文件，以方便存储档与远程传输、校验。区别于以往的压缩工具，GT Compressor系统着力于**高压缩率，高速率，方便的数据抽取**。
 
 GTX Compressor可以在AWS C4.8xlarge机器（或同配置服务器），**以超过114MB/s的速度，将接近200GB大小的33个质量数的FASTQ文件（NA12878_1.fastq），在29分钟内压缩到原大小的13%**，而对于X10等只有**7个质量数的FASTQ数据，其压缩率更可以达到5.5%**。
@@ -14,15 +15,20 @@ GTX Compressor可以在AWS C4.8xlarge机器（或同配置服务器），**以�
 ## 系统亮点
 
 该数据打包压缩系统的特点：
+
 - **高压缩比：**采用Context Model压缩技术，配合多种优化的预测模型，平衡系统并发度与内存资源消耗后，能达到极高的压缩率。对FASTQ文件，压缩率最高可达5.58%。
-- **高性能：** GTX compressor充分发挥了CPU的并发性以及新型Haswell CPU体系结构与AVX2、BMI2等指令集的计算能力，使得在普通服务器上的压缩速度，最高能够以接近114MB/s的输入流量输入数据并压缩完毕。 
+
+- **高性能：** GTX compressor充分发挥了CPU的并发性以及新型Haswell CPU体系结构与AVX2、BMI2等指令集的计算能力，使得在普通服务器上的压缩速度，最高能够以接近114MB/s的输入流量输入数据并压缩完毕。
+
 - **高速直压上云：** GTX compressor支持直压上云和从云端直接解压下载功能。普通的20核服务器，通过百兆Intenet线路，可以在短短30分钟内稳定地将200GB Fastq文件的直压上云。 
 
 
 
 ## 系统环境要求
-64位 Linux 系统（CentOS 6.5以上或Ubuntu 12.04以上，推荐Ububtu 14.04及以上64位操作系统)
-4核以上，最小8GB内存的主机系统（若要达到最大并发性，推荐32核 64GB内存，或与AWS C4.8xlarge机器相同配置）
+
+- 64位 Linux 系统（CentOS 6.5以上或Ubuntu 12.04以上，推荐Ububtu 14.04及以上64位操作系统)
+
+- 4核以上，最小8GB内存的主机系统（若要达到最大并发性，推荐32核 64GB内存，或与AWS C4.8xlarge机器相同配置）
 
 ## 安装说明
 本系统采用开包即用的打包原则，不依赖当前系统其他任何库。
@@ -47,6 +53,7 @@ USAGE:
 ```
 
 通用选项说明：
+
 - -h：输出以上命令行帮助信息
 - \-\-version：输出gt_compress程序的版本号
 - \-\-access-key-id       :   指定云平台用户ID
@@ -54,6 +61,7 @@ USAGE:
 - \-\-endpoint             ：  指定阿里云OSS平台的访问域名和数据中心
 
 压缩选项说明：
+
 - -f,  \-\-force              ：  强制删除容器内的object
 - \-\-timeout               ：  指定上传超时阀值
 - -i：压缩时增加索引，主要用于在压缩文件中快速检索fastq文件的某段内容，该选项会降低压缩速度
@@ -64,6 +72,7 @@ USAGE:
 
 
 解压选项说明：
+
 - -d,\-\-decode             :  解压模式
 - -f, \-\-force              ：  强制删除容器内的object
 - \-\-timeout               ：  指定下载超时阀值
@@ -76,26 +85,38 @@ USAGE:
 
 
 ### 示例：
+
 配置环境变量：
+
 export access_key_id=xxxxxx
+
 export secret_access_key=xxxxxx
+
 export endpoint=xxxxxx   （该环境变量只有上传至OSS时才需设置）
 
 
 #### 直压阿里OSS：
 
 ./gtz  -o oss://gt-compress/source.gtz   source.fastq
+
 或者
+
 zcat source.fastq.gz  |  ./gtz  -o oss://gt-compress/source.gtz
 
 ####直压AWS S3：
+
 ./gtz  -o s3://gt-compress/source.gtz   source.fastq
+
 或者：
+
 zcat source.fastq.gz  |  ./gtz  -o s3://gt-compress/source.gtz
 
 #### 压缩到本地
+
 ./gtz  -o gt-compress/source.gtz   source.fastq
+
 或者
+
 zcat source.fastq.gz  |  ./gtz  -o gt-compress/source.gtz
 
 
