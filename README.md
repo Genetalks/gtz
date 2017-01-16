@@ -1,4 +1,4 @@
-# GTX Compressor  （技术预览版）
+# GTX Compressor  （直压上云技术预览版）
 
 Powered by GTXLab of Genetalks.
 
