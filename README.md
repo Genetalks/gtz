@@ -24,6 +24,11 @@ GTX Compressor可以在AWS C4.8xlarge机器（或同配置服务器），**以�
 64位 Linux 系统（CentOS 6.5以上或Ubuntu 12.04以上，推荐Ububtu 14.04及以上64位操作系统)
 4核以上，最小8GB内存的主机系统（若要达到最大并发性，推荐32核 64GB内存，或与AWS C4.8xlarge机器相同配置）
 
+## 安装说明
+本系统采用开包即用的打包原则，不依赖当前系统其他任何库。
+
+下载包内包含ubuntu版本和centos版本的两个tar.gz的包。选择对应tar.gz的包，解压后，gtz命令就在当前解压的gtz_0.1_ubuntu_tech_preview目录或gtz_0.1_centos_tech_preview目录中，直接使用即可。
+
 
 ## 命令行说明
 
