@@ -2,7 +2,7 @@
 
 Powered by GTXLab of Genetalks.
 
-下载： https://github.com/Genetalks/gtz/archive/0.1_tech_preview.zip
+下载： https://github.com/Genetalks/gtz/archive/0.1.1_tech_preview.zip
 
 ##系统简介
 
