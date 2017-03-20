@@ -43,9 +43,9 @@ GTX Compressor可以在AWS C4.8xlarge机器（或同配置服务器），**以�
 
 ```
 USAGE: 
-./gtz  [-f] [--endpoint <string>] [--timeout <string>]
+./gtz  [--list] [-e <string>] [-f] [--endpoint <string>] [--timeout <string>]
           [--secret-access-key <string>] [--access-key-id <string>] [-b
-          <string>] [-s <string>] [-t] [-n <string>] [-l <string>] [-i]
+          <string>] [-s <string>] [-c] [-n <string>] [-l <string>] [-i]
           [-d] [--delete] [-a] [-g <number>] [-o <string>] [--] [--version]
           [-h] <file names> ...
 
@@ -74,12 +74,11 @@ USAGE:
 解压选项说明：
 
 - -d,\-\-decode             :  解压模式
+--list		   : 列出压缩包中所有的压缩文件名，与-d参数一起使用
+-e, --extract	   : 解压压缩包中指定的压缩文件，文件名之间用冒号:分割，与-d参数一起使用
 - -f, \-\-force              ：  强制删除容器内的object
 - \-\-timeout               ：  指定下载超时阀值
-- -t,\-\-terminal            :   解压数据输出至标准输出
-- -i,\-\-index                 :   解压模式下，启用索引功能
-- -l, \-\-line                   :   指定需检索的起始行，起始行在fastq中的位置为（该值-1)*4
-- -n, \-\-number           :   指定需要检索输出的行数，输出的行数为该值*4，负数为向后检索
+- -c,\-\-stdout            :   解压数据输出至标准输出
 - -o：指定输出文件名，使用-n或-l时需要指定该选项，否则不需要该选项
 - file_name：需要压缩的文件, 若不指定，则从标准输入中读入数据
 
