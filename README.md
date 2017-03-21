@@ -2,8 +2,6 @@
 
 Powered by GTXLab of Genetalks.
 
-下载： https://github.com/Genetalks/gtz/archive/a96812e.zip
-
 ##系统简介
 
 GTX Compressor是Genetalks公司GTX Lab实验室开发的面向大型数据（数GB甚至数TB数据，尤其是生物信息数据）上云，而量身定制的复杂通用数据压缩打包系统，可以对任意基因测序数据以及数据目录进行高压缩率的快速打包，形成单个压缩数据文件，以方便存储档与远程传输、校验。区别于以往的压缩工具，GT Compressor系统着力于**高压缩率，高速率，方便的数据抽取**。
