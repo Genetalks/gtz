@@ -97,87 +97,87 @@ export endpoint=xxxxxx   （该环境变量只有上传至OSS时才需设置）
 
 直压阿里OSS：
 
-		./gtz  -o oss://gtz/source.gtz   source.fastq
+		./gtz  -o oss://gtz/out.gtz   source.fastq
 
 	或者
-		# zcat 通过管道将fastq的数据送入gtz加压，zcat解压出来的fastq数据流在 source.gtz 中将以stdin这个文件名存在
-		zcat source.fastq.gz  |  ./gtz  -o oss://gt-compress/source.gtz
+		# zcat 通过管道将fastq的数据送入gtz加压，zcat解压出来的fastq数据流在 out.gtz 中将以stdin这个文件名存在
+		zcat source.fastq.gz  |  ./gtz  -o oss://gt-compress/out.gtz
 
 直压AWS S3：
 
-		./gtz  -o s3://gtz/source.gtz   source.fastq
+		./gtz  -o s3://gtz/out.gtz   source.fastq
 
 	或者：
-		# zcat 通过管道将fastq的数据送入gtz加压，zcat解压出来的fastq数据流在 source.gtz 中将以stdin这个文件名存在
-		zcat source.fastq.gz  |  ./gtz  -o s3://gt-compress/source.gtz
+		# zcat 通过管道将fastq的数据送入gtz加压，zcat解压出来的fastq数据流在 out.gtz 中将以stdin这个文件名存在
+		zcat source.fastq.gz  |  ./gtz  -o s3://gt-compress/out.gtz
 
 压缩到本地
 
-		./gtz  -o gtz/source.gtz   source.fastq
+		./gtz  -o gtz/out.gtz   source.fastq
 
 	或者
-		# zcat 通过管道将fastq的数据送入gtz加压，zcat解压出来的fastq数据流在 source.gtz 中将以stdin这个文件名存在
-		zcat source.fastq.gz  |  ./gtz  -o gtz/source.gtz
+		# zcat 通过管道将fastq的数据送入gtz加压，zcat解压出来的fastq数据流在 out.gtz 中将以stdin这个文件名存在
+		zcat source.fastq.gz  |  ./gtz  -o gtz/out.gtz
 
 ### 追加文件进压缩包
 
-	./gtz -a -o oss://gtz/source.gtz /A/source2.fastq  # -a 指当前是追加模式
+	./gtz -a -o oss://gtz/out.gtz /A/source2.fastq  # -a 指当前是追加模式
 
-    ./gtz -a -o s3://gtz/source.gtz /A/source2.fastq   # -a 指当前是追加模式
+    ./gtz -a -o s3://gtz/out.gtz /A/source2.fastq   # -a 指当前是追加模式
 
-    ./gtz -a -o gtz/source.gtz /A/source2.fastq   # -a 指当前是追加模式
+    ./gtz -a -o gtz/out.gtz /A/source2.fastq   # -a 指当前是追加模式
 
 ### 查看压缩包里包含的文件
 
-	./gtz_0.2.0_ubuntu_release/gtz --list -d oss://gtz/source.gtz
+	./gtz_0.2.0_ubuntu_release/gtz --list -d oss://gtz/out.gtz
 
-	./gtz_0.2.0_ubuntu_release/gtz --list -d s3://gtz/source.gtz
+	./gtz_0.2.0_ubuntu_release/gtz --list -d s3://gtz/out.gtz
 
-    ./gtz_0.2.0_ubuntu_release/gtz --list -d gtz/source.gtz
+    ./gtz_0.2.0_ubuntu_release/gtz --list -d gtz/out.gtz
 
 ### 解压举例
 
 从阿里 OSS 解压：
 
-	./gtz  -d oss://gtz/source.gtz
+	./gtz  -d oss://gtz/out.gtz
 
 	或者 单独抽取几个文件：
 	# -e 代表抽取文件，后面要抽取的文件名称间，用 ":" 隔开
-	./gtz -e /A/A1.fastq:/A/A2.fastq -d oss://gtz/source.gtz
+	./gtz -e /A/A1.fastq:/A/A2.fastq -d oss://gtz/out.gtz
 
     或者某个文件到管道：
     # -c 代表输出到console， -e 代表抽取其中的某个文件
-    ./gtz -c -e test.fastq  -d oss://gtz/source.gtz > myfile.txt
+    ./gtz -c -e test.fastq  -d oss://gtz/out.gtz > myfile.txt
     或者
-    ./gtz -c -e test.fastq  -d oss://gtz/source.gtz | gzip -c > source.gz
+    ./gtz -c -e test.fastq  -d oss://gtz/out.gtz | gzip -c > source.gz
 
 从AWS S3 解压：
 
-	./gtz  -d s3://gtz/source.gtz
+	./gtz  -d s3://gtz/out.gtz
 
 	或者 单独抽取几个文件：
 	# -e 代表抽取文件，后面要抽取的文件名称间，用 ":" 隔开
-	./gtz -e /A/A1.fastq:/A/A2.fastq -d s3://gtz/source.gtz
+	./gtz -e /A/A1.fastq:/A/A2.fastq -d s3://gtz/out.gtz
 
     或者某个文件到管道：
     # -c 代表输出到console， -e 代表抽取其中的某个文件
-    ./gtz -c -e test.fastq  -d s3://gtz/source.gtz > myfile.txt
+    ./gtz -c -e test.fastq  -d s3://gtz/out.gtz > myfile.txt
     或者
-    ./gtz -c -e test.fastq  -d s3://gtz/source.gtz | gzip -c > source.gz
+    ./gtz -c -e test.fastq  -d s3://gtz/out.gtz | gzip -c > source.gz
 
 从本地文件：
 	
-          ./gtz  -d ./gtz/source.gtz
+    ./gtz  -d ./gtz/out.gtz
 
-	或者 单独抽取几个文件：
-	# -e 代表抽取文件，后面要抽取的文件名称间，用 ":" 隔开
-	./gtz -e source.fastq:/A/source2.fastq -d gtz/source.gtz
+    或者 单独抽取几个文件：
+    # -e 代表抽取文件，后面要抽取的文件名称间，用 ":" 隔开
+    ./gtz -e source.fastq:/A/source2.fastq -d gtz/out.gtz
 
     或者某个文件到管道：
     # -c 代表输出到console， -e 代表抽取其中的某个文件
-    ./gtz -c -e /A/source2.fastq  -d gtz/source.gtz > myfile.txt
+    ./gtz -c -e /A/source2.fastq  -d gtz/out.gtz > myfile.txt
     或者
-    ./gtz -c -e /A/source2.fastq  -d gtz/source.gtz | gzip -c > myfastq.gz
+    ./gtz -c -e /A/source2.fastq  -d gtz/out.gtz | gzip -c > myfastq.gz
 
 
 
