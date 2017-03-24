@@ -4,13 +4,13 @@ Powered by GTXLab of Genetalks.
 
 0.2技术预览版本下载地址： https://github.com/Genetalks/gtz/archive/0.2_tech_preview.tar.gz
 
-##系统简介
+## 系统简介
 
 GTX Compressor是Genetalks公司GTX Lab实验室开发的面向大型数据（数GB甚至数TB数据，尤其是生物信息数据）上云，而量身定制的复杂通用数据压缩打包系统，可以对任意基因测序数据以及数据目录进行高压缩率的快速打包，形成单个压缩数据文件，以方便存储档与远程传输、校验。区别于以往的压缩工具，GT Compressor系统着力于**高压缩率，高速率，方便的数据抽取**。
 
 GTX Compressor可以在AWS C4.8xlarge机器（或同配置服务器），**以超过114MB/s的速度，将接近200GB大小的33个质量数的FASTQ文件（NA12878_1.fastq），在13分钟内压缩到原大小的19%**，而对于X10等只有**7个质量数的FASTQ数据，其压缩率更可以达到5.5%**。
 
-**GTX Compressor提供“直压上云”功能**。考虑商业使用时，用户不仅需要将测序产生的海量数据存储于本地，更迫切地寻求将数据快速稳定传输至云端的能力。 GTX Compressor的数据压缩引擎允许用户直接将fastq文件压缩存储到亚马逊AWS平台或者阿里云OSS平台，并保持与本地压缩相同的压缩速度与压缩效率。普通100Mbits Intenet线路，可以在短短30分钟内稳定地将200GB Fastq文件的直压上云。
+** GTX Compressor提供“直压上云”功能 **。考虑商业使用时，用户不仅需要将测序产生的海量数据存储于本地，更迫切地寻求将数据快速稳定传输至云端的能力。 GTX Compressor的数据压缩引擎允许用户直接将fastq文件压缩存储到亚马逊AWS平台或者阿里云OSS平台，并保持与本地压缩相同的压缩速度与压缩效率。普通100Mbits Intenet线路，可以在短短30分钟内稳定地将200GB Fastq文件的直压上云。
 
 ## 系统亮点
 
@@ -102,7 +102,7 @@ export endpoint=xxxxxx   （该环境变量只有上传至OSS时才需设置）
 
 zcat source.fastq.gz  |  ./gtz  -o oss://gt-compress/source.gtz
 
-####直压AWS S3：
+#### 直压AWS S3：
 
 ./gtz  -o s3://gt-compress/source.gtz   source.fastq
 
