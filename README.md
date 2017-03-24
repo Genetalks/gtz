@@ -143,13 +143,13 @@ export endpoint=xxxxxx   （该环境变量只有上传至OSS时才需设置）
 
 	或者 单独抽取几个文件：
 	# -e 代表抽取文件，后面要抽取的文件名称间，用 ":" 隔开
-	./gtz -e /A/A1.fastq:/A/A2.fastq -d oss://gtz/out.gtz
+	./gtz -e source.fastq:/A/source2.fastq -d oss://gtz/out.gtz
 
     或者某个文件到管道：
     # -c 代表输出到console， -e 代表抽取其中的某个文件
-    ./gtz -c -e test.fastq  -d oss://gtz/out.gtz > myfile.txt
+    ./gtz -c -e source.fastq  -d oss://gtz/out.gtz > myfile.txt
     或者
-    ./gtz -c -e test.fastq  -d oss://gtz/out.gtz | gzip -c > source.gz
+    ./gtz -c -e source.fastq  -d oss://gtz/out.gtz | gzip -c > source.gz
 
 从AWS S3 解压：
 
@@ -157,13 +157,13 @@ export endpoint=xxxxxx   （该环境变量只有上传至OSS时才需设置）
 
 	或者 单独抽取几个文件：
 	# -e 代表抽取文件，后面要抽取的文件名称间，用 ":" 隔开
-	./gtz -e /A/A1.fastq:/A/A2.fastq -d s3://gtz/out.gtz
+	./gtz -e source.fastq:/A/source2.fastq -d s3://gtz/out.gtz
 
     或者某个文件到管道：
     # -c 代表输出到console， -e 代表抽取其中的某个文件
-    ./gtz -c -e test.fastq  -d s3://gtz/out.gtz > myfile.txt
+    ./gtz -c -e source.fastq  -d s3://gtz/out.gtz > myfile.txt
     或者
-    ./gtz -c -e test.fastq  -d s3://gtz/out.gtz | gzip -c > source.gz
+    ./gtz -c -e source.fastq  -d s3://gtz/out.gtz | gzip -c > source.gz
 
 从本地文件：
 	
@@ -175,9 +175,9 @@ export endpoint=xxxxxx   （该环境变量只有上传至OSS时才需设置）
 
     或者某个文件到管道：
     # -c 代表输出到console， -e 代表抽取其中的某个文件
-    ./gtz -c -e /A/source2.fastq  -d gtz/out.gtz > myfile.txt
+    ./gtz -c -e source.fastq  -d gtz/out.gtz > myfile.txt
     或者
-    ./gtz -c -e /A/source2.fastq  -d gtz/out.gtz | gzip -c > myfastq.gz
+    ./gtz -c -e source.fastq  -d gtz/out.gtz | gzip -c > myfastq.gz
 
 
 
