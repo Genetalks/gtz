@@ -151,7 +151,7 @@ export endpoint=xxxxxx   （该环境变量只有上传至OSS时才需设置）
     或者
     ./gtz -c -e test.fastq  -d oss://gtz/source.gtz | gzip -c > source.gz
 
-从阿里 AWS S3 解压：
+从AWS S3 解压：
 
 	./gtz  -d s3://gtz/source.gtz
 
