@@ -112,23 +112,25 @@ Direct compression locally
 Massive small files (<500MB each) compression:
 
 	
-	To compress a large number of small files (500MB or less) to an package or transfer to the cloud, GTZ can work with tar by using pipe. It is very useful to compress and transfer amounts of small data at very fast speed. (Note: In this way, GTZ uses binary data compression algorithm, the fastq or fastq.gz files inside the tar package will not be treated specially ).
-	tar -cf - ./you_dir_or_file | gtz -o /dest.gtz
+- To compress a large number of small files (500MB or less) to an package or transfer to the cloud, GTZ can work with tar by using pipe. It is very useful to compress and transfer amounts of small data at very fast speed. (Note: In this way, GTZ uses binary data compression algorithm, the fastq or fastq.gz files inside the tar package will not be treated specially ).
 
-	Direct compression to AWS S3 or Aliyun OSS: 
-	tar -cf - ./you_dir_or_file | gtz -o s3://bucket/dest.gtz
-	
-	tar -cf - ./you_dir_or_file | gtz -o oss://bucket/dest.gtz
+		tar -cf - ./you_dir_or_file | gtz -o /dest.gtz
 
-	Direct decompression：
-	
-	gtz -c -d /dest.gtz | tar -xf - 
-	
-	gtz -c -d s3://bucket/dest.gtz | tar -xf - 
-	
-	gtz -c -d oss://bucket/dest.gtz | tar -xf - 
+- Direct compression to AWS S3 or Aliyun OSS:
 
-	Notice: Large size files (500MB or more) or the directory full of Large size files, especially fastq or fastq.gz file or its directory, we suggest to use GTZ to directly compress and package, it will be more faster.
+		tar -cf - ./you_dir_or_file | gtz -o s3://bucket/dest.gtz
+
+		tar -cf - ./you_dir_or_file | gtz -o oss://bucket/dest.gtz
+
+- Direct decompression：
+	
+		gtz -c -d /dest.gtz | tar -xf - 
+
+		gtz -c -d s3://bucket/dest.gtz | tar -xf - 
+
+		gtz -c -d oss://bucket/dest.gtz | tar -xf - 
+
+Notice: Large size files (500MB or more) or the directory full of Large size files, especially fastq or fastq.gz file or its directory, we suggest to use GTZ to directly compress and package, it will be more faster.
 
 
 ### Add files to the compressed package
