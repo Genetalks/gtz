@@ -2,7 +2,7 @@
 
 Powered by GTXLab of Genetalks.
 
-技术预览版本下载地址： https://github.com/Genetalks/gtz/archive/0.2.2b_tech_preview.tar.gz 
+技术预览版本下载地址： https://github.com/Genetalks/gtz/archive/0.2.2c_tech_preview.tar.gz 
 
 
 [English Manual](https://github.com/Genetalks/gtz/blob/master/README.md "Markdown").

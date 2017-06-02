@@ -2,7 +2,7 @@
 
 Powered by GTXLab of Genetalks.
 
-technique preview download URL:https://github.com/Genetalks/gtz/archive/0.2.2b_tech_preview.tar.gz
+technique preview download URL:https://github.com/Genetalks/gtz/archive/0.2.2c_tech_preview.tar.gz
 
 [中文说明](https://github.com/Genetalks/gtz/blob/master/README_chs.md "Markdown").
 
