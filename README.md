@@ -69,7 +69,7 @@ Decompression Option Description:
 - -e, \-\-extract: decompresses and extract the target files specified (The file names are separated by ":") in the compressed file. Must used together with the -d parameter
 - -f, \-\-force: Forcely delete the object within the container
 - \-\-timeout: Specifies the download timeout value
-- -c, \-\-stdout: output to console(standard output)
+- -c, \-\-stdout: output to console(standard output). It can only be use for decompression.
 - file_name: the file to be decompressed
 
 ### Examples:
@@ -86,7 +86,7 @@ export endpoint=xxxxxx   （Only set when transfering to OSS）
 
 Direct compression to Ali OSS:
 
-	./gtz  -o oss://gtz/out.gtz   source.fastq
+	./gtz  -o oss://gtz/out.gtz   source.fastq  （or source.fastq.gz , gtz supports recompress fastq.gz file）
 
    	or
 
@@ -94,7 +94,7 @@ Direct compression to Ali OSS:
 
 Direct compression to AWS S3
 
-	./gtz  -o s3://gtz/out.gtz   source.fastq
+	./gtz  -o s3://gtz/out.gtz   source.fastq  （or source.fastq.gz , gtz supports recompress fastq.gz file）
 
 	or:
 
@@ -102,11 +102,35 @@ Direct compression to AWS S3
 
 Direct compression locally
 
-    ./gtz  -o gtz/out.gtz   source.fastq
+    ./gtz  -o gtz/out.gtz   source.fastq  
 
     or:
 
 	zcat source.fastq.gz  |  ./gtz  -o gtz/out.gtz
+
+
+Massive small files (<500MB each) compression:
+
+	
+- To compress a large number of small files (500MB or less) to an package or transfer to the cloud, GTZ can work with tar by using pipe. It is very useful to compress and transfer amounts of small data at very fast speed. (Note: In this way, GTZ uses binary data compression algorithm, the fastq or fastq.gz files inside the tar package will not be treated specially ).
+
+		tar -cf - ./you_dir_or_file | gtz -o /dest.gtz
+
+- Direct compression to AWS S3 or Aliyun OSS:
+
+		tar -cf - ./you_dir_or_file | gtz -o s3://bucket/dest.gtz
+
+		tar -cf - ./you_dir_or_file | gtz -o oss://bucket/dest.gtz
+
+- Direct decompression：
+	
+		gtz -c -d /dest.gtz | tar -xf - 
+
+		gtz -c -d s3://bucket/dest.gtz | tar -xf - 
+
+		gtz -c -d oss://bucket/dest.gtz | tar -xf - 
+
+Notice: Large size files (500MB or more) or the directory full of Large size files, especially fastq or fastq.gz file or its directory, we suggest to use GTZ to directly compress and package, it will be more faster.
 
 
 ### Add files to the compressed package
