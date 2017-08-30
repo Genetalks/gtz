@@ -2,7 +2,7 @@
 
 Powered by GTXLab of Genetalks.
 
-技术预览版本下载地址： https://github.com/Genetalks/gtz/archive/0.2.2g_tech_preview.tar.gz 
+技术预览版本下载地址： https://github.com/Genetalks/gtz/archive/0.2.2h_tech_preview.tar.gz 
 
 
 [English Manual](https://github.com/Genetalks/gtz/blob/master/README.md "Markdown").
@@ -13,7 +13,7 @@ GTX Compressor是Genetalks公司GTX Lab实验室开发的面向大型数据（�
 
 GTX Compressor可以在AWS C4.8xlarge机器（或同配置服务器），**以超过114MB/s的速度，将接近200GB大小的33个质量数的FASTQ文件（NA12878_1.fastq），在13分钟内压缩到原大小的19%**，而对于X10等只有 **7个质量数的FASTQ数据，其压缩率更可以达到5.5%** 。
 
-**GTX Compressor提供“直压上云”功能**。考虑商业使用时，用户不仅需要将测序产生的海量数据存储于本地，更迫切地寻求将数据快速稳定传输至云端的能力。 GTX Compressor的数据压缩引擎允许用户直接将fastq文件压缩存储到亚马逊AWS平台或者阿里云OSS平台，并保持与本地压缩相同的压缩速度与压缩效率。普通100Mbits Intenet线路，可以在短短30分钟内稳定地将200GB Fastq文件的直压上云。
+**GTX Compressor提供“直压上云”功能**。考虑商业使用时，用户不仅需要将测序产生的海量数据存储于本地，更迫切地寻求将数据快速稳定传输至云端的能力。 GTX Compressor的数据压缩引擎允许用户直接将fastq文件压缩存储到亚马逊AWS平台,阿里云OSS平台或者腾讯云COS平台，并保持与本地压缩相同的压缩速度与压缩效率。普通100Mbits Intenet线路，可以在短短30分钟内稳定地将200GB Fastq文件的直压上云。
 
 ## 系统亮点
 
@@ -46,7 +46,7 @@ GTX Compressor可以在AWS C4.8xlarge机器（或同配置服务器），**以�
 
 ```
 USAGE: 
-./gtz  [--list] [-e <string>] [-f] [--endpoint <string>] [--timeout <string>]
+./gtz  [--list] [-e <string>] [-f] [--endpoint <string>]  [--appid <string>]  [--timeout <string>]
           [--secret-access-key <string>] [--access-key-id <string>] [-b
           <string>] [-s <string>] [-c] [-n <string>] [-l <string>] [-i]
           [-d] [--delete] [-a] [-g <number>] [-o <string>] [--] [--version]
@@ -61,7 +61,9 @@ USAGE:
 - \-\-version：输出gt_compress程序的版本号
 - \-\-access-key-id       :   指定云平台用户ID
 - \-\-secret-access-key： 指定云平台用户密钥
-- \-\-endpoint             ：  指定阿里云OSS平台的访问域名和数据中心
+- \-\-endpoint             ：  指定阿里云OSS平台或者腾讯云COS平台的访问域名和数据中心
+- \-\-appid             ：  指定腾讯云COS平台的用户ID
+
 
 压缩选项说明：
 
@@ -93,7 +95,10 @@ export access_key_id=xxxxxx
 
 export secret_access_key=xxxxxx
 
-export endpoint=xxxxxx   （该环境变量只有上传至OSS时才需设置）
+export endpoint=xxxxxx   （该环境变量只有上传至OSS或者COS时才需设置）
+
+export appid=xxxxxx   （该环境变量只有上传至COS时才需设置）
+
 
 ### 压缩举例
 
@@ -104,6 +109,14 @@ export endpoint=xxxxxx   （该环境变量只有上传至OSS时才需设置）
 	或者
 		# zcat 通过管道将fastq的数据送入gtz加压，zcat解压出来的fastq数据流在 out.gtz 中将以stdin这个文件名存在
 		zcat source.fastq.gz  |  ./gtz  -o oss://gt-compress/out.gtz
+		
+直压腾讯COS：
+
+		./gtz  -o cos://gtz/out.gtz   source.fastq  (or source.fastq.gz, gtz支持对fastq.gz的重新压缩)
+
+	或者
+		# zcat 通过管道将fastq的数据送入gtz加压，zcat解压出来的fastq数据流在 out.gtz 中将以stdin这个文件名存在
+		zcat source.fastq.gz  |  ./gtz  -o cos://gt-compress/out.gtz
 
 直压AWS S3：
 
@@ -132,6 +145,8 @@ export endpoint=xxxxxx   （该环境变量只有上传至OSS时才需设置）
 	
 	tar -cf - ./you_dir_or_file | gtz -o oss://bucket/dest.gtz
 
+	tar -cf - ./you_dir_or_file | gtz -o cos://bucket/dest.gtz
+
 	直接传输回来解包：
 
 	gtz -c -d s3://bucket/dest.gtz | tar -xf - 
@@ -142,6 +157,8 @@ export endpoint=xxxxxx   （该环境变量只有上传至OSS时才需设置）
 
 	./gtz -a -o oss://gtz/out.gtz /A/source2.fastq  # -a 指当前是追加模式
 
+	./gtz -a -o cos://gtz/out.gtz /A/source2.fastq  # -a 指当前是追加模式
+
     ./gtz -a -o s3://gtz/out.gtz /A/source2.fastq   # -a 指当前是追加模式
 
     ./gtz -a -o gtz/out.gtz /A/source2.fastq   # -a 指当前是追加模式
@@ -149,6 +166,8 @@ export endpoint=xxxxxx   （该环境变量只有上传至OSS时才需设置）
 ### 查看压缩包里包含的文件
 
 	./gtz_0.2.0_ubuntu_release/gtz --list -d oss://gtz/out.gtz
+
+	./gtz_0.2.0_ubuntu_release/gtz --list -d cos://gtz/out.gtz
 
 	./gtz_0.2.0_ubuntu_release/gtz --list -d s3://gtz/out.gtz
 
@@ -169,6 +188,20 @@ export endpoint=xxxxxx   （该环境变量只有上传至OSS时才需设置）
     ./gtz -c -e source.fastq  -d oss://gtz/out.gtz > myfile.txt
     或者
     ./gtz -c -e source.fastq  -d oss://gtz/out.gtz | gzip -c > source.gz
+
+从腾讯 COS 解压：
+
+	./gtz  -d cos://gtz/out.gtz
+
+	或者 单独抽取几个文件：
+	# -e 代表抽取文件，后面要抽取的文件名称间，用 ":" 隔开
+	./gtz -e source.fastq:/A/source2.fastq -d cos://gtz/out.gtz
+
+    或者某个文件到管道：
+    # -c 代表输出到console， -e 代表抽取其中的某个文件
+    ./gtz -c -e source.fastq  -d cos://gtz/out.gtz > myfile.txt
+    或者
+    ./gtz -c -e source.fastq  -d cos://gtz/out.gtz | gzip -c > source.gz
 
 从AWS S3 解压：
 
