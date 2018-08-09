@@ -2,7 +2,7 @@
 
 Powered by GTXLab of Genetalks.
 
-technique preview download URL:https://github.com/Genetalks/gtz/archive/0.2.2i_tech_preview.tar.gz
+technique preview download URL:https://github.com/Genetalks/gtz/archive/0.2.2k_tech_preview.tar.gz
 
 [中文说明](https://github.com/Genetalks/gtz/blob/master/README_chs.md "Markdown").
 
@@ -69,34 +69,32 @@ Decompression Option Description:
 
 ### Compression examples
 
-		./gtz  -o  output.gtz  source.fastq  									  Compress the original file source.fastq to output.gtz
-		./gtz  -o  output.gtz  source.fastq.gz									Compress the original file source.fastq.gz to output.gtz
-		./gtz  -o  output.gtz  source1.fastq  source2.fastq     Compress multiple original files source1.fastq,source2.fastq into output.gtz (Support multiple file compression to a single compressed package)
-		./gtz  -o  output.gtz  source_diretory									Compress the directory source_directory to output.gtz (Supports compression of the directory to a compressed package)
-		./gtz  -a -o output.gtz source3.fastq                   Compress the file source3.fastq in an append manner to the existing output.gtz
-	
+	./gtz  -o  output.gtz  source.fastq  			Compress the original file source.fastq to output.gtz
+	./gtz  -o  output.gtz  source.fastq.gz			Compress the original file source.fastq.gz to output.gtz
+	./gtz  -o  output.gtz  source1.fastq  source2.fastq     Compress multiple original files source1.fastq,source2.fastq into output.gtz (Support multiple file compression to a single compressed package)
+	./gtz  -o  output.gtz  source_diretory			Compress the directory source_directory to output.gtz (Supports compression of the directory to a compressed package)
+	./gtz  -a -o output.gtz source3.fastq                   Compress the file source3.fastq in an append manner to the existing output.gtz
+
 
 
 ### Decompression examples
 
-		./gtz  -d  output.gtz                                   Decompress output.gtz,the default output is fastq format
-		./gtz  -d  output.gtz --gz                              Decompress output.gtz ,decompress it to .gz format
-		./gtz  -d  output.gtz --outdir  output_path             Decompress output.gtz into the output_path directory
-		./gtz  -d  output.gtz --rbin-path  rbin_path            Decompress the enterprise version of high-compression package output.gtz,and specify the path to the corresponding rbin file
-		./gtz  -d  output.gtz --list														View the list of files in the compressed package output.gtz	
+	./gtz  -d  output.gtz                                   Decompress output.gtz,the default output is fastq format
+	./gtz  -d  output.gtz --gz                              Decompress output.gtz ,decompress it to .gz format
+	./gtz  -d  output.gtz --outdir  output_path             Decompress output.gtz into the output_path directory
+	./gtz  -d  output.gtz --rbin-path  rbin_path            Decompress the enterprise version of high-compression package output.gtz,and specify the path to the corresponding rbin file
+	./gtz  -d  output.gtz --list				View the list of files in the compressed package output.gtz	
 
 
-    Decompress several files separately:
+	Decompress several files separately:
+	# -e denotes the target decompression files, seperated by ":"
+	./gtz -e source.fastq:/A/source2.fastq -d gtz/out.gtz
 
-    # -e denotes the target decompression files, seperated by ":"
-    ./gtz -e source.fastq:/A/source2.fastq -d gtz/out.gtz
-
-    Decompress the target firles to the tube:
-
-    # -c denote output files to the console; -e denotes the target decompression file.
-    ./gtz -c -e source.fastq  -d gtz/out.gtz > myfile.txt
-    or
-    ./gtz -c -e source.fastq  -d gtz/out.gtz | gzip -c > myfastq.gz
+	Decompress the target firles to the tube:
+	# -c denote output files to the console; -e denotes the target decompression file.
+	./gtz -c -e source.fastq  -d gtz/out.gtz > myfile.txt
+	or
+	./gtz -c -e source.fastq  -d gtz/out.gtz | gzip -c > myfastq.gz
 
 
 ## contact us

@@ -2,7 +2,7 @@
 
 Powered by GTXLab of Genetalks.
 
-技术预览版本下载地址： https://github.com/Genetalks/gtz/archive/0.2.2i_tech_preview.tar.gz 
+技术预览版本下载地址： https://github.com/Genetalks/gtz/archive/0.2.2k_tech_preview.tar.gz 
 
 
 [English Manual](https://github.com/Genetalks/gtz/blob/master/README.md "Markdown").
@@ -66,24 +66,24 @@ USAGE:
 
 
 解压选项说明：
-- -d,\-\-decode             :  解压模式
---gz				 : 解压为gz格式。如果不指定，默认输出为.fastq格式
---rbin-path  : 指定本地解压所需要的rbin文件的路径
---outdir		 : 指定解压输出目录
---list		   : 列出压缩包中所有的压缩文件名，与-d参数一起使用
--e, --extract	   : 解压压缩包中指定的压缩文件，文件名之间用冒号:分割，与-d参数一起使用
-- -c,\-\-stdout            :   解压数据输出至标准输出, 只能与 -d 参数一起使用
-- file_name：需要压缩的文件, 若不指定，则从标准输入中读入数据
+- -d,\-\-decode            : 解压模式
+- \-\-gz		   : 解压为gz格式。如果不指定，默认输出为.fastq格式
+- \-\-rbin-path  	   : 指定本地解压所需要的rbin文件的路径
+- \-\-outdir		   : 指定解压输出目录
+- \-\-list		   : 列出压缩包中所有的压缩文件名，与-d参数一起使用
+- -e, \-\-extract	   : 解压压缩包中指定的压缩文件，文件名之间用冒号:分割，与-d参数一起使用
+- -c,\-\-stdout            : 解压数据输出至标准输出, 只能与 -d 参数一起使用
+- file_name                ：需要压缩的文件, 若不指定，则从标准输入中读入数据
 
 
 ### 示例：
 
 
 ### 压缩举例
-	./gtz  -o  output.gtz  source.fastq  									  将原文件source.fastq压缩为output.gtz
-	./gtz  -o  output.gtz  source.fastq.gz									将原文件source.fastq.gz压缩为output.gtz
+	./gtz  -o  output.gtz  source.fastq                     将原文件source.fastq压缩为output.gtz
+	./gtz  -o  output.gtz  source.fastq.gz                  将原文件source.fastq.gz压缩为output.gtz
 	./gtz  -o  output.gtz  source1.fastq  source2.fastq     将多个原文件source1.fastq,source2.fastq压缩为output.gtz (支持多个文件压缩到一个压缩包)
-	./gtz  -o  output.gtz  source_diretory									将目录source_diretory压缩为output.gtz (支持目录压缩到一个压缩包)
+	./gtz  -o  output.gtz  source_diretory	                将目录source_diretory压缩为output.gtz (支持目录压缩到一个压缩包)
 	./gtz  -a -o output.gtz source3.fastq                   将文件source3.fastq以追加的方式，压缩到已有的output.gtz中
 
 
@@ -92,7 +92,7 @@ USAGE:
 	./gtz  -d  output.gtz --gz                              解压output.gtz，输出为fastq.gz格式
 	./gtz  -d  output.gtz --outdir  output_path             解压output.gtz到output_path目录中
 	./gtz  -d  output.gtz --rbin-path  rbin_path            解压企业版高倍率压缩包output.gtz，指定对应的rbin文件的路径
-	./gtz  -d  output.gtz --list														查看压缩包output.gtz里的文件列表	
+	./gtz  -d  output.gtz --list				查看压缩包output.gtz里的文件列表	
 	
 	# -e 代表抽取文件，后面要抽取的文件名称间，用 ":" 隔开
 	./gtz -e source.fastq:/A/source2.fastq -d gtz/out.gtz
