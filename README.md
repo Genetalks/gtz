@@ -63,7 +63,7 @@ GTX.Zip compressor system features:
 ## Guidelines of gtz:
 usage: gtz [-h] [-o OUT] [-b INDEX_BIN] [-d DECOMPRESS] [-O OUT_DIR]
 
--	 -h, --help&nbsp&nbsp&nbsp&nbsp&nbsp&nbspshow this help message and exit
+-	 -h, --help&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;show this help message and exit
 -	 -o OUT,--out OUT                       specify the GTZ file name after compression
 -	 -b BIN_FILE,--bin-file BIN_FILE        specify the BIN file for high compression
 -	 -d DECOMPRESS, --decompress DECOMPRESS decompress
