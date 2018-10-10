@@ -44,9 +44,9 @@ GTX.Zip compressor system features:
 - **Software ecology**: GTX.Zip provides command line and GUI decompression software for Linux, Mac OSX and Windows. It also provides SDK interfaces in languages such as Python, C, C++, etc. which is convenient for third-party developers to read and write gtz file (GTX.Zip compression format) directly. For example, gtz version of bcl2fastq, fastp and BWA are supported by community now. More software will be released soon.
 
 ## Note:
-- **bin files:**Genome reference index files which used for compression.Size range: 5.3~37G.Human: 14G
-- **rbin files:**Compact genome reference files which used for decompression.Size range: 0.041G~3.6G.  Human: 0.7G
-- **gtz_index:**An installation tool of GTX.Zip Professional which used to view species list, download rbin files and generate bin files. 
+- **bin files**:Genome reference index files which used for compression.Size range: 5.3~37G.Human: 14G
+- **rbin files**:Compact genome reference files which used for decompression.Size range: 0.041G~3.6G.  Human: 0.7G
+- **gtz_index**:An installation tool of GTX.Zip Professional which used to view species list, download rbin files and generate bin files. 
 - **BIN,RBIN:**The default file storage path is "~/.config/gtz/"
 
 ## GTX.Zip Professional version
@@ -57,76 +57,76 @@ GTX.Zip compressor system features:
 - To achieve good performance, the computing server with **32-core 64GB** memory is recommended (**at least 4-core and 8GB memory**), or that has the same configuration with the **AWS C4.8xlarge** machine)
 
 ## Installation Instruction  
-	- One-click installation:
-	**sudo curl -sSL https://gtzdata.oss-cn-hangzhou.aliyuncs.com/install_gtz_latest.run -o /tmp/install_gtz_latest.run && sudo sh /tmp/install_gtz_latest.run**
+	sudo curl -sSL https://gtzdata.oss-cn-hangzhou.aliyuncs.com/install_gtz_latest.run -o /tmp/install_gtz_latest.run && sudo sh /tmp/install_gtz_latest.run
 
 
 ## Guidelines of gtz:
 usage: gtz [-h] [-o OUT] [-b INDEX_BIN] [-d DECOMPRESS] [-O OUT_DIR]
 
-  \-h, \-\-help            										show this help message and exit
-  \-o OUT, \-\-out OUT     										specify the GTZ file name after compression
-  \-b BIN_FILE, \-\-bin\-file BIN_FILE				specify the BIN file for high compression
-  \-d DECOMPRESS, \-\-decompress DECOMPRESS		decompress
-  \-O OUT_DIR, \-\-out\-dir OUT_DIR						specify the save path of the extracted file
-  \-r RBIN_PATH, \-\-rbin\-path RBIN_PATH			specify the path where the RBIN file resides
-  \-f, \-\-force															force overwrite of output file
-  \-k, \-\-keep																keep (don't delete) input files
-  \-v, \-\-version														display version number
+	-\-h, \-\-help            			show this help message and exit
+	-\-o OUT, \-\-out OUT     			specify the GTZ file name after compression
+	-\-b BIN_FILE, \-\-bin\-file BIN_FILE		specify the BIN file for high compression
+	-\-d DECOMPRESS, \-\-decompress DECOMPRESS	decompress
+	-\-O OUT_DIR, \-\-out\-dir OUT_DIR		specify the save path of the extracted file
+	-\-r RBIN_PATH, \-\-rbin\-path RBIN_PATH	specify the path where the RBIN file resides
+	-\-f, \-\-force					force overwrite of output file
+	-\-k, \-\-keep					keep (don't delete) input files
+	-\-v, \-\-version				display version number
 
 ## Guidelines of gtz_index：
 gtz_index <command> [options]
-Command: list                									show species which current support
-         download <index> <path_to> 					download species reference sequence rbin file , path_to is not necessary.
-         make <rbin_path>   									making reference sequence
+	Command: 
+	list                				show species which current support
+	 download <index> <path_to> 			download species reference sequence rbin file , path_to is not necessary.
+	make <rbin_path>   				making reference sequence
 
 ## For Example:
 ### compress
-    **1 ./gtz Arab_E822-R02-I_good_1.fq -o Arab_E822-R02-I_good_1.fq.gz.gtz **
-    **Compress the file arab_e822-r02-i_good_1.fq to the current directory**.Without the specified BIN file, GTZ will automatically recognize the species to compress.
+    1 ./gtz Arab_E822-R02-I_good_1.fq -o Arab_E822-R02-I_good_1.fq.gz.gtz 
+    Compress the file arab_e822-r02-i_good_1.fq to the current directory.Without the specified BIN file, GTZ will automatically recognize the species to compress.
 
-		**2./gtz Arab_E822-R02-I_good_1.fq -o ./out/Arab_E822-R02-I_good_1.fq.gz.gtz **
-			Compress the file arab_e822-r02-i_good_1.fq into the out folder of the current directory.Without the specified BIN file, GTZ will automatically recognize the species to compress.
+    2./gtz Arab_E822-R02-I_good_1.fq -o ./out/Arab_E822-R02-I_good_1.fq.gz.gtz 
+    Compress the file arab_e822-r02-i_good_1.fq into the out folder of the current directory.Without the specified BIN file, GTZ will automatically recognize the species to compress.
 
-		**3./gtz Arab_E822-R02-I_good_1.fq -o Arab_E822-R02-I_good_1.fq.gz.gtz --bin-file ./Arab/Arabidopsis_thaliana_3dcb9b7a5a8b46c8ebbdbbdb3e0fa233.bin**
-			GTZ performs high compression by specifying BIN files in the Arab folder under the current directory.
+    3./gtz Arab_E822-R02-I_good_1.fq -o Arab_E822-R02-I_good_1.fq.gz.gtz --bin-file ./Arab/Arabidopsis_thaliana_3dcb9b7a5a8b46c8ebbdbbdb3e0fa233.bin
+    GTZ performs high compression by specifying BIN files in the Arab folder under the current directory.
 
 ### Decompress
-		**1./gtz -d Arab_E822-R02-I_good_1.fq.gz.gtz**
-			Deompress the file arab_e822-r02-i_good_1.fq to the current directory.If there is no species RBIN file under "~/.config/ gtz/", GTZ will be automatically downloaded from the Cloud to "~/.config/ gtz /".
+    1./gtz -d Arab_E822-R02-I_good_1.fq.gz.gtz
+    Deompress the file arab_e822-r02-i_good_1.fq to the current directory.If there is no species RBIN file under "~/.config/ gtz/", GTZ will be automatically downloaded from the Cloud to "~/.config/ gtz /".
 
-		**2./gtz -d Arab_E822-R02-I_good_1.fq.gz.gtz --rbin-path ~/Arab**
-			Specify the directory of the rbin path “~/Ara” for decompress Arab_E822-R02-I_good_1.fq.gz.gtz.
+    2./gtz -d Arab_E822-R02-I_good_1.fq.gz.gtz --rbin-path ~/Arab
+    Specify the directory of the rbin path “~/Ara” for decompress Arab_E822-R02-I_good_1.fq.gz.gtz.
 
-		**3./gtz -d Arab_E822-R02-I_good_1.fq.gz.gtz -outdir ./Arab**
-			Decompress Arab_e822-r02-i_good_1.fq.gz.gtz to the Arab folder in the current path
+    3./gtz -d Arab_E822-R02-I_good_1.fq.gz.gtz -outdir ./Arab
+    Decompress Arab_e822-r02-i_good_1.fq.gz.gtz to the Arab folder in the current path
 
 ## gtz_index
-		Interaction mode：
-		./gtz_index
-			Show supported species and you can gradually create bin files through human-machine interaction mode.
+    Interaction mode:
+	./gtz_index
+	Show supported species and you can gradually create bin files through human-machine interaction mode.
 
-		Manual mode
-		**1./gtz_index list**
-			Show supported species list，the index number is the input of the gtz_index download command.
+	Manual mode
+	1./gtz_index list
+	Show supported species list，the index number is the input of the gtz_index download command.
 
-		**2./gtz_index download 3**
-			Download the RBIN file in the species list with No.3 index .
+	2./gtz_index download 3
+	Download the RBIN file in the species list with No.3 index .
 
-		**3、./gtz_index makeindex ./Arab/Arabidopsis_thaliana_3dcb9b7a5a8b46c8ebbdbbdb3e0fa233.rbin**
-			Make BIN,rec file by specifying the rbin file". / Arab/Arabidopsis_thaliana_3dcb9b7a5a8b46c8ebbdbbdb3e0fa233 rbin "
+	3、./gtz_index makeindex ./Arab/Arabidopsis_thaliana_3dcb9b7a5a8b46c8ebbdbbdb3e0fa233.rbin
+	Make BIN,rec file by specifying the rbin file". / Arab/Arabidopsis_thaliana_3dcb9b7a5a8b46c8ebbdbbdb3e0fa233 rbin "
 
 ## Nirvana plan
-		Let’s start Nirvana plan!At first, we have a gtz file named nova_rna_1.fq.gtz.
-		Step 1:
-			Run the following command to extract the embeded programe gtz_reborn to current directory.
-			**sed -e 's/\[GTZ_REBORN_BEGIN\]/\n&/;' nova_rna_1_head.fq.gtz　| sed -n '/\[GTZ_REBORN_BEGIN\]/,/\[GTZ_REBORN_END\]/p' | sed -e 's/.*\[GTZ_REBORN_BEGIN\]//g' -e 's/\[GTZ_REBORN_END\].*//g' | tar -zxvf -**
-		Step2:
-			Run ./gtz_reborn -d nova_rna_1.fq.gtz
-			If nova_rna_1.fq.gtz is a high compression file, download the corresponding fasta file according to the prompt, and then extract the file.
-			If nova_rna_1.fq.gtz is not a high compression file, the FASTQ file can be extracted directly
+	Let’s start Nirvana plan!At first, we have a gtz file named nova_rna_1.fq.gtz.
+	Step 1:
+	Run the following command to extract the embeded programe gtz_reborn to current directory:
+	sed -e 's/\[GTZ_REBORN_BEGIN\]/\n&/;' nova_rna_1_head.fq.gtz　| sed -n '/\[GTZ_REBORN_BEGIN\]/,/\[GTZ_REBORN_END\]/p' | sed -e 's/.*\[GTZ_REBORN_BEGIN\]//g' -e 's/\[GTZ_REBORN_END\].*//g' | tar -zxvf -
+	Step2:
+	Run ./gtz_reborn -d nova_rna_1.fq.gtz
+	If nova_rna_1.fq.gtz is a high compression file, download the corresponding fasta file according to the prompt, and then extract the file.
+	If nova_rna_1.fq.gtz is not a high compression file, the FASTQ file can be extracted directly
 
 ## contact us
 
-		If you have any questions, feel free to contact: gtz@genetalks.com, or commit an issus on Github.
+	If you have any questions, feel free to contact: gtz@genetalks.com, or commit an issus on Github.
 
