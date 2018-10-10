@@ -19,8 +19,8 @@ There are three different versions of GTX.Zip for different users:
 
 ## Nirvana plan
 As an enterprise-level software, GTX.Zip has developed a nirvana program for high-availability requirements to ensure that users can decompress compressed data into original data under the extreme condition. The nirvana plan's dual availability protection strategy is as follows:
-- 1. GTX.Zip is multi-site hosted. http://gtz.io website, GitHub and other sites will permanently host all versions of GTX.Zip, to make sure that it is available to the entire network all the time and free of charge at any time.
-- 2. To ensure that compressed data can be restored to original file under any conditions, pre-embedded micro decompression programs could be extract from compressed data first, and then be used to decompress the file.
+-  GTX.Zip is multi-site hosted. http://gtz.io website, GitHub and other sites will permanently host all versions of GTX.Zip, to make sure that it is available to the entire network all the time and free of charge at any time.
+-  To ensure that compressed data can be restored to original file under any conditions, pre-embedded micro decompression programs could be extract from compressed data first, and then be used to decompress the file.
 
 
 ## System highlights
@@ -75,7 +75,7 @@ usage: gtz [-h] [-o OUT] [-b INDEX_BIN] [-d DECOMPRESS] [-O OUT_DIR]
 
 ## Guidelines f gtz_index：
 gtz_index <command> [options]
-	Command: 
+###	Command: 
 -	list                				show species which current support
 -	download <index> <path_to> 			download species reference sequence rbin file , path_to is not necessary.
 -	make <rbin_path>   				making reference sequence
