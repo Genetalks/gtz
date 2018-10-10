@@ -63,17 +63,17 @@ GTX.Zip compressor system features:
 ## Guidelines of gtz:
 usage: gtz [-h] [-o OUT] [-b INDEX_BIN] [-d DECOMPRESS] [-O OUT_DIR]
 
-	-\-h, \-\-help            			show this help message and exit
-	-\-o OUT, \-\-out OUT     			specify the GTZ file name after compression
-	-\-b BIN_FILE, \-\-bin\-file BIN_FILE		specify the BIN file for high compression
-	-\-d DECOMPRESS, \-\-decompress DECOMPRESS	decompress
-	-\-O OUT_DIR, \-\-out\-dir OUT_DIR		specify the save path of the extracted file
-	-\-r RBIN_PATH, \-\-rbin\-path RBIN_PATH	specify the path where the RBIN file resides
-	-\-f, \-\-force					force overwrite of output file
-	-\-k, \-\-keep					keep (don't delete) input files
-	-\-v, \-\-version				display version number
+-	 -h, --help            			show this help message and exit
+-	 -o OUT,--out OUT     			specify the GTZ file name after compression
+-	 -b BIN_FILE,--bin-file BIN_FILE	specify the BIN file for high compression
+-	 -d DECOMPRESS, --decompress DECOMPRESS	decompress
+-	 -O OUT_DIR,--out-dir OUT_DIR		specify the save path of the extracted file
+-	 -r RBIN_PATH,--rbin-path RBIN_PATH	specify the path where the RBIN file resides
+-	 -f, --force				force overwrite of output file
+-	 -k, --keep				keep (don't delete) input files
+-	 -v, --version				display version number
 
-## Guidelines of gtz_index：
+## Guidelines f gtz_index：
 gtz_index <command> [options]
 	Command: 
 	list                				show species which current support
