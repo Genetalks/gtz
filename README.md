@@ -63,21 +63,21 @@ GTX.Zip compressor system features:
 ## Guidelines of gtz:
 usage: gtz [-h] [-o OUT] [-b INDEX_BIN] [-d DECOMPRESS] [-O OUT_DIR]
 
--	 -h, --help&emsp; &emsp; &emsp; &emsp;  show this help message and exit
--	 -o OUT,--out OUT                       specify the GTZ file name after compression
--	 -b BIN_FILE,--bin-file BIN_FILE        specify the BIN file for high compression
--	 -d DECOMPRESS, --decompress DECOMPRESS decompress
--	 -O OUT_DIR,--out-dir OUT_DIR           specify the save path of the extracted file
--	 -r RBIN_PATH,--rbin-path RBIN_PATH     specify the path where the RBIN file resides
--	 -f, --force                            force overwrite of output file
--	 -k, --keep                             keep (don't delete) input files
--	 -v, --version                          display version number
+-	 -h, --help&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;show this help message and exit
+-	 -o OUT,--out OUT&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;specify the GTZ file name after compression
+-	 -b BIN_FILE,--bin-file BIN_FILE&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;specify the BIN file for high compression
+-	 -d DECOMPRESS, --decompress DECOMPRESS&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;decompress
+-	 -O OUT_DIR,--out-dir OUT_DIR&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;specify the save path of the extracted file
+-	 -r RBIN_PATH,--rbin-path RBIN_PATH&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;specify the path where the RBIN file resides
+-	 -f, --force&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;force overwrite of output file
+-	 -k, --keep&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;keep (don't delete) input files
+-	 -v, --version&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;display version number
 
 ## Guidelines f gtz_index：
 gtz_index <command> [options]
--	list                                    show species which current support
--	download <index> <path_to>              download species reference sequence rbin file , path_to is not necessary.
--	make <rbin_path>                        making reference sequence
+-	list&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;show species which current support
+-	download <index> <path_to>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;download species reference sequence rbin file , path_to is not necessary.
+-	make <rbin_path>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;making reference sequence
 
 ## For Example:
 ### compress
