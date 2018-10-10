@@ -47,7 +47,7 @@ GTX.Zip compressor system features:
 - **bin files**:Genome reference index files which used for compression.Size range: 5.3~37G.Human: 14G
 - **rbin files**:Compact genome reference files which used for decompression.Size range: 0.041G~3.6G.  Human: 0.7G
 - **gtz_index**:An installation tool of GTX.Zip Professional which used to view species list, download rbin files and generate bin files. 
-- **BIN,RBIN:**The default file storage path is "~/.config/gtz/"
+- **BIN,RBIN**:The default file storage path is "~/.config/gtz/"
 
 ## GTX.Zip Professional version
 - GTX.Zip Professional is a stand-alone version which supports local compression service. GTX.Zip Professional runs by command lines for compression and decompression of local genomic data.
@@ -76,9 +76,9 @@ usage: gtz [-h] [-o OUT] [-b INDEX_BIN] [-d DECOMPRESS] [-O OUT_DIR]
 ## Guidelines f gtz_index：
 gtz_index <command> [options]
 	Command: 
-	list                				show species which current support
-	 download <index> <path_to> 			download species reference sequence rbin file , path_to is not necessary.
-	make <rbin_path>   				making reference sequence
+-	list                				show species which current support
+-	download <index> <path_to> 			download species reference sequence rbin file , path_to is not necessary.
+-	make <rbin_path>   				making reference sequence
 
 ## For Example:
 ### compress
