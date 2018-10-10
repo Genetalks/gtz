@@ -63,15 +63,15 @@ GTX.Zip compressor system features:
 ## Guidelines of gtz:
 usage: gtz [-h] [-o OUT] [-b INDEX_BIN] [-d DECOMPRESS] [-O OUT_DIR]
 
--	 -h, --help&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;show this help message and exit
--	 -o OUT,--out OUT&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;specify the GTZ file name after compression
--	 -b BIN_FILE,--bin-file BIN_FILE&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;specify the BIN file for high compression
+-	 -h, --help&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;show this help message and exit
+-	 -o OUT,--out OUT&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;specify the GTZ file name after compression
+-	 -b BIN_FILE,--bin-file BIN_FILE&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;specify the BIN file for high compression
 -	 -d DECOMPRESS, --decompress DECOMPRESS&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;decompress
--	 -O OUT_DIR,--out-dir OUT_DIR&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;specify the save path of the extracted file
--	 -r RBIN_PATH,--rbin-path RBIN_PATH&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;specify the path where the RBIN file resides
--	 -f, --force&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;force overwrite of output file
--	 -k, --keep&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;keep (don't delete) input files
--	 -v, --version&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;display version number
+-	 -O OUT_DIR,--out-dir OUT_DIR&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;specify the save path of the extracted file
+-	 -r RBIN_PATH,--rbin-path RBIN_PATH&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;specify the path where the RBIN file resides
+-	 -f, --force&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;force overwrite of output file
+-	 -k, --keep&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;keep (don't delete) input files
+-	 -v, --version&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;display version number
 
 ## Guidelines f gtz_index：
 gtz_index <command> [options]
