@@ -77,7 +77,7 @@ usage: gtz [-h] [-o OUT] [-b INDEX_BIN] [-d DECOMPRESS] [-O OUT_DIR]
 gtz_index <command> [options]
 -	list&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;show species which current support
 -	download <index> <path_to>&emsp;&emsp;&emsp;&emsp;download species reference sequence rbin file , path_to is not necessary.
--	make <rbin_path>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;making reference sequence
+-	make <rbin_path>&emsp;&emsp;&emsp;&emsp;&emsp;making reference sequence
 
 ## For Example:
 ### compress
