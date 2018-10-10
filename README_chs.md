@@ -1,111 +1,138 @@
-# GTX Compressor  （技术预览版）
+# GTX.Zip Compressor Professional Version
 
 Powered by GTXLab of Genetalks.
 
-技术预览版本下载地址： https://github.com/Genetalks/gtz/archive/0.2.2k_tech_preview.tar.gz 
-
+- One-click installation:
+	**sudo curl -sSL https://gtzdata.oss-cn-hangzhou.aliyuncs.com/install_gtz_latest.run -o /tmp/install_gtz_latest.run && sudo sh /tmp/install_gtz_latest.run**
 
 [English Manual](https://github.com/Genetalks/gtz/blob/master/README.md "Markdown").
 
 ## 系统简介
 
-GTX Compressor是Genetalks公司GTX Lab实验室开发的面向大型数据（数GB甚至数TB数据，尤其是生物信息数据）上云，而量身定制的复杂通用数据压缩打包系统，可以对任意基因测序数据以及数据目录进行高压缩率的快速打包，形成单个压缩数据文件，以方便存储档与远程传输、校验。区别于以往的压缩工具，GT Compressor系统着力于 **高压缩率，高速率，方便的数据抽取** 。
+GTX.Zip是面向基因行业，结合行业数据特征，对基因测序数据进行定向优化，支持所有文件格式的高倍无损压缩系统。**该系统具有业界最高无损压缩倍率和速度，能以1100MB/s的极致速度，将基因测序数据压缩至原大小的2%。该系统采用高效“多流数据”存储结构，可对测序数据文件及文件目录进行高倍率快速压缩和打包，并支持随机寻址等高级功能，赋能用户对海量基因数据进行方便快捷的存储、传输、分发和提取**。
 
-GTX Compressor可以在AWS C4.8xlarge机器（或同配置服务器），**以超过114MB/s的速度，将接近200GB大小的33个质量数的FASTQ文件（NA12878_1.fastq），在13分钟内压缩到原大小的19%**，而对于X10等只有 **7个质量数的FASTQ数据，其压缩率更可以达到5.5%** 。
+目前 GTX.Zip Professional, GTX.Zip Enterprise, GTX.Zip Cloud三个产品已正式面世，分别适用于以下客户：
+	- **GTX.Zip Professional:**	本地测序数据量大的基因公司、研究机构及个人用户
+	- **GTX.Zip Enterprise:**拥有PB级本地测序数据，需要通过自有计算集群对数据进行分布式压缩的大型企业和数据中心
+	- **GTX.Zip Cloud:**云端测序数据分发、存储效率低的企业
 
-**GTX Compressor提供“上云”功能**。考虑商业使用时，用户不仅需要将测序产生的海量数据存储于本地，更迫切地寻求将数据快速稳定分发传输的能力。GTX Lab实验室已经研发出在普通带宽条件下，提供远距离和超远距离数据传输服务的工具gtransfer，可以便捷地进行端到端或端到云平台的数据传输。
+## 涅槃计划
+	GTX.Zip作为企业级软件，针对高可用性需求制定了“涅磐计划”，以确保用户在最为极端、无法获得任何GTX.Zip系统支持的情况下，也能将压缩数据解压为原始数据。
+	涅磐计划的双重可用性保护策略如下：
+	-GTX.Zip多站托管，确保全网随时可下载：gtz.io网站与GitHub等多个站点永久托管GTX.Zip所有版本，确保全网不掉线，免费随时可得。
+	-内嵌应急解压程序，确保极端情况下仍可还原数据：压缩数据中预嵌微型程序，支持在极端特殊情况时，先一键抽取出解压程序再直接还原数据。
+		
+## 技术亮点	
+	**高倍无损**:GTX.Zip 采用全球领先的基因数据无损压缩算法，能够将FASTQ文件压缩低至原大小的2%，可以直接重压缩fastq.gz 至原大小的1/6。
+		 数据集名称|GTX.Zip—压缩率|Gzip—压缩率
+		 ---|:--:|---:
+		 Nova_wes_1.fq|2.53%|17.15%
+		 Nova_wes_2.fq|3.45%|18.34%
+		 nova_wgs_1.fq|3.18%|17.55%
+		 nova_wgs_2.fq|3.93%|18.66%
+		 nova_rna_1.fq|4.56%|17.70%
+		 nova_rna_2.fq|5.39%|18.94%
 
-## 系统亮点
+	**极速如飞**
+	- GTX.Zip 充分利用了CPU的并发性、新的Haswell CPU体系结构，以及新的指令(如AVX2、BMI2)，使得即使在普通计算服务器上，GTX.Zip的压缩速度也是飞快的，GTX.Zip Professional单机压缩速度高达1100MB/s，GTX.Zip Enterprise更支持企业所需的大规模分布式压缩。
 
-该数据打包压缩系统的特点：
+	**安全无忧**
+	- GTX.Zip 采用业内首屈一指的企业级数据安全策略,是目前业界唯一能够确保数据解压100%一致还原的系统。除了常规的分块MD5校验，还凭借其强大的计算效率,在压缩的同时进行解压还原验证，只有当解压还原后的数据与源数据完全一致时，才落地压缩文件，做到数据万无一失。
 
-- **高压缩比** 采用Context Model压缩技术，配合多种优化的预测模型，平衡系统并发度与内存资源消耗后，能达到极高的压缩率。对FASTQ文件，压缩率最高可达5.58%。
+	**生态完整**
+	- GTX.Zip 提供 Linux 、Mac OSX以及Windows等全平台命令行以及图形化解压工具。并提供Python、C、C++等语言的SDK接口，方便第三方开发者接入数据的读写处理。目前已免费提供能支持直接读写gtz格式（GTX.Zip压缩文件）的 bcl2fastq, fastp和BWA等常用测序分析软件，更多支持软件将陆续发布，欢迎垂询。
+	
+## 名词解析	
+	-**BIN文件**：压缩时用到的参考序列索引文件，根据不同物种，大小在5.3~37G，人类为14G。
+	-**RBIN文件**：解压缩时用到的紧致参考序列文件，根据不同物种，大小在0.041G~3.6G之间，人类为0.7G。
+	-**gtz_index**：GTX.Zip Professional 安装目录下的工具软件，可以用来查看支持物种列表、下载rbin、制作bin。
+	-**BIN,RBIN**:文件默认存放路径为："~/.config/gtz/"
 
-- **高性能：** GTX compressor充分发挥了CPU的并发性以及新型Haswell CPU体系结构与AVX2、BMI2等指令集的计算能力，使得在普通服务器上的压缩速度，最高能够以接近114MB/s的输入流量输入数据并压缩完毕。
-
-- **高速上云：** GTX gtransfer支持在普通带宽条件下，提供远距离和超远距离数据传输服务，可以便捷地进行端到端或端到云平台的数据传输。
-
-
-
+## GTX.Zip Professional产品	
+	GTX.Zip Professional为用户提供便捷的单机版压缩服务，可以灵活地使用默认或指定参考基因组对本地基因组数据文件进行压缩、解压操作。
+	
+	
 ## 系统环境要求
-
-- 64位 Linux 系统（CentOS 6.5以上或Ubuntu 12.04以上，推荐Ububtu 14.04及以上64位操作系统)
-
-- 4核以上，最小8GB内存的主机系统（若要达到最大并发性，推荐32核 64GB内存，或与AWS C4.8xlarge机器相同配置）
-
-## 安装说明
-本系统采用开包即用的打包原则，不依赖当前系统其他任何库。
-
-下载包内包含ubuntu版本和centos版本的两个tar.gz的包。选择对应tar.gz的包，解压后，gtz命令就在当前解压的gtz_0.2.2i_ubuntu_tech_preview目录或gtz_0.2.2i_centos_tech_preview目录中，直接使用即可。
+	-**64位 Linux 系统（CentOS 6.5以上或Ubuntu 12.04以上，推荐Ububtu 14.04及以上64位操作系统)**
+	-4核以上，最小8GB内存的主机系统（若要达到最大并发性，推荐32核 64GB内存，或与AWS C4.8xlarge机器相同配置）
 
 
-## 命令行说明
-
-执行 ./gtz -h，输出命令行帮助说明。
-
-
-```
-USAGE: 
-./gtz   [--gz]  [--rbin-path] [--outdir] [--list] [-e <string>] [-c] 
-          [-d]  [-a] [-o <string>] [--] [--version]
-          [-h] <file names> ...
-
-  
-```
-
-通用选项说明：
-
-- -h：输出以上命令行帮助信息
-- \-\-version：输出gt_compress程序的版本号
+## 安装说明	
+	一键安装方式:
+	**sudo curl -sSL https://gtzdata.oss-cn-hangzhou.aliyuncs.com/install_gtz_latest.run -o /tmp/install_gtz_latest.run && sudo sh /tmp/install_gtz_latest.run**
+	
+## 命令行说明	
+### GTX.Zip主程序gtz的参数解析
+		usage: gtz [-h] [-o OUT] [-b INDEX_BIN] [-d DECOMPRESS] [-O OUT_DIR]
+	  \-h, \-\-help            										显示帮助信息
+	  \-o OUT, \-\-out OUT     										指定GTZ压缩文件的输出路径
+	  \-b BIN_FILE, \-\-bin\-file BIN_FILE				通过指定所需物种BIN文件进行高倍率压缩
+	  \-d DECOMPRESS, \-\-decompress DECOMPRESS		解压缩GTZ文件
+	  \-O OUT_DIR, \-\-out\-dir OUT_DIR						指定解压后文件的保存路径
+	  \-r RBIN_PATH, \-\-rbin\-path RBIN_PATH			通过指定RBIN文件解压
+	  \-f, \-\-force															输出覆盖同名文件
+	  \-k, \-\-keep																保留源文件
+	  \-v, \-\-version														显示版本号
 
 
-压缩选项说明：
-- -a：追加模式，本次压缩的内容会追加到压缩文件中
-- -o：指定压缩文件名，不指定时，默认为out.gtz
-- file_name：需要压缩的文件或目录, 若不指定，则从标准输入中读入数据
+## gtz_index的用法：
+gtz_index <command> [options]
 
+Command: list                										查看现在支持的所有物种信息
+         download <index> <path_to>   					下载紧致参考序列rbin文件
+         make <rbin_path>    										制作参考序列索引bin文件
+         
+## 示例：	         
+### 压缩举例:
+		**1 ./gtz Arab_E822-R02-I_good_1.fq -o Arab_E822-R02-I_good_1.fq.gz.gtz **
+			将文件Arab_E822-R02-I_good_1.fq压缩到当前目录
 
-解压选项说明：
-- -d,\-\-decode            : 解压模式
-- \-\-gz		   : 解压为gz格式。如果不指定，默认输出为.fastq格式
-- \-\-rbin-path  	   : 指定本地解压所需要的rbin文件的路径
-- \-\-outdir		   : 指定解压输出目录
-- \-\-list		   : 列出压缩包中所有的压缩文件名，与-d参数一起使用
-- -e, \-\-extract	   : 解压压缩包中指定的压缩文件，文件名之间用冒号:分割，与-d参数一起使用
-- -c,\-\-stdout            : 解压数据输出至标准输出, 只能与 -d 参数一起使用
-- file_name                ：需要压缩的文件, 若不指定，则从标准输入中读入数据
+		**2 ./gtz Arab_E822-R02-I_good_1.fq -o ./out/Arab_E822-R02-I_good_1.fq.gz.gtz **
+			将文件Arab_E822-R02-I_good_1.fq压缩到当前目录的out文件夹内,以上两种情况没有指定bin，会根据程序自动识别物种功能去压缩,以下为指定物种的使用方式--index-bin
 
-
-### 示例：
-
-
-### 压缩举例
-	./gtz  -o  output.gtz  source.fastq                     将原文件source.fastq压缩为output.gtz
-	./gtz  -o  output.gtz  source.fastq.gz                  将原文件source.fastq.gz压缩为output.gtz
-	./gtz  -o  output.gtz  source1.fastq  source2.fastq     将多个原文件source1.fastq,source2.fastq压缩为output.gtz (支持多个文件压缩到一个压缩包)
-	./gtz  -o  output.gtz  source_diretory	                将目录source_diretory压缩为output.gtz (支持目录压缩到一个压缩包)
-	./gtz  -a -o output.gtz source3.fastq                   将文件source3.fastq以追加的方式，压缩到已有的output.gtz中
-
+		**3 ./gtz Arab_E822-R02-I_good_1.fq -o Arab_E822-R02-I_good_1.fq.gz.gtz --index-bin ./Arab/Arabidopsis_thaliana_3dcb9b7a5a8b46c8ebbdbbdb3e0fa233.bin**
+			GTZ通过指定当前目录下Arab文件夹中BIN文件的方式来进行高倍压缩，
 
 ### 解压举例
-	./gtz  -d  output.gtz                                   解压output.gtz，默认输出为fastq格式
-	./gtz  -d  output.gtz --gz                              解压output.gtz，输出为fastq.gz格式
-	./gtz  -d  output.gtz --outdir  output_path             解压output.gtz到output_path目录中
-	./gtz  -d  output.gtz --rbin-path  rbin_path            解压企业版高倍率压缩包output.gtz，指定对应的rbin文件的路径
-	./gtz  -d  output.gtz --list				查看压缩包output.gtz里的文件列表	
-	
-	# -e 代表抽取文件，后面要抽取的文件名称间，用 ":" 隔开
-	./gtz -e source.fastq:/A/source2.fastq -d gtz/out.gtz
-	
-	或者某个文件到管道：
-	# -c 代表输出到console， -e 代表抽取其中的某个文件
-	./gtz -c -e source.fastq  -d gtz/out.gtz > myfile.txt
-	或者
-	./gtz -c -e source.fastq  -d gtz/out.gtz | gzip -c > myfastq.gz
-	
+		**1./gtz -d Arab_E822-R02-I_good_1.fq.gz.gtz**
+			将文件Arab_E822-R02-I_good_1.fq解压到当前路径，如果"~/.config/gtz/"下没有对应的rbin文件，程序会自动从云下载至"~/.config/gtz/"
 
+		**2./gtz -d Arab_E822-R02-I_good_1.fq.gz.gtz --index-path ~/Arab**
+			指定已有的rbin文件所在文件夹 --index-path; 当rbin文件存在于"~/.config/gtz/"的其它地方，则可以指定rbin所在文件夹的形式进行解压，目前rbin文件存在于“~/Arab”
 
+		**3./gtz -d Arab_E822-R02-I_good_1.fq.gz.gtz -outdir ./Arab**
+			将文件Arab_E822-R02-I_good_1.fq.gz.gtz解压至当前路径的Arab文件夹下
+			
+			
+### gtz_index举例
+		交互模式：
+			./gtz_index
+			显示当前支持的物种列表，并且通过人机交互的模式逐步制作成BIN文件。
 
+			手动模式：
+			1 ./gtz_index list
+			显示当前支持的物种列表，其中index编号为gtz_index download 命令的输入，下载对应物种的rbin文件
+
+			2 ./gtz_index download 3
+			下载编号为3的Arab物种的rbin文件。
+
+			3 ./gtz_index makeindex ./Arab/Arabidopsis_thaliana_3dcb9b7a5a8b46c8ebbdbbdb3e0fa233.rbin
+			通过指定rbin文件 “./Arab/Arabidopsis_thaliana_3dcb9b7a5a8b46c8ebbdbbdb3e0fa233.rbin"制作Arabidopsis_thaliana物种的bin、rec文件
+
+## 涅槃计划
+		gtz文件名为: nova_rna_1.fq.gtz
+
+		步骤一
+		运行以下命令提取解压缩内嵌程序gtz_reborn到当前目录下会生成可执行文件gtz_reborn
+
+		**sed -e 's/\[GTZ_REBORN_BEGIN\]/\n&/;' nova_rna_1_head.fq.gtz　|　sed -n '/\[GTZ_REBORN_BEGIN\]/,/\[GTZ_REBORN_END\]/p' |sed -e 's/.*\[GTZ_REBORN_BEGIN\]//g' -e 's/\[GTZ_REBORN_END\].*//g' | tar -zxvf -**
+
+		步骤二
+		运行./gtz_reborn -d nova_rna_1.fq.gtz
+			情形一: 如果nova_rna_1.fq.gtz是高倍率压缩文件，需要按提示下载对应的fasta文件，然后再解压
+			情形二: 如果nova_rna_1.fq.gtz不是高倍压缩文件，则该命令可以直接解压出原始的fastq文件
+
+	
 ## 联系我们
 
-使用中有任何问题请联系： gen.li@genetalks.com
+		使用中有任何问题请联系： gtz@genetalks.com
