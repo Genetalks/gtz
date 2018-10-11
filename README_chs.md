@@ -68,7 +68,6 @@ GTX.Zip Professional为用户提供便捷的单机版压缩服务，可以灵活
 	方式二：
 	下载文件install_gtz_latest.run，然后执行它。
 	
-## GTX.Zip命令行说明  
 ### gtz的用法
 usage: gtz [-h] [-o OUT] [-b INDEX_BIN] [-d DECOMPRESS] [-O OUT_DIR]  
 
