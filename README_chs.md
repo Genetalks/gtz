@@ -68,7 +68,8 @@ GTX.Zip Professional为用户提供便捷的单机版压缩服务，可以灵活
 	方式二：
 	下载文件install_gtz_latest.run，然后执行它。
 	
-## gtx命令行说明  
+## GTX.Zip命令行说明  
+### gtz的用法
 usage: gtz [-h] [-o OUT] [-b INDEX_BIN] [-d DECOMPRESS] [-O OUT_DIR]  
 
 -h, --help&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;显示帮助信息  
@@ -82,7 +83,7 @@ usage: gtz [-h] [-o OUT] [-b INDEX_BIN] [-d DECOMPRESS] [-O OUT_DIR]
 -v, --version&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;显示版本号  
 
 
-## gtz_index的用法：
+### gtz_index的用法：
 gtz_index <command> [options]  
 Command:  
 - list&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;查看现在支持的所有物种信息  
