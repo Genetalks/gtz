@@ -110,7 +110,7 @@ Interaction mode:
 Show supported species and you can gradually create bin files through human-machine interaction mode.  
 
 Manual mode  
-1:Show supported species list，the index number is the input of the gtz_index download command.
+1:Show supported species list，the index number is the input of the gtz_index download command.  
 	`./gtz_index list`  
 2:Download the RBIN file in the species list with No.3 index  
 	`./gtz_index download 3`  
@@ -126,7 +126,7 @@ Run the following command to extract the embeded programe gtz_reborn to current 
 
 Step2:  
 If nova_rna_1.fq.gtz is a high compression file, download the corresponding fasta file according to the prompt, and then extract the file.  
-If nova_rna_1.fq.gtz is not a high compression file, the FASTQ file can be extracted directly
+If nova_rna_1.fq.gtz is not a high compression file, the FASTQ file can be extracted directly  
 	`./gtz_reborn -d nova_rna_1.fq.gtz`
 
 ## Contact Us
