@@ -139,4 +139,4 @@ Command:
 
 	
 ## 联系我们
-	使用中有任何问题请联系： gtz@genetalks.com
+	使用中有任何问题请联系: contact@gtz.io 

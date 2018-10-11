@@ -131,5 +131,5 @@ gtz_index <command> [options]
 
 ## contact us
 
-	If you have any questions, feel free to contact: gtz@genetalks.com, or commit an issus on Github.
+	If you have any questions, feel free to contact: contact@gtz.io, or commit an issus on Github.
 
