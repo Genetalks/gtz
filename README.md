@@ -116,7 +116,7 @@ gtz_index <command> [options]
 	2./gtz_index download 3
 	Download the RBIN file in the species list with No.3 index .
 
-	3、./gtz_index makeindex ./Arab/Arabidopsis_thaliana_3dcb9b7a5a8b46c8ebbdbbdb3e0fa233.rbin
+	3./gtz_index makeindex ./Arab/Arabidopsis_thaliana_3dcb9b7a5a8b46c8ebbdbbdb3e0fa233.rbin
 	Make BIN,rec file by specifying the rbin file". / Arab/Arabidopsis_thaliana_3dcb9b7a5a8b46c8ebbdbbdb3e0fa233 rbin "
 
 ## Nirvana plan
