@@ -58,10 +58,10 @@ GTX.Zip compressor system features:
 - To achieve good performance, the computing server with **32-core 64GB** memory is recommended (**at least 4-core and 8GB memory**), or that has the same configuration with the **AWS C4.8xlarge** machine)
 
 ## Installation Instruction	
-- Method 1 (recommended):
-	curl -sSL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run
+- Method 1 (recommended):  
+	`curl -sSL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`
 
-- Method 2:
+- Method 2:  
 	Download the gtz_latest.run, and then execute the it. 
 
 
