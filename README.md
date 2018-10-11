@@ -4,7 +4,7 @@ Powered by GTXLab of Genetalks.
 - One-click installation:  
 	`curl -sSL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`
 
-- GTX.Zip Professional download URL:https://github.com/Genetalks/gtz/raw/master/gtz_latest.run
+- GTX.Zip Professional download URL:https://gtz.io/gtz_latest.run
 
 [中文说明](https://github.com/Genetalks/gtz/blob/master/README_chs.md "Markdown").
 
