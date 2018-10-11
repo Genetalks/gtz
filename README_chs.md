@@ -2,8 +2,10 @@
 
 Powered by GTXLab of Genetalks.
 
-- One-click installation:
+- 一键安装命令:
 	**sudo curl -sSL https://gtz.io/install_gtz_latest.run -o /tmp/install_gtz_latest.run && sudo sh /tmp/install_gtz_latest.run**
+
+- GTX.Zip 专业版本下载链接：https://github.com/Genetalks/gtz/archive/professional_v1.0.tar.gz
 
 [English Manual](https://github.com/Genetalks/gtz/blob/master/README.md "Markdown").
 
