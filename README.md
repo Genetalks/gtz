@@ -119,7 +119,7 @@ gtz_index <command> [options]
 	3./gtz_index makeindex ./Arab/Arabidopsis_thaliana_3dcb9b7a5a8b46c8ebbdbbdb3e0fa233.rbin
 	Make BIN,rec file by specifying the rbin file". / Arab/Arabidopsis_thaliana_3dcb9b7a5a8b46c8ebbdbbdb3e0fa233 rbin "
 
-## Nirvana Plan
+## Nirvana Plan  
 	Let’s start Nirvana plan!At first, we have a gtz file named nova_rna_1.fq.gtz.
 	Step 1:
 	Run the following command to extract the embeded programe gtz_reborn to current directory:
