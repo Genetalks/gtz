@@ -95,7 +95,7 @@ gtz_index <command> [options]
 	`./gtz Arab_E822-R02-I_good_1.fq -o Arab_E822-R02-I_good_1.fq.gz.gtz --bin-file ./Arab/Arabidopsis_thaliana_3dcb9b7a5a8b46c8ebbdbbdb3e0fa233.bin`  
 
 ### Decompress
-1.Deompress the file arab_e822-r02-i_good_1.fq to the current directory.If there is no species RBIN file under "~/.config/ gtz/", GTZ will be automatically downloaded from the Cloud to "~/.config/ gtz /".  
+1.Deompress the file arab_e822-r02-i_good_1.fq to the current directory.If there is no species RBIN file under "\~/.config/ gtz/", GTZ will be automatically downloaded from the Cloud to "\~/.config/ gtz /".  
 	`./gtz -d Arab_E822-R02-I_good_1.fq.gz.gtz`  
 
 2.Specify the directory of the rbin path “~/Ara” for decompress Arab_E822-R02-I_good_1.fq.gz.gtz.  
