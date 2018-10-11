@@ -3,7 +3,7 @@
 Powered by GTXLab of Genetalks.
 
 - One-click installation:
-	**sudo curl -sSL https://gtzdata.oss-cn-hangzhou.aliyuncs.com/install_gtz_latest.run -o /tmp/install_gtz_latest.run && sudo sh /tmp/install_gtz_latest.run**
+	**sudo curl -sSL https://gtz.io/install_gtz_latest.run -o /tmp/install_gtz_latest.run && sudo sh /tmp/install_gtz_latest.run**
 
 [中文说明](https://github.com/Genetalks/gtz/blob/master/README_chs.md "Markdown").
 
@@ -57,7 +57,11 @@ GTX.Zip compressor system features:
 - To achieve good performance, the computing server with **32-core 64GB** memory is recommended (**at least 4-core and 8GB memory**), or that has the same configuration with the **AWS C4.8xlarge** machine)
 
 ## Installation Instruction  
-	sudo curl -sSL https://gtzdata.oss-cn-hangzhou.aliyuncs.com/install_gtz_latest.run -o /tmp/install_gtz_latest.run && sudo sh /tmp/install_gtz_latest.run
+- Method 1 (recommended):
+	sudo curl -sSL https://gtz.io/install_gtz_latest.run -o /tmp/install_gtz_latest.run && sudo sh /tmp/install_gtz_latest.run
+
+- Method 2:
+	Download the install_gtz_latest.run, and then execute the it. 
 
 
 ## Guidelines of gtz:
