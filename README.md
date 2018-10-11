@@ -1,4 +1,4 @@
-# GTX.Zip Compressor Compressor Professional Version
+# GTX.Zip Professional Version
 
 Powered by GTXLab of Genetalks.
 
