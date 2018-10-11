@@ -5,7 +5,7 @@ Powered by GTXLab of Genetalks.
 - 一键安装命令:  
 	`curl -sSL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`
 
-- GTX.Zip 专业版本下载链接:https://github.com/Genetalks/gtz/raw/master/gtz_latest.run
+- GTX.Zip 专业版本下载链接:https://gtz.io/gtz_latest.run
 
 [English Manual](https://github.com/Genetalks/gtz/blob/master/README.md "Markdown").
 
