@@ -2,7 +2,7 @@
 
 Powered by GTXLab of Genetalks.
 
-- One-click installation:
+- One-click installation:  
 	curl -sSL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run
 
 - GTX.Zip Professional download URL:https://github.com/Genetalks/gtz/archive/professional_v1.1.tar.gz
@@ -59,7 +59,6 @@ GTX.Zip compressor system features:
 - To achieve good performance, the computing server with **32-core 64GB** memory is recommended (**at least 4-core and 8GB memory**), or that has the same configuration with the **AWS C4.8xlarge** machine)
 
 ## Installation Instruction	
-
 - Method 1 (recommended):
 	curl -sSL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run
 
