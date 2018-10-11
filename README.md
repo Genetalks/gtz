@@ -120,16 +120,17 @@ gtz_index <command> [options]
 	Make BIN,rec file by specifying the rbin file". / Arab/Arabidopsis_thaliana_3dcb9b7a5a8b46c8ebbdbbdb3e0fa233 rbin "
 
 ## Nirvana Plan  
-	Let’s start Nirvana plan!At first, we have a gtz file named nova_rna_1.fq.gtz.
-	Step 1:
-	Run the following command to extract the embeded programe gtz_reborn to current directory:
-	sed -e 's/\[GTZ_REBORN_BEGIN\]/\n&/;' nova_rna_1_head.fq.gtz　| sed -n '/\[GTZ_REBORN_BEGIN\]/,/\[GTZ_REBORN_END\]/p' | sed -e 's/.*\[GTZ_REBORN_BEGIN\]//g' -e 's/\[GTZ_REBORN_END\].*//g' | tar -zxvf -
-	Step2:
-	Run ./gtz_reborn -d nova_rna_1.fq.gtz
-	If nova_rna_1.fq.gtz is a high compression file, download the corresponding fasta file according to the prompt, and then extract the file.
-	If nova_rna_1.fq.gtz is not a high compression file, the FASTQ file can be extracted directly
+Let’s start Nirvana plan!At first, we have a gtz file named nova_rna_1.fq.gtz.
+Step 1:
+Run the following command to extract the embeded programe gtz_reborn to current directory:
+	`sed -e 's/\[GTZ_REBORN_BEGIN\]/\n&/;' nova_rna_1_head.fq.gtz　| sed -n '/\[GTZ_REBORN_BEGIN\]/,/\[GTZ_REBORN_END\]/p' | sed -e 's/.*\[GTZ_REBORN_BEGIN\]//g' -e 's/\[GTZ_REBORN_END\].*//g' | tar -zxvf -`
+
+Step2:
+	`./gtz_reborn -d nova_rna_1.fq.gtz`
+If nova_rna_1.fq.gtz is a high compression file, download the corresponding fasta file according to the prompt, and then extract the file.
+If nova_rna_1.fq.gtz is not a high compression file, the FASTQ file can be extracted directly
 
 ## Contact Us
 
-	If you have any questions, feel free to contact: contact@gtz.io, or commit an issus on Github.
+If you have any questions, feel free to contact: contact@gtz.io, or commit an issus on Github.
 
