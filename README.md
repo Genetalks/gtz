@@ -105,29 +105,32 @@ gtz_index <command> [options]
     Decompress Arab_e822-r02-i_good_1.fq.gz.gtz to the Arab folder in the current path
 
 ## gtz_index
-    Interaction mode:
-	./gtz_index
-	Show supported species and you can gradually create bin files through human-machine interaction mode.
+Interaction mode:  
+	`./gtz_index`
+Show supported species and you can gradually create bin files through human-machine interaction mode.  
 
-	Manual mode
-	1./gtz_index list
-	Show supported species list，the index number is the input of the gtz_index download command.
+Manual mode  
+1:Show supported species list，the index number is the input of the gtz_index download command.
+	`./gtz_index list`
 
-	2./gtz_index download 3
-	Download the RBIN file in the species list with No.3 index .
 
-	3./gtz_index makeindex ./Arab/Arabidopsis_thaliana_3dcb9b7a5a8b46c8ebbdbbdb3e0fa233.rbin
-	Make BIN,rec file by specifying the rbin file". / Arab/Arabidopsis_thaliana_3dcb9b7a5a8b46c8ebbdbbdb3e0fa233 rbin "
+2:Download the RBIN file in the species list with No.3 index
+	`./gtz_index download 3`
+
+
+3:Make BIN,rec file by specifying the rbin file". / Arab/Arabidopsis_thaliana_3dcb9b7a5a8b46c8ebbdbbdb3e0fa233 rbin "  
+	`./gtz_index makeindex ./Arab/Arabidopsis_thaliana_3dcb9b7a5a8b46c8ebbdbbdb3e0fa233.rbin`
+
 
 ## Nirvana Plan  
-Let’s start Nirvana plan!At first, we have a gtz file named nova_rna_1.fq.gtz.
-Step 1:
-Run the following command to extract the embeded programe gtz_reborn to current directory:
+Let’s start Nirvana plan!At first, we have a gtz file named nova_rna_1.fq.gtz.  
+Step 1:  
+Run the following command to extract the embeded programe gtz_reborn to current directory:  
 	`sed -e 's/\[GTZ_REBORN_BEGIN\]/\n&/;' nova_rna_1_head.fq.gtz　| sed -n '/\[GTZ_REBORN_BEGIN\]/,/\[GTZ_REBORN_END\]/p' | sed -e 's/.*\[GTZ_REBORN_BEGIN\]//g' -e 's/\[GTZ_REBORN_END\].*//g' | tar -zxvf -`
 
-Step2:
+Step2:  
 	`./gtz_reborn -d nova_rna_1.fq.gtz`
-If nova_rna_1.fq.gtz is a high compression file, download the corresponding fasta file according to the prompt, and then extract the file.
+If nova_rna_1.fq.gtz is a high compression file, download the corresponding fasta file according to the prompt, and then extract the file.  
 If nova_rna_1.fq.gtz is not a high compression file, the FASTQ file can be extracted directly
 
 ## Contact Us
