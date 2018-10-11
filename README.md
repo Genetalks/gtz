@@ -84,25 +84,25 @@ gtz_index <command> [options]
 -	make <rbin_path>&emsp;&emsp;&emsp;&emsp;&emsp;making reference sequence
 
 ## For Example:
-### Compress
-    1 ./gtz Arab_E822-R02-I_good_1.fq -o Arab_E822-R02-I_good_1.fq.gz.gtz 
-    Compress the file arab_e822-r02-i_good_1.fq to the current directory.Without the specified BIN file, GTZ will automatically recognize the species to compress.
+### Compress  
+1:Compress the file arab_e822-r02-i_good_1.fq to the current directory.Without the specified BIN file, GTZ will automatically recognize the species to compress.  
+	`./gtz Arab_E822-R02-I_good_1.fq -o Arab_E822-R02-I_good_1.fq.gz.gtz `   
 
-    2./gtz Arab_E822-R02-I_good_1.fq -o ./out/Arab_E822-R02-I_good_1.fq.gz.gtz 
-    Compress the file arab_e822-r02-i_good_1.fq into the out folder of the current directory.Without the specified BIN file, GTZ will automatically recognize the species to compress.
+2:Compress the file arab_e822-r02-i_good_1.fq into the out folder of the current directory.Without the specified BIN file, GTZ will automatically recognize the species to compress.  
+	`./gtz Arab_E822-R02-I_good_1.fq -o ./out/Arab_E822-R02-I_good_1.fq.gz.gtz `   
 
-    3./gtz Arab_E822-R02-I_good_1.fq -o Arab_E822-R02-I_good_1.fq.gz.gtz --bin-file ./Arab/Arabidopsis_thaliana_3dcb9b7a5a8b46c8ebbdbbdb3e0fa233.bin
-    GTZ performs high compression by specifying BIN files in the Arab folder under the current directory.
+3.GTZ performs high compression by specifying BIN files in the Arab folder under the current directory.  
+	`./gtz Arab_E822-R02-I_good_1.fq -o Arab_E822-R02-I_good_1.fq.gz.gtz --bin-file ./Arab/Arabidopsis_thaliana_3dcb9b7a5a8b46c8ebbdbbdb3e0fa233.bin`  
 
 ### Decompress
-    1./gtz -d Arab_E822-R02-I_good_1.fq.gz.gtz
-    Deompress the file arab_e822-r02-i_good_1.fq to the current directory.If there is no species RBIN file under "~/.config/ gtz/", GTZ will be automatically downloaded from the Cloud to "~/.config/ gtz /".
+1.Deompress the file arab_e822-r02-i_good_1.fq to the current directory.If there is no species RBIN file under "~/.config/ gtz/", GTZ will be automatically downloaded from the Cloud to "~/.config/ gtz /".  
+	`./gtz -d Arab_E822-R02-I_good_1.fq.gz.gtz`  
 
-    2./gtz -d Arab_E822-R02-I_good_1.fq.gz.gtz --rbin-path ~/Arab
-    Specify the directory of the rbin path “~/Ara” for decompress Arab_E822-R02-I_good_1.fq.gz.gtz.
+2.Specify the directory of the rbin path “~/Ara” for decompress Arab_E822-R02-I_good_1.fq.gz.gtz.  
+	`/gtz -d Arab_E822-R02-I_good_1.fq.gz.gtz --rbin-path ~/Arab`  
 
-    3./gtz -d Arab_E822-R02-I_good_1.fq.gz.gtz -outdir ./Arab
-    Decompress Arab_e822-r02-i_good_1.fq.gz.gtz to the Arab folder in the current path
+3.Decompress Arab_e822-r02-i_good_1.fq.gz.gtz to the Arab folder in the current path  
+	`./gtz -d Arab_E822-R02-I_good_1.fq.gz.gtz -outdir ./Arab`  
 
 ## gtz_index
 Interaction mode:  
