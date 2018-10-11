@@ -134,8 +134,8 @@ Command:
 
 		步骤二
 		运行./gtz_reborn -d nova_rna_1.fq.gtz
-			情形一: 如果nova_rna_1.fq.gtz是高倍率压缩文件，需要按提示下载对应的fasta文件，然后再解压
-			情形二: 如果nova_rna_1.fq.gtz不是高倍压缩文件，则该命令可以直接解压出原始的fastq文件
+		情形一: 如果nova_rna_1.fq.gtz是高倍率压缩文件，需要按提示下载对应的fasta文件，然后再解压
+		情形二: 如果nova_rna_1.fq.gtz不是高倍压缩文件，则该命令可以直接解压出原始的fastq文件
 
 	
 ## 联系我们
