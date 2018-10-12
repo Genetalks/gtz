@@ -132,15 +132,15 @@ Command:
 ## 涅槃计划
 gtz文件名为: nova_rna_1.fq.gtz
 
-步骤一:
-	运行以下命令提取解压缩内嵌程序gtz_reborn到当前目录下会生成可执行文件gtz_reborn
+步骤一:  
+	运行以下命令提取解压缩内嵌程序gtz_reborn到当前目录下会生成可执行文件gtz_reborn  
 	`sed -e 's/\[GTZ_REBORN_BEGIN\]/\n&/;' nova_rna_1_head.fq.gtz　|　sed -n '/\[GTZ_REBORN_BEGIN\]/,/\[GTZ_REBORN_END\]/p' |sed -e 's/.*\[GTZ_REBORN_BEGIN\]//g' -e 's/\[GTZ_REBORN_END\].*//g' | tar -zxvf -`
 
-步骤二:
-	运行:
-	`./gtz_reborn -d nova_rna_1.fq.gtz`
-	情形一: 如果nova_rna_1.fq.gtz是高倍率压缩文件，需要按提示下载对应的fasta文件，然后再解压
-	情形二: 如果nova_rna_1.fq.gtz不是高倍压缩文件，则该命令可以直接解压出原始的fastq文件
+步骤二:  
+	运行:  
+	`./gtz_reborn -d nova_rna_1.fq.gtz`  
+	情形一: 如果nova_rna_1.fq.gtz是高倍率压缩文件，需要按提示下载对应的fasta文件，然后再解压  
+	情形二: 如果nova_rna_1.fq.gtz不是高倍压缩文件，则该命令可以直接解压出原始的fastq文件  
 
 	
 ## 联系我们
