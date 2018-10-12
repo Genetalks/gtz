@@ -50,12 +50,48 @@ As an enterprise-level software, GTX.Zip has developed a nirvana program for hig
 - **rbin files**:Compact genome reference files which used for decompression.The default file storage path is "~/.config/gtz/"
 - **gtz_index**:An installation tool of GTX.Zip Professional which used to view species list, download rbin files and generate bin files. 
 
-## GTX.Zip Professional Version
+## GTX.Zip Professional
 - GTX.Zip Professional is a stand-alone version which supports local compression service. GTX.Zip Professional runs by command lines for compression and decompression of local genomic data.
 
 ## System Environment Requirements
 - **64-bit Linux system (CentOS 6.5 or above, or Ubuntu 12.04 or above)**                                                                                                                            
 - To achieve good performance, the computing server with **32-core 64GB** memory is recommended (**at least 4-core and 8GB memory**), or that has the same configuration with the **AWS C4.8xlarge** machine)
+
+## Quick Start	
+
+- **1、Install GTX.Zip**  
+- Method 1(recommended)
+	`sudo curl -sSL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`	
+- Method 2：  
+	Download from: https://gtz.io/gtz_latest.run 
+	
+	Change permissions: `chmod +x ./gtz_latest.run `
+	
+	Install: ` ./gtz_latest.run`
+	
+- **2、Make index to enable high rate compression**  
+ Take the human sample species as an example, make the index file (bin file) required for GTX.Zip high rate compression
+
+- Download the 18th rbin (18 is the serial number of the human rbin file, see the rbin file sequence number and its corresponding download URL in the appendix) and save to the default path (~/.config/gtz):
+
+ `gtz_index download 18`
+ 
+ or 
+ 
+ You can download rbin file from  here ( [Homo_sapiens rbin file](https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin) )
+
+ 
+-  Make the index bin file ( make sure you have 20GB disk space )
+ gtz_index makeindex ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin  
+ 
+
+- **3、Compress sample fastq file **	  
+ `gtz  sample.fq -o  sample.fq.gtz --bin-file  ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.bin` 
+ 
+ You can download the sample.fq from https://gtz.io/sample.fq. (1GB, extracted from a real WES data produced by Novaseq)
+ 
+ Notice: gtz can also directly compress fastq.gz file.
+ 
 
 ## Installation Instruction	
 - Method 1 (recommended):  
