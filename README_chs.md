@@ -168,9 +168,11 @@ Command:
 
 
 ## 附件2
--当前支持物种的RBIN文件下载地址列表
+
+当前支持物种的RBIN文件下载地址列表：
+
 No. | 物种 | 官方链接
-----|-------- | -------------
+----|---- | --------
 1 | Ailuropoda melanoleuca | https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Ailuropoda_melanoleuca_9d59370cb06760b671353b20224ec2de.rbin        
 2 | Apis mellifera | https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Apis_mellifera_10a768025aad33307a53bc077b60e4c8.rbin         
 3 | Homoidopsis thaliana | https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Homoidopsis_thaliana_3dcb9b7a5a8b46c8ebbdbbdb3e0fa233.rbin             
