@@ -63,10 +63,10 @@ GTX.Zip Professional为用户提供便捷的单机版压缩服务，可以灵活
 
 
 ## 安装说明	
-	方式一（推荐）：
-	curl -sSL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run
+方式一（推荐）：
+	`curl -sSL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`
 
-	方式二：
+方式二：
 	下载文件gtz_latest.run，然后执行它。
 	
 ### gtz的用法
