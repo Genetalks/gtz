@@ -99,17 +99,17 @@ Command:
 2:将文件Arab_E822-R02-I_good_1.fq压缩到当前目录的out文件夹内,以上两种情况没有指定bin，会根据程序自动识别物种功能去压缩,以下为指定物种的使用方式--index-bin  
 	`./gtz Arab_E822-R02-I_good_1.fq -o ./out/Arab_E822-R02-I_good_1.fq.gz.gtz`
 
-3:GTZ通过指定当前目录下Arab文件夹中BIN文件的方式来进行高倍压缩  
+3:GTZ通过指定当前目录下Arab文件夹中BIN文件的方式来进行高倍压缩   
 	`./gtz Arab_E822-R02-I_good_1.fq -o Arab_E822-R02-I_good_1.fq.gz.gtz --index-bin ./Arab/Arabidopsis_thaliana_3dcb9b7a5a8b46c8ebbdbbdb3e0fa233.bin`
 
 ### 解压举例
 1:将文件Arab_E822-R02-I_good_1.fq解压到当前路径，如果"\~/.config/gtz/"下没有对应的rbin文件，程序会自动从云下载至"\~/.config/gtz/"   
 	`./gtz -d Arab_E822-R02-I_good_1.fq.gz.gtz`
 
-2:指定已有的rbin文件所在文件夹 --index-path; 当rbin文件存在于"\~/.config/gtz/"的其它地方，则可以指定rbin所在文件夹的形式进行解压，目前rbin文件存在于“\~/Arab” 
+2:指定已有的rbin文件所在文件夹 --index-path; 当rbin文件存在于"\~/.config/gtz/"的其它地方，则可以指定rbin所在文件夹的形式进行解压，目前rbin文件存在于“\~/Arab”  
 	`./gtz -d Arab_E822-R02-I_good_1.fq.gz.gtz --index-path ~/Arab`
 
-3:将文件Arab_E822-R02-I_good_1.fq.gz.gtz解压至当前路径的Arab文件夹下  
+3:将文件Arab_E822-R02-I_good_1.fq.gz.gtz解压至当前路径的Arab文件夹下   
 	`./gtz -d Arab_E822-R02-I_good_1.fq.gz.gtz -outdir ./Arab`		
 			
 ### gtz_index举例
