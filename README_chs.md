@@ -240,7 +240,7 @@ Command:
 
 -   [36  Triticum aestivum](https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Triticum_aestivum_8e2da4d2c18d5fadd1d3cd0c15e918d0.rbin)                                 
 
--   [37  Zea mays](https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Zea_mays_898a827cde37664a7c0ac710d79b333f.rbinm)                                          
+-   [37  Zea mays](https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Zea_mays_898a827cde37664a7c0ac710d79b333f.rbin)                                          
 
 	
 ## 联系我们
