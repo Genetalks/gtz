@@ -110,7 +110,7 @@ Command:
 	`./gtz -d Arab_E822-R02-I_good_1.fq.gz.gtz --index-path ~/Arab`
 
 3:将文件Arab_E822-R02-I_good_1.fq.gz.gtz解压至当前路径的Arab文件夹下   
-	`./gtz -d Arab_E822-R02-I_good_1.fq.gz.gtz -outdir ./Arab`		
+	`./gtz -d Arab_E822-R02-I_good_1.fq.gz.gtz --out-dir ./Arab`		
 			
 ### gtz_index举例
 -	交互模式：
@@ -130,7 +130,7 @@ Command:
 		
 
 ## 涅槃计划
-gtz文件名为: nova_rna_1.fq.gtz
+假定gtz文件名为: nova_rna_1.fq.gtz
 
 步骤一:  
 	运行以下命令提取解压缩内嵌程序gtz_reborn到当前目录下会生成可执行文件gtz_reborn  
