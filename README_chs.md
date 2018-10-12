@@ -73,9 +73,9 @@ GTX.Zip Professional为用户提供便捷的单机版压缩服务，可以灵活
 usage: gtz [-h] [-o OUT] [-b INDEX_BIN] [-d DECOMPRESS] [-O OUT_DIR]  
 
 -h, --help&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;显示帮助信息  
--o OUT, --out OUT&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;指定GTZ压缩文件的输出路径  
+-o OUT, --out OUT&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;指定GTZ压缩文件的输出路径  
 -b BIN_FILE, --bin-file BIN_FILE&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;通过指定所需物种BIN文件进行高倍率压缩  
--d DECOMPRESS, --decompress DECOMPRESS&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;解压缩GTZ文件  
+-d DECOMPRESS, --decompress DECOMPRESS&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;解压缩GTZ文件  
 -O OUT_DIR, --out-dir OUT_DIR&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;指定解压后文件的保存路径  
 -r RBIN_PATH, --rbin-path RBIN_PATH&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;通过指定RBIN文件解压  
 -f, --force&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;输出覆盖同名文件  
