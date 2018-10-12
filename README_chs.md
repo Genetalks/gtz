@@ -63,11 +63,15 @@ GTX.Zip Professional为用户提供便捷的单机版压缩服务，可以灵活
 	
 - **2、制作参考基因组BIN文件（定义见附件1）**  
  以人类（Homo_sapiens）为样本数据的物种，利用软件包里自带的gtz_index 工具下载并制作BIN文件  
--下载人类RBIN文件（定义见附件1）并保存到默认路径  
- `gtz_index download 18  `  
--下载完毕之后，制作BIN文件  
- `gtz_index makeindex ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin`  
+```
 
+-下载人类RBIN文件（定义见附件1）并保存到默认路径  
+ gtz_index download 18
+ 
+-下载完毕之后，制作BIN文件  
+ gtz_index makeindex ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin  
+ 
+```
 - **3、下载待压缩样本**	  
  样本下载：[sample.fq](https://gtz.io/sample.fq)  
 
@@ -85,6 +89,7 @@ usage: gtz [-h] [-o OUT] [-b INDEX_BIN] [-d DECOMPRESS] [-O OUT_DIR]
 -d DECOMPRESS, --decompress DECOMPRESS                        解压缩GTZ文件  
 -O OUT_DIR, --out-dir OUT_DIR                                 指定解压后文件的保存路径  
 -r RBIN_PATH, --rbin-path RBIN_PATH                           通过指定RBIN文件解压  
+-p PARALLEL_NUM,--parallel				      指定并行压缩/解压的线程数，默认等于CPU逻辑核数
 -f, --force                                                   输出覆盖同名文件  
 -k, --keep                                                    保留源文件  
 -v, --version                                                 显示版本号  
