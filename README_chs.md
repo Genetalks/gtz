@@ -113,32 +113,34 @@ Command:
 	`./gtz -d Arab_E822-R02-I_good_1.fq.gz.gtz -outdir ./Arab`		
 			
 ### gtz_index举例
-	交互模式：
-		./gtz_index
-		显示当前支持的物种列表，并且通过人机交互的模式逐步制作成BIN文件。
+-	交互模式：
+		显示当前支持的物种列表，并且通过人机交互的模式逐步制作成BIN文件  
+		`./gtz_index`
 
-	手动模式：
-		1 ./gtz_index list
-		显示当前支持的物种列表，其中index编号为gtz_index download 命令的输入，下载对应物种的rbin文件
+-	手动模式：
+	1:显示当前支持的物种列表，其中index编号为gtz_index download 命令的输入，下载对应物种的rbin文件  
+		`./gtz_index list`  
 
-		2 ./gtz_index download 3
-		下载编号为3的Arab物种的rbin文件。
+	2:下载编号为3的Arab物种的rbin文件  
+		`./gtz_index download 3`
+		
 
-		3 ./gtz_index makeindex ./Arab/Arabidopsis_thaliana_3dcb9b7a5a8b46c8ebbdbbdb3e0fa233.rbin
-		通过指定rbin文件 “./Arab/Arabidopsis_thaliana_3dcb9b7a5a8b46c8ebbdbbdb3e0fa233.rbin"制作Arabidopsis_thaliana物种的bin、rec文件
+	3:通过指定rbin文件 “./Arab/Arabidopsis_thaliana_3dcb9b7a5a8b46c8ebbdbbdb3e0fa233.rbin"制作Arabidopsis_thaliana物种的bin、rec文件  
+		`./gtz_index makeindex ./Arab/Arabidopsis_thaliana_3dcb9b7a5a8b46c8ebbdbbdb3e0fa233.rbin`
+		
 
 ## 涅槃计划
-		gtz文件名为: nova_rna_1.fq.gtz
+gtz文件名为: nova_rna_1.fq.gtz
 
-		步骤一
-		运行以下命令提取解压缩内嵌程序gtz_reborn到当前目录下会生成可执行文件gtz_reborn
+步骤一:
+	运行以下命令提取解压缩内嵌程序gtz_reborn到当前目录下会生成可执行文件gtz_reborn
+	`sed -e 's/\[GTZ_REBORN_BEGIN\]/\n&/;' nova_rna_1_head.fq.gtz　|　sed -n '/\[GTZ_REBORN_BEGIN\]/,/\[GTZ_REBORN_END\]/p' |sed -e 's/.*\[GTZ_REBORN_BEGIN\]//g' -e 's/\[GTZ_REBORN_END\].*//g' | tar -zxvf -`
 
-		sed -e 's/\[GTZ_REBORN_BEGIN\]/\n&/;' nova_rna_1_head.fq.gtz　|　sed -n '/\[GTZ_REBORN_BEGIN\]/,/\[GTZ_REBORN_END\]/p' |sed -e 's/.*\[GTZ_REBORN_BEGIN\]//g' -e 's/\[GTZ_REBORN_END\].*//g' | tar -zxvf -
-
-		步骤二
-		运行./gtz_reborn -d nova_rna_1.fq.gtz
-		情形一: 如果nova_rna_1.fq.gtz是高倍率压缩文件，需要按提示下载对应的fasta文件，然后再解压
-		情形二: 如果nova_rna_1.fq.gtz不是高倍压缩文件，则该命令可以直接解压出原始的fastq文件
+步骤二:
+	运行:
+	`./gtz_reborn -d nova_rna_1.fq.gtz`
+	情形一: 如果nova_rna_1.fq.gtz是高倍率压缩文件，需要按提示下载对应的fasta文件，然后再解压
+	情形二: 如果nova_rna_1.fq.gtz不是高倍压缩文件，则该命令可以直接解压出原始的fastq文件
 
 	
 ## 联系我们
