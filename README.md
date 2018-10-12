@@ -102,7 +102,7 @@ gtz_index <command> [options]
 	`/gtz -d Arab_E822-R02-I_good_1.fq.gz.gtz --rbin-path ~/Arab`  
 
 3.Decompress Arab_e822-r02-i_good_1.fq.gz.gtz to the Arab folder in the current path  
-	`./gtz -d Arab_E822-R02-I_good_1.fq.gz.gtz -outdir ./Arab`  
+	`./gtz -d Arab_E822-R02-I_good_1.fq.gz.gtz --out-dir ./Arab`  
 
 ## gtz_index
 Interaction mode:  
