@@ -72,16 +72,16 @@ As an enterprise-level software, GTX.Zip has developed a nirvana program for hig
 - **2、Make index to enable high rate compression**  
  Take the human sample species as an example, make the index file (bin file) required for GTX.Zip high rate compression
 
-- Download the 18th rbin (18 is the serial number of the human rbin file, see the rbin file sequence number and its corresponding download URL in the appendix) and save to the default path (~/.config/gtz):
+   - Download the 18th rbin (18 is the serial number of the human rbin file, see the rbin file sequence number and its corresponding download URL in the appendix) and save to the default path (~/.config/gtz):
 
- `gtz_index download 18`
+    `gtz_index download 18`
  
- or 
+    or 
  
- You can download rbin file from  here ( [Homo_sapiens rbin file](https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin) )
+     You can download rbin file from  here ( [Homo_sapiens rbin file](https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin) )
 
  
--  Make the index bin file ( make sure you have 20GB disk space )
+   - Make the index bin file ( make sure you have 20GB disk space )
  gtz_index makeindex ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin  
  
 
