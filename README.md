@@ -2,7 +2,7 @@
 
 Powered by GTXLab of Genetalks.  
 - One-click installation:  
-	`curl -sSL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`
+	`sudo curl -sSL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`
 
 - GTX.Zip Professional download URL:https://gtz.io/gtz_latest.run
 
@@ -58,7 +58,7 @@ GTX.Zip compressor system features:
 
 ## Installation Instruction	
 - Method 1 (recommended):  
-	`curl -sSL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`
+	`sudo curl -sSL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`
 
 - Method 2:  
 	Download the gtz_latest.run, and then execute the it. 
