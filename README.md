@@ -59,39 +59,47 @@ As an enterprise-level software, GTX.Zip has developed a nirvana program for hig
 
 ## Quick Start	
 
-- **1、Install GTX.Zip**  
-- Method 1(recommended)
-	`sudo curl -sSL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`	
-- Method 2：  
-	Download from: https://gtz.io/gtz_latest.run 
+1. **Install GTX.Zip**
+   - Method 1(recommended)
+   
+	`sudo curl -sSL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`
 	
-	Change permissions: `chmod +x ./gtz_latest.run `
+   - Method 2：
+   
+	Download from:
 	
-	Install: ` ./gtz_latest.run`
+    	   https://gtz.io/gtz_latest.run
 	
-- **2、Make index to enable high rate compression**  
- Take the human sample species as an example, make the index file (bin file) required for GTX.Zip high rate compression
+	Change permissions:
+	
+    	  `chmod +x ./gtz_latest.run`
+	
+	Install:
+	
+    	  `./gtz_latest.run`
+2. **Make index to enable high rate compression**
+   Take the human sample species as an example, make the index file (bin file) required for GTX.Zip high rate compression
+   
+   - Download the 18th rbin file (18 is the number of the human rbin file in the appendix list) and gtz_index will save it to the default path (~/.config/gtz):
+   
+      `gtz_index download 18`
+      
+      or
+      
+      You can download rbin file from  here ( [Homo_sapiens rbin file](https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin) )
 
-   - Download the 18th rbin (18 is the serial number of the human rbin file, see the rbin file sequence number and its corresponding download URL in the appendix) and save to the default path (~/.config/gtz):
-
-    `gtz_index download 18`
- 
-    or 
- 
-     You can download rbin file from  here ( [Homo_sapiens rbin file](https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin) )
-
- 
    - Make the index bin file ( make sure you have 20GB disk space )
- gtz_index makeindex ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin  
- 
+   
+     `gtz_index makeindex ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin`
 
-- **3、Compress sample fastq file **	  
- `gtz  sample.fq -o  sample.fq.gtz --bin-file  ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.bin` 
+3. **Compress sample fastq file**
+
+    `gtz  sample.fq -o  sample.fq.gtz --bin-file  ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.bin` 
  
- You can download the sample.fq from https://gtz.io/sample.fq. (1GB, extracted from a real WES data produced by Novaseq)
- 
- Notice: gtz can also directly compress fastq.gz file.
- 
+    sample.fq can be downloaded from https://gtz.io/sample.fq. (1GB fastq file, extracted from a real WES data produced by Novaseq)
+  
+    [^] Notice: gtz can also directly compress fastq.gz file.
+
 
 ## Installation Instruction	
 - Method 1 (recommended):  
