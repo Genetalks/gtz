@@ -88,7 +88,7 @@ As an enterprise-level software, GTX.Zip has developed a nirvana program for hig
       
       You can download rbin file from  here ( [Homo_sapiens rbin file](https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin) )
 
-   - Make the index bin file ( make sure you have 20GB disk space )
+   - Make the index bin file ( make sure you have 20GB disk space, and 28GB memory, otherwise skip this step )
    
      `gtz_index makeindex ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin`
 
