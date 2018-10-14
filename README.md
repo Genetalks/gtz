@@ -173,7 +173,7 @@ Manual mode
 Let’s start Nirvana plan!At first, we have a gtz file named nova_rna_1.fq.gtz.  
 Step 1:  
 Run the following command to extract the embeded programe gtz_reborn to current directory:  
-	`sed -e 's/\[GTZ_REBORN_BEGIN\]/\n&/;' nova_rna_1_head.fq.gtz　| sed -n '/\[GTZ_REBORN_BEGIN\]/,/\[GTZ_REBORN_END\]/p' | sed -e 's/.*\[GTZ_REBORN_BEGIN\]//g' -e 's/\[GTZ_REBORN_END\].*//g' | tar -zxvf -`
+	`sed -e 's/\[GTZ_REBORN_BEGIN\]/\n&/;' nova_rna_1_head.fq.gtz | sed -n '/\[GTZ_REBORN_BEGIN\]/,/\[GTZ_REBORN_END\]/p' | sed -e 's/.*\[GTZ_REBORN_BEGIN\]//g' -e 's/\[GTZ_REBORN_END\].*//g' | tar -zxvf -`
 
 Step2:  
 If nova_rna_1.fq.gtz is a high compression file, download the corresponding fasta file according to the prompt, and then extract the file.  
