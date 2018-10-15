@@ -90,10 +90,10 @@ usage: gtz [-h] [-o OUT] [-b INDEX_BIN] [-d DECOMPRESS] [-O OUT_DIR]
 
 -h, --help                                                    显示帮助信息  
 -o OUT, --out OUT                                             指定GTZ压缩文件的输出路径  
--b BIN_FILE, --bin-file BIN_FILE                              通过指定所需物种BIN文件进行高倍率压缩  
+-b BIN_FILE, --bin-file BIN_FILE                              通过指定所需物种bin文件进行高倍率压缩  
 -d DECOMPRESS, --decompress DECOMPRESS                        解压缩GTZ文件  
 -O OUT_DIR, --out-dir OUT_DIR                                 指定解压后文件的保存路径  
--r RBIN_PATH, --rbin-path RBIN_PATH                           通过指定RBIN文件解压  
+-r RBIN_PATH, --rbin-path RBIN_PATH                           通过指定rbin文件解压  
 -p PARALLEL_NUM,--parallel				      指定并行压缩/解压的线程数，默认等于CPU逻辑核数
 -f, --force                                                   输出覆盖同名文件  
 -k, --keep                                                    保留源文件  
