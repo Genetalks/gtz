@@ -96,7 +96,7 @@ usage: gtz [-h] [-o OUT] [-b INDEX_BIN] [-d DECOMPRESS] [-O OUT_DIR]
 -r RBIN_PATH, --rbin-path RBIN_PATH                           通过指定rbin文件解压  
 -p PARALLEL_NUM,--parallel				      指定并行压缩/解压的线程数，默认等于CPU逻辑核数
 -f, --force                                                   输出覆盖同名文件  
--k, --keep                                                    保留源文件  
+-e, --erase                                                   删除源文件  
 -v, --version                                                 显示版本号  
 ```
 
