@@ -139,18 +139,18 @@ gtz_index <command> [options]
 2:Compress the file sample.fq into the out folder of the current directory.Without the specified BIN file, GTZ will automatically recognize the species to compress.  
 	`gtz sample.fq -o ./out/sample.fq.gtz `   
 
-3.GTZ performs high compression by specifying BIN files in the Arab folder under the current directory.  
+3.GTZ performs high compression by specifying BIN files in the Homo folder under the current directory.  
 	`gtz sample.fq -o sample.fq.gtz --index-bin ./Homo/Homo_sapiens_bcacac9064331276504f27c6cf40e580.bin`  
 
 ### Decompress
 1.Deompress the file sample.fq to the current directory.If there is no species RBIN file under "\~/.config/ gtz/", GTZ will be automatically downloaded from the Cloud to "\~/.config/ gtz /".  
 	`gtz -d sample.fq.gtz` 
 
-2.Specify the directory of the rbin path “~/Homo” for decompress sample.fq.gz.gtz.  
-	`gtz -d sample.gtz --index-path ~/Homo` 
+2.Specify the directory of the rbin path “~/Homo” for decompress sample.fq.gtz.  
+	`gtz -d sample.fq.gtz --index-path ~/Homo` 
 
-3.Decompress sample.fq.gz.gtz to the Arab folder in the current path  
-	`gtz -d sample.fq.gz.gtz --out-dir ./Homo`  
+3.Decompress sample.fq.gtz to the Homo folder in the current path  
+	`gtz -d sample.fq.gtz --out-dir ./Homo`  
 
 ## gtz_index
 Interaction mode:  
