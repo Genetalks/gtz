@@ -75,17 +75,17 @@ As an enterprise-level software, GTX.Zip has developed a nirvana program for hig
 	
     	  `./gtz_latest.run`
 2. **Make index to enable high rate compression**
-   Take the human sample species as an example, make the index file (BIN file) required for GTX.Zip high rate compression
+   Take the human sample species as an example, make the index file (bin file) required for GTX.Zip high rate compression
    
-   - Download the 18th RBIN file (18 is the number of the human RBIN file in the appendix list) and gtz_index will save it to the default path (~/.config/gtz):
+   - Download the 18th rbin file (18 is the number of the human RBIN file in the appendix list) and gtz_index will save it to the default path (~/.config/gtz):
    
       `gtz_index download 18`
       
       or
       
-      You can download RBIN file from  here ( [Homo_sapiens RBIN file](https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin) )
+      You can download rbin file from  here ( [Homo_sapiens RBIN file](https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin) )
 
-   - Make the index BIN file ( may need 80~100GB free disk space, and >28GB memory, and 10 mins)
+   - Make the index bin file ( may need 80~100GB free disk space, and >28GB memory, and 10 mins)
    
      `gtz_index makeindex ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin`
 
@@ -112,10 +112,10 @@ usage: gtz [-h] [-o OUT] [-b INDEX_BIN] [-d DECOMPRESS] [-O OUT_DIR]
 
 -h, --help                                      show this help message and exit  
 -o OUT, --out OUT                               specify the GTZ file name after compression  
--b BIN_FILE, --bin-file BIN_FILE                specify the BIN file name for high compression  
+-b BIN_FILE, --bin-file BIN_FILE                specify the bin file name for high compression  
 -d DECOMPRESS, --decompress DECOMPRESS          decompress  
 -O OUT_DIR, --out-dir OUT_DIR                   specify the save path of the extracted file  
--r RBIN_PATH, --rbin-path RBIN_PATH             specify the path where the RBIN file resides  
+-r RBIN_PATH, --rbin-path RBIN_PATH             specify the path where the rbin file resides  
 -p PARALLEL_NUM,--parallel			specify parallel number for compression or decompression, 
 						default equal CPU logical cores
 -f, --force                                     force overwrite of output file  
@@ -133,17 +133,17 @@ gtz_index <command> [options]
 
 ## For Example:
 ### Compress  
-1:Compress the sample.fq to the current directory.Without the specified BIN file, GTZ will automatically recognize the species to compress.  
+1:Compress the sample.fq to the current directory.Without the specified bin file, GTZ will automatically recognize the species to compress.  
 	`gtz sample.fq -o sample.fq.gtz `   
 
-2:Compress the file sample.fq into the out folder of the current directory.Without the specified BIN file, GTZ will automatically recognize the species to compress.  
+2:Compress the file sample.fq into the out folder of the current directory.Without the specified bin file, GTZ will automatically recognize the species to compress.  
 	`gtz sample.fq -o ./out/sample.fq.gtz `   
 
-3.GTZ performs high compression by specifying BIN files in the Homo folder under the current directory.  
+3.GTZ performs high compression by specifying bin files in the Homo folder under the current directory.  
 	`gtz sample.fq -o sample.fq.gtz --index-bin ./Homo/Homo_sapiens_bcacac9064331276504f27c6cf40e580.bin`  
 
 ### Decompress
-1.Deompress the file sample.fq to the current directory.If there is no species RBIN file under "\~/.config/ gtz/", GTZ will be automatically downloaded from the Cloud to "\~/.config/ gtz /".  
+1.Deompress the file sample.fq to the current directory.If there is no species rbin file under "\~/.config/ gtz/", GTZ will be automatically downloaded from the Cloud to "\~/.config/ gtz /".  
 	`gtz -d sample.fq.gtz` 
 
 2.Specify the directory of the rbin path “~/Homo” for decompress sample.fq.gtz.  
@@ -160,9 +160,9 @@ Show supported species and you can gradually create bin files through human-mach
 Manual mode  
 1:Show supported species list，the index number is the input of the gtz_index download command.  
 	`gtz_index list`  
-2:Download the RBIN file in the species list with No.18 index  
+2:Download the rbin file in the species list with No.18 index  
 	`gtz_index download 18`  
-3:Make BIN,rec file by specifying the rbin file". /Homo/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbinn "  
+3:Make BIN,rec file by specifying the rbin file". /Homo/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin "  
 	`gtz_index makeindex ./Homo/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin`
 
 
@@ -173,16 +173,16 @@ Run the following command to extract the embeded programe gtz_reborn to current 
 	`sed -e 's/\[GTZ_REBORN_BEGIN\]/\n&/;' sample.fq.gtz | sed -n '/\[GTZ_REBORN_BEGIN\]/,/\[GTZ_REBORN_END\]/p' | sed -e 's/.*\[GTZ_REBORN_BEGIN\]//g' -e 's/\[GTZ_REBORN_END\].*//g' | tar -zxvf -`
 
 Step2:  
-If nova_rna_1.fq.gtz is a high compression file, download the corresponding fasta file according to the prompt, and then extract the file.  
-If nova_rna_1.fq.gtz is not a high compression file, the FASTQ file can be extracted directly  
+If sample.fq.gtz is a high compression file, download the corresponding fasta file according to the prompt, and then extract the file.  
+If sample.fq.gtz is not a high compression file, the FASTQ file can be extracted directly  
 	`gtz_reborn -d sample.fq.gtz`
 
 ## Note:
-- **BIN files**:Genome reference index files which used for compression.The default file storage path is "~/.config/gtz/"
-- **RBIN files**:Compact genome reference files which used for decompression.The default file storage path is "~/.config/gtz/"
+- **bin files**:Genome reference index files which used for compression.The default file storage path is "~/.config/gtz/"
+- **rbin files**:Compact genome reference files which used for decompression.The default file storage path is "~/.config/gtz/"
 - **gtz_index**:An installation tool of GTX.Zip Professional which used to view species list, download rbin files and generate bin files. 
 
-## RBINs Download 
+## rbins Download 
 
 No. | Species | Official Url
 ----|-------- | -------------
