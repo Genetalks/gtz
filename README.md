@@ -69,11 +69,11 @@ As an enterprise-level software, GTX.Zip has developed a nirvana program for hig
 	
 	Change permissions:
 	
-    	  `chmod +x ./gtz_latest.run`
+    	  chmod +x ./gtz_latest.run
 	
 	Install:
 	
-    	  `./gtz_latest.run`
+    	  ./gtz_latest.run
 2. **Make index to enable high rate compression**
    Take the human sample species as an example, make the index file (bin file) required for GTX.Zip high rate compression
    
