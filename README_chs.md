@@ -77,7 +77,12 @@ GTX.Zip Professional为用户提供便捷的单机版压缩服务，可以灵活
 
 - **4、开始压缩**	  
  `gtz  sample.fq -o  sample.fq.gtz --bin-file  ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.bin`  
-
+ 
+### 安装软件  
+-方式一（推荐）：  
+	`sudo curl -sSL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`  
+-方式二：  
+	下载安装文件[gtz_latest.run](https://gtz.io/gtz_latest.run)，然后执行`  
 	
 ### GTX.Zip主程序gtz用法
 ```  
