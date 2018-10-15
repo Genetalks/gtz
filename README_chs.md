@@ -61,14 +61,14 @@ GTX.Zip Professional为用户提供便捷的单机版压缩服务，可以灵活
 -方式二：  
 	下载安装文件[gtz_latest.run](https://gtz.io/gtz_latest.run)，然后执行`  
 	
-- **2、制作参考基因组BIN文件（定义见附件1）**  
- 以人类（Homo_sapiens）为样本数据的物种，利用软件包里自带的gtz_index 工具下载并制作BIN文件  
+- **2、制作参考基因组bin文件（定义见附件1）**  
+ 以人类（Homo_sapiens）为样本数据的物种，利用软件包里自带的gtz_index 工具下载并制作bin文件  
 ```
 
--下载人类RBIN文件（定义见附件1）并保存到默认路径  
+-下载人类rbin文件（定义见附件1）并保存到默认路径  
  gtz_index download 18
  
--下载完毕之后，制作BIN文件  
+-下载完毕之后，制作rbin文件  
  gtz_index makeindex ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin  
  
 ```
@@ -164,9 +164,9 @@ Command:
 
 ## 附件1
 
-**BIN文件**:压缩时用到的参考序列索引文件。文件默认存放路径为："~/.config/gtz/"
+**bin文件**:压缩时用到的参考序列索引文件。文件默认存放路径为："~/.config/gtz/"
 
-**RBIN文件**:解压缩时用到的紧致参考序列文件。文件默认存放路径为："~/.config/gtz/"
+**rbin文件**:解压缩时用到的紧致参考序列文件。文件默认存放路径为："~/.config/gtz/"
 
 **gtz_index**:GTX.Zip Professional 安装目录下的工具软件，可以用来查看支持物种列表、下载rbin、制作bin。
 
@@ -174,7 +174,7 @@ Command:
 
 ## 附件2
 
-当前支持物种的RBIN文件下载地址列表：
+当前支持物种的rbin文件下载地址列表：
 
 No. | 物种 | 官方链接
 ----|---- | --------
