@@ -83,7 +83,7 @@ As an enterprise-level software, GTX.Zip has developed a nirvana program for hig
       
       or
       
-      You can download rbin file from  here ( [Homo_sapiens RBIN file](https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin) )
+      You can download rbin file from  here ( [Homo_sapiens rbin file](https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin) )
 
    - Make the index bin file ( may need 80~100GB free disk space, and >28GB memory, and 10 mins)
    
@@ -182,7 +182,7 @@ If sample.fq.gtz is not a high compression file, the FASTQ file can be extracted
 - **rbin files**:Compact genome reference files which used for decompression.The default file storage path is "~/.config/gtz/"
 - **gtz_index**:An installation tool of GTX.Zip Professional which used to view species list, download rbin files and generate bin files. 
 
-## rbins Download 
+## Rbin files Download 
 
 No. | Species | Official Url
 ----|-------- | -------------
