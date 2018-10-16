@@ -80,9 +80,9 @@ GTX.Zip Professional为用户提供便捷的单机版压缩服务，可以灵活
  
 ### 安装软件  
 -方式一（推荐）：  
-	`sudo curl -sSL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`  
+ `sudo curl -sSL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`  
 -方式二：  
-	下载安装文件[gtz_latest.run](https://gtz.io/gtz_latest.run)，然后执行`  
+ `下载安装文件[gtz_latest.run](https://gtz.io/gtz_latest.run)，然后执行`  
 	
 ### GTX.Zip主程序gtz用法
 ```  
@@ -108,7 +108,7 @@ gtz_index <command> [options]
 Command:  
 - list                                                         查看现在支持的所有物种信息  
 - download <index> <path_to>                                   下载紧致参考序列rbin文件  
-- make <rbin_path>                                             制作参考序列索引bin文件  
+- makeindex <rbin_path>                                        制作参考序列索引bin文件  
 ```  
          
 ## 示例：	         
