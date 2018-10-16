@@ -65,15 +65,15 @@ As an enterprise-level software, GTX.Zip has developed a nirvana program for hig
    
 	Download from:
 	
-    	   https://gtz.io/gtz_latest.run
+    	https://gtz.io/gtz_latest.run
 	
 	Change permissions:
 	
-    	  chmod +x ./gtz_latest.run
+    	chmod +x ./gtz_latest.run
 	
 	Install:
 	
-    	  ./gtz_latest.run
+    	./gtz_latest.run
 2. **Make index to enable high rate compression**
    Take the human sample species as an example, make the index file (bin file) required for GTX.Zip high rate compression
    
@@ -128,7 +128,7 @@ usage: gtz [-h] [-o OUT] [-b INDEX_BIN] [-d DECOMPRESS] [-O OUT_DIR]
 gtz_index <command> [options]
 -	list					show species which current support
 -	download <index> <path_to>		download species reference sequence rbin file , path_to is not necessary.
--	make <rbin_path>			making reference sequence  
+-	makeindex <rbin_path>			making reference sequence  
 ```
 
 ## For Example:
