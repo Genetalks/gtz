@@ -175,7 +175,7 @@ Run the following command to extract the embeded programe gtz_reborn to current 
 Step2:  
 If sample.fq.gtz is a high compression file, download the corresponding fasta file according to the prompt, and then extract the file.  
 If sample.fq.gtz is not a high compression file, the FASTQ file can be extracted directly  
-	`gtz_reborn -d sample.fq.gtz`
+	`./gtz_reborn -d sample.fq.gtz`
 
 ## Note:
 - **bin files**:Genome reference index files which used for compression.The default file storage path is "~/.config/gtz/"
