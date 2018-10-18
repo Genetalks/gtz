@@ -119,7 +119,7 @@ usage: gtz [-h] [-o OUT] [-b INDEX_BIN] [-d DECOMPRESS] [-O OUT_DIR]
 -p PARALLEL_NUM,--parallel			specify parallel number for compression or decompression, 
 						default equal CPU logical cores
 -f, --force                                     force overwrite of output file  
--e, --erase                                     erase input files  
+-e, --no-keep                                   don't keep input files  
 -v, --version                                   display version number  
 ```
 
