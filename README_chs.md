@@ -9,17 +9,27 @@ Powered by GTXLab of Genetalks.
 
 [English Manual](https://github.com/Genetalks/gtz/blob/master/README.md "Markdown").
 
-[快速上手](#quick-start)
-## 系统简介
+## 目录
+- [简介](#intro)  
+- [特性](#feature)  
+- [建议运行环境](#environment)  
+- [安装软件](#install)
+- [快速上手](#quick-start)
+- [使用方法](#usage)
+
+
+## 简介<span id="intro"></span>
 
 GTX.Zip是面向基因行业，结合行业数据特征，对基因测序数据进行定向优化，支持所有文件格式的高倍无损压缩系统。**该系统具有业界最高无损压缩倍率和速度，能以1100MB/s的极致速度，将基因测序数据压缩至原大小的2%。该系统采用高效“多流数据”存储结构，可对测序数据文件及文件目录进行高倍率快速压缩和打包，并支持随机寻址等高级功能，赋能用户对海量基因数据进行方便快捷的存储、传输、分发和提取**。
+本次发布的是GTX.Zip Professional版本，它可以为用户提供便捷的单机版压缩服务，可以灵活地使用默认或指定参考基因组对本地基因组数据文件进行压缩、解压操作。
 
 目前 GTX.Zip Professional, GTX.Zip Enterprise, GTX.Zip Cloud三个产品已正式面世，分别适用于以下客户：
 - 	**GTX.Zip Professional**:本地测序数据量大的基因公司、研究机构及个人用户
 - 	**GTX.Zip Enterprise**:拥有PB级本地测序数据，需要通过自有计算集群对数据进行分布式压缩的大型企业和数据中心
 - 	**GTX.Zip Cloud**:云端测序数据分发、存储效率低的企业
 	
-## 技术亮点	
+## 特性<span id="feature"></span>
+
 -	**高倍无损**  
 	- GTX.Zip 采用全球领先的基因数据无损压缩算法，能够将FASTQ文件压缩低至原大小的2%，可以直接重压缩fastq.gz 至原大小的1/6。
 
@@ -46,24 +56,21 @@ GTX.Zip作为企业级软件，针对高可用性需求制定了“涅磐计划�
 -	GTX.Zip多站托管，确保全网随时可下载：gtz.io网站与GitHub等多个站点永久托管GTX.Zip所有版本，确保全网不掉线，免费随时可得。
 -	内嵌应急解压程序，确保极端情况下仍可还原数据：压缩数据中预嵌微型程序，支持在极端特殊情况时，先一键抽取出解压程序再直接还原数据。
 
-## GTX.Zip Professional产品
-GTX.Zip Professional为用户提供便捷的单机版压缩服务，可以灵活地使用默认或指定参考基因组对本地基因组数据文件进行压缩、解压操作。
 	
-	
-## 系统环境要求
+## 建议运行环境<span id="environment"></span>
 - **64位 Linux 系统（CentOS 6.5以上或Ubuntu 12.04以上，推荐Ububtu 14.04及以上64位操作系统)**
 - 4核以上，最小8GB内存的主机系统（若要达到最大并发性，推荐32核 64GB内存，或与AWS C4.8xlarge机器相同配置）
 
-
-
-## 快速上手<span id="quick-start"></span>
-- **1、安装软件**  
+## 安装软件<span id="install"></span>  
 -方式一（推荐）：  
 	`sudo curl -sSL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`  
 -方式二：  
-	下载安装文件[gtz_latest.run](https://gtz.io/gtz_latest.run)，然后执行`  
+	下载安装文件[gtz_latest.run](https://gtz.io/gtz_latest.run)  
 	
-- **2、制作参考基因组bin文件（定义见附件1）**  
+
+## 快速上手<span id="quick-start"></span>
+
+- **1、制作参考基因组bin文件（定义见附件1）**  
  以人类（Homo_sapiens）为样本数据的物种，利用软件包里自带的gtz_index 工具下载并制作bin文件  
 ```
 
@@ -74,18 +81,14 @@ GTX.Zip Professional为用户提供便捷的单机版压缩服务，可以灵活
  gtz_index makeindex ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin  
  
 ```
-- **3、下载待压缩样本**	  
+- **2、下载待压缩样本**	  
  样本下载：[sample.fq](https://gtz.io/sample.fq)  
 
-- **4、开始压缩**	  
+- **3、开始压缩**	  
  `gtz  sample.fq -o  sample.fq.gtz --bin-file  ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.bin`  
  
-### 安装软件  
--方式一（推荐）：  
- `sudo curl -sSL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`  
--方式二：  
- `下载安装文件[gtz_latest.run](https://gtz.io/gtz_latest.run)，然后执行`  
-	
+
+## 使用方法<span id="usage"></span>
 ### GTX.Zip主程序gtz用法
 ```  
 usage: gtz [-h] [-o OUT] [-b INDEX_BIN] [-d DECOMPRESS] [-O OUT_DIR]  
