@@ -61,7 +61,7 @@ GTX.Zip作为企业级软件，针对高可用性需求制定了“涅磐计划�
 运行命令（推荐）  
 	`sudo curl -sSL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`  
 - **方式二：**  
-下载安装文件：[**GTX.Zip Professional **]( https://gtz.io/gtz_latest.run)  
+下载安装文件：[GTX.Zip Professional ]( https://gtz.io/gtz_latest.run)  
 在安装文件目录下运行命令  
 `sudo sh gtz_lastest.run`  
 根据提示完成安装  
@@ -141,8 +141,8 @@ Command:
 1:将文件sample.fq解压到当前路径，如果"~/.config/gtz/"下没有对应的rbin文件，程序会自动从云下载至"~/.config/gtz/"   
     `gtz -d sample.fq.gtz`
 
-2:指定已有的rbin文件所在文件夹 --index-path; 当rbin文件存在于"~/.config/gtz/"的其它地方，则可以指定rbin所在文件夹的形式进行解压，
-示例中rbin文件存在于“\~/Homo”  
+2:指定已有的rbin文件所在文件夹 --index-path; 当rbin文件存在于"~/.config/gtz/"的其它地方，
+则可以指定rbin所在文件夹的形式进行解压，示例中rbin文件存在于“~/Homo”  
     `gtz -d sample.gtz --index-path ~/Homo`
 
 3:将文件sample.fq.gtz解压至当前路径的Homo文件夹下   
