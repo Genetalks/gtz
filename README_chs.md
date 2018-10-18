@@ -7,7 +7,7 @@ Powered by GTXLab of Genetalks.
 ## 目录
 - [简介](#intro)  
 - [特性](#feature)  
-- [建议运行环境](#environment)  
+- [运行环境](#environment)  
 - [安装软件](#install)
 - [快速上手](#quick-start)
 - [使用方法](#usage)
@@ -54,7 +54,7 @@ GTX.Zip作为企业级软件，针对高可用性需求制定了“涅磐计划�
 -	内嵌应急解压程序，确保极端情况下仍可还原数据：压缩数据中预嵌微型程序，支持在极端特殊情况时，先一键抽取出解压程序再直接还原数据。
 
 	
-## 建议运行环境<span id="environment"></span>
+## 运行环境<span id="environment"></span>
 - **64位 Linux 系统（CentOS 6.5以上或Ubuntu 12.04以上，推荐Ububtu 14.04及以上64位操作系统)**
 - 4核以上，最小8GB内存的主机系统（若要达到最大并发性，推荐32核 64GB内存，或与AWS C4.8xlarge机器相同配置）
 
