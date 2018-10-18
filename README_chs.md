@@ -9,6 +9,7 @@ Powered by GTXLab of Genetalks.
 
 [English Manual](https://github.com/Genetalks/gtz/blob/master/README.md "Markdown").
 
+[快速上手](#quick-start)
 ## 系统简介
 
 GTX.Zip是面向基因行业，结合行业数据特征，对基因测序数据进行定向优化，支持所有文件格式的高倍无损压缩系统。**该系统具有业界最高无损压缩倍率和速度，能以1100MB/s的极致速度，将基因测序数据压缩至原大小的2%。该系统采用高效“多流数据”存储结构，可对测序数据文件及文件目录进行高倍率快速压缩和打包，并支持随机寻址等高级功能，赋能用户对海量基因数据进行方便快捷的存储、传输、分发和提取**。
@@ -53,7 +54,7 @@ GTX.Zip Professional为用户提供便捷的单机版压缩服务，可以灵活
 - **64位 Linux 系统（CentOS 6.5以上或Ubuntu 12.04以上，推荐Ububtu 14.04及以上64位操作系统)**
 - 4核以上，最小8GB内存的主机系统（若要达到最大并发性，推荐32核 64GB内存，或与AWS C4.8xlarge机器相同配置）
 
-
+<span id="quick-start">快速上手</span>
 ## 快速上手	
 - **1、安装软件**  
 -方式一（推荐）：  
