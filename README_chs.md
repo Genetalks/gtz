@@ -71,10 +71,16 @@ GTX.Zip作为企业级软件，针对高可用性需求制定了“涅磐计划�
  以人类（Homo_sapiens）为样本数据的物种，利用软件包里自带的gtz_index 工具下载rbin文件并制作bin文件  
 
 
--- 下载[人类rbin文件](https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin)并保存到默认路径  
-` gtz_index download 1`
+*通过工具下载人类rbin文件并保存到默认路径*    
+
+` gtz_index download 1`    
+
+*或者通过URL下载*  
+
+[**人类rbin文件**](https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin)
  
--- 下载完毕之后，制作rbin文件  
+*下载完毕之后，制作rbin文件*    
+
  `gtz_index makeindex ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin  `
  
 
