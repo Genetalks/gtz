@@ -169,14 +169,13 @@ Command:
 **gtz_index**:GTX.Zip Professional 安装目录下的工具软件，可以用来查看支持物种列表、下载rbin、制作bin。
 
 ## 产品系列
-目前 GTX.Zip Professional, GTX.Zip Enterprise, GTX.Zip Cloud三个产品已正式面世，分别适用于以下客户：
-- 	**GTX.Zip Professional**:本地测序数据量大的基因公司、研究机构及个人用户
-- 	**GTX.Zip Enterprise**:拥有PB级本地测序数据，需要通过自有计算集群对数据进行分布式压缩的大型企业和数据中心
-- 	**GTX.Zip Cloud**:云端测序数据分发、存储效率低的企业  
+目前 GTX.Zip Professional, GTX.Zip Enterprise, GTX.Zip Cloud三个产品已正式面世：
+  
+  
 产品名称 | 版本 | 描述 | 获得方式
 ----|---- | -------- | --------
 **GTX.Zip Professional**|V1.0.1|本地测序数据量大的基因公司、研究机构及个人用户|[安装软件](#install)
-**GTX.Zip Enterprise**|V1.0.1|拥有PB级本地测序数据，需要通过自有计算集群对数据进行分布式压缩的大型企业和数据中心|联系我们
+**GTX.Zip Enterprise**|V1.0.1|拥有PB级本地测序数据，需要通过自有计算集群对数据进行分布式压缩的大型企业和数据中心|[联系我们](https://github.com/Genetalks/gtz/new)
 **GTX.Zip Cloud**|V1.0.1|云端测序数据分发、存储效率低的企业| http://gtz.io
 
 ## rbin下载列表<span id="rbin-download"></span>
