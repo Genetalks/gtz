@@ -54,8 +54,9 @@ GTX.Zip Professional为用户提供便捷的单机版压缩服务，可以灵活
 - **64位 Linux 系统（CentOS 6.5以上或Ubuntu 12.04以上，推荐Ububtu 14.04及以上64位操作系统)**
 - 4核以上，最小8GB内存的主机系统（若要达到最大并发性，推荐32核 64GB内存，或与AWS C4.8xlarge机器相同配置）
 
-<span id="quick-start">快速上手</span>
-## 快速上手	
+
+
+## 快速上手<span id="quick-start"></span>
 - **1、安装软件**  
 -方式一（推荐）：  
 	`sudo curl -sSL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`  
