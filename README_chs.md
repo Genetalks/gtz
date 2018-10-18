@@ -75,16 +75,16 @@ GTX.Zip作为企业级软件，针对高可用性需求制定了“涅磐计划�
 - 下载完毕之后，制作bin文件(需要至少100GB的空闲磁盘空间跟28GB内存空间，耗时10秒钟)    
 `gtz_index makeindex ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin  `    
 
->>\*  **bin文件**:压缩时用到的参考序列索引文件。文件默认存放路径为："\~/.config/gtz/"  
->>\*  **rbin文件**:解压缩时用到的紧致参考序列文件。文件默认存放路径为："\~/.config/gtz/"   
+><font size=1>\*  **bin文件**：压缩时用到的参考序列索引文件。文件默认存放路径为："\~/.config/gtz/"</font>  
+><font size=1>\*  **rbin文件**：解压缩时用到的紧致参考序列文件。文件默认存放路径为："\~/.config/gtz/"</font>   
 
 **2、下载待压缩样本**	  
 样本下载：[sample.fq](https://gtz.io/sample.fq)  
->>\* 样本文件大小1GB , 从Novaseq的WES数据提取  
+>  <font size=1>\* 样本文件大小1GB , 从Novaseq的WES数据提取</font>
  
 **3、开始压缩**	  
  `gtz  sample.fq -o  sample.fq.gtz --bin-file  ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.bin`  
->>\* gtz也可以直接压缩fq.gz文件  
+>  <font size=1>\* gtz也可以直接压缩fq.gz文件</font>
 
 ## 使用方法<span id="usage"></span>
 ### GTX.Zip主程序gtz用法
