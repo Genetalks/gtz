@@ -62,22 +62,22 @@ GTX.Zip作为企业级软件，针对高可用性需求制定了“涅磐计划�
 -方式二：  
 下载安装文件  
 
-[**GTX.Zip Professional **]( https://gtz.io/gtz_latest.run)
+[**GTX.Zip Professional**]( https://gtz.io/gtz_latest.run)
 	
 
 ## 快速上手<span id="quick-start"></span>
 
 - **1、制作参考基因组bin文件（定义见附件1）**  
- 以人类（Homo_sapiens）为样本数据的物种，利用软件包里自带的gtz_index 工具下载并制作bin文件  
-```
+ 以人类（Homo_sapiens）为样本数据的物种，利用软件包里自带的gtz_index 工具下载rbin文件并制作bin文件  
 
--下载人类rbin文件并保存到默认路径  
- gtz_index download 18
+
+-- 下载[人类rbin文件](https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin)并保存到默认路径  
+` gtz_index download 1`
  
--下载完毕之后，制作rbin文件  
- gtz_index makeindex ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin  
+-- 下载完毕之后，制作rbin文件  
+ `gtz_index makeindex ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin  `
  
-```
+
 >**bin文件**:压缩时用到的参考序列索引文件。文件默认存放路径为："~/.config/gtz/"
 >**rbin文件**:解压缩时用到的紧致参考序列文件。文件默认存放路径为："~/.config/gtz/"
 - **2、下载待压缩样本**	  
@@ -182,8 +182,8 @@ Command:
 
 No. | 物种 | 官方链接
 ----|---- | --------
-1|Homo sapiens|ttps://gtzdata.oss-cn-hangzhou.aliyuncs.com/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin
-2|Triticum aestivum|ttps://gtzdata.oss-cn-hangzhou.aliyuncs.com/Triticum_aestivum_8e2da4d2c18d5fadd1d3cd0c15e918d0.rbin
+1|Homo sapiens|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin
+2|Triticum aestivum|Https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Triticum_aestivum_8e2da4d2c18d5fadd1d3cd0c15e918d0.rbin
 3|Arabidopsis thaliana|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Arabidopsis_thaliana_3dcb9b7a5a8b46c8ebbdbbdb3e0fa233.rbin
 4|Mus musculus|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Mus_musculus_def651daa3884affc85be8a74f7ba67e.rbin
 5|Rattus norvegicus|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Rattus_norvegicus_6cb6204aeddde515414059bcc3f048af.rbin
