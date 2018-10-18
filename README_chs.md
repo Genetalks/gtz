@@ -84,8 +84,9 @@ GTX.Zip作为企业级软件，针对高可用性需求制定了“涅磐计划�
  `gtz_index makeindex ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin  `
  
 
->**bin文件**:压缩时用到的参考序列索引文件。文件默认存放路径为："~/.config/gtz/"
->**rbin文件**:解压缩时用到的紧致参考序列文件。文件默认存放路径为："~/.config/gtz/"
+>**bin文件**:压缩时用到的参考序列索引文件。文件默认存放路径为："\~/.config/gtz/"  
+
+>**rbin文件**:解压缩时用到的紧致参考序列文件。文件默认存放路径为："\~/.config/gtz/"
 - **2、下载待压缩样本**	  
  样本下载：[sample.fq](https://gtz.io/sample.fq)  
 
