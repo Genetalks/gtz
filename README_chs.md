@@ -68,32 +68,32 @@ GTX.Zip作为企业级软件，针对高可用性需求制定了“涅磐计划�
 ## 快速上手<span id="quick-start"></span>
 
 >**1、制作参考基因组bin文件（定义见附件1）**  
- 以人类（Homo_sapiens）为样本数据的物种，利用软件包里自带的gtz_index 工具下载rbin文件并制作bin文件  
+> 以人类（Homo_sapiens）为样本数据的物种，利用软件包里自带的gtz_index 工具下载rbin文件并制作bin文件  
 
 
 >>- 通过工具下载人类rbin文件并保存到默认路径   
 
-` gtz_index download 1`    
+>>>` gtz_index download 1`    
 
 >>- 或者通过URL下载:[ homo_sapiens.rbin](https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin)
  
 >>- 下载完毕之后，制作bin文件(需要至少100GB的空闲磁盘空间跟28GB内存空间，耗时10秒钟)    
 
- `gtz_index makeindex ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin  `
+>> >`gtz_index makeindex ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin  `
  
 
-[^_^] **bin文件**:压缩时用到的参考序列索引文件。文件默认存放路径为："\~/.config/gtz/"  
+>>>[^_^] **bin文件**:压缩时用到的参考序列索引文件。文件默认存放路径为："\~/.config/gtz/"  
 
-[^_^] **rbin文件**:解压缩时用到的紧致参考序列文件。文件默认存放路径为："\~/.config/gtz/"  
+>>>[^_^] **rbin文件**:解压缩时用到的紧致参考序列文件。文件默认存放路径为："\~/.config/gtz/"  
 
 >**2、下载待压缩样本**	  
  >>样本下载：[sample.fq](https://gtz.io/sample.fq)  
- [^_^]大小1GB , 从Novaseq的WES数据提取的片段
+ >>>[^_^]大小1GB , 从Novaseq的WES数据提取的片段
 
 >**3、开始压缩**	  
- `gtz  sample.fq -o  sample.fq.gtz --bin-file  ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.bin`  
+>>> `gtz  sample.fq -o  sample.fq.gtz --bin-file  ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.bin`  
  
->[^_^]gtz也可以直接压缩fq.gz文件  
+>>>[^_^]gtz也可以直接压缩fq.gz文件  
 
 ## 使用方法<span id="usage"></span>
 ### GTX.Zip主程序gtz用法
