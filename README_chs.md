@@ -2,11 +2,6 @@
 
 Powered by GTXLab of Genetalks.
 
-- 一键安装命令:  
-	`sudo curl -sSL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`
-
-- GTX.Zip 专业版本下载链接:https://gtz.io/gtz_latest.run
-
 [English Manual](https://github.com/Genetalks/gtz/blob/master/README.md "Markdown").
 
 ## 目录
@@ -16,17 +11,19 @@ Powered by GTXLab of Genetalks.
 - [安装软件](#install)
 - [快速上手](#quick-start)
 - [使用方法](#usage)
-
+- [举个栗子](#example)
+- [rbin下载列表](#rbin-download)
 
 ## 简介<span id="intro"></span>
 
-GTX.Zip是面向基因行业，结合行业数据特征，对基因测序数据进行定向优化，支持所有文件格式的高倍无损压缩系统。**该系统具有业界最高无损压缩倍率和速度，能以1100MB/s的极致速度，将基因测序数据压缩至原大小的2%。该系统采用高效“多流数据”存储结构，可对测序数据文件及文件目录进行高倍率快速压缩和打包，并支持随机寻址等高级功能，赋能用户对海量基因数据进行方便快捷的存储、传输、分发和提取**。
-本次发布的是GTX.Zip Professional版本，它可以为用户提供便捷的单机版压缩服务，可以灵活地使用默认或指定参考基因组对本地基因组数据文件进行压缩、解压操作。
+GTX.Zip是面向基因行业，结合行业数据特征，对基因测序数据进行定向优化，支持所有文件格式的高倍无损压缩系统。**该系统具有业界最高无损压缩倍率和速度，能以1100MB/s的极致速度，将基因测序数据压缩至原大小的2%。该系统采用高效“多流数据”存储结构，可对测序数据文件及文件目录进行高倍率快速压缩和打包，并支持随机寻址等高级功能，赋能用户对海量基因数据进行方便快捷的存储、传输、分发和提取**。  
 
 目前 GTX.Zip Professional, GTX.Zip Enterprise, GTX.Zip Cloud三个产品已正式面世，分别适用于以下客户：
 - 	**GTX.Zip Professional**:本地测序数据量大的基因公司、研究机构及个人用户
 - 	**GTX.Zip Enterprise**:拥有PB级本地测序数据，需要通过自有计算集群对数据进行分布式压缩的大型企业和数据中心
-- 	**GTX.Zip Cloud**:云端测序数据分发、存储效率低的企业
+- 	**GTX.Zip Cloud**:云端测序数据分发、存储效率低的企业  
+
+本次发布的是GTX.Zip Professional版本，它可以为用户提供便捷的单机版压缩服务，可以灵活地使用默认或指定参考基因组对本地基因组数据文件进行压缩、解压操作。
 	
 ## 特性<span id="feature"></span>
 
@@ -62,10 +59,10 @@ GTX.Zip作为企业级软件，针对高可用性需求制定了“涅磐计划�
 - 4核以上，最小8GB内存的主机系统（若要达到最大并发性，推荐32核 64GB内存，或与AWS C4.8xlarge机器相同配置）
 
 ## 安装软件<span id="install"></span>  
--方式一（推荐）：  
+-方式一 运行命令行一键安装（推荐）：  
 	`sudo curl -sSL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`  
 -方式二：  
-	下载安装文件[gtz_latest.run](https://gtz.io/gtz_latest.run)  
+	下载安装文件[gtz_latest.run](https://gtz.io/gtz_latest.run)  https://gtz.io/gtz_latest.run
 	
 
 ## 快速上手<span id="quick-start"></span>
@@ -116,8 +113,8 @@ Command:
 - makeindex <rbin_path>                                        制作参考序列索引bin文件  
 ```  
          
-## 示例：	         
-### 压缩举例:
+## 举个栗子：<span id="example"></span>	         
+### 压缩:
 1:将文件sample.fq压缩到当前目录  
 	`gtz sample.fq -o sample.fq.gtz`
 
@@ -127,7 +124,7 @@ Command:
 3:GTZ通过指定当前目录下Homo文件夹中BIN文件的方式来进行高倍压缩   
 	`gtz sample.fq -o sample.fq.gtz --index-bin ./Homo/Homo_sapiens_bcacac9064331276504f27c6cf40e580.bin`
 
-### 解压举例
+### 解压
 1:将文件sample.fq解压到当前路径，如果"\~/.config/gtz/"下没有对应的rbin文件，程序会自动从云下载至"\~/.config/gtz/"   
 	`gtz -d sample.fq.gtz`
 
@@ -137,7 +134,7 @@ Command:
 3:将文件sample.fq.gtz解压至当前路径的Homo文件夹下   
 	`gtz -d sample.fq.gtz --out-dir ./Homo`		
 			
-### gtz_index举例
+### gtz_index
 -	交互模式：
 		显示当前支持的物种列表，并且通过人机交互的模式逐步制作成BIN文件  
 		`gtz_index`
@@ -177,7 +174,7 @@ Command:
 
 
 
-## 附件2
+## rbin下载列表<span id="rbin-download"></span>
 
 当前支持物种的rbin文件下载地址列表：
 
