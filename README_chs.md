@@ -11,7 +11,7 @@ Powered by GTXLab of Genetalks.
 - [安装软件](#install)
 - [快速上手](#quick-start)
 - [使用方法](#usage)
-- [举个栗子](#example)
+- [应用示例](#example)
 - [rbin下载列表](#rbin-download)
 
 ## 简介<span id="intro"></span>
@@ -113,7 +113,7 @@ Command:
 - makeindex <rbin_path>                                        制作参考序列索引bin文件  
 ```  
          
-## 举个栗子：<span id="example"></span>	         
+## 应用示例：<span id="example"></span>	         
 ### 压缩:
 1:将文件sample.fq压缩到当前目录  
 	`gtz sample.fq -o sample.fq.gtz`
