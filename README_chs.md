@@ -73,17 +73,17 @@ GTX.Zip作为企业级软件，针对高可用性需求制定了“涅磐计划�
 >>>` gtz_index download 1`    
 >>- 或者通过URL下载:[ homo_sapiens.rbin](https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin)
 >>- 下载完毕之后，制作bin文件(需要至少100GB的空闲磁盘空间跟28GB内存空间，耗时10秒钟)    
->> >`gtz_index makeindex ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin  `
->>>[^_^] **bin文件**:压缩时用到的参考序列索引文件。文件默认存放路径为："\~/.config/gtz/"  
->>>[^_^] **rbin文件**:解压缩时用到的紧致参考序列文件。文件默认存放路径为："\~/.config/gtz/"   
+>> >`gtz_index makeindex ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin  `  
+>>>\*  **bin文件**:压缩时用到的参考序列索引文件。文件默认存放路径为："\~/.config/gtz/"  
+>>>\*  **rbin文件**:解压缩时用到的紧致参考序列文件。文件默认存放路径为："\~/.config/gtz/"   
 
 >**2、下载待压缩样本**	  
  >>样本下载：[sample.fq](https://gtz.io/sample.fq)  
- >>>[^_^]大小1GB , 从Novaseq的WES数据提取的片段  
+ >>>\* 大小1GB , 从Novaseq的WES数据提取的片段  
  
 >**3、开始压缩**	  
 >>> `gtz  sample.fq -o  sample.fq.gtz --bin-file  ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.bin`  
->>>[^_^]gtz也可以直接压缩fq.gz文件  
+>>>\* gtz也可以直接压缩fq.gz文件  
 
 ## 使用方法<span id="usage"></span>
 ### GTX.Zip主程序gtz用法
