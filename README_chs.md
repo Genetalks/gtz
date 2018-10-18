@@ -27,14 +27,15 @@ GTX.Zip是面向基因行业，结合行业数据特征，对基因测序数据�
 -	**高倍无损**  
 	- GTX.Zip 采用全球领先的基因数据无损压缩算法，能够将FASTQ文件压缩低至原大小的2%，可以直接重压缩fastq.gz 至原大小的1/6。
 
-数据集名称|GTX.Zip—压缩率|Gzip—压缩率
+数据集名称|GTX.Zip—压缩率|GZip—压缩率
 ---|:--:|---:
 Nova_wes_1.fq|2.53%|17.15%
 Nova_wes_2.fq|3.45%|18.34%
 nova_wgs_1.fq|3.18%|17.55%
 nova_wgs_2.fq|3.93%|18.66%
 nova_rna_1.fq|4.56%|17.70%
-nova_rna_2.fq|5.39%|18.94%
+nova_rna_2.fq|5.39%|18.94%  
+>\*数据集为Novaseq的wes、wgs、rna测序数据
 
 -	**极速如飞**  
 	- GTX.Zip 充分利用了CPU的并发性、新的Haswell CPU体系结构，以及新的指令(如AVX2、BMI2)，使得即使在普通计算服务器上，GTX.Zip的压缩速度也是飞快的，GTX.Zip Professional单机压缩速度高达1100MB/s，GTX.Zip Enterprise更支持企业所需的大规模分布式压缩。
@@ -56,14 +57,19 @@ GTX.Zip作为企业级软件，针对高可用性需求制定了“涅磐计划�
 - 4核以上，最小8GB内存的主机系统（若要达到最大并发性，推荐32核 64GB内存，或与AWS C4.8xlarge机器相同配置）
 
 ## 安装软件<span id="install"></span>  
--方式一 :  
+- **方式一 :**  
 运行命令（推荐）  
 	`sudo curl -sSL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`  
--方式二：  
-安装文件  
+- **方式二：**  
+下载安装文件：[**GTX.Zip Professional **]( https://gtz.io/gtz_latest.run)  
+在安装文件目录下运行命令  
+`sudo sh gtz_lastest.run`  
+根据提示完成安装  
 
-[**GTX.Zip Professional 下载**]( https://gtz.io/gtz_latest.run)
-	
+- **验证安装是否成功**  
+运行命令  
+`gtz -v`  
+出现相应的软件版本信息则说明安装成功
 
 ## 快速上手<span id="quick-start"></span>  
 前提：当前机器中已经安装了GTX.Zip Professional软件，如未安装请参考[安装软件](#install)
