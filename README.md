@@ -114,7 +114,9 @@ usage: gtz [-h] [-o OUT] [-b INDEX_BIN] [-d DECOMPRESS] [-O OUT_DIR]
 -o OUT, --out OUT                               specify the GTZ file name after compression  
 -b BIN_FILE, --bin-file BIN_FILE                specify the bin file name for high compression  
 -d DECOMPRESS, --decompress DECOMPRESS          decompress  
--O OUT_DIR, --out-dir OUT_DIR                   specify the save path of the extracted file  
+-O OUT_DIR, --out-dir OUT_DIR                   specify the save path of the extracted file 
+-c, --stdout                                    decompress to terminal
+-z, --fastq-to-fastq-gz                         decompress fastq to fastq.gz, it's valid only for FASTQ
 -r RBIN_PATH, --rbin-path RBIN_PATH             specify the path where the rbin file resides  
 -p PARALLEL_NUM,--parallel			specify parallel number for compression or decompression, 
 						default equal CPU logical cores
