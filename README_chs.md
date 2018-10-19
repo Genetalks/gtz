@@ -75,7 +75,7 @@ GTX.Zip作为企业级软件，针对高可用性需求制定了“涅磐计划�
 ## 快速上手<span id="quick-start"></span>  
 前提：当前机器中已经安装了GTX.Zip Professional软件，如未安装请参考[安装软件](#install)
 
-**1、制作参考基因组bin文件（定义见附件1）**  
+**1、制作参考基因组bin文件**  
  以人类（Homo_sapiens）为样本数据的物种，利用软件包里自带的gtz_index 工具下载rbin文件并制作bin文件  
 - 通过工具下载人类rbin文件并保存到默认路径   
 ` gtz_index download 1`    
@@ -107,7 +107,7 @@ usage: gtz [-h] [-o OUT] [-b INDEX_BIN] [-d DECOMPRESS] [-O OUT_DIR]
 -r RBIN_PATH, --rbin-path RBIN_PATH                           通过指定rbin文件解压  
 -p PARALLEL_NUM,--parallel				      指定并行压缩/解压的线程数，默认等于CPU逻辑核数
 -f, --force                                                   输出覆盖同名文件  
--e, --no-keep                                                 删除源文件  
+-e, --erase                                                   删除源文件  
 -v, --version                                                 显示版本号  
 ```
 
