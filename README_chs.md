@@ -20,8 +20,8 @@ Powered by GTXLab of Genetalks.
 
 GTX.Zip是面向基因行业，结合行业数据特征，对基因测序数据进行定向优化，支持所有文件格式的高倍无损压缩系统。**该系统具有业界最高无损压缩倍率和速度，能以1100MB/s的极致速度，将基因测序数据压缩至原大小的2%。该系统可对测序数据文件及文件目录进行高倍率快速压缩和打包，赋能用户对海量基因数据进行方便快捷的存储、传输、分发和提取**。  
 
-
-本次发布的是GTX.Zip Professional版本，它可以为用户提供便捷的单机版压缩服务，可以灵活地使用默认或指定参考基因组对本地基因组数据文件进行压缩、解压操作。
+GTX.Zip Professional可以为用户提供便捷的单机版压缩服务，可以灵活地使用默认或指定参考基因组对本地基因组数据文件进行压缩、解压操作。
+想要获得其他产品请查看[-产品系列-](#product)。
 	
 ## 特性<span id="feature"></span>
 
@@ -36,7 +36,7 @@ nova_wgs_1.fq|3.18%|17.55%
 nova_wgs_2.fq|3.93%|18.66%
 nova_rna_1.fq|4.56%|17.70%
 nova_rna_2.fq|5.39%|18.94%  
->\*数据集为Novaseq的wes、wgs、rna测序数据
+>\*数据集为Novaseq的wes、wgs、rna测序数据。
 
 -	**极速如飞**  
 	- GTX.Zip 充分利用了CPU的并发性、新的Haswell CPU体系结构，以及新的指令(如AVX2、BMI2)，使得即使在普通计算服务器上，GTX.Zip的压缩速度也是飞快的，GTX.Zip Professional单机压缩速度高达1100MB/s，GTX.Zip Enterprise更支持企业所需的大规模分布式压缩。
@@ -144,8 +144,8 @@ Command:
 1:将文件sample.fq解压到当前路径，如果"~/.config/gtz/"下没有对应的rbin文件，程序会自动从云下载至"~/.config/gtz/"   
     `gtz -d sample.fq.gtz`
 
-2:指定已有的rbin文件所在文件夹 --index-path; 当rbin文件存在于"~/.config/gtz/"的其它地方，
-则可以指定rbin所在文件夹的形式进行解压，示例中rbin文件存在于“~/Homo”  
+2:指定已有的rbin文件所在文件夹 --index-path; 
+  当rbin文件存在于"~/.config/gtz/"的其它地方，则可以指定rbin所在文件夹的形式进行解压，示例中rbin文件存在于“~/Homo”  
     `gtz -d sample.gtz --index-path ~/Homo`
 
 3:将文件sample.fq.gtz解压至当前路径的Homo文件夹下   
