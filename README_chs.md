@@ -135,8 +135,8 @@ Command:
     
 /***如果没有通过--index-bin参数指定物种的话，则采用自动判断物种模式，自动判断比指定耗时更长 ***/
 
-3:GTZ通过指定当前目录下Homo文件夹中bin文件的方式来进行高倍压缩   
-    `gtz sample.fq -o sample.fq.gtz --index-bin ./Homo/Homo_sapiens_bcacac9064331276504f27c6cf40e580.bin`
+3:通过指定物种bin文件的方式来进行高倍压缩（Homo_sapiens_bcacac9064331276504f27c6cf40e580.bin为人类的bin文件）   
+    `gtz sample.fq -o sample.fq.gtz --index-bin ./Homo_sapiens_bcacac9064331276504f27c6cf40e580.bin`
 
 ```
 ### 解压
