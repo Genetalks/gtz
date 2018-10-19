@@ -78,7 +78,8 @@ GTX.Zip作为企业级软件，针对高可用性需求制定了“涅磐计划�
 **1、制作参考基因组bin文件**  
  以人类（Homo_sapiens）为样本数据的物种，利用软件包里自带的gtz_index 工具下载rbin文件并制作bin文件  
 - 通过工具下载人类rbin文件并保存到默认路径   
-` gtz_index download 1`    
+` gtz_index download 1`  
+>命令中的“1”为人类物种在gtz_index 列表中的编号，可以通过gtz_index list命令查看物种列表  
 - 或者通过URL下载:[ homo_sapiens.rbin](https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin)
 - 下载完毕之后，制作bin文件(需要至少100GB的空闲磁盘空间跟28GB内存空间，耗时10秒钟)    
 `gtz_index makeindex ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin  `    
@@ -92,7 +93,7 @@ GTX.Zip作为企业级软件，针对高可用性需求制定了“涅磐计划�
  
 **3、开始压缩**	  
  `gtz  sample.fq -o  sample.fq.gtz --bin-file  ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.bin`  
->  <font size=1>\* gtz也可以直接压缩fq.gz文件</font>
+>  <font size=1>\* GTX.Zip 同时支持压缩fq.gz文件</font>
 
 ## 使用方法<span id="usage"></span>
 ### GTX.Zip主程序gtz用法
@@ -117,9 +118,9 @@ usage: gtz [-h] [-o OUT] [-b INDEX_BIN] [-d DECOMPRESS] [-O OUT_DIR]
 ```
 gtz_index <command> [options]  
 Command:  
-- list                                                         查看现在支持的所有物种信息  
-- download <index> <path_to>                                   下载紧致参考序列rbin文件  
-- makeindex <rbin_path>                                        制作参考序列索引bin文件  
+   list                                                         查看现在支持的所有物种信息  
+   download <index> <path_to>                                   下载紧致参考序列rbin文件  
+   makeindex <rbin_path>                                        制作参考序列索引bin文件  
 ```  
          
 ## 应用示例：<span id="example"></span>	         
