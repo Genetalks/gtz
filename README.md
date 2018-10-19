@@ -234,9 +234,9 @@ base revision
 ### v1.1
 add function:
 
--c, --stdout                   decompress to terminal
+-c/--stdout                   decompress to terminal
 
--gz, --fastq-to-fastq-gz       decompress fastq to fastq.gz, it's valid only for FASTQ
+-gz/--fastq-to-fastq-gz       decompress fastq to fastq.gz, it's valid only for FASTQ
 
 ## Contact Us
 
