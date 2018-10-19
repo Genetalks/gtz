@@ -116,7 +116,7 @@ usage: gtz [-h] [-o OUT] [-b INDEX_BIN] [-d DECOMPRESS] [-O OUT_DIR]
 -d DECOMPRESS, --decompress DECOMPRESS          decompress  
 -O OUT_DIR, --out-dir OUT_DIR                   specify the save path of the extracted file 
 -c, --stdout                                    decompress to terminal
--z, --fastq-to-fastq-gz                         decompress fastq to fastq.gz, it's valid only for FASTQ
+-gz, --fastq-to-fastq-gz                        decompress fastq to fastq.gz, it's valid only for FASTQ
 -r RBIN_PATH, --rbin-path RBIN_PATH             specify the path where the rbin file resides  
 -p PARALLEL_NUM,--parallel			specify parallel number for compression or decompression, 
 						default equal CPU logical cores
@@ -225,6 +225,16 @@ No. | Species | Official Url
 34|Solanum tuberosum|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Solanum_tuberosum_11117f289d350ac2727d5136941986f0.rbin
 35|Sorghum bicolor|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Sorghum_bicolor_ad3fb597e71a3d3cc1a50606865207a5.rbin
 36|Sus scrofa|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Sus_scrofa_fa17a95f7b8532dfb932210977bebc77.rbin
+
+## Change Log
+
+### v1.0
+base revision
+
+### v1.1
+add function:
+-c, --stdout                   decompress to terminal
+-gz, --fastq-to-fastq-gz       decompress fastq to fastq.gz, it's valid only for FASTQ
 
 ## Contact Us
 
