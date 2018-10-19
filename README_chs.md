@@ -80,7 +80,8 @@ GTX.Zip作为企业级软件，针对高可用性需求制定了“涅磐计划�
 - 通过工具下载人类rbin文件并保存到默认路径   
 ` gtz_index download 1`  
 >命令中的“1”为人类物种在gtz_index 列表中的编号，可以通过gtz_index list命令查看物种列表  
-- 或者通过URL下载:[ homo_sapiens.rbin](https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin)
+- 或者直接下载并保存到“\~/.config/gtz”目录  
+[ homo_sapiens.rbin](https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin)
 - 下载完毕之后，制作bin文件(需要至少100GB的空闲磁盘空间跟28GB内存空间，耗时10秒钟)    
 `gtz_index makeindex ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin  `    
 
