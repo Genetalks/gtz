@@ -15,6 +15,7 @@ Powered by GTXLab of Genetalks.
 - [应用示例](#example)
 - [产品系列](#product)  
 - [rbin下载列表](#rbin-download)
+- [版本日志](#change-log)
 
 ## 简介<span id="intro"></span>
 
@@ -109,7 +110,7 @@ usage: gtz [-h] [-o OUT] [-b INDEX_BIN] [-d DECOMPRESS] [-O OUT_DIR]
 -d DECOMPRESS, --decompress DECOMPRESS                        解压缩GTZ文件  
 -O OUT_DIR, --out-dir OUT_DIR                                 指定解压后文件的保存路径  
 -c, --stdout                                                  解压到终端
--z, --fastq-to-fastq-gz                                       将FASTQ解压成GZ格式，该选项只对FASTQ有效，非FASTQ会忽略该选项
+-gz, --fastq-to-fastq-gz                                      将FASTQ解压成GZ格式，该选项只对FASTQ有效，非FASTQ会忽略该选项
 -r RBIN_PATH, --rbin-path RBIN_PATH                           通过指定rbin文件解压  
 -p PARALLEL_NUM,--parallel				      指定并行压缩/解压的线程数，默认等于CPU逻辑核数
 -f, --force                                                   输出覆盖同名文件  
@@ -239,5 +240,19 @@ No. | 物种 | 官方链接
 35|Sorghum bicolor|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Sorghum_bicolor_ad3fb597e71a3d3cc1a50606865207a5.rbin
 36|Sus scrofa|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Sus_scrofa_fa17a95f7b8532dfb932210977bebc77.rbin
 	
+## 版本日志<span id="change-log"></span>
+
+### v1.0
+
+基础修订
+
+### v1.1
+
+增加功能:
+
+-c/--stdout                   解压到终端
+
+-gz/--fastq-to-fastq-gz       将FASTQ解压成GZ格式，该选项只对FASTQ有效，非FASTQ会忽略该选项
+
 ## 联系我们
 	使用中有任何问题请联系: contact@gtz.io 
