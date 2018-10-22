@@ -7,7 +7,7 @@ Powered by GTXLab of Genetalks.
 - GTX.Zip Professional download URL:https://gtz.io/gtz_latest.run
 
 [中文说明](https://github.com/Genetalks/gtz/blob/master/README_chs.md "Markdown").
-## Table of contents
+## Index
 - [What is GTX.Zip?](#intro)  
 - [Feature](#feature)    
 - [Environment Requirements](#environment)  
