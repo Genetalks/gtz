@@ -1,6 +1,9 @@
 # GTX.Zip Professional Version 
 
 ### QQ group(s): 934492381 
+
+![GTX.Zip WebChat groups](https://i.loli.net/2018/10/22/5bcd89e697964.jpg "GTX.Zip WebChat groups")
+
 Powered by GTXLab of Genetalks.  
 - One-click installation:  
 	`sudo curl -sSL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`
