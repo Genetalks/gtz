@@ -1,6 +1,10 @@
 # GTX.Zip Professional Version
 
 ### QQ 交流群：934492381
+
+### ### 微信交流群:
+![GTX.Zip WebChat groups](https://i.loli.net/2018/10/22/5bcd8c59dc98e.jpg "GTX.Zip WebChat groups")
+
 Powered by GTXLab of Genetalks.
 
 [English Manual](https://github.com/Genetalks/gtz/blob/master/README.md "Markdown").
