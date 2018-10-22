@@ -87,7 +87,7 @@ GTX.Zip Professional needs to be installed on the current machine. If not, pleas
    
      `gtz_index makeindex ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin`  
      
-     ><font size=1>\*  **bin file**：The index file used for compression.The default file path is："\~/.config/gtz/"</font>    
+     ><font size=1>\*  **bin file**：The index file used for hight compression.The default file path is："\~/.config/gtz/"</font>    
      ><font size=1>\*  **rbin file**：The compact index file used for decompression.The default file  path is："\~/.config/gtz/"</font>  
 
 2. **Compress sample fastq file**
