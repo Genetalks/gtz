@@ -1,6 +1,6 @@
-# GTX.Zip Professional Version
+# GTX.Zip Professional Version 
 
-** QQ Group : 934492381 **
+- ** QQ Group: 934492381 **
 Powered by GTXLab of Genetalks.  
 - One-click installation:  
 	`sudo curl -sSL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`
