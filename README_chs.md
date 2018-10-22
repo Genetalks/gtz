@@ -1,5 +1,6 @@
 # GTX.Zip Professional Version
 
+### QQ 交流群：934492381
 Powered by GTXLab of Genetalks.
 
 [English Manual](https://github.com/Genetalks/gtz/blob/master/README.md "Markdown").
