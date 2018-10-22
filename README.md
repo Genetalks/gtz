@@ -45,8 +45,8 @@ GTX.Zip compressor system features:
 - **Software Ecology**: GTX.Zip provides command line and GUI decompression software for Linux, Mac OSX and Windows. It also provides SDK interfaces in languages such as Python, C, C++, etc. which is convenient for third-party developers to read and write gtz file (GTX.Zip compression format) directly. For example, gtz version of bcl2fastq, fastp and BWA are supported by community now. More software will be released soon.    
 - **Nirvana Plan**:   
 As an enterprise-level software, GTX.Zip has developed a nirvana program for high-availability requirements to ensure that users can decompress compressed data into original data under the extreme condition. The nirvana plan's dual availability protection strategy is as follows:
--  GTX.Zip is multi-site hosted. http://gtz.io website, GitHub and other sites will permanently host all versions of GTX.Zip, to make sure that it is available to the entire network all the time and free of charge at any time.
--  To ensure that compressed data can be restored to original file under any conditions, pre-embedded micro decompression programs could be extract from compressed data first, and then be used to decompress the file.
+	-  GTX.Zip is multi-site hosted. http://gtz.io website, GitHub and other sites will permanently host all versions of GTX.Zip, to make sure that it is available to the entire network all the time and free of charge at any time.
+	-  To ensure that compressed data can be restored to original file under any conditions, pre-embedded micro decompression programs could be extract from compressed data first, and then be used to decompress the file.
 
 
 ## System Environment Requirements<span id="environment"></span>
@@ -60,16 +60,17 @@ As an enterprise-level software, GTX.Zip has developed a nirvana program for hig
 - **Or**  
 	Download the [gtz_latest.run](https://gtz.io/gtz_latest.run), and then execute it.   
   
--**Verify installation**  
-	`gtz -v`
+- **Verify installation**    
+	run  
+	`gtz -v`  
 	If software version information appears, the installation is successful.  
 ## Quick Start <span id="quick-start"></span>	
-Gtx.zip Professional needs to be installed on the current machine. If not, please refer to the [installation](#install) .
+GTX.Zip Professional needs to be installed on the current machine. If not, please go to the [installation](#install) .
 
 1. **Make bin file to enable high rate compression**
    Take the human sample species as an example, make the index file (*bin* file) required for GTX.Zip high rate compression
    
-   - Download the 1th *rbin* file (1 is the number of the human *rbin* file in the appendix list) and gtz_index will save it to the default path (~/.config/gtz):
+   - Download the 1th *rbin* file ("1" is the number of the human *rbin* file in the gtx_index list) and gtz_index will save it to the default path (~/.config/gtz):
    
       `gtz_index download 1`
       
@@ -80,8 +81,8 @@ Gtx.zip Professional needs to be installed on the current machine. If not, pleas
    - Make the *bin* file ( may need 100GB free disk space, and >28GB memory, and 10 sec)
    
      `gtz_index makeindex ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin`
-     >**bin file：**The index file used for compression.The default file path is: "\~/.config/ GTZ /"  
-     >**rbin file：**The compact index file used for decompression.The default file  path is: "\~/.config/ GTZ /" 
+   > **bin file：**The index file used for compression.The default file path is: "\~/.config/ GTZ /"  
+   > **rbin file：**The compact index file used for decompression.The default file  path is: "\~/.config/ GTZ /" 
 
 2. **Compress sample fastq file**
 
@@ -89,7 +90,7 @@ Gtx.zip Professional needs to be installed on the current machine. If not, pleas
  
     sample.fq can be downloaded from https://gtz.io/sample.fq. (1GB fastq file, extracted from a real WES data produced by Novaseq)
   
-    >\*gtz can also directly compress fastq.gz file.
+    > \*gtz can also directly compress fastq.gz file.
 
 ## Usage of gtz: <span id="usage"></span>
 ```  
