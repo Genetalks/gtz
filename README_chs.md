@@ -89,7 +89,7 @@ nova_rna_2.fq|5.39%|18.94%
 - 下载完毕之后，制作bin文件(需要至少100GB的空闲磁盘空间跟28GB内存空间，耗时10秒钟)    
 `gtz_index makeindex ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin  `    
 
-><font size=1>\*  **bin文件**：压缩时用到的参考序列索引文件。文件默认存放路径为："\~/.config/gtz/"</font>  
+><font size=1>\*  **bin文件**：高倍压缩时用到的参考序列索引文件。文件默认存放路径为："\~/.config/gtz/"</font>  
 ><font size=1>\*  **rbin文件**：解压缩时用到的紧致参考序列文件。文件默认存放路径为："\~/.config/gtz/"</font>   
 
 **2、下载待压缩样本**	  
