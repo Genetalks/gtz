@@ -252,7 +252,7 @@ No. | 物种 | 官方链接
 
 -c/--stdout                   解压到终端
 
--gz/--fastq-to-fastq-gz       将FASTQ解压成GZ格式，该选项只对FASTQ有效，非FASTQ会忽略该选项
+-z/--fastq-to-fastq-gz        将FASTQ解压成GZ格式，该选项只对FASTQ有效，非FASTQ会忽略该选项
 
 ## 联系我们
 	使用中有任何问题请联系: contact@gtz.io 
