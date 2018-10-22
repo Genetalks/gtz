@@ -15,7 +15,7 @@ Powered by GTXLab of Genetalks.
 - [Let's Do It!](#quick-start)
 - [Usage](#usage)
 - [For Example](#example)
-- [Get more Product](#product)  
+- [Get More Product](#product)  
 - [rbin Downloads](#rbin-download)
 - [Change Log](#change-log)
 
@@ -27,11 +27,7 @@ GTX.Zip is a professional fastq/bam compressor and also can be used as a univers
 There are three different versions of GTX.Zip for different users:
 - **GTX.Zip Professional**：Companies, Institutions and individual users that with large local sequencing data
 - **GTX.Zip Enterprise**：Large-scale enterprises and data centers that with PB-level sequencing data and require distributed compression by their own computing clusters
-- **GTX.Zip Cloud**：Companies that with low efficiency of sequencing data distribution and storage
-
-
-
-
+- **GTX.Zip Cloud**：Companies that with low efficiency of sequencing data distribution and storage  
 
 ## Feature<span id="feature"></span>
 
@@ -72,42 +68,27 @@ As an enterprise-level software, GTX.Zip has developed a nirvana program for hig
 -**Verify installation**  
 	`gtz -v`
 	If software version information appears, the installation is successful.  
-## Quick Start	
+## Quick Start <span id="quick-start"></span>	
+Gtx.zip Professional needs to be installed on the current machine. If not, please refer to the [installation](#install) .
 
-1. **Install GTX.Zip**
-   - Method 1(recommended)
+1. **Make bin file to enable high rate compression**
+   Take the human sample species as an example, make the index file (*bin* file) required for GTX.Zip high rate compression
    
-	`sudo curl -sSL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`
-	
-   - Method 2：
-   
-	Download from:
-	
-    	https://gtz.io/gtz_latest.run
-	
-	Change permissions:
-	
-    	chmod +x ./gtz_latest.run
-	
-	Install:
-	
-    	./gtz_latest.run
-2. **Make index to enable high rate compression**
-   Take the human sample species as an example, make the index file (bin file) required for GTX.Zip high rate compression
-   
-   - Download the 1th rbin file (1 is the number of the human RBIN file in the appendix list) and gtz_index will save it to the default path (~/.config/gtz):
+   - Download the 1th *rbin* file (1 is the number of the human *rbin* file in the appendix list) and gtz_index will save it to the default path (~/.config/gtz):
    
       `gtz_index download 1`
       
       or
       
-      You can download rbin file from  here ( [Homo_sapiens rbin file](https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin) )
+      You can download *rbin* file from  here ( [Homo_sapiens rbin file](https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin) )
 
-   - Make the index bin file ( may need 100GB free disk space, and >28GB memory, and 10 sec)
+   - Make the *bin* file ( may need 100GB free disk space, and >28GB memory, and 10 sec)
    
      `gtz_index makeindex ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin`
+     >**bin file：**The index file used for compression.The default file path is: "\~/.config/ GTZ /"  
+     >**rbin file：**The compact index file used for decompression.The default file  path is: "\~/.config/ GTZ /" 
 
-3. **Compress sample fastq file**
+2. **Compress sample fastq file**
 
     `gtz  sample.fq -o  sample.fq.gtz --bin-file  ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.bin` 
  
@@ -115,16 +96,7 @@ As an enterprise-level software, GTX.Zip has developed a nirvana program for hig
   
     [^] Notice: gtz can also directly compress fastq.gz file.
 
-
-## Installation Instruction	
-- Method 1 (recommended):  
-	`sudo curl -sSL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`
-
-- Method 2:  
-	Download the [gtz_latest.run](https://gtz.io/gtz_latest.run), and then execute the it. 
-
-
-## Guidelines Of gtz:
+## Usage of gtz: <span id="usage"></span>
 ```  
 usage: gtz [-h] [-o OUT] [-b INDEX_BIN] [-d DECOMPRESS] [-O OUT_DIR]  
 
@@ -143,7 +115,7 @@ usage: gtz [-h] [-o OUT] [-b INDEX_BIN] [-d DECOMPRESS] [-O OUT_DIR]
 -v, --version                                   display version number  
 ```
 
-## Guidelines Of gtz_index：  
+## Usage of gtz_index：  
 ```
 gtz_index <command> [options]
 -	list					show species which current support
@@ -151,7 +123,7 @@ gtz_index <command> [options]
 -	makeindex <rbin_path>			making reference sequence  
 ```
 
-## For Example:
+## For Example: <span id="example"></span>
 ### Compress  
 1:Compress the sample.fq to the current directory.Without the specified bin file, GTZ will automatically recognize the species to compress.  
 	`gtz sample.fq -o sample.fq.gtz `   
@@ -202,7 +174,7 @@ If sample.fq.gtz is not a high compression file, the FASTQ file can be extracted
 - **rbin files**:Compact genome reference files which used for decompression.The default file storage path is "~/.config/gtz/"
 - **gtz_index**:An installation tool of GTX.Zip Professional which used to view species list, download rbin files and generate bin files. 
 
-## Rbin files Download 
+## Rbin files Download <span id="rbin-download"></span> 
 
 No. | Species | Official Url
 ----|-------- | -------------
