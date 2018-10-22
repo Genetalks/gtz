@@ -236,7 +236,7 @@ add function:
 
 -c/--stdout                   decompress to terminal
 
--gz/--fastq-to-fastq-gz       decompress fastq to fastq.gz, it's valid only for FASTQ
+-z/--fastq-to-fastq-gz        decompress fastq to fastq.gz, it's valid only for FASTQ
 
 ## Contact Us
 
