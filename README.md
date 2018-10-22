@@ -7,10 +7,22 @@ Powered by GTXLab of Genetalks.
 - GTX.Zip Professional download URL:https://gtz.io/gtz_latest.run
 
 [中文说明](https://github.com/Genetalks/gtz/blob/master/README_chs.md "Markdown").
+## Table of contents
+- [What is GTX.Zip?](#intro)  
+- [Feature](#feature)    
+- [Environment Requirements](#environment)  
+- [How to Install?](#install)
+- [Let's Do It!](#quick-start)
+- [Usage](#usage)
+- [For Example](#example)
+- [Get more Product](#product)  
+- [rbin Downloads](#rbin-download)
+- [Change Log](#change-log)
 
-## System Overview
+## What is GTX.Zip？<span id="intro"></span>
 
 GTX.Zip is a professional fastq/bam compressor and also can be used as a universal data compression software, developed by GTXLab of Genetalks Inc. GTX.Zip can rapidly compress any DNA sequencing files and directories with very high compression rate, and generate a single compressed data files, thus facilitating the data storage, distribution and transmission. Different from other compression tools, GTX.Zip system focuses on **high compression rate, high speed, and convenient data extraction**. 
+- GTX.Zip Professional is a stand-alone version which supports local compression service. GTX.Zip Professional runs by command lines for compression and decompression of local genomic data.  
 
 There are three different versions of GTX.Zip for different users:
 - **GTX.Zip Professional**：Companies, Institutions and individual users that with large local sequencing data
@@ -21,7 +33,7 @@ There are three different versions of GTX.Zip for different users:
 
 
 
-## System Highlights
+## Feature<span id="feature"></span>
 
 GTX.Zip compressor system features:
 - **High Compression Ratio**: The system implements Context Model compression technology, with a variety of optimized predicting model, and balancing the system concurrent and memory resources consumption, thus achieving a extreme high compression rate. For FASTQ files, GTX.Zip is capable to compress the original fastq file to 2.53%. The compression rate of GTX.Zip is about 3-6 times of gzip compressor which could save up to 80% storage space and transfer costs.
@@ -39,21 +51,27 @@ GTX.Zip compressor system features:
 
 - **Safety Guarantee**: Thanks to its high speed, during the process of GTX.Zip compression, the data decompression and restore test is performed. The compression process will be done only after the data has been confirmed exactly the same as the source data. MD5 validation is performed to ensure data integrity as well.
 
-- **Software Ecology**: GTX.Zip provides command line and GUI decompression software for Linux, Mac OSX and Windows. It also provides SDK interfaces in languages such as Python, C, C++, etc. which is convenient for third-party developers to read and write gtz file (GTX.Zip compression format) directly. For example, gtz version of bcl2fastq, fastp and BWA are supported by community now. More software will be released soon.  
-## Nirvana Plan
+- **Software Ecology**: GTX.Zip provides command line and GUI decompression software for Linux, Mac OSX and Windows. It also provides SDK interfaces in languages such as Python, C, C++, etc. which is convenient for third-party developers to read and write gtz file (GTX.Zip compression format) directly. For example, gtz version of bcl2fastq, fastp and BWA are supported by community now. More software will be released soon.    
+- **Nirvana Plan**:   
 As an enterprise-level software, GTX.Zip has developed a nirvana program for high-availability requirements to ensure that users can decompress compressed data into original data under the extreme condition. The nirvana plan's dual availability protection strategy is as follows:
 -  GTX.Zip is multi-site hosted. http://gtz.io website, GitHub and other sites will permanently host all versions of GTX.Zip, to make sure that it is available to the entire network all the time and free of charge at any time.
 -  To ensure that compressed data can be restored to original file under any conditions, pre-embedded micro decompression programs could be extract from compressed data first, and then be used to decompress the file.
 
 
-
-## GTX.Zip Professional
-- GTX.Zip Professional is a stand-alone version which supports local compression service. GTX.Zip Professional runs by command lines for compression and decompression of local genomic data.
-
-## System Environment Requirements
+## System Environment Requirements<span id="environment"></span>
 - **64-bit Linux system (CentOS 6.5 or above, or Ubuntu 12.04 or above)**                                                                                                                            
 - To achieve good performance, the computing server with **32-core 64GB** memory is recommended (**at least 4-core and 8GB memory**), or that has the same configuration with the **AWS C4.8xlarge** machine)
+  
+## How to Install？ <span id="install"></span>	
+- **For installation you can (recommended)**  
+	`sudo curl -sSL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`
 
+- **Or**  
+	Download the [gtz_latest.run](https://gtz.io/gtz_latest.run), and then execute it.   
+  
+-**Verify installation**  
+	`gtz -v`
+	If software version information appears, the installation is successful.  
 ## Quick Start	
 
 1. **Install GTX.Zip**
