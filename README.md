@@ -22,13 +22,7 @@ Powered by GTXLab of Genetalks.
 ## What is GTX.Zip？<span id="intro"></span>
 
 GTX.Zip is a professional fastq/bam compressor and also can be used as a universal data compression software, developed by GTXLab of Genetalks Inc. GTX.Zip can rapidly compress any DNA sequencing files and directories with very high compression rate, and generate a single compressed data files, thus facilitating the data storage, distribution and transmission. Different from other compression tools, GTX.Zip system focuses on **high compression rate, high speed, and convenient data extraction**. 
-- GTX.Zip Professional is a stand-alone version which supports local compression service. GTX.Zip Professional runs by command lines for compression and decompression of local genomic data.  
-
-There are three different versions of GTX.Zip for different users:
-- **GTX.Zip Professional**：Companies, Institutions and individual users that with large local sequencing data
-- **GTX.Zip Enterprise**：Large-scale enterprises and data centers that with PB-level sequencing data and require distributed compression by their own computing clusters
-- **GTX.Zip Cloud**：Companies that with low efficiency of sequencing data distribution and storage    
-
+- **GTX.Zip Professional** is a stand-alone version which supports local compression service. GTX.Zip Professional runs by command lines for compression and decompression of local genomic data. If you want get more product, please go to [Get More Product](#product).  
 
 ## Feature<span id="feature"></span>
 
@@ -95,7 +89,7 @@ Gtx.zip Professional needs to be installed on the current machine. If not, pleas
  
     sample.fq can be downloaded from https://gtz.io/sample.fq. (1GB fastq file, extracted from a real WES data produced by Novaseq)
   
-    [^] Notice: gtz can also directly compress fastq.gz file.
+    >\*gtz can also directly compress fastq.gz file.
 
 ## Usage of gtz: <span id="usage"></span>
 ```  
