@@ -179,7 +179,7 @@ If sample.fq.gtz is not a high compression file, the FASTQ file can be extracted
 name | version | description | how to get
 ----|---- | -------- | --------
 **GTX.Zip Professional**|V1.0.1|Companies, Institutions and individual users that with large local sequencing data|[Install](#install)
-**GTX.Zip Enterprise**|V1.0.1|Large-scale enterprises and data centers that with PB-level sequencing data and require distributed compression by their own computing clusters|[Contact Us](https://github.com/Genetalks/gtz/new)
+**GTX.Zip Enterprise**|V1.0.1|Large-scale enterprises and data centers that with PB-level sequencing data and require distributed compression by their own computing clusters|[Contact Us](https://github.com/Genetalks/gtz/issues)
 **GTX.Zip Cloud**|V1.0.1|Companies that with large amounts of sequencing data distribution and storage in the cloud| http://gtz.io
 
 ## Rbin files Download <span id="rbin-download"></span> 
