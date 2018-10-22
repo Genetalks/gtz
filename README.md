@@ -119,7 +119,8 @@ usage: gtz [-h] [-o OUT] [-b INDEX_BIN] [-d DECOMPRESS] [-O OUT_DIR]
 ```
 gtz_index <command> [options]
 	list					show species which current support
-	download <index> <path_to>		download species reference sequence rbin file , path_to is not necessary.-			makeindex <rbin_path>			making reference sequence  
+	download <index> <path_to>		download species reference sequence rbin file , path_to is not necessary.  
+	makeindex <rbin_path>			making reference sequence  
 ```
 
 ## For Example: <span id="example"></span>
@@ -131,7 +132,7 @@ gtz_index <command> [options]
 2:Compress the file sample.fq into the out folder of the current directory.
 	`gtz sample.fq -o ./out/sample.fq.gtz `   
 
-****If the species is not specified by the '--index-bin' , GTZ will automatically recognize the species to compress.  ********  
+***If the species is not specified by the '--index-bin' , GTZ will automatically recognize the species to compress.  ***  
 
 3.GTZ performs high compression by specifying bin files in the Homo folder under the current directory.  
 	`gtz sample.fq -o sample.fq.gtz --index-bin ./Homo/Homo_sapiens_bcacac9064331276504f27c6cf40e580.bin`  
@@ -153,6 +154,7 @@ gtz_index <command> [options]
 ```
 Interaction mode:  
 	`gtz_index`  
+	
 Show supported species and you can gradually create bin files through human-machine interaction mode.  
 
 Manual mode  
