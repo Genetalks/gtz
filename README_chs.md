@@ -194,7 +194,7 @@ Command:
 产品名称 | 版本 | 描述 | 获得方式
 ----|---- | -------- | --------
 **GTX.Zip Professional**|V1.0.1|本地测序数据量大的基因公司、研究机构及个人用户|[安装软件](#install)
-**GTX.Zip Enterprise**|V1.0.1|拥有PB级本地测序数据，需要通过自有计算集群对数据进行分布式压缩的大型企业和数据中心|[联系我们](https://github.com/Genetalks/gtz/new)
+**GTX.Zip Enterprise**|V1.0.1|拥有PB级本地测序数据，需要通过自有计算集群对数据进行分布式压缩的大型企业和数据中心|[联系我们](https://github.com/Genetalks/gtz/issues/new)
 **GTX.Zip Cloud**|V1.0.1|云端测序数据分发、存储占比高的企业| http://gtz.io
 
 ## rbin下载列表<span id="rbin-download"></span>
