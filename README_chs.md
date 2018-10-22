@@ -110,7 +110,7 @@ usage: gtz [-h] [-o OUT] [-b INDEX_BIN] [-d DECOMPRESS] [-O OUT_DIR]
 -d DECOMPRESS, --decompress DECOMPRESS                        解压缩GTZ文件  
 -O OUT_DIR, --out-dir OUT_DIR                                 指定解压后文件的保存路径  
 -c, --stdout                                                  解压到终端
--gz, --fastq-to-fastq-gz                                      将FASTQ解压成GZ格式，该选项只对FASTQ有效，非FASTQ会忽略该选项
+-z, --fastq-to-fastq-gz                                       将FASTQ解压成GZ格式，该选项只对FASTQ有效，非FASTQ会忽略该选项
 -r RBIN_PATH, --rbin-path RBIN_PATH                           通过指定rbin文件解压  
 -p PARALLEL_NUM,--parallel				      指定并行压缩/解压的线程数，默认等于CPU逻辑核数
 -f, --force                                                   输出覆盖同名文件  
