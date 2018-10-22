@@ -27,7 +27,8 @@ GTX.Zip is a professional fastq/bam compressor and also can be used as a univers
 There are three different versions of GTX.Zip for different users:
 - **GTX.Zip Professional**：Companies, Institutions and individual users that with large local sequencing data
 - **GTX.Zip Enterprise**：Large-scale enterprises and data centers that with PB-level sequencing data and require distributed compression by their own computing clusters
-- **GTX.Zip Cloud**：Companies that with low efficiency of sequencing data distribution and storage  
+- **GTX.Zip Cloud**：Companies that with low efficiency of sequencing data distribution and storage    
+
 
 ## Feature<span id="feature"></span>
 
