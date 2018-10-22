@@ -16,7 +16,9 @@ Powered by GTXLab of Genetalks.
 - [应用示例](#example)
 - [产品系列](#product)  
 - [rbin下载列表](#rbin-download)
-- [版本日志](#change-log)
+- [版本日志](#change-log)  
+- [联系我们](#contact-us)
+
 
 ## 简介<span id="intro"></span>
 
@@ -195,7 +197,7 @@ Command:
 产品名称 | 版本 | 描述 | 获得方式
 ----|---- | -------- | --------
 **GTX.Zip Professional**|V1.0.1|本地测序数据量大的基因公司、研究机构及个人用户|[安装软件](#install)
-**GTX.Zip Enterprise**|V1.0.1|拥有PB级本地测序数据，需要通过自有计算集群对数据进行分布式压缩的大型企业和数据中心|[联系我们](https://github.com/Genetalks/gtz/issues/new)
+**GTX.Zip Enterprise**|V1.0.1|拥有PB级本地测序数据，需要通过自有计算集群对数据进行分布式压缩的大型企业和数据中心|[联系我们](#contact-us)
 **GTX.Zip Cloud**|V1.0.1|云端测序数据分发、存储占比高的企业| http://gtz.io
 
 ## rbin下载列表<span id="rbin-download"></span>
@@ -257,5 +259,5 @@ No. | 物种 | 官方链接
 
 -z/--fastq-to-fastq-gz        将FASTQ解压成GZ格式，该选项只对FASTQ有效，非FASTQ会忽略该选项
 
-## 联系我们
-	使用中有任何问题请联系: contact@gtz.io 
+## 联系我们<span id="contact-us"></span>  
+使用中有任何问题请联系: contact@gtz.io 或者[创建一个新的issue](https://github.com/Genetalks/gtz/issues/new)。
