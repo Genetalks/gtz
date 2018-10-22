@@ -17,7 +17,8 @@ Powered by GTXLab of Genetalks.
 - [For Example](#example)
 - [Get More Products](#product)  
 - [rbin Downloads](#rbin-download)
-- [Change Log](#change-log)
+- [Change Log](#change-log)  
+- [Contact Us](#contact-us)
 
 ## What is GTX.Zip？<span id="intro"></span>
 
@@ -55,14 +56,17 @@ As an enterprise-level software, GTX.Zip has developed a nirvana program for hig
   
 ## How to Install？ <span id="install"></span>	
 - **For installation you can (recommended)**  
-	`sudo curl -sSL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`
 
+	`sudo curl -sSL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`
+	
 - **Or**  
 	Download the [gtz_latest.run](https://gtz.io/gtz_latest.run), and then execute it.   
   
 - **Verify installation**    
 	run  
+	
 	`gtz -v`  
+	
 	If software version information appears, the installation is successful.  
 ## Quick Start <span id="quick-start"></span>	
 GTX.Zip Professional needs to be installed on the current machine. If not, please go to the [**How to Install**](#install) .
@@ -80,16 +84,16 @@ GTX.Zip Professional needs to be installed on the current machine. If not, pleas
 
    - Make the *bin* file ( may need 100GB free disk space, and >28GB memory, and 10 sec)
    
-     `gtz_index makeindex ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin`
-><font size=1>\*  **bin文件**：The index file used for compression.The default file path is："\~/.config/gtz/"</font>  
-><font size=1>\*  **rbin文件**：The compact index file used for decompression.The default file  path is："\~/.config/gtz/"</font>  
+     `gtz_index makeindex ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin`  
+     
+     ><font size=1>\*  **bin文件**：The index file used for compression.The default file path is："\~/.config/gtz/"</font>    
+     ><font size=1>\*  **rbin文件**：The compact index file used for decompression.The default file  path is："\~/.config/gtz/"</font>  
 
 2. **Compress sample fastq file**
 
     `gtz  sample.fq -o  sample.fq.gtz --bin-file  ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.bin` 
  
-    sample.fq can be downloaded from https://gtz.io/sample.fq. (1GB fastq file, extracted from a real WES data produced by Novaseq)
-  
+    sample.fq can be downloaded from https://gtz.io/sample.fq. (1GB fastq file, extracted from a real WES data produced by Novaseq)  
     > \*gtz can also directly compress fastq.gz file.
 
 ## Usage of gtz: <span id="usage"></span>
@@ -154,10 +158,13 @@ Show supported species and you can gradually create bin files through human-mach
 Manual mode  
 1:Show supported species list，the index number is the input of the gtz_index download command.  
 	`gtz_index list`  
+	
 2:Download the rbin file in the species list with No.1 index  
 	`gtz_index download 1`  
+	
 3:Make BIN,rec file by specifying the rbin file". /Homo/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin "  
 	`gtz_index makeindex ./Homo/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin`  
+	
 ```
 
 
@@ -173,13 +180,14 @@ Step2:
 If sample.fq.gtz is a high compression file, download the corresponding fasta file according to the prompt, and then extract the file.  
 If sample.fq.gtz is not a high compression file, the FASTQ file can be extracted directly  
 	`./gtz_reborn -d sample.fq.gtz`  
+	
 ```
 ## Get More Products<span id="product"></span>
   
 name | version | description | how to get
 ----|---- | -------- | --------
 **GTX.Zip Professional**|V1.0.1|Companies, Institutions and individual users that with large local sequencing data|[Install](#install)
-**GTX.Zip Enterprise**|V1.0.1|Large-scale enterprises and data centers that with PB-level sequencing data and require distributed compression by their own computing clusters|[Contact Us](https://github.com/Genetalks/gtz/issues/new)
+**GTX.Zip Enterprise**|V1.0.1|Large-scale enterprises and data centers that with PB-level sequencing data and require distributed compression by their own computing clusters|[Contact Us](#contact-us)
 **GTX.Zip Cloud**|V1.0.1|Companies that with large amounts of sequencing data distribution and storage in the cloud| http://gtz.io
 
 ## Rbin files Download <span id="rbin-download"></span> 
@@ -236,7 +244,7 @@ add function:
 
 -z/--fastq-to-fastq-gz        decompress fastq to fastq.gz, it's valid only for FASTQ
 
-## Contact Us
+## Contact Us<span id="contact-us"></span> 
 
-If you have any questions, feel free to contact: contact@gtz.io, or commit an issus on Github.
+If you have any questions, feel free to contact: contact@gtz.io, or commit an [issus](https://github.com/Genetalks/gtz/issues/new) on Github.
 
