@@ -246,5 +246,5 @@ add function:
 
 ## Contact Us<span id="contact-us"></span> 
 
-If you have any questions, feel free to contact: contact@gtz.io, or commit an [issus](https://github.com/Genetalks/gtz/issues/new) on Github.
+If you have any questions, feel free to contact: contact@gtz.io, or  [create a new GitHub issue](https://github.com/Genetalks/gtz/issues/new) .
 
