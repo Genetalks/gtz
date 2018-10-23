@@ -1,6 +1,6 @@
 # GTX.Zip Professional Version  
 
-**如果我们提供的[物种列表](#rbin-download)不在您的需求范围内，请[联系我们](#contact-us)，我们将免费为您制作所需物种的rbin跟bin文件。**  
+**如果我们提供的[-物种列表-](#rbin-download)不在您的需求范围内，请[-联系我们-](#contact-us)，我们将免费为您制作所需物种的rbin跟bin文件。**  
 
 ### QQ交流群：934492381
 
@@ -86,7 +86,7 @@ nova_rna_2.fq|5.39%|18.94%
 出现相应的软件版本信息则说明安装成功
 
 ## 快速上手<span id="quick-start"></span>  
-前提：当前机器中已经安装了GTX.Zip Professional软件，如未安装请参考[安装软件](#install)
+前提：当前机器中已经安装了GTX.Zip Professional软件，如未安装请参考[-安装软件-](#install)
 
 **1、制作参考基因组bin文件**  
  以人类（Homo_sapiens）为样本数据的物种，利用软件包里自带的gtz_index 工具下载rbin文件并制作bin文件  
@@ -94,7 +94,7 @@ nova_rna_2.fq|5.39%|18.94%
 ` gtz_index download 1`  
 >命令中的“1”为人类物种在gtz_index 列表中的编号，可以通过gtz_index list命令查看物种列表  
 - 或者直接下载rbin文件并保存到“\~/.config/gtz”目录  
-[ homo_sapiens.rbin](https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin)
+[-homo_sapiens.rbin-](https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin)
 - 下载完毕之后，制作bin文件(需要至少100GB的空闲磁盘空间跟28GB内存空间，耗时10秒钟)    
 `gtz_index makeindex ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin  `    
 
@@ -102,7 +102,7 @@ nova_rna_2.fq|5.39%|18.94%
 ><font size=1>\*  **rbin文件**：解压缩时用到的紧致参考序列文件。文件默认存放路径为："\~/.config/gtz/"</font>   
 
 **2、下载待压缩样本**	  
-样本下载：[sample.fq](https://gtz.io/sample.fq)  
+样本下载：[-sample.fq-](https://gtz.io/sample.fq)  
 >  <font size=1>\* 样本文件大小1GB , 从Novaseq的WES数据提取</font>
  
 **3、开始压缩**	  
@@ -203,8 +203,8 @@ Command:
   
 产品名称 | 版本 | 描述 | 获得方式
 ----|---- | -------- | --------
-**GTX.Zip Professional**|V1.0.1|本地测序数据量大的基因公司、研究机构及个人用户|[安装软件](#install)
-**GTX.Zip Enterprise**|V1.0.1|拥有PB级本地测序数据，需要通过自有计算集群对数据进行分布式压缩的大型企业和数据中心|[联系我们](#contact-us)
+**GTX.Zip Professional**|V1.0.1|本地测序数据量大的基因公司、研究机构及个人用户|[-安装软件-](#install)
+**GTX.Zip Enterprise**|V1.0.1|拥有PB级本地测序数据，需要通过自有计算集群对数据进行分布式压缩的大型企业和数据中心|[-联系我们-](#contact-us)
 **GTX.Zip Cloud**|V1.0.1|云端测序数据分发、存储占比高的企业| http://gtz.io
 
 ## rbin下载列表<span id="rbin-download"></span>
@@ -255,7 +255,7 @@ No. | 物种 | 官方链接
 **如果以上物种不在您的需求范围内，请[联系我们](#contact-us)，我们将免费为您制作所需物种的rbin跟bin文件。**  
 
 ## 常见问题<span id="fqa"></span>  
-常见问题整理，[请戳这里！](https://github.com/Genetalks/gtz/blob/master/FAQ_chs.md "Markdown")  
+常见问题整理，[-请戳这里！-](https://github.com/Genetalks/gtz/blob/master/FAQ_chs.md "Markdown")  
   
 ## 版本日志<span id="change-log"></span>
 
@@ -273,4 +273,4 @@ No. | 物种 | 官方链接
 
 ## 联系我们<span id="contact-us"></span>  
 使用中有任何问题请：  
-邮件至: contact@gtz.io OR [创建一个新的issue](https://github.com/Genetalks/gtz/issues/new)。  
+邮件至: contact@gtz.io OR [-创建一个新的issue-](https://github.com/Genetalks/gtz/issues/new)。  
