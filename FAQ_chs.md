@@ -78,7 +78,7 @@
 **15、是否有工具软件能够支持GTX.Zip的压缩格式作为输入？**<span id="15"></span>  
   >我们提供直接读写gtz格式的上下游工具软件（比如，bcl2fastq, fastp, bwa 等）和各种程序语言的API接口（Perl/Python/C/C++）。  
   
-**16、GTX.Zip Pro是否支持所有下机数据格式？比如fasta**<span id="15"></span>  
+**16、GTX.Zip Pro是否支持所有下机数据格式？比如fasta**<span id="16"></span>  
   >全部支持，只是fastq格式压缩效果最好。  
  
 <!--**15、为什么不允许我们自己生成rbin文件以增加物种支持？**<span id="15"></span>  -->  
