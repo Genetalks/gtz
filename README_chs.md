@@ -21,6 +21,7 @@ Powered by GTXLab of Genetalks.
 - [产品系列](#product)  
 - [rbin下载列表](#rbin-download)
 - [版本日志](#change-log)  
+- [常见问题](#fqa)  
 - [联系我们](#contact-us)
 
 
@@ -248,7 +249,10 @@ No. | 物种 | 官方链接
 36|Sus scrofa|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Sus_scrofa_fa17a95f7b8532dfb932210977bebc77.rbin  
 37|Homo sapiens meth|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Homo_sapiens_meth_d497f0f9f716dff930ae92146c950576.rbin
 38|Mus musculus meth|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Mus_musculus_meth_42a6bd57204889412125be9111bca783.rbin
-	
+
+## 常见问题<span id="fqa"></span>  
+常见问题整理，[请戳这里！](https://github.com/Genetalks/gtz/blob/master/FAQ_chs.md "Markdown")  
+  
 ## 版本日志<span id="change-log"></span>
 
 #### 1.0 - 10/09/2018
