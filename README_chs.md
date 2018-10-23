@@ -1,4 +1,6 @@
-# GTX.Zip Professional Version
+# GTX.Zip Professional Version  
+
+**如果我们提供的[物种列表](#rbin-download)不在您的需求范围内，请[联系我们](#contact-us)，我们将免费为您制作所需物种的rbin跟bin文件。**  
 
 ### QQ交流群：934492381
 
@@ -248,7 +250,9 @@ No. | 物种 | 官方链接
 35|Sorghum bicolor|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Sorghum_bicolor_ad3fb597e71a3d3cc1a50606865207a5.rbin
 36|Sus scrofa|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Sus_scrofa_fa17a95f7b8532dfb932210977bebc77.rbin  
 37|Homo sapiens meth|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Homo_sapiens_meth_d497f0f9f716dff930ae92146c950576.rbin
-38|Mus musculus meth|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Mus_musculus_meth_42a6bd57204889412125be9111bca783.rbin
+38|Mus musculus meth|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Mus_musculus_meth_42a6bd57204889412125be9111bca783.rbin  
+
+**如果以上物种不在您的需求范围内，请[联系我们](#contact-us)，我们将免费为您制作所需物种的rbin跟bin文件。**  
 
 ## 常见问题<span id="fqa"></span>  
 常见问题整理，[请戳这里！](https://github.com/Genetalks/gtz/blob/master/FAQ_chs.md "Markdown")  
@@ -268,4 +272,5 @@ No. | 物种 | 官方链接
 -z/--fastq-to-fastq-gz        将FASTQ解压成GZ格式，该选项只对FASTQ有效，非FASTQ会忽略该选项
 
 ## 联系我们<span id="contact-us"></span>  
-使用中有任何问题请联系: contact@gtz.io 或者[创建一个新的issue](https://github.com/Genetalks/gtz/issues/new)。
+使用中有任何问题请：  
+邮件至: contact@gtz.io OR [创建一个新的issue](https://github.com/Genetalks/gtz/issues/new)。  
