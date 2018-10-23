@@ -64,7 +64,8 @@
   >通常这是因为这些物种暂时不在GTX.Zip Pro支持的列表范围内。GTX.Zip Pro默认采用基于参考基因组的压缩模式以提供最优压缩率，但是当物种不在支持列表范围内，GTX.Zip Pro会自动改用无参考基因组的次优倍率压缩模式，无参的压缩率通常逊于有参压缩率。  
   >如果遇到此情况，请您能及时跟我们联系，制作您需要的物种bin文件。  
   
-  >邮箱: contact@gtz.io, 或者在GitHub[创建一个新的issue](https://github.com/Genetalks/gtz/issues/new) 。  
+  >邮箱: contact@gtz.io, 或者在GitHub[创建一个新的issue](https://github.com/Genetalks/gtz/issues/new)。   
+
 **14、如果你们公司不做这个项目了，我们压缩完的文件怎么办？**<span id="14"></span>  
   >首先我们不会不做这个项目，其次GTX.Zip作为企业级软件，针对高可用性需求制定了“涅磐计划”，以确保用户在最为极端、无法获得任何GTX.Zip系统支持的情况下，也能将压缩数据解压为原始数据。涅磐计划的双重可用性保护策略如下：  
   >- 1）GTX.Zip多站托管，确保全网随时可下载：gtz.io网站与GitHub等多个站点永久托管GTX.Zip所有版本，确保全网不掉线，免费随时可得；  
