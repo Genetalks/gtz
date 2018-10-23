@@ -52,7 +52,7 @@
   >GTX.Zip Pro对gz数据进行了重压缩工作，即将gz文件解压后再重新压成gtz；而解压反过来，会解开gtz格式后，再重新压成gz格式。因此，问题中的压缩前后的两个gz文件其实是两个不同的文件，所以md5不一致，但是里面的fq文件相同且md5值是一样的。。  
   
 **10、GTX.Zip Pro目前支持多少个物种的智能选择压缩？**<span id="10"></span>  
-  >38个物种，点击[这里](https://github.com/Genetalks/gtz#rbin-download)查看列表:。    
+  >38个物种，点击[这里](https://github.com/Genetalks/gtz/blob/master/README_chs.md#rbin-download)查看列表:。    
   >如果您希望将某个物种加入支持列表，请联系邮箱: contact@gtz.io, 或在GitHub创建一个新的issue 。  
   
 **11、GTX.Zip Pro软件包里的bin，rbin文件是做什么的？**<span id="11"></span>  
