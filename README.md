@@ -244,10 +244,10 @@ No. | Species | Official Url
 
 ## Change Log
 
-### 1.0 - 10/09/2018
+#### 1.0 - 10/09/2018
 base revision
 
-### 1.1 - 10/16/2018
+#### 1.1 - 10/16/2018
 add function:
 
 -c/--stdout                   decompress to terminal
