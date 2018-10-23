@@ -9,7 +9,7 @@
 
 Powered by GTXLab of Genetalks.
 
-[English Manual](https://github.com/Genetalks/gtz/blob/master/README.md "Markdown").
+[-English Manual-](https://github.com/Genetalks/gtz/blob/master/README.md "Markdown").
 
 ## 目录
 - [简介](#intro)  
@@ -75,7 +75,7 @@ nova_rna_2.fq|5.39%|18.94%
 运行命令（推荐）  
 	`sudo curl -sSL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`  
 - **方式二：**  
-下载安装文件：[GTX.Zip Professional ]( https://gtz.io/gtz_latest.run)  
+下载安装文件：[-GTX.Zip Professional-]( https://gtz.io/gtz_latest.run)  
 在安装文件目录下运行命令  
 `sudo sh gtz_lastest.run`  
 根据提示完成安装  
@@ -252,7 +252,7 @@ No. | 物种 | 官方链接
 37|Homo sapiens meth|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Homo_sapiens_meth_d497f0f9f716dff930ae92146c950576.rbin
 38|Mus musculus meth|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Mus_musculus_meth_42a6bd57204889412125be9111bca783.rbin  
 
-**如果以上物种不在您的需求范围内，请[联系我们](#contact-us)，我们将免费为您制作所需物种的rbin跟bin文件。**  
+**如果以上物种不在您的需求范围内，请[-联系我们-](#contact-us)，我们将免费为您制作所需物种的rbin跟bin文件。**  
 
 ## 常见问题<span id="fqa"></span>  
 常见问题整理，[-请戳这里！-](https://github.com/Genetalks/gtz/blob/master/FAQ_chs.md "Markdown")  
@@ -273,4 +273,4 @@ No. | 物种 | 官方链接
 
 ## 联系我们<span id="contact-us"></span>  
 使用中有任何问题请：  
-邮件至: contact@gtz.io OR [-创建一个新的issue-](https://github.com/Genetalks/gtz/issues/new)。  
+邮件至: contact@gtz.io OR [创建一个新的issue](https://github.com/Genetalks/gtz/issues/new)。  
