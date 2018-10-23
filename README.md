@@ -1,15 +1,12 @@
-# GTX.Zip Professional Version 
+# GTX.Zip Professional Version   
 
+### If the species you need is not in our [species list](#rbin-download), please [contact us](#contact-us) !  
 ### QQ group(s): 934492381 
 
 ### WebChat group(s):
 ![GTX.Zip WebChat groups](https://i.loli.net/2018/10/22/5bcd8c59dc98e.jpg "GTX.Zip WebChat groups")
 
 Powered by GTXLab of Genetalks.  
-- One-click installation:  
-	`sudo curl -sSL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`
-
-- GTX.Zip Professional download URL:https://gtz.io/gtz_latest.run
 
 [中文说明](https://github.com/Genetalks/gtz/blob/master/README_chs.md "Markdown").
 ## Index
@@ -21,7 +18,7 @@ Powered by GTXLab of Genetalks.
 - [Usage](#usage)
 - [For Example](#example)
 - [Get More Products](#product)  
-- [rbin Downloads](#rbin-download)
+- [species rbin Downloads](#rbin-download)
 - [Change Log](#change-log)  
 - [Contact Us](#contact-us)
 
@@ -240,7 +237,7 @@ No. | Species | Official Url
 37|Homo sapiens methylation|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Homo_sapiens_meth_d497f0f9f716dff930ae92146c950576.rbin
 38|Mus musculus methylation|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Mus_musculus_meth_42a6bd57204889412125be9111bca783.rbin
 
-
+**If the species you need is not in our [species list](#rbin-download) , please [contact us](#contact-us) !**    
 
 ## Change Log
 
