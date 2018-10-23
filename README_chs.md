@@ -14,7 +14,6 @@ Powered by GTXLab of Genetalks.
 ## 目录
 - [简介](#intro)  
 - [特性](#feature)    
-- [涅槃计划](#nirvana)  
 - [运行环境](#environment)  
 - [安装软件](#install)
 - [快速上手](#quick-start)
