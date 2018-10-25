@@ -270,6 +270,11 @@ No. | 物种 | 官方链接
 
 -z/--fastq-to-fastq-gz        将FASTQ解压成GZ格式，该选项只对FASTQ有效，非FASTQ会忽略该选项
 
+#### 1.2
+解决GTZ有时加载慢的问题
+
+解决输入ctrl+c，GTZ有时不能退出的问题
+
 ## 联系我们<span id="contact-us"></span>  
 使用中有任何问题请：  
 邮件至: contact@gtz.io OR [创建一个新的issue](https://github.com/Genetalks/gtz/issues/new)。  
