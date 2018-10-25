@@ -251,6 +251,11 @@ add function:
 
 -z/--fastq-to-fastq-gz        decompress fastq to fastq.gz, it's valid only for FASTQ
 
+#### 1.2
+fix : GTZ load slowly
+
+fix : GTZ cann't be quit by Ctrl+C sometimes.
+
 ## Contact Us<span id="contact-us"></span> 
 
 If you have any questions, feel free to contact: contact@gtz.io, or  [create a new GitHub issue](https://github.com/Genetalks/gtz/issues/new) .
