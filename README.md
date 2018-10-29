@@ -95,7 +95,7 @@ GTX.Zip Professional needs to be installed on the current machine. If not, pleas
 
     `gtz  sample.fq -o  sample.fq.gtz --bin-file  ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.bin` 
  
-    sample.fq can be downloaded from https://gtz.io/sample.fq. (1GB fastq file, extracted from a real WES data produced by Novaseq)  
+    sample.fq can be downloaded from https://gtz.io/sample.fq. (2GB fastq file, extracted from a real WES data produced by Novaseq)  
     > \*gtz can also directly compress fastq.gz file.
 
 ## Usage of gtz: <span id="usage"></span>
