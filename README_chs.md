@@ -102,7 +102,7 @@ nova_rna_2.fq|5.39%|18.94%
 
 **2、下载待压缩样本**	  
 样本下载：[-sample.fq-](https://gtz.io/sample.fq)  
->  <font size=1>\* 样本文件大小1GB , 从Novaseq的WES数据提取</font>
+>  <font size=1>\* 样本文件大小2GB , 从Novaseq的WES数据提取</font>
  
 **3、开始压缩**	  
  `gtz  sample.fq -o  sample.fq.gtz --bin-file  ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.bin`  
