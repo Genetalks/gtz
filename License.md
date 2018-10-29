@@ -13,4 +13,3 @@ The following agreement regarding GTX.Zip COMPRESSOR PROFESSIONAL EDITION - refe
 5.The licensor shall be responsible for interpretation of the agreement.If you want to use this software for a long time, please contact us at contact@gtz.io!
 
 6.Installing and using the software signifies acceptance of these terms and conditions of the license. If you do not agree with the terms of this license, you must remove all software files from your storage devices and cease to use the software.
-
