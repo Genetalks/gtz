@@ -85,7 +85,7 @@ GTX.Zip Professional needs to be installed on the current machine. If not, pleas
       
       You can download *rbin* file from  here ( [Homo_sapiens rbin file](https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin) )
 
-   - Make the *bin* file ( may need 100GB free disk space, and >28GB memory, and 10 sec)
+   - Make the *bin* file ( may need 100GB free disk space, and >28GB memory, and 10 mins)
    
      `gtz_index makeindex ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin`  
      
