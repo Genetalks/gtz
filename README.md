@@ -130,45 +130,45 @@ gtz_index <command> [options]
 ### Compress  
 ```
 1:Compress the sample.fq to the current directory.
-	`gtz sample.fq -o sample.fq.gtz `   
+	gtz sample.fq -o sample.fq.gtz    
 
 2:Compress the file sample.fq into the out folder of the current directory.
-	`gtz sample.fq -o ./out/sample.fq.gtz `   
+	gtz sample.fq -o ./out/sample.fq.gtz    
 
-***If the species is not specified by the '--index-bin' , GTZ will automatically recognize the species to compress.  ***  
+***If the species is not specified by the '--bin-file' , GTZ will automatically recognize the species to compress.  ***  
 
 3.GTZ performs high compression by specifying bin files in the Homo folder under the current directory.  
-	`gtz sample.fq -o sample.fq.gtz --index-bin ./Homo/Homo_sapiens_bcacac9064331276504f27c6cf40e580.bin`  
+	gtz sample.fq -o sample.fq.gtz --bin-file ./Homo/Homo_sapiens_bcacac9064331276504f27c6cf40e580.bin  
 ```
 
 ### Decompress  
 ```
 1.Deompress the file sample.fq to the current directory.If there is no species rbin file under "\~/.config/ gtz/", GTZ will be automatically downloaded from the Cloud to "\~/.config/ gtz /".  
-	`gtz -d sample.fq.gtz` 
+	gtz -d sample.fq.gtz 
 
 2.Specify the directory of the rbin path “~/Homo” for decompress sample.fq.gtz.  
-	`gtz -d sample.fq.gtz --index-path ~/Homo` 
+	gtz -d sample.fq.gtz --rbin-path ~/Homo 
 
 3.Decompress sample.fq.gtz to the Homo folder in the current path  
-	`gtz -d sample.fq.gtz --out-dir ./Homo`    
+	gtz -d sample.fq.gtz --out-dir ./Homo    
 ```
 
 ## gtz_index  
 ```
 Interaction mode:  
-	`gtz_index`  
+	gtz_index  
 	
 Show supported species and you can gradually create bin files through human-machine interaction mode.  
 
 Manual mode  
 1:Show supported species list，the index number is the input of the gtz_index download command.  
-	`gtz_index list`  
+	gtz_index list  
 	
 2:Download the rbin file in the species list with No.1 index  
-	`gtz_index download 1`  
+	gtz_index download 1  
 	
 3:Make BIN,rec file by specifying the rbin file". /Homo/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin "  
-	`gtz_index makeindex ./Homo/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin`  
+	gtz_index makeindex ./Homo/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin  
 	
 ```
 
@@ -179,12 +179,12 @@ At first, we have a gtz file named sample.fq.gtz.
 ```
 Step 1:  
 Run the following command to extract the embeded programe gtz_reborn to current directory:  
-	`sed -e 's/\[GTZ_REBORN_BEGIN\]/\n&/;' sample.fq.gtz | sed -n '/\[GTZ_REBORN_BEGIN\]/,/\[GTZ_REBORN_END\]/p' | sed -e 's/.*\[GTZ_REBORN_BEGIN\]//g' -e 's/\[GTZ_REBORN_END\].*//g' | tar -zxvf -`
+	sed -e 's/\[GTZ_REBORN_BEGIN\]/\n&/;' sample.fq.gtz | sed -n '/\[GTZ_REBORN_BEGIN\]/,/\[GTZ_REBORN_END\]/p' | sed -e 's/.*\[GTZ_REBORN_BEGIN\]//g' -e 's/\[GTZ_REBORN_END\].*//g' | tar -zxvf -
 
 Step2:  
 If sample.fq.gtz is a high compression file, download the corresponding fasta file according to the prompt, and then extract the file.  
 If sample.fq.gtz is not a high compression file, the FASTQ file can be extracted directly  
-	`./gtz_reborn -d sample.fq.gtz`  
+	./gtz_reborn -d sample.fq.gtz  
 	
 ```
 ## Get More Products<span id="product"></span>
