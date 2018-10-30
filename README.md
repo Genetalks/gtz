@@ -258,6 +258,11 @@ fix : GTZ load slowly sometimes
 
 fix : GTZ cann't be quit by Ctrl+C sometimes
 
+#### 1.2.1
+fix : validation maybe be slow sometimes
+
+fix : when decompressed with -c, -e does not work
+
 ## FAQ<span id="faq"></span>  
 Frequently Asked Questions are intended to help newcomers to understand how we work! [-Click here！-](https://github.com/Genetalks/gtz/blob/master/FAQ_chs.md "Markdown")  
 
