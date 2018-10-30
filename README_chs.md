@@ -22,7 +22,7 @@ Powered by GTXLab of Genetalks.
 - [产品系列](#product)  
 - [rbin下载列表](#rbin-download)
 - [版本日志](#change-log)  
-- [常见问题](#fqa)  
+- [常见问题](#faq)  
 - [联系我们](#contact-us)
 
 
@@ -273,8 +273,8 @@ No. | 物种 | 官方链接
 
 解决输入ctrl+c，GTZ有时不能退出的问题  
 
-## 常见问题<span id="fqa"></span>  
-常见问题整理，[-请戳这里！-](https://github.com/Genetalks/gtz/blob/master/FAQ_chs.md "Markdown")  
+## 常见问题<span id="faq"></span>  
+常见问题，[-请戳这里！-](https://github.com/Genetalks/gtz/blob/master/FAQ_chs.md "Markdown")  
 
 ## 联系我们<span id="contact-us"></span>  
 使用中有任何问题请：  
