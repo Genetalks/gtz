@@ -142,7 +142,7 @@ Command:
 ### 压缩:
 ```
 1:将文件sample.fq压缩到当前目录 
-    gtz sample.fq -o sample.fq.gtz
+    gtz sample.fq 
 
 2:将文件sample.fq压缩到当前目录的out文件夹内  
     gtz sample.fq -o ./out/sample.fq.gtz
