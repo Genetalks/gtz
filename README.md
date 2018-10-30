@@ -258,7 +258,7 @@ fix : GTZ load slowly sometimes
 fix : GTZ cann't be quit by Ctrl+C sometimes
 
 ## FAQ<span id="faq"></span>  
-Frequently Asked Questions are intended to help newcomers to GTX.Zip Professional.[-Click here！-](https://github.com/Genetalks/gtz/blob/master/FAQ_chs.md "Markdown")  
+Frequently Asked Questions are intended to help newcomers to understand how we work! [-Click here！-](https://github.com/Genetalks/gtz/blob/master/FAQ_chs.md "Markdown")  
 
 ## Contact Us<span id="contact-us"></span> 
 
