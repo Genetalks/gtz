@@ -142,44 +142,44 @@ Command:
 ### 压缩:
 ```
 1:将文件sample.fq压缩到当前目录 
-    `gtz sample.fq -o sample.fq.gtz`
+    gtz sample.fq -o sample.fq.gtz
 
 2:将文件sample.fq压缩到当前目录的out文件夹内  
-    `gtz sample.fq -o ./out/sample.fq.gtz`
+    gtz sample.fq -o ./out/sample.fq.gtz
     
-/***如果没有通过--index-bin参数指定物种的话，则采用自动判断物种模式，自动判断比指定耗时更长 ***/
+/***如果没有通过--bin-file参数指定物种的话，则采用自动判断物种模式，自动判断比指定耗时更长 ***/
 
 3:通过指定物种bin文件的方式来进行高倍压缩（Homo_sapiens_bcacac9064331276504f27c6cf40e580.bin为人类的bin文件）   
-    `gtz sample.fq -o sample.fq.gtz --index-bin ./Homo_sapiens_bcacac9064331276504f27c6cf40e580.bin`
+    gtz sample.fq -o sample.fq.gtz --bin-file ./Homo_sapiens_bcacac9064331276504f27c6cf40e580.bin
 
 ```
 ### 解压
 ```
 1:将文件sample.fq解压到当前路径，如果"~/.config/gtz/"下没有对应的rbin文件，程序会自动从云下载至"~/.config/gtz/"   
-    `gtz -d sample.fq.gtz`
+    gtz -d sample.fq.gtz
 
-2:指定已有的rbin文件所在文件夹 --index-path; 
+2:指定已有的rbin文件所在文件夹 --rbin-path; 
   当rbin文件存在于"~/.config/gtz/"的其它地方，则可以指定rbin所在文件夹的形式进行解压，示例中rbin文件存在于“~/Homo”  
-    `gtz -d sample.gtz --index-path ~/Homo`
+    gtz -d sample.gtz --rbin-path ~/Homo
 
 3:将文件sample.fq.gtz解压至当前路径的Homo文件夹下   
-    `gtz -d sample.fq.gtz --out-dir ./Homo`		
+    gtz -d sample.fq.gtz --out-dir ./Homo		
 ```  
 ### gtz_index
 ```
 -交互模式：
  显示当前支持的物种列表，并且通过人机交互的模式逐步制作成BIN文件  
-    `gtz_index`
+    gtz_index
 
 -手动模式：  
 1:显示当前支持的物种列表，其中index编号为gtz_index download 命令的输入，下载对应物种的rbin文件  
-    `gtz_index list`  
+    gtz_index list  
 
 2:下载编号为1的Homo(人类)物种的rbin文件  
-    `gtz_index download 1`
+    gtz_index download 1
 
 3:通过指定rbin文件 “./Homo/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin"制作Homo_sapiens物种的bin、rec文件  
-    `gtz_index makeindex ./Homo/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin`
+    gtz_index makeindex ./Homo/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin
 		
 ```
 ### 涅槃计划  
@@ -188,7 +188,7 @@ Command:
 
 步骤一:  
     运行以下命令提取解压缩内嵌程序gtz_reborn到当前目录下会生成可执行文件gtz_reborn  
-    `sed -e 's/\[GTZ_REBORN_BEGIN\]/\n&/;' sample.fq.gtz | sed -n '/\[GTZ_REBORN_BEGIN\]/,/\[GTZ_REBORN_END\]/p' | sed -e 's/.*\[GTZ_REBORN_BEGIN\]//g' -e 's/\[GTZ_REBORN_END\].*//g' | tar -zxvf -`
+    sed -e 's/\[GTZ_REBORN_BEGIN\]/\n&/;' sample.fq.gtz | sed -n '/\[GTZ_REBORN_BEGIN\]/,/\[GTZ_REBORN_END\]/p' | sed -e 's/.*\[GTZ_REBORN_BEGIN\]//g' -e 's/\[GTZ_REBORN_END\].*//g' | tar -zxvf -
 
 步骤二:  
     运行:  
