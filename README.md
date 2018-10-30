@@ -130,7 +130,7 @@ gtz_index <command> [options]
 ### Compress  
 ```
 1:Compress the sample.fq to the current directory.
-	gtz sample.fq -o sample.fq.gtz    
+	gtz sample.fq    
 
 2:Compress the file sample.fq into the out folder of the current directory.
 	gtz sample.fq -o ./out/sample.fq.gtz    
@@ -138,7 +138,7 @@ gtz_index <command> [options]
 ***If the species is not specified by the '--bin-file' , GTZ will automatically recognize the species to compress.  ***  
 
 3.GTZ performs high compression by specifying bin files in the Homo folder under the current directory.  
-	gtz sample.fq -o sample.fq.gtz --bin-file ./Homo/Homo_sapiens_bcacac9064331276504f27c6cf40e580.bin  
+	gtz sample.fq --bin-file ./Homo/Homo_sapiens_bcacac9064331276504f27c6cf40e580.bin  
 ```
 
 ### Decompress  
