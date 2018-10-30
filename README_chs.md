@@ -253,8 +253,6 @@ No. | 物种 | 官方链接
 
 **如果以上物种不在您的需求范围内，请[-联系我们-](#contact-us)，我们将免费为您制作所需物种的rbin跟bin文件。**  
 
-## 常见问题<span id="fqa"></span>  
-常见问题整理，[-请戳这里！-](https://github.com/Genetalks/gtz/blob/master/FAQ_chs.md "Markdown")  
   
 ## 版本日志<span id="change-log"></span>
 
@@ -273,7 +271,10 @@ No. | 物种 | 官方链接
 #### 1.2
 解决GTZ有时加载慢的问题
 
-解决输入ctrl+c，GTZ有时不能退出的问题
+解决输入ctrl+c，GTZ有时不能退出的问题  
+
+## 常见问题<span id="fqa"></span>  
+常见问题整理，[-请戳这里！-](https://github.com/Genetalks/gtz/blob/master/FAQ_chs.md "Markdown")  
 
 ## 联系我们<span id="contact-us"></span>  
 使用中有任何问题请：  
