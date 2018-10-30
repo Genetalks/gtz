@@ -274,6 +274,11 @@ No. | 物种 | 官方链接
 
 解决输入ctrl+c，GTZ有时不能退出的问题  
 
+#### 1.2.1
+解决压缩完成后做校验时，GTZ有时会比较慢的问题
+
+解决用-c做解压时，-e不工作的问题
+
 ## 常见问题<span id="faq"></span>  
 常见问题，[-请戳这里！-](https://github.com/Genetalks/gtz/blob/master/FAQ_chs.md "Markdown")  
 
