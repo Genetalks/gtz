@@ -94,7 +94,7 @@ nova_rna_2.fq|5.39%|18.94%
 >命令中的“1”为人类物种在gtz_index 列表中的编号，可以通过gtz_index list命令查看物种列表  
 - 或者直接下载rbin文件并保存到“\~/.config/gtz”目录  
 [-homo_sapiens.rbin-](https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin)
-- 下载完毕之后，制作bin文件(需要至少100GB的空闲磁盘空间跟28GB内存空间，耗时10秒钟)    
+- 下载完毕之后，制作bin文件(需要至少100GB的空闲磁盘空间跟28GB内存空间，耗时10分钟    
 `gtz_index makeindex ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin  `    
 
 ><font size=1>\*  **bin文件**：高倍压缩时用到的参考序列索引文件。文件默认存放路径为："\~/.config/gtz/"</font>  
