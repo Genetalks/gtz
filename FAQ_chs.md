@@ -55,7 +55,7 @@
   
 **10、GTX.Zip Pro目前支持多少个物种的智能选择压缩？**<span id="10"></span>  
   >38个物种，点击[-这里-](https://github.com/Genetalks/gtz/blob/master/README_chs.md#rbin-download)查看列表:。    
-  >如果您希望将某个物种加入支持列表，请联系邮箱: contact@gtz.io, 或者在GitHub[创建一个新的issue](https://github.com/Genetalks/gtz/issues/new)。  
+  >如果您希望将某个物种加入支持列表，请联系邮箱: contact@gtz.io, 或者在GitHub创建一个[新的issue](https://github.com/Genetalks/gtz/issues/new)。  
   
 **11、GTX.Zip Pro软件包里的bin，rbin文件是做什么的？**<span id="11"></span>  
   >bin文件是高倍压缩时用到的指定物种的参考序列索引文件；   
