@@ -45,7 +45,7 @@
   >GTX.Zip Pro将永远向后兼容所有以前版本，但同时也在增添更多功能，未来的持续改进包括：继续压缩率和压缩速度、采用更加紧致的索引文件、支持BAM文件压缩、支持BCL目录压缩等，通过强制更新，以期望大家手里的客户端可以跟上GTZ升级的步伐，已达到最佳的使用体验，切实帮助整个产业减小数据传、存成本。此外，6个月时间的选择也期望尽量减小对大家的运维时间上的打断，有更好的使用体验。  
     
   >如果使用场景中有绝不允许任何更新的情况，请联系我们，可以获得企业版或商讨其他解决方案。    
-  >邮箱: contact@gtz.io, 或者在GitHub[创建一个新的issue](https://github.com/Genetalks/gtz/issues/new) 。
+  >邮箱: contact@gtz.io, 或者在GitHub创建一个[新的issue](https://github.com/Genetalks/gtz/issues/new) 。
 
 **8、怎么并行跑多个压缩任务？**<span id="8"></span>  
   >如果需要并行跑多个压缩任务可以联系我们获得GTX.Zip Enterprise版，该版本可以在企业内部组建分布式计算集群，从而获得高并发高性能的压缩性能。  
@@ -70,7 +70,7 @@
   >通常这是因为这些物种暂时不在GTX.Zip Pro支持的列表范围内。GTX.Zip Pro默认采用基于参考基因组的压缩模式以提供最优压缩率，但是当物种不在支持列表范围内，GTX.Zip Pro会自动改用无参考基因组的次优倍率压缩模式，无参的压缩率通常逊于有参压缩率。  
   
   >如果遇到此情况，请您能及时跟我们联系，制作您需要的物种bin文件。  
-  >邮箱: contact@gtz.io, 或者在GitHub[创建一个新的issue](https://github.com/Genetalks/gtz/issues/new)。   
+  >邮箱: contact@gtz.io, 或者在GitHub创建一个[新的issue](https://github.com/Genetalks/gtz/issues/new)。   
 
 **14、如果你们公司不做这个项目了，我们压缩完的文件怎么办？**<span id="14"></span>  
   >首先我们不会不做这个项目，其次GTX.Zip作为企业级软件，针对高可用性需求制定了“涅磐计划”，以确保用户在最为极端、无法获得任何GTX.Zip系统支持的情况下，也能将压缩数据解压为原始数据。涅磐计划的双重可用性保护策略如下：  
@@ -87,7 +87,8 @@
   >不允许直接将 GTZ-Perfessional版本 二次 打包进 其他商业发布系统中。但如果由此需求的客户，请联系 ：contact@gtz.io , 我们会确认身份后，跟您签署一份合作协议，并为您发布一份专有重打包协议。  
   
 **18、怎样让GTX.Zip Pro增加高倍压缩所需的新物种的参考基因组信息？**<span id="18"></span>  
-  >邮箱: contact@gtz.io, 或者在GitHub[创建一个新的issue](https://github.com/Genetalks/gtz/issues/new) 或者加入我们的[微信交流群]提出需求(https://github.com/Genetalks/gtz/)，我们将免费制作用户所需的新物种的参考基因组文件。  
+  >邮箱: contact@gtz.io, 或者在GitHub创建一个[新的issue](https://github.com/Genetalks/gtz/issues/new) 或者加入我们的[微信交流群](https://github.com/Genetalks/gtz/)提出需求。  
+  >我们将免费制作用户所需的新物种的参考基因组文件。  
 
 <!--**15、为什么不允许我们自己生成rbin文件以增加物种支持？**<span id="15"></span>  -->  
    
