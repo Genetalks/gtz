@@ -15,7 +15,8 @@
 - [14、如果你们公司不做这个项目了，我们压缩完的文件怎么办?](#14)  
 - [15、是否有工具软件能够支持GTX.Zip的压缩格式作为输入?](#15)  
 - [16、GTX.Zip Pro是否支持所有下机数据格式？比如fasta](#16)  
-- [17、GTZ是否允许二次打包进其他商业发布中？](#17)  
+- [17、是否允许将GTX.Zip Pro二次打包进其他软件的商业发布中？](#17)  
+- [18、怎样让GTX.Zip Pro增加高倍压缩所需的新物种的参考基因组信息？](#18)  
 
 
  <!--- [15、为什么不允许我们自己生成rbin文件以增加物种支持？](#15)-->  
@@ -54,7 +55,7 @@
   
 **10、GTX.Zip Pro目前支持多少个物种的智能选择压缩？**<span id="10"></span>  
   >38个物种，点击[-这里-](https://github.com/Genetalks/gtz/blob/master/README_chs.md#rbin-download)查看列表:。    
-  >如果您希望将某个物种加入支持列表，请联系邮箱: contact@gtz.io, 或在GitHub创建一个新的issue 。  
+  >如果您希望将某个物种加入支持列表，请联系邮箱: contact@gtz.io, 或者在GitHub[创建一个新的issue](https://github.com/Genetalks/gtz/issues/new)。  
   
 **11、GTX.Zip Pro软件包里的bin，rbin文件是做什么的？**<span id="11"></span>  
   >bin文件是高倍压缩时用到的指定物种的参考序列索引文件；   
@@ -82,8 +83,10 @@
 **16、GTX.Zip Pro是否支持所有下机数据格式？比如fasta**<span id="16"></span>  
   >全部支持，只是fastq格式压缩效果最好。  
    
-**17、GTZ是否允许二次打包进其他商业发布中？**<span id="17"></span>  
+**17、是否允许将GTX.Zip Pro二次打包进其他软件的商业发布中？**<span id="17"></span>  
   >不允许直接将 GTZ-Perfessional版本 二次 打包进 其他商业发布系统中。但如果由此需求的客户，请联系 ：contact@gtz.io , 我们会确认身份后，跟您签署一份合作协议，并为您发布一份专有重打包协议。  
+**18、怎样让GTX.Zip Pro增加高倍压缩所需的新物种的参考基因组信息？**<span id="18"></span>  
+  >邮箱: contact@gtz.io, 或者在GitHub[创建一个新的issue](https://github.com/Genetalks/gtz/issues/new) 或者加入我们的[微信交流群]提出需求(https://github.com/Genetalks/gtz/)，我们将免费制作用户所需的新物种的参考基因组文件。  
 
 <!--**15、为什么不允许我们自己生成rbin文件以增加物种支持？**<span id="15"></span>  -->  
    
