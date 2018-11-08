@@ -85,6 +85,7 @@
    
 **17、是否允许将GTX.Zip Pro二次打包进其他软件的商业发布中？**<span id="17"></span>  
   >不允许直接将 GTZ-Perfessional版本 二次 打包进 其他商业发布系统中。但如果由此需求的客户，请联系 ：contact@gtz.io , 我们会确认身份后，跟您签署一份合作协议，并为您发布一份专有重打包协议。  
+  
 **18、怎样让GTX.Zip Pro增加高倍压缩所需的新物种的参考基因组信息？**<span id="18"></span>  
   >邮箱: contact@gtz.io, 或者在GitHub[创建一个新的issue](https://github.com/Genetalks/gtz/issues/new) 或者加入我们的[微信交流群]提出需求(https://github.com/Genetalks/gtz/)，我们将免费制作用户所需的新物种的参考基因组文件。  
 
