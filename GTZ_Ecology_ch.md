@@ -9,52 +9,72 @@
 
 	##### 方式一  
 	运行命令（推荐）  
-	  
 		`sudo curl -sSL https://gtz.io/bwagtz_latest.run -o /tmp/bwagtz.run && sudo sh /tmp/bwagtz.run`  
-		  
 	##### 方式二  
 	下载安装文件：[-GTX.Zip bwa-gtz-]( https://gtz.io/bwagtz_latest.run )  
 	在安装文件目录下运行命令  
-	  
 	`sudo sh bwagtz_lastest.run`  
-	  
 	根据提示完成安装  
 	
 - **使用说明**
 
-	bwa-gtz基于bwa官网的0.7.17版本所做修改，在bwa基础上支持gtz格式数据，同时其性能比官网bwa提升1/3倍。
-	bwa-gtz其他功能和使用方式与官网bwa完全一致，举例如下:
-	
-	官网bwa
+	GTX.Zip对bwa的支持包中，包含bwa-gtz和bwa-opt-gtz, 两个版本均基于bwa的0.7.17版本。其中：两个版本都添加了对gtz文件的直接读取能力，各项功能与bwa主代码功能完全一致。
 
-	`bwa mem GCF_000001405.37_GRCh38.p11_genomic.fna nova_wes_1.fq nova_wes_2.fq -t 4 -o nova_wes.sam`  
+	bwa-gtz对比bwa-opt-gtz差异如下：
 
-	bwa-gtz
+	1）bwa-gtz可以直接使用官网bwa所制作的index，性能与官网bwa一致
+
+	2）bwa-opt-gtz不能直接使用官网bwa制作的index，index需要使用bwa-opt-gtz重新制作，但在性能上会比官网bwa提升1/3
+
+
+	#### 使用举例
+
+	#### bwa-gtz
+
+	`export GTZ_RBIN_PATH=/path/rbin`
 	
-	`bwa-gtz mem GCF_000001405.37_GRCh38.p11_genomic.fna nova_wes_1.fq nova_wes_2.fq -t 4 -o nova_wes.sam`  
-	`bwa-gtz mem GCF_000001405.37_GRCh38.p11_genomic.fna nova_wes_1.fq.gtz nova_wes_2.fq.gtz -t 4 -o nova_wes.sam`  
-  
-	>\*1) bwa-gtz处理gtz格式数据时，我们建议您都可以通过以下环境变量指定rbin文件所在的路径，因为bwa-gtz在处理gtz格式数据
-	>时，如果需要rbin文件，它只会去～/.config/gtz路径下搜索对应的rbin文件，在没有找到的情形下再去从网络上拖取对应的rbin
-	>文件，下载将消耗一定的时间。  
-  >\**环境变量设置**:   
-	>    `export GTZ_RBIN_PATH=/path/rbin`  
-	>\*2) 使用bwa-gtz时所有index必须重新制作，不能直接使用官网bwa制作的index  
-  
+	`bwa-gtz mem ref.fa read1.fq.gtz read2.fq.gtz -o aln-pe.sam`
+
+	该例子中通过环境变量GTZ_RBIN_PATH指定了rbin文件所在路径，这里"export GTZ_RBIN_PATH=/path/rbin"不是必须的，但如果您知道rbin所在路径，建议您指定，这样可以加快bwa-gtz处理速度。因为，当bwa-gtz需要rbin文件，且在默认路径~/.config/gtz下找不到该rbin文件，则会通过网络下载，下载过程将消耗时间。
+
+
+	#### bwa-opt-gtz
+
+	##### 步骤一：重新制作index（必须）
+
+	`bwa-opt-gtz index ref.fa`
+
+	##### 步骤二：执行比对
+
+	`export GTZ_RBIN_PATH=/path/rbin`
+	
+	`bwa-opt-gtz mem ref.fa read1.fq.gtz read2.fq.gtz -t 4 -o aln-pe.sam`
+	
+	
 - **性能**
 
-	在服务器资源足够的情形下，bwa-gtz性能会比官网bwa好1/3，以下是同环境下的一组测试数据(指定线程数为4):
 	
-	官网bwa，耗时50分钟  
-
-	`bwa mem GCF_000001405.37_GRCh38.p11_genomic.fna nova_wes_1.fq nova_wes_2.fq -t 4 -o nova_wes.sam`  
-
-	bwa-gtz，耗时34分钟  
-
-	`bwa-gtz mem GCF_000001405.37_GRCh38.p11_genomic.fna nova_wes_1.fq.gtz nova_wes_2.fq.gtz -t 4 -o nova_wes.sam`  
+	在服务器资源足够的情形下，bwa-opt-gtz性能会比官网bwa好1/3，以下是同环境下的一组测试数据(指定线程数为4):
 	
+	#####	命令
 	
-- **最佳实践**
+	`bwa mem ref.fa read1.fq.gz read2.fq.gz -t 4 -o aln-pe.sam`
+	
+	`bwa-gtz mem ref.fa read1.fq.gz.gtz read2.fq.gz.gtz -t 4 -o aln-pe.sam`
+	
+	`bwa-opt-gtz mem ref.fa read1.fq.gz.gtz read2.fq.gz.gtz -t 4 -o aln-pe.sam`
+	
+	#####	机器配置
+	
+	16核CPU,64G内存
+	
+	#####	性能数据
+	
+	软件  |bwa|bwa-gtz|bwa-opt-gtz
+	---|:---:|:--:|---:
+ 	时间消耗|-|-|-
+	内存消耗|-|-|-
+	
 
 
 
