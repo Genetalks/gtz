@@ -74,7 +74,7 @@ As an enterprise-level software, GTX.Zip has developed a nirvana program for hig
 	
 	If software version information appears, the installation is successful.  
 ## Quick Start <span id="quick-start"></span>	
-GTX.Zip Professional needs to be installed on the current machine. If not, please go to the [-How to Install-](#install) .
+GTX.Zip Professional needs to be installed on the current machine. If not, please go to [-How to Install-](#install) .
 
 1. **Make bin file to enable high rate compression**
    Take the human sample species as an example, make the index file (*bin* file) required for GTX.Zip high rate compression
