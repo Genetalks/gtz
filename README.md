@@ -27,7 +27,8 @@ Powered by GTXLab of Genetalks.
 ## What is GTX.Zip？<span id="intro"></span>
 
 GTX.Zip is a professional fastq/bam compressor and also can be used as a universal data compression software, developed by GTXLab of Genetalks Inc. GTX.Zip can rapidly compress any DNA sequencing files and directories with very high compression rate, and generate a single compressed data files, thus facilitating the data storage, distribution and transmission. Different from other compression tools, GTX.Zip system focuses on **high compression rate, high speed, and convenient data extraction**. 
-- **[GTX.Zip Professional](#install)** is a stand-alone version which supports local compression service. GTX.Zip Professional runs by command lines for compression and decompression of local genomic data.To get other GTX.Zip product, come [-here-](#product).  
+- **[GTX.Zip Professional](#install)** is a stand-alone version which supports local compression service. GTX.Zip Professional runs by command lines for compression and decompression of local genomic data.If you want get other GTX.Zip product, come [here](#product).  
+- **[Tools for GTX.Zip](#ecology)** . GTX.Zip's support package for sequencing analysis tools, include [bwa-gtz](#bwa). 
 
 ## Feature<span id="feature"></span>
 
@@ -48,7 +49,7 @@ GTX.Zip compressor system features:
 - **Safety Guarantee**: Thanks to its high speed, during the process of GTX.Zip compression, the data decompression and restore test is performed. The compression process will be done only after the data has been confirmed exactly the same as the source data. MD5 validation is performed to ensure data integrity as well.
 
 - **Software Ecology**: GTX.Zip provides command line and GUI decompression software for Linux, Mac OSX and Windows. It also provides SDK interfaces in languages such as Python, C, C++, etc. which is convenient for third-party developers to read and write gtz file (GTX.Zip compression format) directly. For example, gtz version of bcl2fastq, fastp and BWA are supported by community now.   
-If you want to get these softwares, please go to [-GTX.Zip Ecology-](#ecology).    
+If you want to get these softwares, please go to [-Tools for GTZ-](#ecology).    
 - **Nirvana Plan**:   
 As an enterprise-level software, GTX.Zip has developed a nirvana program for high-availability requirements to ensure that users can decompress compressed data into original data under the extreme condition. The nirvana plan's dual availability protection strategy is as follows:
 	-  GTX.Zip is multi-site hosted. http://gtz.io website, GitHub and other sites will permanently host all versions of GTX.Zip, to make sure that it is available to the entire network all the time and free of charge at any time.
