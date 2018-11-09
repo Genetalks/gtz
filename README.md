@@ -21,7 +21,6 @@ Powered by GTXLab of Genetalks.
 - [species rbin Downloads](#rbin-download)
 - [Change Log](#change-log) 
 - [GTX.Zip Ecology](#ecology)
-	- [bwa support](#bwa-support)
 - [FAQ](#faq)  
 - [Contact Us](#contact-us)
 
@@ -242,7 +241,11 @@ No. | Species | Official Url
 39|Equus caballus|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Equus_caballus_48fb76cc859b80aff9818361dce3e735.rbin  
 
 **If the species you need is not in our [species list](#rbin-download) , please [contact us](#contact-us) !**    
-
+## GTX.Zip Ecology<span id="ecology"></span>
+No. | Project | Description 
+----|-------- | -------------
+1|[bwa-gtz](https://github.com/Genetalks/gtz/blob/master/GTZ_Ecology_en.md#bwa)|bwa-gtz is based on the modification of version 0.7.17 of bwa official website   
+    
 ## Change Log
 
 #### 1.0
@@ -268,11 +271,7 @@ fix : when decompressed with -c, -e does not work
 #### 1.2.2 - 2018/11/09
 mainly optimize the loading speed of index files, the compression speed will be significantly improved
 
-## GTX.Zip Ecology<span id="ecology"></span>
-No. | Project | Description 
-----|-------- | -------------
-1|[BWA for gtz](https://github.com/Genetalks/gtz/blob/master/GTZ_Ecology_en.md#bwa)|bwa-gtz is based on the modification of version 0.7.17 of bwa official website  
-    
+
     
 ## FAQ<span id="faq"></span>  
 Frequently Asked Questions are intended to help newcomers to understand how we work! [-Click here！-](https://github.com/Genetalks/gtz/blob/master/FAQ_chs.md "Markdown")  
