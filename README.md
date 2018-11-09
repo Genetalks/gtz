@@ -269,9 +269,9 @@ fix : when decompressed with -c, -e does not work
 mainly optimize the loading speed of index files, the compression speed will be significantly improved
 
 ## GTX.Zip Ecology<span id="ecology"></span>
-No. | Project | Description
+No. | Project | Description 
 ----|-------- | -------------
-1|[BWA for gtz](https://gtz.io/bwagtz_latest.run)|bwa-gtz is based on the modification of version 0.7.17 of bwa official website  
+1|[BWA for gtz](https://github.com/Genetalks/gtz/blob/master/GTZ_Ecology_en.md#bwa)|bwa-gtz is based on the modification of version 0.7.17 of bwa official website  
     
     
 ## FAQ<span id="faq"></span>  
