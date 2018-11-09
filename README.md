@@ -19,7 +19,7 @@ Powered by GTXLab of Genetalks.
 - [For Example](#example)
 - [Get More Products](#product)  
 - [Species rbin Downloads](#rbin-download)  
-- [GTX.Zip Ecology](#ecology)  
+- [Tools for GTX.Zip](#ecology)  
 - [Change Log](#change-log) 
 - [FAQ](#faq)  
 - [Contact Us](#contact-us)
@@ -243,7 +243,7 @@ No. | Species | Official Url
 39|Equus caballus|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Equus_caballus_48fb76cc859b80aff9818361dce3e735.rbin  
 
 **If the species you need is not in our [species list](#rbin-download) , please [contact us](#contact-us) !**    
-## GTX.Zip Ecology<span id="ecology"></span>
+## Tools for GTX.Zip<span id="ecology"></span>
 No. | Project | Description 
 ----|-------- | -------------
 1|[bwa-gtz](https://github.com/Genetalks/gtz/blob/master/GTZ_Ecology_en.md#bwa)|bwa-gtz is based on the modification of version 0.7.17 of bwa official website   
