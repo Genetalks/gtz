@@ -21,7 +21,7 @@ Powered by GTXLab of Genetalks.
 - [应用示例](#example)
 - [产品系列](#product)  
 - [rbin下载列表](#rbin-download)  
-- [GTX.Zip生态](#ecology)  
+- [GTX.Zip生态圈工具集](#ecology)  
 - [版本日志](#change-log)  
 - [常见问题](#faq)  
 - [联系我们](#contact-us)
@@ -256,7 +256,14 @@ No. | 物种 | 官方链接
 39|Equus caballus|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Equus_caballus_48fb76cc859b80aff9818361dce3e735.rbin  
 
 **如果以上物种不在您的需求范围内，请[-联系我们-](#contact-us)，我们将免费为您制作所需物种的rbin跟bin文件。**  
+  
+  
+## GTX.Zip生态圈工具集]<span id="ecology"></span>
 
+## bwa支持<span id="bwa-support"></span>
+序号. | 工具 | 描述
+----|-------- | -------------
+1|[bwa-gtz](https://github.com/Genetalks/gtz/blob/master/GTZ_Ecology_en.md#bwa)|bwa-gtz is based on the modification of version 0.7.17 of bwa official website   
   
 ## 版本日志<span id="change-log"></span>
 
@@ -285,12 +292,6 @@ No. | 物种 | 官方链接
 #### 1.2.2 - 2018/11/09
 主要优化索引文件的加载速度，压缩速度会有明显的提升
 
-## GTX.Zip生态<span id="ecology"></span>
-
-## bwa支持<span id="bwa-support"></span>
-序号. | 工具 | 描述
-----|-------- | -------------
-1|[bwa-gtz](https://github.com/Genetalks/gtz/blob/master/GTZ_Ecology_en.md#bwa)|bwa-gtz is based on the modification of version 0.7.17 of bwa official website   
 
 ## 常见问题<span id="faq"></span>  
 常见问题，[-请戳这里！-](https://github.com/Genetalks/gtz/blob/master/FAQ_chs.md "Markdown")  
