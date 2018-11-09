@@ -1,9 +1,10 @@
-# GTX.Zip 生态圈    
-- [1、BWA Support](#1)  
+# GTX.Zip Ecology   
+## index
+- [1、BWA Support](#bwa)  
  
 -----------------------------------------
-**1、BWA Support**<span id="1"></span>  
-## bwa support<span id="bwa-support"></span>
+## 1、BWA Support <span id="bwa"></span>  
+
 
 - **How to Install?**
 
