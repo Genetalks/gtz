@@ -306,20 +306,20 @@ No. | Species | Official Url
 	
 	`bwa mem ref.fa read1.fq.gz read2.fq.gz -t 4 -o aln-pe.sam`
 	
-	`bwa-gtz mem ref.fa read1.fq.gz.gtz read2.fq.gz.gtz -t 4 -o aln-pe.sam`
+	`bwa-gtz mem ref.fa read1.fq.gtz read2.fq.gtz -t 4 -o aln-pe.sam`
 	
-	`bwa-opt-gtz mem ref.fa read1.fq.gz.gtz read2.fq.gz.gtz -t 4 -o aln-pe.sam`
+	`bwa-opt-gtz mem ref.fa read1.fq.gtz read2.fq.gtz -t 4 -o aln-pe.sam`
 	
 	#####	Test environment
 	
-	Server configuration: 48 core CPU, 128G memory; file size: read1.fq.gz(1.5G), read1.fq.gz(1.6G), read1.fq.gz(1G), read1.fq.gz(1.1G)
+	Server configuration: 16 core CPU, 64G memory; file size: read1.fq.gz(1.8G), read2.fq.gz(1.8G), read1.fq.gtz(0.3G), read2.fq.gtz(0.3G)
 	
 	#####	performance data
 	
 	Software  |bwa|bwa-gtz|bwa-opt-gtz
 	---|:---:|:--:|---:
- 	Time consumption|82m48.506s|80m10.062s|58m28.795s
-	Memory consumption|-|-|-
+ 	Time consumption|50m14.06s|51m37.67s|39m18.86s
+	Memory consumption|5.888G|10.56G|19.84G
 
 
     
