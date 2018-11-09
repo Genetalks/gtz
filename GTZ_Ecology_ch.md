@@ -1,4 +1,4 @@
-# GTX.Zip 生态圈工具集   
+# 测序分析软件 for GTZ   
 ## 目录
 - [1、BWA for GTZ](#bwa)  
  
