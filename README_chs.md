@@ -21,7 +21,7 @@ Powered by GTXLab of Genetalks.
 - [应用示例](#example)
 - [产品系列](#product)  
 - [rbin下载列表](#rbin-download)  
-- [测序分析软件 for GTZ](#ecology)  
+- [GTZ生态圈软件](#ecology)  
 - [版本日志](#change-log)  
 - [常见问题](#faq)  
 - [联系我们](#contact-us)
@@ -33,7 +33,7 @@ GTX.Zip（简称GTZ）是面向基因行业，结合行业数据特征，对基�
 
 - **[GTX.Zip Professional](#install)** 可以为用户提供便捷的单机版压缩服务，可以灵活地使用默认或指定参考基因组对本地基因组数据文件进行压缩、解压操作。
 想要获得其他产品请查看[-产品系列-](#product)。  
-- **[测序分析软件 for GTZ。](#ecology)** 我们目前已免费提供能支持直接读写gtz格式（GTX.Zip压缩文件）的常用测序分析软件，其中包含[bwa-gtz](#bwa)等工具。
+- **[GTZ生态圈软件。](#ecology)** 我们目前已免费提供能支持直接读写gtz格式（GTX.Zip压缩文件）的常用测序分析软件，其中包含[bwa-gtz](#bwa)等工具。
 	
 ## 特性<span id="feature"></span>
 
@@ -259,7 +259,7 @@ No. | 物种 | 官方链接
 **如果以上物种不在您的需求范围内，请[-联系我们-](#contact-us)，我们将免费为您制作所需物种的rbin跟bin文件。**  
   
   
-## 测序分析软件 for GTZ<span id="ecology"></span>
+## GTZ生态圈软件<span id="ecology"></span>
 
 ## 1、BWA for GTZ <span id="bwa"></span>  
 
@@ -320,13 +320,13 @@ No. | 物种 | 官方链接
 	
 	`bwa mem ref.fa read1.fq.gz read2.fq.gz -t 4 -o aln-pe.sam`
 	
-	`bwa-gtz mem ref.fa read1.fq.gz.gtz read2.fq.gz.gtz -t 4 -o aln-pe.sam`
+	`bwa-gtz mem ref.fa read1.fq.gtz read2.fq.gtz -t 4 -o aln-pe.sam`
 	
-	`bwa-opt-gtz mem ref.fa read1.fq.gz.gtz read2.fq.gz.gtz -t 4 -o aln-pe.sam`
+	`bwa-opt-gtz mem ref.fa read1.fq.gtz read2.fq.gtz -t 4 -o aln-pe.sam`
 	
 	#####	测试环境
 	
-	服务器配置：16核CPU,64G内存; 文件大小: read1.fq.gz(1.8G), read1.fq.gz(1.8G), read1.fq.gtz(0.3G), read1.fq.gtz(0.3G)
+	服务器配置：16核CPU,64G内存; 文件大小: read1.fq.gz(1.8G), read2.fq.gz(1.8G), read1.fq.gtz(0.3G), read2.fq.gtz(0.3G)
 	
 	#####	性能数据
 	
