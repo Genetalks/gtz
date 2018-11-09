@@ -33,7 +33,7 @@ GTX.Zip（简称GTZ）是面向基因行业，结合行业数据特征，对基�
 
 - **[GTX.Zip Professional](#install)** 可以为用户提供便捷的单机版压缩服务，可以灵活地使用默认或指定参考基因组对本地基因组数据文件进行压缩、解压操作。
 想要获得其他产品请查看[-产品系列-](#product)。  
-- **[测序分析软件 for GTZ](#ecology)**。 我们目前已免费提供能支持直接读写gtz格式（GTX.Zip压缩文件）的[常用测序分析软件](#ecology)，其中包含[bwa-gtz](#bwa)等工具。
+- **[测序分析软件 for GTZ。](#ecology)** 我们目前已免费提供能支持直接读写gtz格式（GTX.Zip压缩文件）的常用测序分析软件，其中包含[bwa-gtz](#bwa)等工具。
 	
 ## 特性<span id="feature"></span>
 
