@@ -275,7 +275,7 @@ mainly optimize the loading speed of index files, the compression speed will be 
 - **How to Install?**
 
 	##### For installation you can (recommended)  
-		`sudo curl -sSL https://gtz.io/bwagtz_latest.run -o /tmp/bwagtz.run && sudo sh /tmp/bwagtz.run`  
+        `sudo curl -sSL https://gtz.io/bwagtz_latest.run -o /tmp/bwagtz.run && sudo sh /tmp/bwagtz.run`  
 	##### or 
 	download installation files：[-GTX.Zip bwa-gtz-]( https://gtz.io/bwagtz_latest.run )  
 	Run commands in the installation file directory 
@@ -284,7 +284,7 @@ mainly optimize the loading speed of index files, the compression speed will be 
 	
 - **How to Use?**
 
-	bwa-gtz is based on the modification of version 0.7.17 of bwa official website. It supports GTZ format data on the 	   basis of bwa. At the same time, its performance is 1/3 times higher than that of BWA official website.
+	bwa-gtz is based on the modification of version 0.7.17 of bwa official website. It supports GTZ format data on the  basis of bwa. At the same time, its performance is 1/3 times higher than that of BWA official website.
 	bwa-gtz other functions and modes of use are exactly the same as those of official website bwa. Examples are as follows:
 	
 	official network bwa
@@ -293,7 +293,7 @@ mainly optimize the loading speed of index files, the compression speed will be 
 
 	bwa-gtz
 	
-	`bwa-gtz mem GCF_000001405.37_GRCh38.p11_genomic.fna nova_wes_1.fq nova_wes_2.fq -t 4 -o nova_wes.sam`
+	`bwa-gtz mem GCF_000001405.37_GRCh38.p11_genomic.fna nova_wes_1.fq nova_wes_2.fq -t 4 -o nova_wes.sam`  
 	`bwa-gtz mem GCF_000001405.37_GRCh38.p11_genomic.fna nova_wes_1.fq.gtz nova_wes_2.fq.gtz -t 4 -o nova_wes.sam`
 	
 	####  ** notice **
