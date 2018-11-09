@@ -18,9 +18,9 @@ Powered by GTXLab of Genetalks.
 - [Usage](#usage)
 - [For Example](#example)
 - [Get More Products](#product)  
-- [species rbin Downloads](#rbin-download)
+- [Species rbin Downloads](#rbin-download)  
+- [GTX.Zip Ecology](#ecology)  
 - [Change Log](#change-log) 
-- [GTX.Zip Ecology](#ecology)
 - [FAQ](#faq)  
 - [Contact Us](#contact-us)
 
@@ -47,7 +47,8 @@ GTX.Zip compressor system features:
 
 - **Safety Guarantee**: Thanks to its high speed, during the process of GTX.Zip compression, the data decompression and restore test is performed. The compression process will be done only after the data has been confirmed exactly the same as the source data. MD5 validation is performed to ensure data integrity as well.
 
-- **Software Ecology**: GTX.Zip provides command line and GUI decompression software for Linux, Mac OSX and Windows. It also provides SDK interfaces in languages such as Python, C, C++, etc. which is convenient for third-party developers to read and write gtz file (GTX.Zip compression format) directly. For example, gtz version of bcl2fastq, fastp and BWA are supported by community now. More software will be released soon.    
+- **Software Ecology**: GTX.Zip provides command line and GUI decompression software for Linux, Mac OSX and Windows. It also provides SDK interfaces in languages such as Python, C, C++, etc. which is convenient for third-party developers to read and write gtz file (GTX.Zip compression format) directly. For example, gtz version of bcl2fastq, fastp and BWA are supported by community now.   
+If you want to get these softwares, please see [here](#ecology)!.    
 - **Nirvana Plan**:   
 As an enterprise-level software, GTX.Zip has developed a nirvana program for high-availability requirements to ensure that users can decompress compressed data into original data under the extreme condition. The nirvana plan's dual availability protection strategy is as follows:
 	-  GTX.Zip is multi-site hosted. http://gtz.io website, GitHub and other sites will permanently host all versions of GTX.Zip, to make sure that it is available to the entire network all the time and free of charge at any time.
