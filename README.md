@@ -275,7 +275,9 @@ mainly optimize the loading speed of index files, the compression speed will be 
 - **How to Install?**
 
 	##### For installation you can (recommended)  
-        sudo curl -sSL https://gtz.io/bwagtz_latest.run -o /tmp/bwagtz.run && sudo sh /tmp/bwagtz.run  
+	  
+	`sudo curl -sSL https://gtz.io/bwagtz_latest.run -o /tmp/bwagtz.run && sudo sh /tmp/bwagtz.run`    
+	  
 	##### or 
 	download installation files：[-GTX.Zip bwa-gtz-]( https://gtz.io/bwagtz_latest.run )  
 	Run commands in the installation file directory   
@@ -294,10 +296,10 @@ mainly optimize the loading speed of index files, the compression speed will be 
 	`bwa mem GCF_000001405.37_GRCh38.p11_genomic.fna nova_wes_1.fq nova_wes_2.fq -t 4 -o nova_wes.sam`  
 
 	bwa-gtz  
-	
+	   
 	`bwa-gtz mem GCF_000001405.37_GRCh38.p11_genomic.fna nova_wes_1.fq nova_wes_2.fq -t 4 -o nova_wes.sam`  
 	`bwa-gtz mem GCF_000001405.37_GRCh38.p11_genomic.fna nova_wes_1.fq.gtz nova_wes_2.fq.gtz -t 4 -o nova_wes.sam`   
-	
+	  
 	
 	
 	>\*1) When bwa-gtz processes data in GTZ format, we recommend that you specify the path of the RBIN file 
