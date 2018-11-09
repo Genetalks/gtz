@@ -1,4 +1,4 @@
-# GTX.Zip Ecology   
+# Tools for GTX.Zip   
 ## index
 - [1、BWA Support](#bwa)  
  
