@@ -31,8 +31,9 @@ Powered by GTXLab of Genetalks.
 
 GTX.Zip（简称GTZ）是面向基因行业，结合行业数据特征，对基因测序数据进行定向优化，支持所有文件格式的高倍无损压缩系统。**该系统具有业界最高无损压缩倍率和速度，能以1100MB/s的极致速度，将基因测序数据压缩至原大小的2%。该系统可对测序数据文件及文件目录进行高倍率快速压缩和打包，赋能用户对海量基因数据进行方便快捷的存储、传输、分发和提取**。  
 
-GTX.Zip Professional可以为用户提供便捷的单机版压缩服务，可以灵活地使用默认或指定参考基因组对本地基因组数据文件进行压缩、解压操作。
-想要获得其他产品请查看[-产品系列-](#product)。
+- **[GTX.Zip Professional](#install)** 可以为用户提供便捷的单机版压缩服务，可以灵活地使用默认或指定参考基因组对本地基因组数据文件进行压缩、解压操作。
+想要获得其他产品请查看[-产品系列-](#product)。  
+- **[测序分析软件 for GTZ](#ecology)**。 我们目前已免费提供能支持直接读写gtz格式（GTX.Zip压缩文件）的[常用测序分析软件](#ecology)，包含[bwa-gtz](#bwa)。
 	
 ## 特性<span id="feature"></span>
 
@@ -260,15 +261,95 @@ No. | 物种 | 官方链接
   
 ## 测序分析软件 for GTZ<span id="ecology"></span>
 
-序号 | 工具 | 描述
-----|-------- | -------------
-1 | [bwa-gtz](https://github.com/Genetalks/gtz/blob/master/GTZ_Ecology_ch.md#bwa) | bwa-gtz是基于bwa的0.7.17版本开发，添加了对gtz文件的直接读取能力，各项功能与bwa主代码功能完全一致。   
+## 1、BWA for GTZ <span id="bwa"></span>  
+
+- **安装方法**
+
+	##### 方式一  
+	运行命令（推荐）  
+		`sudo curl -sSL https://gtz.io/bwagtz_latest.run -o /tmp/bwagtz.run && sudo sh /tmp/bwagtz.run`  
+	##### 方式二  
+	下载安装文件：[-GTX.Zip bwa-gtz-]( https://gtz.io/bwagtz_latest.run )  
+	在安装文件目录下运行命令  
+	`sudo sh bwagtz_lastest.run`  
+	根据提示完成安装  
+	
+- **使用说明**
+
+	GTX.Zip对bwa的支持包中，包含bwa-gtz和bwa-opt-gtz, 两个版本均基于bwa的0.7.17版本。
+	其中：两个版本都添加了对gtz文件的直接读取能力，各项功能与bwa主代码功能完全一致。
+	bwa-opt-gtz还对bwa的查表结构进行了深度优化，在完全不改变其比对结果的情况下，能够节省超过1/3的比对时间。由于查表数据结构发生了一些变化，因此，bwa-opt-gtz不兼容原bwa产生的index文件数据，请按照bwa标准步骤，先重新生成index文件，然后在使用bwa-opt-gtz进行比对。
+
+	bwa-gtz对比bwa-opt-gtz差异如下：
+
+	(1) bwa-gtz可以直接使用官网bwa所制作的index，性能与官网bwa一致
+
+	(2) bwa-opt-gtz不能直接使用官网bwa制作的index，index需要使用bwa-opt-gtz重新制作，但在性能上会比官网bwa提升1/3
+	
+
+	#### 使用举例
+
+	#### bwa-gtz
+
+	`export GTZ_RBIN_PATH=/path/rbin`
+	
+	`bwa-gtz mem ref.fa read1.fq.gtz read2.fq.gtz -o aln-pe.sam`
+
+	>  <font size=1>\* 该例子中通过环境变量GTZ_RBIN_PATH指定了rbin文件所在路径，这里"export GTZ_RBIN_PATH=/path/rbin"不是必须的，但如果您知道rbin所在路径，建议您指定，这样可以加快bwa-gtz处理速度。因为，当bwa-gtz需要rbin文件，且在默认路径~/.config/gtz下找不到该rbin文件，则会通过网络下载，下载过程将消耗时间。</font>
+	
+
+	#### bwa-opt-gtz
+
+	##### 步骤一：重新制作index（必须）
+
+	`bwa-opt-gtz index ref.fa`
+
+	##### 步骤二：执行比对
+
+	`export GTZ_RBIN_PATH=/path/rbin`
+	
+	`bwa-opt-gtz mem ref.fa read1.fq.gtz read2.fq.gtz -t 4 -o aln-pe.sam`
+	
+	
+- **性能**
+
+	
+	在服务器资源足够的情形下，bwa-opt-gtz性能会比官网bwa好1/3，以下是同环境下的一组测试数据(指定线程数为4):
+	
+	#####	测试命令
+	
+	`bwa mem ref.fa read1.fq.gz read2.fq.gz -t 4 -o aln-pe.sam`
+	
+	`bwa-gtz mem ref.fa read1.fq.gz.gtz read2.fq.gz.gtz -t 4 -o aln-pe.sam`
+	
+	`bwa-opt-gtz mem ref.fa read1.fq.gz.gtz read2.fq.gz.gtz -t 4 -o aln-pe.sam`
+	
+	#####	测试环境
+	
+	服务器配置：48核CPU,128G内存; 文件大小: read1.fq.gz(1.5G), read1.fq.gz(1.6G), read1.fq.gz(1G), read1.fq.gz(1.1G)
+	
+	#####	性能数据
+	
+	软件  |bwa|bwa-gtz|bwa-opt-gtz
+	---|:---:|:--:|---:
+ 	时间消耗|82m48.506s|80m10.062s|58m28.795s
+	内存消耗|-|-|-
+	
   
 ## 版本日志<span id="change-log"></span>
 
-#### 1.0
+#### 1.2.2 - 2018/11/09
+主要优化索引文件的加载速度，压缩速度会有明显的提升  
 
-基础修订
+#### 1.2.1
+解决压缩完成后做校验时，GTZ有时会比较慢的问题
+
+解决用-c做解压时，-e不工作的问题
+
+#### 1.2
+解决GTZ有时加载慢的问题
+
+解决输入ctrl+c，GTZ有时不能退出的问题  
 
 #### 1.1
 
@@ -277,19 +358,12 @@ No. | 物种 | 官方链接
 -c/--stdout                   解压到终端
 
 -z/--fastq-to-fastq-gz        将FASTQ解压成GZ格式，该选项只对FASTQ有效，非FASTQ会忽略该选项
+#### 1.0
 
-#### 1.2
-解决GTZ有时加载慢的问题
+基础修订
 
-解决输入ctrl+c，GTZ有时不能退出的问题  
 
-#### 1.2.1
-解决压缩完成后做校验时，GTZ有时会比较慢的问题
 
-解决用-c做解压时，-e不工作的问题
-
-#### 1.2.2 - 2018/11/09
-主要优化索引文件的加载速度，压缩速度会有明显的提升
 
 
 ## 常见问题<span id="faq"></span>  
