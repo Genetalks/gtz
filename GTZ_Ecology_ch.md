@@ -9,11 +9,15 @@
 
 	##### 方式一  
 	运行命令（推荐）  
+	  
 		`sudo curl -sSL https://gtz.io/bwagtz_latest.run -o /tmp/bwagtz.run && sudo sh /tmp/bwagtz.run`  
+		  
 	##### 方式二  
 	下载安装文件：[-GTX.Zip bwa-gtz-]( https://gtz.io/bwagtz_latest.run )  
 	在安装文件目录下运行命令  
+	  
 	`sudo sh bwagtz_lastest.run`  
+	  
 	根据提示完成安装  
 	
 - **使用说明**
@@ -23,11 +27,11 @@
 	
 	官网bwa
 
-	`bwa mem GCF_000001405.37_GRCh38.p11_genomic.fna nova_wes_1.fq nova_wes_2.fq -t 4 -o nova_wes.sam`
+	`bwa mem GCF_000001405.37_GRCh38.p11_genomic.fna nova_wes_1.fq nova_wes_2.fq -t 4 -o nova_wes.sam`  
 
 	bwa-gtz
 	
-	`bwa-gtz mem GCF_000001405.37_GRCh38.p11_genomic.fna nova_wes_1.fq nova_wes_2.fq -t 4 -o nova_wes.sam`
+	`bwa-gtz mem GCF_000001405.37_GRCh38.p11_genomic.fna nova_wes_1.fq nova_wes_2.fq -t 4 -o nova_wes.sam`  
 	`bwa-gtz mem GCF_000001405.37_GRCh38.p11_genomic.fna nova_wes_1.fq.gtz nova_wes_2.fq.gtz -t 4 -o nova_wes.sam`  
   
 	>\*1) bwa-gtz处理gtz格式数据时，我们建议您都可以通过以下环境变量指定rbin文件所在的路径，因为bwa-gtz在处理gtz格式数据
@@ -41,13 +45,13 @@
 
 	在服务器资源足够的情形下，bwa-gtz性能会比官网bwa好1/3，以下是同环境下的一组测试数据(指定线程数为4):
 	
-	官网bwa，耗时50分钟
+	官网bwa，耗时50分钟  
 
-	`bwa mem GCF_000001405.37_GRCh38.p11_genomic.fna nova_wes_1.fq nova_wes_2.fq -t 4 -o nova_wes.sam`
+	`bwa mem GCF_000001405.37_GRCh38.p11_genomic.fna nova_wes_1.fq nova_wes_2.fq -t 4 -o nova_wes.sam`  
 
-	bwa-gtz，耗时34分钟
+	bwa-gtz，耗时34分钟  
 
-	`bwa-gtz mem GCF_000001405.37_GRCh38.p11_genomic.fna nova_wes_1.fq.gtz nova_wes_2.fq.gtz -t 4 -o nova_wes.sam`
+	`bwa-gtz mem GCF_000001405.37_GRCh38.p11_genomic.fna nova_wes_1.fq.gtz nova_wes_2.fq.gtz -t 4 -o nova_wes.sam`  
 	
 	
 - **最佳实践**
