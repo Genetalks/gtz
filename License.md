@@ -10,7 +10,7 @@ The following agreement regarding GTX.Zip COMPRESSOR PROFESSIONAL EDITION - refe
 
 4.By accepting this agreement, you will participate in the User Experience Improvement Program. Users must update to the latest version every 6 months. We may collect some software operating parameters through the HTTPS protocol, including CPU usage, memory usage, compressed file size, output file size, compression ratio, etc.  
 
-5.The GTX.Zip Professional is not allowed to be packaged into other software for commercial use. If you need do this, please contact us(email: contact@gtz.io), we will signe a contract with you and give you an authorized license.
+5.GTX.Zip Professional is not allowed to be packaged into other software for commercial purposes. If you need to do this, please contact us(email: contact@gtz.io), we will signe a contract with you and give you an authorized license.
 
 6.The licensor shall be responsible for interpretation of the agreement.If you want to use this software for a long time, please contact us at contact@gtz.io!
 
