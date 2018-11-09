@@ -258,10 +258,9 @@ No. | 物种 | 官方链接
 **如果以上物种不在您的需求范围内，请[-联系我们-](#contact-us)，我们将免费为您制作所需物种的rbin跟bin文件。**  
   
   
-## GTX.Zip生态圈工具集]<span id="ecology"></span>
+## GTX.Zip生态圈工具集<span id="ecology"></span>
 
-## bwa支持<span id="bwa-support"></span>
-序号. | 工具 | 描述
+序号 | 工具 | 描述
 ----|-------- | -------------
 1|[bwa-gtz](https://github.com/Genetalks/gtz/blob/master/GTZ_Ecology_en.md#bwa)|bwa-gtz is based on the modification of version 0.7.17 of bwa official website   
   
