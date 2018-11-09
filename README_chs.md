@@ -326,14 +326,14 @@ No. | 物种 | 官方链接
 	
 	#####	测试环境
 	
-	服务器配置：48核CPU,128G内存; 文件大小: read1.fq.gz(1.5G), read1.fq.gz(1.6G), read1.fq.gz(1G), read1.fq.gz(1.1G)
+	服务器配置：16核CPU,64G内存; 文件大小: read1.fq.gz(1.8G), read1.fq.gz(1.8G), read1.fq.gz(0.3G), read1.fq.gz(0.3G)
 	
 	#####	性能数据
 	
 	软件  |bwa|bwa-gtz|bwa-opt-gtz
 	---|:---:|:--:|---:
- 	时间消耗|82m48.506s|80m10.062s|58m28.795s
-	内存消耗|-|-|-
+ 	时间消耗|50m14.06s|51m37.67s|39m18.86s
+	内存消耗|5.888G|10.56G|19.84G
 	
   
 ## 版本日志<span id="change-log"></span>
