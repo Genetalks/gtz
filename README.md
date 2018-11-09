@@ -278,7 +278,7 @@ mainly optimize the loading speed of index files, the compression speed will be 
         `sudo curl -sSL https://gtz.io/bwagtz_latest.run -o /tmp/bwagtz.run && sudo sh /tmp/bwagtz.run`  
 	##### or 
 	download installation files：[-GTX.Zip bwa-gtz-]( https://gtz.io/bwagtz_latest.run )  
-	Run commands in the installation file directory 
+	Run commands in the installation file directory   
 	`sudo sh bwagtz_lastest.run`  
 	complete installation according to prompt. 
 	
@@ -301,10 +301,10 @@ mainly optimize the loading speed of index files, the compression speed will be 
 	>\*1) When bwa-gtz processes data in GTZ format, we recommend that you specify the path of the RBIN file 
 	>through the following environment variables, because when bwa-gtz processes data in GTZ format，If you 
 	>need RBIN files,It only searches the corresponding RBIN files from ～/.config/gtz， In the case of not 
-	>found, then drag the corresponding RBIN from the network, download will take a certain amount of time.
-	>How to set environment variables:  
+	>found, then drag the corresponding RBIN from the network, download will take a certain amount of time.  
+	>**How to set environment variables:**  
 	>    `export GTZ_RBIN_PATH=/path/rbin`  
-	  
+	>    
 	>\*2) When using bwa-gtz, all index must be remade, and index can not be directly used by official website BWA.
 	
 	
@@ -328,5 +328,5 @@ Frequently Asked Questions are intended to help newcomers to understand how we w
 
 ## Contact Us<span id="contact-us"></span> 
 
-If you have any questions, feel free to contact: contact@gtz.io, or  [create a new GitHub issue](https://github.com/Genetalks/gtz/issues/new) .
+If you have any questions, feel free to contact: contact@gtz.io, or  create [a new GitHub issue](https://github.com/Genetalks/gtz/issues/new) .
 
