@@ -58,7 +58,7 @@
 	
 	在服务器资源足够的情形下，bwa-opt-gtz性能会比官网bwa好1/3，以下是同环境下的一组测试数据(指定线程数为4):
 	
-	#####	命令
+	#####	测试命令
 	
 	`bwa mem ref.fa read1.fq.gz read2.fq.gz -t 4 -o aln-pe.sam`
 	
