@@ -262,7 +262,7 @@ No. | 物种 | 官方链接
 
 序号 | 工具 | 描述
 ----|-------- | -------------
-1 | [bwa-gtz](https://github.com/Genetalks/gtz/blob/master/GTZ_Ecology_en.md#bwa) | bwa-gtz是基于bwa的0.7.17版本开发，添加了对gtz文件的直接读取能力，各项功能与bwa主代码功能完全一致。   
+1 | [bwa-gtz](https://github.com/Genetalks/gtz/blob/master/GTZ_Ecology_ch.md#bwa) | bwa-gtz是基于bwa的0.7.17版本开发，添加了对gtz文件的直接读取能力，各项功能与bwa主代码功能完全一致。   
   
 ## 版本日志<span id="change-log"></span>
 
