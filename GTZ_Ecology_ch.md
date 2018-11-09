@@ -68,8 +68,7 @@
 	
 	#####	测试环境
 	
-	服务器配置：48核CPU,128G内存，文件大小，
-	文件大小: read1.fq.gz(1.5G), read1.fq.gz(1.6G), read1.fq.gz(1G), read1.fq.gz(1.1G)
+	服务器配置：48核CPU,128G内存; 文件大小: read1.fq.gz(1.5G), read1.fq.gz(1.6G), read1.fq.gz(1G), read1.fq.gz(1.1G)
 	
 	#####	性能数据
 	
