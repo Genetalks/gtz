@@ -19,7 +19,7 @@ Powered by GTXLab of Genetalks.
 - [For Example](#example)
 - [Get More Products](#product)  
 - [Species rbin Downloads](#rbin-download)  
-- [Ecology Softwares](#ecology)  
+- [GTZ Ecology Softwares](#ecology)  
 - [Change Log](#change-log) 
 - [FAQ](#faq)  
 - [Contact Us](#contact-us)
@@ -28,7 +28,7 @@ Powered by GTXLab of Genetalks.
 
 GTX.Zip is a professional fastq/bam compressor and also can be used as a universal data compression software, developed by GTXLab of Genetalks Inc. GTX.Zip can rapidly compress any DNA sequencing files and directories with very high compression rate, and generate a single compressed data files, thus facilitating the data storage, distribution and transmission. Different from other compression tools, GTX.Zip system focuses on **high compression rate, high speed, and convenient data extraction**. 
 - **[GTX.Zip Professional](#install)** is a stand-alone version which supports local compression service. GTX.Zip Professional runs by command lines for compression and decompression of local genomic data.If you want get other GTX.Zip product, come [here](#product).  
-- **[Ecology Softwares](#ecology)** . GTX.Zip provides gtz version of sequencing analysis tools, include [bwa-gtz](#bwa), etc.   
+- **[GTZ Ecology Softwares](#ecology)** . GTX.Zip provides gtz version of sequencing analysis tools, include [bwa-gtz](#bwa), etc.   
 
 ## Feature<span id="feature"></span>
 
