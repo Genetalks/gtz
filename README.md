@@ -57,7 +57,7 @@ As an enterprise-level software, GTX.Zip has developed a nirvana program for hig
 
 
 ## System Environment Requirements<span id="environment"></span>
-- **64-bit Linux system (CentOS 6.5 or above, or Ubuntu 12.04 or above)**                                                                                                                            
+- **64-bit Linux system (CentOS >= 6.5；Ubuntu >= 12.04， < 18.04)**                                                                                                                            
 - To achieve good performance, the computing server with **32-core 64GB** memory is recommended (**at least 4-core and 8GB memory**), or that has the same configuration with the **AWS C4.8xlarge** machine)
   
 ## How to Install？ <span id="install"></span>	
