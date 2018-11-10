@@ -70,7 +70,7 @@ nova_rna_2.fq|5.39%|18.94%
 
 	
 ## 运行环境<span id="environment"></span>
-- **64位 Linux 系统（CentOS 6.5以上或Ubuntu 12.04以上，推荐Ububtu 14.04及以上64位操作系统)**
+- **64位 Linux 系统（CentOS >= 6.5；Ubuntu >= 12.04， < 18.04)**
 - 4核以上，最小8GB内存的主机系统（若要达到最大并发性，推荐32核 64GB内存，或与AWS C4.8xlarge机器相同配置）
 
 ## 安装软件<span id="install"></span>  
