@@ -190,7 +190,12 @@ If sample.fq.gtz is a high compression file, download the corresponding fasta fi
 If sample.fq.gtz is not a high compression file, the FASTQ file can be extracted directly  
 	./gtz_reborn -d sample.fq.gtz  
 	
-```
+```  
+  
+[-Back to Top-](#index)  
+  
+--------    
+  
 ## Get More Products<span id="product"></span>
   
 Product | Version | Description | How to Get
@@ -244,6 +249,12 @@ No. | Species | Official Url
 39|Equus caballus|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Equus_caballus_48fb76cc859b80aff9818361dce3e735.rbin  
 
 **If the species you need is not in our [species list](#rbin-download) , please [contact us](#contact-us) !**    
+  
+    
+[-Back to Top-](#index)  
+  
+--------  
+
 ## Ecology Softwares<span id="ecology"></span>
 ## 1、BWA for gtz <span id="bwa"></span>  
 
@@ -322,7 +333,10 @@ No. | Species | Official Url
  	Time consumption|50m14.06s|51m37.67s|39m18.86s
 	Memory consumption|5.888G|10.56G|19.84G
 
-
+  
+[-Back to Top-](#index)  
+  
+--------  
     
 ## Change Log  
 
