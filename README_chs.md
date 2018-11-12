@@ -323,6 +323,8 @@ No. | 物种 | 官方链接
 	
 	#####	测试命令
 	
+	`export GTZ_RBIN_PATH=/path/rbin`
+	
 	`bwa mem ref.fa read1.fq.gz read2.fq.gz -t 4 -o aln-pe.sam`
 	
 	`bwa-gtz mem ref.fa read1.fq.gtz read2.fq.gtz -t 4 -o aln-pe.sam`
