@@ -296,11 +296,11 @@ No. | 物种 | 官方链接
 
 	#### bwa-gtz
 
-	`export GTZ_RBIN_PATH=/path/rbin`
+	`export GTZ_RBIN_PATH=/path/rbin/`
 	
 	`bwa-gtz mem ref.fa read1.fq.gtz read2.fq.gtz -o aln-pe.sam`
 
-	>  <font size=1>\* 该例子中通过环境变量GTZ_RBIN_PATH指定了rbin文件所在路径，这里"export GTZ_RBIN_PATH=/path/rbin"不是必须的，但如果您知道rbin所在路径，建议您指定，这样可以加快bwa-gtz处理速度。因为，当bwa-gtz需要rbin文件，且在默认路径~/.config/gtz下找不到该rbin文件，则会通过网络下载，下载过程将消耗时间。</font>
+	>  <font size=1>\* 该例子中通过环境变量GTZ_RBIN_PATH指定了rbin文件所在路径，这里"export GTZ_RBIN_PATH=/path/rbin/"不是必须的，但如果您知道rbin所在路径，建议您指定，这样可以加快bwa-gtz处理速度。因为，当bwa-gtz需要rbin文件，且在默认路径~/.config/gtz下找不到该rbin文件，则会通过网络下载，下载过程将消耗时间。</font>
 	
 
 	#### bwa-opt-gtz
@@ -311,7 +311,7 @@ No. | 物种 | 官方链接
 
 	##### 步骤二：执行比对
 
-	`export GTZ_RBIN_PATH=/path/rbin`
+	`export GTZ_RBIN_PATH=/path/rbin/`
 	
 	`bwa-opt-gtz mem ref.fa read1.fq.gtz read2.fq.gtz -t 4 -o aln-pe.sam`
 	
@@ -323,7 +323,7 @@ No. | 物种 | 官方链接
 	
 	#####	测试命令
 	
-	`export GTZ_RBIN_PATH=/path/rbin`
+	`export GTZ_RBIN_PATH=/path/rbin/`
 	
 	`bwa mem ref.fa read1.fq.gz read2.fq.gz -t 4 -o aln-pe.sam`
 	
