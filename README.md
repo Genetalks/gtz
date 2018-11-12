@@ -30,7 +30,11 @@ Powered by GTXLab of Genetalks.
 GTX.Zip(or GTZ for short) is a professional fastq/bam compressor and also can be used as a universal data compression software, developed by GTXLab of Genetalks Inc. GTX.Zip can rapidly compress any DNA sequencing files and directories with very high compression rate, and generate a single compressed data files, thus facilitating the data storage, distribution and transmission. Different from other compression tools, GTX.Zip system focuses on **high compression rate, high speed, and convenient data extraction**. 
 - **[GTX.Zip Professional](#install)** is a stand-alone version which supports local compression service. GTX.Zip Professional runs by command lines for compression and decompression of local genomic data.If you want get other GTX.Zip product, come [here](#product).  
 - **[GTZ Ecology Softwares](#ecology)** . GTX.Zip provides gtz version of sequencing analysis tools, include [bwa-gtz](#bwa), etc.   
-
+  
+[-Back to Top-](#index)  
+  
+--------    
+  
 ## Feature<span id="feature"></span>
 
 GTX.Zip compressor system features:
@@ -55,7 +59,11 @@ If you want to get these softwares, please go to [-GTZ Ecology Softwares-](#ecol
 As an enterprise-level software, GTX.Zip has developed a nirvana program for high-availability requirements to ensure that users can decompress compressed data into original data under the extreme condition. The nirvana plan's dual availability protection strategy is as follows:
 	-  GTX.Zip is multi-site hosted. http://gtz.io website, GitHub and other sites will permanently host all versions of GTX.Zip, to make sure that it is available to the entire network all the time and free of charge at any time.
 	-  To ensure that compressed data can be restored to original file under any conditions, pre-embedded micro decompression programs could be extract from compressed data first, and then be used to decompress the file.
-
+  
+    
+[-Back to Top-](#index)  
+  
+--------  
 
 ## System Environment Requirements<span id="environment"></span>
 - **64-bit Linux system (CentOS >= 6.5；Ubuntu >= 12.04， < 18.04)**                                                                                                                            
@@ -74,7 +82,13 @@ As an enterprise-level software, GTX.Zip has developed a nirvana program for hig
 	
 	`gtz -v`  
 	
-	If software version information appears, the installation is successful.  
+	If software version information appears, the installation is successful.    
+	  
+	    
+[-Back to Top-](#index)  
+  
+--------  
+
 ## Quick Start <span id="quick-start"></span>	
 GTX.Zip Professional needs to be installed on the current machine. If not, please see [-How to Install-](#install) .
 
@@ -102,7 +116,12 @@ GTX.Zip Professional needs to be installed on the current machine. If not, pleas
  
     sample.fq can be downloaded from https://gtz.io/sample.fq. (2GB fastq file, extracted from a real WES data produced by Novaseq)  
     > \*gtz can also directly compress fastq.gz file.
-
+  
+      
+[-Back to Top-](#index)  
+  
+--------  
+    
 ## Usage of gtz: <span id="usage"></span>
 ```  
 usage: gtz [-h] [-o OUT] [-b INDEX_BIN] [-d DECOMPRESS] [-O OUT_DIR]  
@@ -129,6 +148,10 @@ gtz_index <command> [options]
 	download <index> <path_to>		download species reference sequence rbin file , path_to is not necessary.  
 	makeindex <rbin_path>			making reference sequence  
 ```
+  
+[-Back to Top-](#index)  
+  
+--------  
 
 ## For Example: <span id="example"></span>
 ### Compress  
@@ -203,7 +226,11 @@ Product | Version | Description | How to Get
 **GTX.Zip Professional**|V1.0.1|Companies, Institutions and individual users that with large local sequencing data|[Install](#install)
 **GTX.Zip Enterprise**|V1.0.1|Large-scale enterprises and data centers that with PB-level sequencing data and require distributed compression by their own computing clusters|[Contact Us](#contact-us)
 **GTX.Zip Cloud**|V1.0.1|Companies that with large amounts of sequencing data distribution and storage in the cloud| http://gtz.io
-
+  
+[-Back to Top-](#index)  
+  
+--------  
+  
 ## Rbin files Download <span id="rbin-download"></span> 
 
 No. | Species | Official Url
