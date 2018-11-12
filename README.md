@@ -22,7 +22,8 @@ Powered by GTXLab of Genetalks.
 - [GTZ Ecology Softwares](#ecology)  
 - [Change Log](#change-log) 
 - [FAQ](#faq)  
-- [Contact Us](#contact-us)
+- [Contact Us](#contact-us)  
+- [License](#license)    
 
 ## What is GTX.Zip？<span id="intro"></span>
 
@@ -357,4 +358,7 @@ Frequently Asked Questions are intended to help newcomers to understand how we w
 ## Contact Us<span id="contact-us"></span> 
 
 If you have any questions, feel free to contact: contact@gtz.io, or  create [a new GitHub issue](https://github.com/Genetalks/gtz/issues/new) .
+  
+## License<span id="license"></span>  
 
+See [LICENSE](https://github.com/Genetalks/gtz/blob/master/License.md) for details.
