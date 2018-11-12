@@ -13,6 +13,7 @@ Powered by GTXLab of Genetalks.
 
 ## 目录
 - [简介](#intro)  
+- [生物信息分析软件支持情况](#support)
 - [特性](#feature)    
 - [运行环境](#environment)  
 - [安装软件](#install)
@@ -31,9 +32,13 @@ Powered by GTXLab of Genetalks.
 
 GTX.Zip（简称GTZ）是面向基因行业，结合行业数据特征，对基因测序数据进行定向优化，支持所有文件格式的高倍无损压缩系统。**该系统具有业界最高无损压缩倍率和速度，能以1100MB/s的极致速度，将基因测序数据压缩至原大小的2%。该系统可对测序数据文件及文件目录进行高倍率快速压缩和打包，赋能用户对海量基因数据进行方便快捷的存储、传输、分发和提取**。  
 
-- **[GTX.Zip Professional](#install)** 可以为用户提供便捷的单机版压缩服务，可以灵活地使用默认或指定参考基因组对本地基因组数据文件进行压缩、解压操作。
+
+**[安装 GTX.Zip Professional](#install)** ，提供单机版压缩，可以灵活地使用默认或指定参考基因组对本地基因组数据文件进行压缩、解压操作。
+
 想要获得其他产品请查看[-产品系列-](#product)。  
-- **[GTZ生态圈软件。](#ecology)** 我们目前已免费提供能支持直接读写gtz格式（GTX.Zip压缩文件）的常用测序分析软件，其中包含[bwa-gtz](#bwa)等工具。
+
+## 生物信息分析软件支持情况<span id="support"></span>
+- **[BWA 1.7 for GTX.Zip](#bwa)** 最为常用的比对分析软件，可以直接读取 gtz数据，其中包含 bwa 1.7 版本和 bwa-opt 1.7版本。其中  bwa-opt 是深度优化版本，比标准 bwa快 30%左右，并且比对结果完全一致。
 	
 ## 特性<span id="feature"></span>
 
