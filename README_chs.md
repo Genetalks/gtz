@@ -13,6 +13,7 @@ Powered by GTXLab of Genetalks.
 
 ## 目录
 - [简介](#intro)  
+- [产品系列](#product)  
 - [生物信息分析软件支持情况](#support)
 - [特性](#feature)    
 - [运行环境](#environment)  
@@ -20,7 +21,6 @@ Powered by GTXLab of Genetalks.
 - [快速上手](#quick-start)
 - [使用方法](#usage)
 - [应用示例](#example)
-- [产品系列](#product)  
 - [rbin下载列表](#rbin-download)  
 - [GTZ生态圈软件](#ecology)  
 - [版本日志](#change-log)  
@@ -35,7 +35,13 @@ GTX.Zip（简称GTZ）是面向基因行业，结合行业数据特征，对基�
 
 **[安装 GTX.Zip Professional](#install)** ，提供单机版压缩，可以灵活地使用默认或指定参考基因组对本地基因组数据文件进行压缩、解压操作。
 
-想要获得其他产品请查看[-产品系列-](#product)。  
+## 产品系列<span id="product"></span>
+  
+产品名称 | 版本 | 描述 | 获得方式
+----|---- | -------- | --------
+**GTX.Zip Professional**|V1.0.1|本地测序数据量大的基因公司、研究机构及个人用户|[-安装软件-](#install)
+**GTX.Zip Enterprise**|V1.0.1|拥有PB级本地测序数据，需要通过自有计算集群对数据进行分布式压缩的大型企业和数据中心|[-联系我们-](#contact-us)
+**GTX.Zip Cloud**|V1.0.1|云端测序数据分发、存储占比高的企业| http://gtz.io
 
 ## 生物信息分析软件支持情况<span id="support"></span>
 - **[BWA 0.7 for GTX.Zip](#bwa)** 最为常用的比对分析软件，可以直接读取 gtz数据，其中包含 bwa 0.7 版本和 bwa-opt 0.7版本。其中  bwa-opt 是深度优化版本，比标准 bwa快 30%左右，并且比对结果完全一致。
@@ -207,13 +213,7 @@ Command:
 ```
 
 
-## 产品系列<span id="product"></span>
-  
-产品名称 | 版本 | 描述 | 获得方式
-----|---- | -------- | --------
-**GTX.Zip Professional**|V1.0.1|本地测序数据量大的基因公司、研究机构及个人用户|[-安装软件-](#install)
-**GTX.Zip Enterprise**|V1.0.1|拥有PB级本地测序数据，需要通过自有计算集群对数据进行分布式压缩的大型企业和数据中心|[-联系我们-](#contact-us)
-**GTX.Zip Cloud**|V1.0.1|云端测序数据分发、存储占比高的企业| http://gtz.io
+
 
 ## rbin下载列表<span id="rbin-download"></span>
 
