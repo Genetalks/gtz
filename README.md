@@ -9,7 +9,7 @@
 Powered by GTXLab of Genetalks.  
 
 [中文说明](https://github.com/Genetalks/gtz/blob/master/README_chs.md "Markdown").
-## Index
+## Index<span id="index"></span>
 - [What is GTX.Zip?](#intro)  
 - [Feature](#feature)    
 - [Environment Requirements](#environment)  
@@ -357,7 +357,11 @@ Frequently Asked Questions are intended to help newcomers to understand how we w
 
 ## Contact Us<span id="contact-us"></span> 
 
-If you have any questions, feel free to contact: contact@gtz.io, or  create [a new GitHub issue](https://github.com/Genetalks/gtz/issues/new) .
+If you have any questions, feel free to contact: contact@gtz.io, or  create [a new GitHub issue](https://github.com/Genetalks/gtz/issues/new) .  
+  
+[-Back to Top-](#index)  
+  
+--------  
   
 ## License<span id="license"></span>  
 
