@@ -3,7 +3,7 @@
 ### If the species you need is not in our [species list](#rbin-download), please [contact us](#contact-us) !  
 ### QQ group(s): 934492381 
 
-### WebChat group(s):
+### WeChat group(s):
 ![GTX.Zip WebChat groups](https://i.loli.net/2018/11/12/5be8d03268263.jpg "GTX.Zip WebChat groups")
 
 Powered by GTXLab of Genetalks.  
