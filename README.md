@@ -278,11 +278,11 @@ No. | Species | Official Url
 
 	#### bwa-gtz
 
-	`export GTZ_RBIN_PATH=/path/rbin`
+	`export GTZ_RBIN_PATH=/path/rbin/`
 	
 	`bwa-gtz mem ref.fa read1.fq.gtz read2.fq.gtz -o aln-pe.sam`
 
-	>  <font size=1>\* In this example, the path of the RBIN file is specified by the environment variable GTZ_RBIN_PATH, where "export GTZ_RBIN_PATH=/path/rbin" is not necessary, but if you know the path of rbin, you are advised to specify it, which can speed up the processing of bwa-gtz. Because when bwa-gtz needs RBIN file and cannot find the RBIN file under the default path ~/.config/gtz, it will be downloaded through the network, and the download process will consume time.</font>
+	>  <font size=1>\* In this example, the path of the RBIN file is specified by the environment variable GTZ_RBIN_PATH, where "export GTZ_RBIN_PATH=/path/rbin/" is not necessary, but if you know the path of rbin, you are advised to specify it, which can speed up the processing of bwa-gtz. Because when bwa-gtz needs RBIN file and cannot find the RBIN file under the default path ~/.config/gtz, it will be downloaded through the network, and the download process will consume time.</font>
 	
 
 	#### bwa-opt-gtz
@@ -293,7 +293,7 @@ No. | Species | Official Url
 
 	##### Step two: execution comparison
 
-	`export GTZ_RBIN_PATH=/path/rbin`
+	`export GTZ_RBIN_PATH=/path/rbin/`
 	
 	`bwa-opt-gtz mem ref.fa read1.fq.gtz read2.fq.gtz -t 4 -o aln-pe.sam`
 	
