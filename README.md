@@ -12,7 +12,7 @@ Powered by GTXLab of Genetalks.
 ## Index<span id="index"></span>
 - [What is GTX.Zip?](#intro)  
 - [Product series](#product)  
-- [Supported Bioinformatics Analysis Softwares](#supported-softwares)  
+- [Supported Bioinformatic Analysis Softwares](#supported-softwares)  
 - [Feature](#feature)    
 - [Environment Requirements](#environment)  
 - [How to Install?](#install)
@@ -47,7 +47,7 @@ Product | Version | Description | How to Get
   
 --------  
   
-## Supported Bioinformatics Analysis Softwares<span id="supported-softwares"></span>
+## Supported Bioinformatic Analysis Softwares<span id="supported-softwares"></span>
   
 [BWA 0.7 for GTX.Zip](#bwa) is the  the most widely used software package for mapping DNA sequences that can input XXX.gtz file. It consists of two softwares : bwa 0.7 and bwa-opt 0.7.   
 bwa-opt 0.7 is the optimized version that is about 30% faster than standard bwa, and its mapping results are completely consistent with those of standard bwa.       
