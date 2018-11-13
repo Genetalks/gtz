@@ -11,7 +11,7 @@ Powered by GTXLab of Genetalks.
 
 [-English Manual-](https://github.com/Genetalks/gtz/blob/master/README.md "Markdown").
 
-## 目录
+## 目录<span id="index"></span>
 - [简介](#intro)  
 - [产品系列](#product)  
 - [生物信息分析软件支持情况](#support)
@@ -31,9 +31,13 @@ Powered by GTXLab of Genetalks.
 ## 简介<span id="intro"></span>
 
 GTX.Zip（简称GTZ）是面向基因行业，结合行业数据特征，对基因测序数据进行定向优化，支持所有文件格式的高倍无损压缩系统。**该系统具有业界最高无损压缩倍率和速度，能以1100MB/s的极致速度，将基因测序数据压缩至原大小的2%。该系统可对测序数据文件及文件目录进行高倍率快速压缩和打包，赋能用户对海量基因数据进行方便快捷的存储、传输、分发和提取**。  
-
-
+  
 **[安装 GTX.Zip Professional](#install)** ，提供单机版压缩，可以灵活地使用默认或指定参考基因组对本地基因组数据文件进行压缩、解压操作。
+  
+[-回顶-](#index)  
+  
+--------    
+  
 
 ## 产品系列<span id="product"></span>
   
@@ -42,9 +46,19 @@ GTX.Zip（简称GTZ）是面向基因行业，结合行业数据特征，对基�
 **GTX.Zip Professional**|V1.0.1|本地测序数据量大的基因公司、研究机构及个人用户|[-安装软件-](#install)
 **GTX.Zip Enterprise**|V1.0.1|拥有PB级本地测序数据，需要通过自有计算集群对数据进行分布式压缩的大型企业和数据中心|[-联系我们-](#contact-us)
 **GTX.Zip Cloud**|V1.0.1|云端测序数据分发、存储占比高的企业| http://gtz.io
+  
+[-回顶-](#index)  
+  
+--------    
+  
 
 ## 生物信息分析软件支持情况<span id="support"></span>
 - **[BWA 0.7 for GTX.Zip](#bwa)** 最为常用的比对分析软件，可以直接读取 gtz数据，其中包含 bwa 0.7 版本和 bwa-opt 0.7版本。其中  bwa-opt 是深度优化版本，比标准 bwa快 30%左右，并且比对结果完全一致。
+  
+[-回顶-](#index)  
+  
+--------    
+  
 	
 ## 特性<span id="feature"></span>
 
@@ -78,11 +92,21 @@ nova_rna_2.fq|5.39%|18.94%
 	gtz.io网站与GitHub等多个站点永久托管GTX.Zip所有版本，确保全网不掉线，免费随时可得。  
 	**2.内嵌应急解压程序，确保极端情况下仍可还原数据：**  
 	压缩数据中预嵌微型程序，支持在极端特殊情况时，先一键抽取出解压程序再直接还原数据。
+  
+[-回顶-](#index)  
+  
+--------    
+  
 
 	
 ## 运行环境<span id="environment"></span>
 - **64位 Linux 系统（CentOS >= 6.5；Ubuntu >= 12.04， < 18.04)**
 - 4核以上，最小8GB内存的主机系统（若要达到最大并发性，推荐32核 64GB内存，或与AWS C4.8xlarge机器相同配置）
+  
+[-回顶-](#index)  
+  
+--------    
+  
 
 ## 安装软件<span id="install"></span>  
 - **方式一 :**  
@@ -98,6 +122,11 @@ nova_rna_2.fq|5.39%|18.94%
 运行命令  
 `gtz -v`  
 出现相应的软件版本信息则说明安装成功
+  
+[-回顶-](#index)  
+  
+--------    
+  
 
 ## 快速上手<span id="quick-start"></span>  
 前提：当前机器中已经安装了GTX.Zip Professional软件，如未安装请参考[-安装软件-](#install)
@@ -122,6 +151,11 @@ nova_rna_2.fq|5.39%|18.94%
 **3、开始压缩**	  
  `gtz  sample.fq -o  sample.fq.gtz --bin-file  ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.bin`  
 >  <font size=1>\* GTX.Zip 同时支持压缩fq.gz文件</font>
+  
+[-回顶-](#index)  
+  
+--------    
+  
 
 ## 使用方法<span id="usage"></span>
 ### GTX.Zip主程序gtz用法
@@ -152,6 +186,11 @@ Command:
    download <index> <path_to>                                   下载紧致参考序列rbin文件  
    makeindex <rbin_path>                                        制作参考序列索引bin文件  
 ```  
+  
+[-回顶-](#index)  
+  
+--------    
+  
          
 ## 应用示例：<span id="example"></span>	         
 ### 压缩:
@@ -211,10 +250,11 @@ Command:
 	情形一: 如果sample.fq.gtz是高倍率压缩文件，需要按提示下载对应的fasta文件，然后再解压  
 	情形二: 如果sample.fq.gtz不是高倍压缩文件，则该命令可以直接解压出原始的fastq文件  
 ```
-
-
-
-
+  
+[-回顶-](#index)  
+  
+--------    
+  
 ## rbin下载列表<span id="rbin-download"></span>
 
 当前支持物种的rbin文件下载地址列表：
@@ -262,6 +302,11 @@ No. | 物种 | 官方链接
 39|Equus caballus|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Equus_caballus_48fb76cc859b80aff9818361dce3e735.rbin  
 
 **如果以上物种不在您的需求范围内，请[-联系我们-](#contact-us)，我们将免费为您制作所需物种的rbin跟bin文件。**  
+  
+[-回顶-](#index)  
+  
+--------    
+  
   
   
 ## GTZ生态圈软件<span id="ecology"></span>
@@ -343,6 +388,11 @@ No. | 物种 | 官方链接
 	内存消耗|5.888G|10.56G|19.84G
 	
   
+[-回顶-](#index)  
+  
+--------    
+  
+  
 ## 版本日志<span id="change-log"></span>
 
 #### 1.2.2 - 2018/11/09
@@ -368,11 +418,11 @@ No. | 物种 | 官方链接
 #### 1.0
 
 基础修订
-
-
-
-
-
+  
+[-回顶-](#index)  
+  
+--------    
+  
 ## 常见问题<span id="faq"></span>  
 - [1、GTX.Zip Pro的压缩性能怎么样？](#1)  
 - [2、GTX.Zip Pro可以压缩哪些文件？](#2)  
@@ -465,9 +515,24 @@ No. | 物种 | 官方链接
   >我们将免费制作用户所需的新物种的参考基因组文件。  
 
 <!--**15、为什么不允许我们自己生成rbin文件以增加物种支持？**<span id="15"></span>  -->  
-   
-
-
+  
+[-回顶-](#index)  
+  
+--------    
+  
 ## 联系我们<span id="contact-us"></span>  
 使用中有任何问题请：  
 邮件至: contact@gtz.io OR [创建一个新的issue](https://github.com/Genetalks/gtz/issues/new)。  
+  
+[-回顶-](#index)  
+  
+--------    
+  
+## License<span id="license"></span>  
+
+详情请查看 [LICENSE](https://github.com/Genetalks/gtz/blob/master/License.md) .  
+  
+[-回顶-](#index)  
+  
+--------    
+
