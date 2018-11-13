@@ -1,6 +1,6 @@
 # GTX.Zip    
 
-### If the species you need is not in our [species list](https://github.com/Genetalks/gtz/wiki/Rbin-files-Download), please [contact us](https://github.com/Genetalks/gtz/wiki#contact-us) !  
+### If the species you need is not in our [species list](https://github.com/Genetalks/gtz/wiki/Rbin-files-Download), please [Email us](https://github.com/Genetalks/gtz/wiki#contact-us) or join our community !  
 ### QQ group(s): 934492381 
 
 ### WeChat group(s):
