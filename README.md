@@ -11,13 +11,14 @@ Powered by GTXLab of Genetalks.
 [中文说明](https://github.com/Genetalks/gtz/blob/master/README_chs.md "Markdown").
 ## Index<span id="index"></span>
 - [What is GTX.Zip?](#intro)  
+- [Product series](#product)  
+- [Supported Bioinformatics Analysis Softwares](#supported-softwares)  
 - [Feature](#feature)    
 - [Environment Requirements](#environment)  
 - [How to Install?](#install)
 - [Let's Do It!](#quick-start)
 - [Usage](#usage)
-- [For Example](#example)
-- [Get More Products](#product)  
+- [For Example](#example)   
 - [Species rbin Downloads](#rbin-download)  
 - [GTZ Ecology Softwares](#ecology)  
 - [Change Log](#change-log) 
@@ -29,12 +30,32 @@ Powered by GTXLab of Genetalks.
 
 GTX.Zip(or GTZ for short) is a professional fastq/bam compressor and also can be used as a universal data compression software, developed by GTXLab of Genetalks Inc. GTX.Zip can rapidly compress any DNA sequencing files and directories with very high compression rate, and generate a single compressed data files, thus facilitating the data storage, distribution and transmission. Different from other compression tools, GTX.Zip system focuses on **high compression rate, high speed, and convenient data extraction**. 
 - **[GTX.Zip Professional](#install)** is a stand-alone version which supports local compression service. GTX.Zip Professional runs by command lines for compression and decompression of local genomic data.If you want get other GTX.Zip product, come [here](#product).  
-- **[GTZ Ecology Softwares](#ecology)** . GTX.Zip provides gtz version of sequencing analysis tools, include [bwa-gtz](#bwa), etc.   
   
 [-Back to Top-](#index)  
   
 --------    
   
+## Products<span id="product"></span>
+  
+Product | Version | Description | How to Get
+----|---- | -------- | --------
+**GTX.Zip Professional**|V1.0.1|Companies, Institutions and individual users that with large local sequencing data|[Install](#install)
+**GTX.Zip Enterprise**|V1.0.1|Large-scale enterprises and data centers that with PB-level sequencing data and require distributed compression by their own computing clusters|[Contact Us](#contact-us)
+**GTX.Zip Cloud**|V1.0.1|Companies that with large amounts of sequencing data distribution and storage in the cloud| http://gtz.io
+  
+[-Back to Top-](#index)  
+  
+--------  
+  
+## Supported Bioinformatics Analysis Softwares<span id="supported-softwares"></span>
+  
+[BWA 0.7 for GTX.Zip](#bwa) is the  the most widely used software package for mapping DNA sequences that can input XXX.gtz file. It consists of two softwares : bwa 0.7 and bwa-opt 0.7.   
+bwa-opt 0.7 is the optimized version that is about 30% faster than standard bwa, and its mapping results are completely consistent with those of standard bwa.       
+  
+[-Back to Top-](#index)  
+  
+--------  
+
 ## Feature<span id="feature"></span>
 
 GTX.Zip compressor system features:
@@ -218,18 +239,6 @@ If sample.fq.gtz is not a high compression file, the FASTQ file can be extracted
 [-Back to Top-](#index)  
   
 --------    
-  
-## Get More Products<span id="product"></span>
-  
-Product | Version | Description | How to Get
-----|---- | -------- | --------
-**GTX.Zip Professional**|V1.0.1|Companies, Institutions and individual users that with large local sequencing data|[Install](#install)
-**GTX.Zip Enterprise**|V1.0.1|Large-scale enterprises and data centers that with PB-level sequencing data and require distributed compression by their own computing clusters|[Contact Us](#contact-us)
-**GTX.Zip Cloud**|V1.0.1|Companies that with large amounts of sequencing data distribution and storage in the cloud| http://gtz.io
-  
-[-Back to Top-](#index)  
-  
---------  
   
 ## Rbin files Download <span id="rbin-download"></span> 
 
