@@ -142,8 +142,8 @@ GTX.Zip Professional needs to be installed on the current machine. If not, pleas
 [-Back to Top-](#index)  
   
 --------  
-    
-## Usage of gtz: <span id="usage"></span>
+## Usage <span id="usage"></span>    
+### gtz:
 ```  
 usage: gtz [-h] [-o OUT] [-b INDEX_BIN] [-d DECOMPRESS] [-O OUT_DIR]  
 
@@ -162,7 +162,7 @@ usage: gtz [-h] [-o OUT] [-b INDEX_BIN] [-d DECOMPRESS] [-O OUT_DIR]
 -v, --version                                   display version number  
 ```
 
-## Usage of gtz_index：  
+### gtz_index：  
 ```
 gtz_index <command> [options]
 	list					show species which current support
@@ -170,7 +170,7 @@ gtz_index <command> [options]
 	makeindex <rbin_path>			making reference sequence  
 ```
 
-## Usage of Nirvana Plan<span id="nirvana-example"></span>  
+### Nirvana Plan<span id="nirvana-example"></span>  
 Let’s start Nirvana plan!
 At first, we have a gtz file named sample.fq.gtz.    
 ```
