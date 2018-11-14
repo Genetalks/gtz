@@ -11,7 +11,7 @@ Powered by GTXLab of Genetalks.
 [中文说明](https://github.com/Genetalks/gtz/blob/master/README_chs.md "Markdown").
 ## Index<span id="index"></span>
 - [What is GTX.Zip?](#intro)  
-- [Product series](#product)  
+- [Product Series](#product-series)  
 - [Supported Bioinformatic Analysis Softwares](#supported-softwares)  
 - [Feature](#feature)    
 - [Environment Requirements](#environment)  
@@ -34,7 +34,7 @@ GTX.Zip(or GTZ for short) is a professional fastq/bam compressor and also can be
   
 --------    
   
-## Products<span id="product"></span>
+## Product Series<span id="product-series"></span>
   
 Product | Version | Description | How to Get
 ----|---- | -------- | --------
