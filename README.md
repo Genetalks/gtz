@@ -18,8 +18,7 @@ Powered by GTXLab of Genetalks.
 - [How to Install?](#install)
 - [Let's Do It!](#quick-start)
 - [Usage](#usage)
-- [For Example](#example)   
-- [Species rbin Downloads](#rbin-download)  
+- [Rbin Files Downloads](#rbin-download)  
 - [GTZ Ecology Softwares](#ecology)  
 - [Change Log](#change-log) 
 - [FAQ](#faq)  
@@ -143,7 +142,32 @@ GTX.Zip Professional needs to be installed on the current machine. If not, pleas
   
 --------  
 ## Usage <span id="usage"></span>    
-### gtz:
+### Example of Compression 
+```
+1:Compress the sample.fq to the current directory.
+	gtz sample.fq    
+
+2:Compress the file sample.fq into the out folder of the current directory.
+	gtz sample.fq -o ./out/sample.fq.gtz    
+
+***If the species is not specified by the '--bin-file' , GTZ will automatically recognize the species to compress.  ***  
+
+3.GTZ performs high compression by specifying bin files in the Homo folder under the current directory.  
+	gtz sample.fq --bin-file ./Homo/Homo_sapiens_bcacac9064331276504f27c6cf40e580.bin  
+```
+
+### Example of Decompression  
+```
+1.Deompress the file sample.fq to the current directory.If there is no species rbin file under "\~/.config/ gtz/", GTZ will be automatically downloaded from the Cloud to "\~/.config/ gtz /".  
+	gtz -d sample.fq.gtz 
+
+2.Specify the directory of the rbin path “~/Homo” for decompress sample.fq.gtz.  
+	gtz -d sample.fq.gtz --rbin-path ~/Homo 
+
+3.Decompress sample.fq.gtz to the Homo folder in the current path  
+	gtz -d sample.fq.gtz --out-dir ./Homo    
+```  
+### Options of gtz:
 ```  
 usage: gtz [-h] [-o OUT] [-b INDEX_BIN] [-d DECOMPRESS] [-O OUT_DIR]  
 
@@ -160,9 +184,29 @@ usage: gtz [-h] [-o OUT] [-b INDEX_BIN] [-d DECOMPRESS] [-O OUT_DIR]
 -f, --force                                     force overwrite of output file  
 -e, --no-keep                                   don't keep input files  
 -v, --version                                   display version number  
+```  
+
+
+## Example of gtz_index  
+```
+Interaction mode:  
+	gtz_index  
+	
+Show supported species and you can gradually create bin files through human-machine interaction mode.  
+
+Manual mode  
+1:Show supported species list，the index number is the input of the gtz_index download command.  
+	gtz_index list  
+	
+2:Download the rbin file in the species list with No.1 index  
+	gtz_index download 1  
+	
+3:Make BIN,rec file by specifying the rbin file". /Homo/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin "  
+	gtz_index makeindex ./Homo/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin  
+	
 ```
 
-### gtz_index：  
+### Options of gtz_index：  
 ```
 gtz_index <command> [options]
 	list					show species which current support
@@ -189,58 +233,7 @@ If sample.fq.gtz is not a high compression file, the FASTQ file can be extracted
   
 --------  
 
-## For Example: <span id="example"></span>
-### Compress  
-```
-1:Compress the sample.fq to the current directory.
-	gtz sample.fq    
-
-2:Compress the file sample.fq into the out folder of the current directory.
-	gtz sample.fq -o ./out/sample.fq.gtz    
-
-***If the species is not specified by the '--bin-file' , GTZ will automatically recognize the species to compress.  ***  
-
-3.GTZ performs high compression by specifying bin files in the Homo folder under the current directory.  
-	gtz sample.fq --bin-file ./Homo/Homo_sapiens_bcacac9064331276504f27c6cf40e580.bin  
-```
-
-### Decompress  
-```
-1.Deompress the file sample.fq to the current directory.If there is no species rbin file under "\~/.config/ gtz/", GTZ will be automatically downloaded from the Cloud to "\~/.config/ gtz /".  
-	gtz -d sample.fq.gtz 
-
-2.Specify the directory of the rbin path “~/Homo” for decompress sample.fq.gtz.  
-	gtz -d sample.fq.gtz --rbin-path ~/Homo 
-
-3.Decompress sample.fq.gtz to the Homo folder in the current path  
-	gtz -d sample.fq.gtz --out-dir ./Homo    
-```
-
-## gtz_index  
-```
-Interaction mode:  
-	gtz_index  
-	
-Show supported species and you can gradually create bin files through human-machine interaction mode.  
-
-Manual mode  
-1:Show supported species list，the index number is the input of the gtz_index download command.  
-	gtz_index list  
-	
-2:Download the rbin file in the species list with No.1 index  
-	gtz_index download 1  
-	
-3:Make BIN,rec file by specifying the rbin file". /Homo/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin "  
-	gtz_index makeindex ./Homo/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin  
-	
-```
-
-
-[-Back to Top-](#index)  
-  
---------    
-  
-## Rbin files Download <span id="rbin-download"></span> 
+## Rbin Files Download <span id="rbin-download"></span> 
 
 No. | Species | Official Url
 ----|-------- | -------------
