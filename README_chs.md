@@ -83,7 +83,7 @@ nova_rna_2.fq|5.39%|18.94%
 
 -	**生态完整**
 	- GTX.Zip 提供 Linux 、Mac OSX以及Windows等全平台命令行以及图形化解压工具。并提供Python、C、C++等语言的SDK接口，方便第三方开发者接入数据的读写处理。目前已免费提供能支持直接读写gtz格式（GTX.Zip压缩文件）的 bcl2fastq, fastp和BWA等常用测序分析软件。  
-	可以在[这里](#ecology)获得这些软件。  
+	- 详情请见[-GTZ生态圈软件-](#ecology)。  
 	
 
 -	**涅槃计划**<span id="nirvana"></span>
