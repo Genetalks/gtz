@@ -80,7 +80,7 @@ If you want to get these softwares, please go to [-GTZ Ecology Softwares-](#ecol
 As an enterprise-level software, GTX.Zip has developed a nirvana program for high-availability requirements to ensure that users can decompress compressed data into original data under the extreme condition. The nirvana plan's dual availability protection strategy is as follows:
 	-  GTX.Zip is multi-site hosted. http://gtz.io website, GitHub and other sites will permanently host all versions of GTX.Zip, to make sure that it is available to the entire network all the time and free of charge at any time.
 	-  To ensure that compressed data can be restored to original file under any conditions, pre-embedded micro decompression programs could be extract from compressed data first, and then be used to decompress the file.
-  
+	-  Please click [-here-](nirvana-example) for usage.   
     
 [-Back to Top-](#index)  
   
@@ -169,7 +169,22 @@ gtz_index <command> [options]
 	download <index> <path_to>		download species reference sequence rbin file , path_to is not necessary.  
 	makeindex <rbin_path>			making reference sequence  
 ```
-  
+
+## Usage of Nirvana Plan<span id="nirvana-example"></span>  
+Let’s start Nirvana plan!
+At first, we have a gtz file named sample.fq.gtz.    
+```
+Step 1:  
+Run the following command to extract the embeded programe gtz_reborn to current directory:  
+	sed -e 's/\[GTZ_REBORN_BEGIN\]/\n&/;' sample.fq.gtz | sed -n '/\[GTZ_REBORN_BEGIN\]/,/\[GTZ_REBORN_END\]/p' | sed -e 's/.*\[GTZ_REBORN_BEGIN\]//g' -e 's/\[GTZ_REBORN_END\].*//g' | tar -zxvf -
+
+Step2:  
+If sample.fq.gtz is a high compression file, download the corresponding fasta file according to the prompt, and then extract the file.  
+If sample.fq.gtz is not a high compression file, the FASTQ file can be extracted directly  
+	./gtz_reborn -d sample.fq.gtz  
+	
+```  
+    
 [-Back to Top-](#index)  
   
 --------  
@@ -221,21 +236,6 @@ Manual mode
 ```
 
 
-## Nirvana Plan  
-Let’s start Nirvana plan!
-At first, we have a gtz file named sample.fq.gtz.    
-```
-Step 1:  
-Run the following command to extract the embeded programe gtz_reborn to current directory:  
-	sed -e 's/\[GTZ_REBORN_BEGIN\]/\n&/;' sample.fq.gtz | sed -n '/\[GTZ_REBORN_BEGIN\]/,/\[GTZ_REBORN_END\]/p' | sed -e 's/.*\[GTZ_REBORN_BEGIN\]//g' -e 's/\[GTZ_REBORN_END\].*//g' | tar -zxvf -
-
-Step2:  
-If sample.fq.gtz is a high compression file, download the corresponding fasta file according to the prompt, and then extract the file.  
-If sample.fq.gtz is not a high compression file, the FASTQ file can be extracted directly  
-	./gtz_reborn -d sample.fq.gtz  
-	
-```  
-  
 [-Back to Top-](#index)  
   
 --------    
