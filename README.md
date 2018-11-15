@@ -284,8 +284,12 @@ No. | Species | Official Url
   
 --------  
 
-## Ecology Softwares<span id="ecology"></span>
-## 1、BWA for gtz <span id="bwa"></span>  
+## Ecology Softwares<span id="ecology"></span>  
+- [1、BWA for GTZ](#bwa)  
+- [2、BOWTIE for GTZ](#bowtie)  
+- [3、BOWTIE2 for GTZ](#bowtie2) 
+
+## 1、BWA for GTZ <span id="bwa"></span>  
 
 - **How to Install?**
 
@@ -362,7 +366,7 @@ No. | Species | Official Url
  	Time consumption|50m14.06s|51m37.67s|39m18.86s
 	Memory consumption|5.888G|10.56G|19.84G
 
-## 2、BOWTIE for GTZ <span id="bwa"></span>  
+## 2、BOWTIE for GTZ <span id="bowtie"></span>  
 
 - **How to Install?**
 
@@ -407,7 +411,7 @@ No. | Species | Official Url
 	
  	
  	
-## 3、BOWTIE2 for GTZ <span id="bwa"></span>  
+## 3、BOWTIE2 for GTZ <span id="bowtie2"></span>  
 
 - **How to Install?**
 
