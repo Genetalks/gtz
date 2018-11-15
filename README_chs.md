@@ -381,6 +381,114 @@ No. | 物种 | 官方链接
  	时间消耗|50m14.06s|51m37.67s|39m18.86s
 	内存消耗|5.888G|10.56G|19.84G
 	
+## 2、BOWTIE for GTZ <span id="bwa"></span>  
+
+- **安装方法**
+
+	##### 方式一  
+	运行命令（推荐）  
+		`sudo curl -sSL https://gtz.io/bowtiegtz_latest.run -o /tmp/bowtiegtz.run && sudo sh /tmp/bowtiegtz.run`  
+	##### 方式二  
+	下载安装文件：[-GTX.Zip bowtie-gtz-]( https://gtz.io/bowtiegtz_latest.run )  
+	在安装文件目录下运行命令  
+	`sudo sh bowtiegtz_latest.run`  
+	根据提示完成安装  
+	
+- **使用说明**
+
+    安装完成后，会生成bowtie-gtz、bowtie-build-gtz、bowtie-inspect-gtz三个执行程序。
+    如果安装时"create a soft link to /usr/bin"选择y，则在任意目录可以直接运行以上执行程序；否则需要切换到安装目录，以./bowtie-gtz方式运行
+    
+	GTX.Zip对bowtie的支持包中，基于bowtie的1.2.2版本。
+	其中：添加了对gtz文件的直接读取能力，各项功能与bowtie主代码功能完全一致。
+	bowtie-gtz可以直接使用官网bowtie制作的index，您可以用bowtie-build或者bowtie-build-gtz制作index，当然bowtie-inspect-gtz和bowtie-inspect功能也完全一致。
+
+	#### 使用举例
+
+
+	##### 步骤一：制作index
+
+	`bowtie-build-gtz ref.fa ref_index`
+
+	##### 步骤二：执行比对
+
+	`export GTZ_RBIN_PATH=/path/rbin/`
+	
+	`bowtie-gtz -S ref_index reads.fq.gtz eg.sam`
+
+	>  <font size=1>\* 该例子中通过环境变量GTZ_RBIN_PATH指定了rbin文件所在路径，这里"export GTZ_RBIN_PATH=/path/rbin/"不是必须的，但如果您知道rbin所在路径，建议您指定，这样可以加快bowtie-gtz处理速度。因为，当bowtie-gtz需要rbin文件，且在默认路径~/.config/gtz下找不到该rbin文件时，则会通过网络下载，下载过程将消耗时间。</font>
+	
+
+	
+- **性能**
+
+	
+	
+ 	
+ 	
+## 3、BOWTIE2 for GTZ <span id="bwa"></span>  
+
+- **安装方法**
+
+	##### 方式一  
+	运行命令（推荐）  
+		`sudo curl -sSL https://gtz.io/bowtie2gtz_latest.run -o /tmp/bowtie2gtz.run && sudo sh /tmp/bowtie2gtz.run`  
+	##### 方式二  
+	下载安装文件：[-GTX.Zip bowtie2-gtz-]( https://gtz.io/bowtie2gtz_latest.run )  
+	在安装文件目录下运行命令  
+	`sudo sh bowtie2gtz_latest.run`  
+	根据提示完成安装  
+	
+- **使用说明**
+
+    安装完成后，会生成bowtie2-gtz、bowtie2-build-gtz、bowtie2-inspect-gtz三个执行程序。
+    如果安装时"create a soft link to /usr/bin"选择y，则在任意目录可以直接运行以上执行程序；否则需要切换到安装目录，以./bowtie2-gtz方式运行
+    
+	GTX.Zip对bowtie2的支持包中，基于bowtie2的2.3.4.3版本。
+	其中：添加了对gtz文件的直接读取能力，各项功能与bowtie2主代码功能完全一致。
+	bowtie2-gtz可以直接使用官网bowtie2制作的index，您可以用bowtie2-build或者bowtie2-build-gtz制作index，当然bowtie2-inspect-gtz和bowtie2-inspect功能也完全一致。
+
+	#### 使用举例
+
+
+	##### 步骤一：制作index
+
+	`bowtie2-build-gtz ref.fa ref_index`
+
+	##### 步骤二：执行比对
+
+	`export GTZ_RBIN_PATH=/path/rbin/`
+	
+	`bowtie2-gtz -x ref_index -1 reads_1.fq.gtz -2 reads_2.fq.gtz -S eg2.sam -p 4 --reorder`
+
+	>  <font size=1>\* 该例子中通过环境变量GTZ_RBIN_PATH指定了rbin文件所在路径，这里"export GTZ_RBIN_PATH=/path/rbin/"不是必须的，但如果您知道rbin所在路径，建议您指定，这样可以加快bowtie2-gtz处理速度。因为，当bowtie2-gtz需要rbin文件，且在默认路径~/.config/gtz下找不到该rbin文件时，则会通过网络下载，下载过程将消耗时间。</font>
+	
+
+	
+- **性能**
+
+	
+	#####	测试命令
+	
+	`export GTZ_RBIN_PATH=/path/rbin/`
+	
+	`bowtie2 -x ref_index -1 reads_1.fq.gz -2 reads_2.fq.gz -S eg2.sam -p 4 --reorder`
+	
+	`bowtie2-gtz -x ref_index -1 reads_1.fq.gtz -2 reads_2.fq.gtz -S eg2.sam -p 4 --reorder`
+	
+	#####	测试环境
+	
+	服务器配置：16核CPU,64G内存; 文件大小: read1.fq.gz(1.55G), read2.fq.gz(1.78G), read1.fq.gtz(0.43G), read2.fq.gtz(0.61G)
+	
+	#####	性能数据
+	
+	软件  |bowtie2|bowtie2-gtz
+	:---:|:---:|:--:
+	CPU消耗(平均值)|400|445
+	内存消耗(平均值)|0.19G|12.92G
+ 	时间消耗|63m41.06s|61m56.67s
+	
+  
   
 [-回顶-](#index)  
   
