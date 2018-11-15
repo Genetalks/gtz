@@ -362,6 +362,114 @@ No. | Species | Official Url
  	Time consumption|50m14.06s|51m37.67s|39m18.86s
 	Memory consumption|5.888G|10.56G|19.84G
 
+## 2、BOWTIE for GTZ <span id="bwa"></span>  
+
+- **How to Install?**
+
+	##### For installation you can (recommended)  
+		`sudo curl -sSL https://gtz.io/bowtiegtz_latest.run -o /tmp/bowtiegtz.run && sudo sh /tmp/bowtiegtz.run`  
+	##### or 
+	download installation files：[-GTX.Zip bowtie-gtz-]( https://gtz.io/bowtiegtz_latest.run )  
+	Run commands in the installation file directory 
+	`sudo sh bowtiegtz_latest.run`  
+	complete installation according to prompt.  
+	
+- **How to Use?**
+
+    After installation, three executable programs of bowtie-gtz, bowtie-build-gtz and bowtie-inspect-gtz will be generated.
+    If y is selected when installing "create a soft link to /usr/bin", the above executable program can be run directly in any directory;
+    Otherwise, you need to switch to the installation directory and run with ./bowtie-gtz.
+    
+	GTX.Zip's support package for bowtie based on 1.2.2 version.
+	Bowtie-gtz can directly use the index produced by bowtie on the official website. You can use bowtie-build or bowtie-build-gtz to make the index. 
+	Of course, bowtie-inspect-gtz and bowtie-inspect functions are exactly the same.
+
+	#### Use examples
+
+
+	##### Step one: make index
+
+	`bowtie-build-gtz ref.fa ref_index`
+
+	##### Step two: execution comparison
+
+	`export GTZ_RBIN_PATH=/path/rbin/`
+	
+	`bowtie-gtz -S ref_index reads.fq.gtz eg.sam`
+
+	>  <font size=1>\* In this example, the path of the RBIN file is specified by the environment variable GTZ_RBIN_PATH, where "export GTZ_RBIN_PATH=/path/rbin/" is not necessary, but if you know the path of rbin, it is recommended that you specify it to speed up bowtie-gtz processing. Because when bowtie-gtz needs RBIN file and cannot find the RBIN file under the default path ~/.config/gtz, it will be downloaded through the network, which will take time to download.。</font>
+	
+
+	
+- **performance**
+
+	
+	
+ 	
+ 	
+## 3、BOWTIE2 for GTZ <span id="bwa"></span>  
+
+- **How to Install?**
+
+	##### For installation you can (recommended)   
+		`sudo curl -sSL https://gtz.io/bowtie2gtz_latest.run -o /tmp/bowtie2gtz.run && sudo sh /tmp/bowtie2gtz.run`  
+	##### or  
+	download installation files：[-GTX.Zip bowtie2-gtz-]( https://gtz.io/bowtie2gtz_latest.run )  
+	Run commands in the installation file directory  
+	`sudo sh bowtie2gtz_latest.run`  
+	complete installation according to prompt.   
+	
+- **How to Use?**
+
+    After installation, three executable programs of bowtie2-gtz, bowtie2-build-gtz and bowtie2-inspect-gtz will be generated.
+    If y is selected when installing "create a soft link to /usr/bin", the above executable program can be run directly in any directory;
+    Otherwise, you need to switch to the installation directory and run with ./bowtie2-gtz.
+    
+	GTX.Zip's support package for bowtie2 based on 2.3.4.3 version.
+	Bowtie2-gtz can directly use the index produced by bowtie2 on the official website. You can use bowtie2-build or bowtie2-build-gtz to make the index. 
+	Of course, bowtie2-inspect-gtz and bowtie2-inspect functions are exactly the same.
+
+	#### Use examples
+
+
+	##### Step one: make index
+
+	`bowtie2-build-gtz ref.fa ref_index`
+
+	##### Step two: execution comparison
+
+	`export GTZ_RBIN_PATH=/path/rbin/`
+	
+	`bowtie2-gtz -x ref_index -1 reads_1.fq.gtz -2 reads_2.fq.gtz -S eg2.sam -p 4 --reorder`
+
+	>  <font size=1>\* In this example, the path of the RBIN file is specified by the environment variable GTZ_RBIN_PATH, where "export GTZ_RBIN_PATH=/path/rbin/" is not necessary, but if you know the path of rbin, you are advised to specify it, which can speed up bowtie2-gtz processing. Because, when bowtie2-gtz needs RBIN file and cannot find the RBIN file under the default path ~/.config/gtz, it will be downloaded through the network, and the download process will consume time.。</font>
+	
+
+	
+- **performance**
+
+	
+	#####	Test command
+	
+	`export GTZ_RBIN_PATH=/path/rbin/`
+	
+	`bowtie2 -x ref_index -1 reads_1.fq.gz -2 reads_2.fq.gz -S eg2.sam -p 4 --reorder`
+	
+	`bowtie2-gtz -x ref_index -1 reads_1.fq.gtz -2 reads_2.fq.gtz -S eg2.sam -p 4 --reorder`
+	
+	#####	Test environment
+	
+	Server configuration: 16 core CPU, 64G memory; file size: read1.fq.gz(1.55G), read2.fq.gz(1.78G), read1.fq.gtz(0.43G), read2.fq.gtz(0.61G)
+	
+	#####	performance data
+	
+	Software  |bowtie2|bowtie2-gtz
+	:---:|:---:|:--:
+	CPU consumption(average)|400|445
+	Memory consumption(average)|0.19G|12.92G
+ 	Time consumption|63m41.06s|61m56.67s
+	
+	
   
 [-Back to Top-](#index)  
   
