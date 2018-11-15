@@ -303,7 +303,10 @@ No. | 物种 | 官方链接
   
   
   
-## GTZ生态圈软件<span id="ecology"></span>
+## GTZ生态圈软件<span id="ecology"></span>  
+- [1、BWA for GTZ](#bwa)  
+- [2、BOWTIE for GTZ](#bowtie)  
+- [3、BOWTIE2 for GTZ](#bowtie2) 
 
 ## 1、BWA for GTZ <span id="bwa"></span>  
 
@@ -381,7 +384,7 @@ No. | 物种 | 官方链接
  	时间消耗|50m14.06s|51m37.67s|39m18.86s
 	内存消耗|5.888G|10.56G|19.84G
 	
-## 2、BOWTIE for GTZ <span id="bwa"></span>  
+## 2、BOWTIE for GTZ <span id="bowtie"></span>  
 
 - **安装方法**
 
@@ -426,7 +429,7 @@ No. | 物种 | 官方链接
 	
  	
  	
-## 3、BOWTIE2 for GTZ <span id="bwa"></span>  
+## 3、BOWTIE2 for GTZ <span id="bowtie2"></span>  
 
 - **安装方法**
 
