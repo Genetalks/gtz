@@ -48,9 +48,12 @@ Product | Version | Description | How to Get
   
 ## Supported Bioinformatic Analysis Softwares<span id="supported-softwares"></span>
   
-[BWA 0.7 for GTX.Zip](#bwa) is the  the most widely used software package for mapping DNA sequences that can input XXX.gtz file. It consists of two softwares : bwa 0.7 and bwa-opt 0.7.   
-bwa-opt 0.7 is the optimized version that is about 30% faster than standard bwa, and its mapping results are completely consistent with those of standard bwa.       
-  
+- **[BWA 0.7 for GTX.Zip](#bwa)** is the  the most widely used software package for mapping DNA sequences that can input XXX.gtz file directly. It consists of two softwares : bwa 0.7 and bwa-opt 0.7.   
+	- bwa-opt 0.7 is the optimized version that is about 30% faster than standard bwa, and its mapping results are completely consistent with those of standard bwa.       
+- **[BOWTIE](#bowtie) / [BOWTIE2 for GTX.Zip](#bowtie2)** is an ultrafast and memory-efficient tool for aligning sequencing reads to long reference sequences. It can input XXX.gtz file directly, and You can use this tool as if you are using the official version.  
+	- BOWTIE for GTX.Zip based on BOWTIE 1.2.2 version.  
+	- BOWTIE2 for GTX.Zip based on BOWTIE2 2.3.4.3 version. 
+
 [-Back to Top-](#index)  
   
 --------  
