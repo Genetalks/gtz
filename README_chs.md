@@ -52,8 +52,8 @@ GTX.Zip（简称GTZ）是面向基因行业，结合行业数据特征，对基�
   
 
 ## 生物信息分析软件支持情况<span id="support"></span>
-- **[BWA 0.7 for GTX.Zip](#bwa)** 最为常用的比对分析软件，可以直接读取gtz压缩格式的数据，其中包含 bwa 0.7 版本和 bwa-opt 0.7版本。其中  bwa-opt 是深度优化版本，比标准 bwa快 30%左右，并且比对结果完全一致。  
-- **[BOWTIE](#bowtie)/[BOWTIE2](#bowtie2) for GTX.Zip** 是一个短序列比对工具，它的运行速度快并且内存利用率高，同时可以直接读取gtz压缩格式的数据，使用方式跟官方BOWTIE/BOWTIE2保持一致。 
+- **[BWA 0.7 for GTX.Zip](#bwa)** 是基于官方BWA 0.7开发的比对分析软件，可以直接读取gtz压缩格式的数据，其中包含 bwa 0.7 版本和 bwa-opt 0.7版本。其中  bwa-opt 是深度优化版本，比标准 bwa快 30%左右，并且比对结果完全一致。  
+- **[BOWTIE](#bowtie)/[BOWTIE2](#bowtie2) for GTX.Zip** 是将短序列与参考基因组进行比对的工具，它的运行速度快并且内存利用率高，同时可以直接读取gtz压缩格式的数据，使用方式跟官方BOWTIE/BOWTIE2保持一致。其中BOWTIE for GTX.Zip是基于官方BOWTIE 1.2.2版本开发的，BOWTIE2 for GTX.Zip是基于官方BOWTIE2 2.3.4.3版本开发的。  
   
 [-回顶-](#index)  
   
