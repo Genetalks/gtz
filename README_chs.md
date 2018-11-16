@@ -561,7 +561,7 @@ No. | 物种 | 官方链接
 **2、GTX.Zip Pro可以压缩哪些文件？**<span id="2"></span>  
   >GTX.Zip Pro不仅支持fastq及fastq.gz格式的高倍率压缩，还支持所有格式的文件压缩。  
 
-**3、GTX.Zip目前支持多少物种？**<span id="3"></span>  
+**3、GTX.Zip目前收费吗？**<span id="3"></span>  
   >GTX.Zip Pro是免费的，而且永久免费。  
   
 **4、免费的话，那你们如何盈利？**<span id="4"></span>  
