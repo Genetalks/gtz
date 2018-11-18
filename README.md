@@ -489,7 +489,7 @@ No. | Species | Official Url
 mainly optimize the loading speed of index files, the compression speed will be significantly improved
   
 #### 1.2.1
-fix : validation maybe be slow sometimes
+fix : validation might be slow sometimes
 
 fix : when decompressed with -c, -e does not work  
 
