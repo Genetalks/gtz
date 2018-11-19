@@ -582,8 +582,9 @@ No. | 物种 | 官方链接
 **8、怎么并行跑多个压缩任务？**<span id="8"></span>  
   >如果需要并行跑多个压缩任务可以联系我们获得GTX.Zip Enterprise版，该版本可以在企业内部组建分布式计算集群，从而获得高并发高性能的压缩性能。  
  
-**9、当fq.gz被GTX.Zip Pro压缩成fq.gz.gtz 后再解压回fq.gz，为什么前后两个gz文件的md5值不一致呢？**<span id="9"></span>  
-  >GTX.Zip Pro对gz数据进行了重压缩工作，即将gz文件解压后再重新压成gtz；而解压反过来，会解开gtz格式后，再重新压成gz格式。因此，问题中的压缩前后的两个gz文件其实是两个不同的文件，所以md5不一致，但是里面的fq文件相同且md5值是一样的。。  
+**9、当fq.gz被GTX.Zip Pro压缩成fq.gz.gtz后再解压回fq.gz，为什么前后两个gz文件的md5值不一致呢？**<span id="9"></span>  
+  >GTX.Zip Pro对gz数据进行了重压缩工作，即将gz文件解压成fq（fastq）文件后再将fq文件压缩成gtz；当gtz文件解压成gz文件时会先解压成fq文件后，再压缩成gz格式。  
+  >因此，问题中的两个gz文件其实是两个不同的文件，所以md5不同，但是里面的fq文件相同且fq文件的md5值是一样的。  
   
 **10、GTX.Zip Pro目前支持多少个物种的智能选择压缩？**<span id="10"></span>  
   >38个物种，点击[-这里-](https://github.com/Genetalks/gtz/blob/master/README_chs.md#rbin-download)查看列表:。    
