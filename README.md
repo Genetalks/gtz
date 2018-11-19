@@ -4,7 +4,7 @@
 ### QQ group(s): 934492381 
 
 ### WeChat group(s):
-![GTX.Zip WebChat groups](https://i.loli.net/2018/11/12/5be8d03268263.jpg "GTX.Zip WebChat groups")
+![GTX.Zip WebChat groups](https://i.loli.net/2018/11/19/5bf20877763c1.jpg "GTX.Zip WebChat groups")
 
 Powered by GTXLab of Genetalks.  
 
