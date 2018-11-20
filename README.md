@@ -291,6 +291,7 @@ No. | Species | Official Url
 - [1、BWA for GTZ](#bwa)  
 - [2、BOWTIE for GTZ](#bowtie)  
 - [3、BOWTIE2 for GTZ](#bowtie2) 
+- [4、TOPHAT for GTZ](#tophat) 
 
 ## 1、BWA for GTZ <span id="bwa"></span>  
 
@@ -476,6 +477,66 @@ No. | Species | Official Url
 	Memory consumption(average)|0.19G|12.92G
  	Time consumption|63m41.06s|61m56.67s
 	
+	
+## ４、TOPHAT for GTZ <span id="tophat"></span>  
+
+- **How to Install?**
+
+	##### For installation you can (recommended)   
+		`sudo curl -sSL https://gtz.io/tophatgtz_latest.run -o /tmp/tophatgtz.run && sudo sh /tmp/tophatgtz.run`  
+	##### or 
+	download installation files：[-GTX.Zip tophat-gtz-]( https://gtz.io/tophatgtz_latest.run )  
+	Run commands in the installation file directory 
+	`sudo sh tophatgtz_latest.run`  
+	complete installation according to prompt.
+	
+- **How to Use?**
+
+    After installation, you can run tophat-gtz directly without any other dependencies.（If bowtie/bowtie2 is not installed in the environment, it will be installed automatically when tophat installing.）
+    
+    If y is selected when installing "create a soft link to /usr/bin", you can run tophat-gtz in any directory; Otherwise, you need to switch to the installation directory and run with ./tophat-gtz.
+    
+    GTX.Zip's support package for tophat based on 2.1.2 version. Among them: the ability to read GTZ files directly is added, and all functions are completely consistent with the main code function of tophat.
+
+	#### Use examples
+
+
+	##### Step one: use bowtie/bowtie2 (bowtie2-gtz) to make index.
+
+	`bowtie2-build ref.fa ref_index`
+	
+	>  <font size=1>\* Note: It is recommended that bowtie 2/bowtie 2-gtz be used to produce index, because for bowtie, tophat can only use bowtie 1.1.2 and previous versions.</font>
+
+	##### Step two: execution comparison
+
+	`export GTZ_RBIN_PATH=/path/rbin/`
+	
+	`tophat-gtz -o report_dir ref_index reads_1.fq.gtz reads_2.fq.gtz`
+
+	>  <font size=1>\* In this example, the path of the RBIN file is specified by the environment variable GTZ_RBIN_PATH, where "export GTZ_RBIN_PATH=/path/rbin/" is not necessary, but if you know the path of rbin, you are advised to specify it, which can speed up the processing of tophat-gtz. Because when tophat-gtz needs RBIN file and cannot find the RBIN file under the default path ~/.config/gtz, it will be downloaded through the network, which will consume time.</font>
+	
+	
+- **performance**
+
+	
+	#####	Test command
+	
+	`export GTZ_RBIN_PATH=/path/rbin/`
+	
+	`tophat -o report_dir -p 4 ref_index reads_1.fq.gz reads_2.fq.gz`
+	
+	`tophat-gtz -o report_dir -p 4 ref_index reads_1.fq.gtz reads_2.fq.gtz`
+	
+	
+	#####	Testing environment
+	
+	Server configuration: 16 core CPU, 64G memory; file size: read1.fq.gz(1.55G), read2.fq.gz(1.78G), read1.fq.gtz(0.43G), read2.fq.gtz(0.61G)
+	
+	#####	Performance data
+	
+	Software  |tophat|tophat-gtz
+	:---:|:---:|:--:
+ 	Time consumption|133m12.61s|134m43.02s
 	
   
 [-Back to Top-](#index)  
