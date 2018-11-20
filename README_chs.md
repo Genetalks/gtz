@@ -308,6 +308,8 @@ No. | 物种 | 官方链接
 - [1、BWA for GTZ](#bwa)  
 - [2、BOWTIE for GTZ](#bowtie)  
 - [3、BOWTIE2 for GTZ](#bowtie2) 
+- [4、TOPHAT for GTZ](#tophat) 
+
 
 ## 1、BWA for GTZ <span id="bwa"></span>  
 
@@ -492,7 +494,68 @@ No. | 物种 | 官方链接
 	内存消耗(平均值)|0.19G|12.92G
  	时间消耗|63m41.06s|61m56.67s
 	
-  
+ 
+## ４、TOPHAT for GTZ <span id="tophat"></span>  
+
+- **安装方法**
+
+	##### 方式一  
+	运行命令（推荐）  
+		`sudo curl -sSL https://gtz.io/tophatgtz_latest.run -o /tmp/tophatgtz.run && sudo sh /tmp/tophatgtz.run`  
+	##### 方式二  
+	下载安装文件：[-GTX.Zip tophat-gtz-]( https://gtz.io/tophatgtz_latest.run )  
+	在安装文件目录下运行命令  
+	`sudo sh tophatgtz_latest.run`  
+	根据提示完成安装
+	
+- **使用说明**
+
+    安装完成后可以直接运行tophat-gtz，不需要其他依赖（如果环境没有安装bowtie/bowtie2，安装tophat时会自动安装）
+    
+    如果安装时"create a soft link to /usr/bin"选择y，则在任意目录可以直接运行tophat-gtz；否则需要切换到安装目录，以./tophat-gtz方式运行
+    
+    GTX.Zip对tophat的支持包中，基于tophat v2.1.2版本，其中：添加了对gtz文件的直接读取能力，各项功能与tophat主代码功能完全一致。
+
+	#### 使用举例
+
+
+	##### 步骤一：使用bowtie/bowtie2(bowtie2-gtz)制作index
+
+	`bowtie2-build ref.fa ref_index`
+	
+	>  <font size=1>\* 注意：这里建议使用bowtie2/bowtie2-gtz制作index，因为对于bowtie，tophat只能使用bowtie1.1.2及以前的版本</font>
+
+	##### 步骤二：执行比对
+
+	`export GTZ_RBIN_PATH=/path/rbin/`
+	
+	`tophat-gtz -o report_dir ref_index reads_1.fq.gtz reads_2.fq.gtz`
+
+	>  <font size=1>\* 该例子中通过环境变量GTZ_RBIN_PATH指定了rbin文件所在路径，这里"export GTZ_RBIN_PATH=/path/rbin/"不是必须的，但如果您知道rbin所在路径，建议您指定，这样可以加快tophat-gtz处理速度。因为，当tophat-gtz需要rbin文件，且在默认路径~/.config/gtz下找不到该rbin文件时，则会通过网络下载，下载过程将消耗时间。</font>
+	
+	
+- **性能**
+
+	
+	#####	测试命令
+	
+	`export GTZ_RBIN_PATH=/path/rbin/`
+	
+	`tophat -o report_dir -p 4 ref_index reads_1.fq.gz reads_2.fq.gz`
+	
+	`tophat-gtz -o report_dir -p 4 ref_index reads_1.fq.gtz reads_2.fq.gtz`
+	
+	
+	#####	测试环境
+	
+	服务器配置：16核CPU,64G内存; 文件大小: read1.fq.gz(1.55G), read2.fq.gz(1.78G), read1.fq.gtz(0.43G), read2.fq.gtz(0.61G)
+	
+	#####	性能数据
+	
+	软件  |tophat|tophat-gtz
+	:---:|:---:|:--:
+ 	时间消耗|133m12.61s|134m43.02s
+	
   
 [-回顶-](#index)  
   
