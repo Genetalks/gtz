@@ -292,7 +292,7 @@ No. | Species | Official Url
 - [2、BOWTIE for GTZ](#bowtie)  
 - [3、BOWTIE2 for GTZ](#bowtie2) 
 - [4、TOPHAT for GTZ](#tophat) 
-- [4、HISAT2 for GTZ](#hisat2) 
+- [5、HISAT2 for GTZ](#hisat2) 
 
 
 ## 1、BWA for GTZ <span id="bwa"></span>  
