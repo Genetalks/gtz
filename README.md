@@ -382,6 +382,7 @@ No. | Species | Official Url
 	##### or 
 	download installation files：[-GTX.Zip bowtie-gtz-]( https://gtz.io/bowtiegtz_latest.run )  
 	Run commands in the installation file directory 
+	
 	`sudo sh bowtiegtz_latest.run`  
 	complete installation according to prompt.  
 	
@@ -428,6 +429,7 @@ No. | Species | Official Url
 	##### or  
 	download installation files：[-GTX.Zip bowtie2-gtz-]( https://gtz.io/bowtie2gtz_latest.run )  
 	Run commands in the installation file directory  
+	
 	`sudo sh bowtie2gtz_latest.run`  
 	complete installation according to prompt.   
 	
@@ -492,6 +494,7 @@ No. | Species | Official Url
 	##### or 
 	download installation files：[-GTX.Zip tophat-gtz-]( https://gtz.io/tophatgtz_latest.run )  
 	Run commands in the installation file directory 
+	
 	`sudo sh tophatgtz_latest.run`  
 	complete installation according to prompt.
 	
