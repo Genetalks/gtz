@@ -553,9 +553,43 @@ No. | Species | Official Url
 
 - **How to Use?**
 
-    After installation,two executable programs of hisat2-build and hisat2-gtz will be generated.
-    If y is selected when installing "create a soft link to /usr/bin", the above executable program can be run directly in any directory;
-    Otherwise, you need to switch to the installation directory and run with ./hisat2-gtz.
+    After the installation is complete, the execution program and related scripts will be generated in the installation directory,such as hisat2-gtz,hisat2-build,etc.
+    If you select "y" in the "create a soft link to /usr/bin" installation, you can run the hisat2-gtz and hisat2-build executables directly in any directory; 
+    otherwise you need to switch to the installation directory and run it in ./hisat2-gtz mode. GTX.Zip support package for hisat2, based on hisat2 (2.1.0) version, which: Added direct reading capability for gtz files, all functions are exactly the same as hisat2 main code function.
+    
+    #### Use examples
+	##### Step one: use hisat2-build to make index.
+
+	`hisat2-build -p 4 ~/GCF_000001405.37_GRCh38.p11_genomic.fna genome`
+	
+	##### Step two: execution comparison
+
+	`export GTZ_RBIN_PATH=/path/rbin/`
+	
+	`hisat2-gtz -x genome -1　reads_1.fq.gtz -2 reads_2.fq.gtz -S result.sam`
+
+	>  <font size=1>\* In this example, the path of the RBIN file is specified by the environment variable GTZ_RBIN_PATH, where "export GTZ_RBIN_PATH=/path/rbin/" is not necessary, but if you know the path of rbin, you are advised to specify it, which can speed up the processing of hisat2-gtz. Because when hisat2-gtz needs RBIN file and cannot find the RBIN file under the default path ~/.config/gtz, it will be downloaded through the network, which will consume time.</font>
+	
+- **performance**
+	#####	Test command
+	
+	`export GTZ_RBIN_PATH=/path/rbin/`
+	
+	`hisat2 -x genome -1 reads_1.fq.gz -2 reads_2.fq.gz -S gz.sam -p 16 --reorder`
+	
+	`hisat2-gtz -x genome -1 reads_1.fq.gtz -2 reads_2.fq.gtz -S gtz.sam -p 16 --reorder`
+	
+	
+	#####	Testing environment
+	
+	Server configuration: 16 core CPU, 64G memory; file size: read1.fq.gz(7.3G), read2.fq.gz(7.3G), read1.fq.gtz(1.6G), read2.fq.gtz(1.8G)
+	
+	#####	Performance data
+	
+	Software  |hisat2|hisat2-gtz
+	:---:|:---:|:--:
+ 	Time consumption|8m25.845s|10m47.930s
+    
   
 [-Back to Top-](#index)  
   
