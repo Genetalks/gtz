@@ -377,7 +377,8 @@ No. | Species | Official Url
 - **How to Install?**
 
 	##### For installation you can (recommended)  
-		`sudo curl -sSL https://gtz.io/bowtiegtz_latest.run -o /tmp/bowtiegtz.run && sudo sh /tmp/bowtiegtz.run`  
+	
+	`sudo curl -sSL https://gtz.io/bowtiegtz_latest.run -o /tmp/bowtiegtz.run && sudo sh /tmp/bowtiegtz.run`  
 	##### or 
 	download installation files：[-GTX.Zip bowtie-gtz-]( https://gtz.io/bowtiegtz_latest.run )  
 	Run commands in the installation file directory 
@@ -422,7 +423,8 @@ No. | Species | Official Url
 - **How to Install?**
 
 	##### For installation you can (recommended)   
-		`sudo curl -sSL https://gtz.io/bowtie2gtz_latest.run -o /tmp/bowtie2gtz.run && sudo sh /tmp/bowtie2gtz.run`  
+	
+	`sudo curl -sSL https://gtz.io/bowtie2gtz_latest.run -o /tmp/bowtie2gtz.run && sudo sh /tmp/bowtie2gtz.run`  
 	##### or  
 	download installation files：[-GTX.Zip bowtie2-gtz-]( https://gtz.io/bowtie2gtz_latest.run )  
 	Run commands in the installation file directory  
@@ -485,7 +487,8 @@ No. | Species | Official Url
 - **How to Install?**
 
 	##### For installation you can (recommended)   
-		`sudo curl -sSL https://gtz.io/tophatgtz_latest.run -o /tmp/tophatgtz.run && sudo sh /tmp/tophatgtz.run`  
+	
+	`sudo curl -sSL https://gtz.io/tophatgtz_latest.run -o /tmp/tophatgtz.run && sudo sh /tmp/tophatgtz.run`  
 	##### or 
 	download installation files：[-GTX.Zip tophat-gtz-]( https://gtz.io/tophatgtz_latest.run )  
 	Run commands in the installation file directory 
@@ -549,6 +552,7 @@ No. | Species | Official Url
 	##### or 
 	download installation files：[-GTX.Zip hisat2-gtz-]( https://gtz.io/hisat2gtz_latest.run )  
 	Run commands in the installation file directory 
+	
 	`sudo sh hisat2gtz_latest.run`  
 	complete installation according to prompt.
 
