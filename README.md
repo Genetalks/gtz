@@ -541,7 +541,21 @@ No. | Species | Official Url
  	Time consumption|133m12.61s|134m43.02s
 	
 ## 5、HISAT2 for GTZ <span id="hisat2"></span>  
+- **How to Install?**
 	
+	##### For installation you can (recommended)   
+		`sudo curl -sSL https://gtz.io/hisat2gtz_latest.run -o /tmp/hisat2gtz.run && sudo sh /tmp/hisat2gtz.run`  
+	##### or 
+	download installation files：[-GTX.Zip hisat2-gtz-]( https://gtz.io/hisat2gtz_latest.run )  
+	Run commands in the installation file directory 
+	`sudo sh hisat2gtz_latest.run`  
+	complete installation according to prompt.
+
+- **How to Use?**
+
+    After installation,two executable programs of hisat2-build and hisat2-gtz will be generated.
+    If y is selected when installing "create a soft link to /usr/bin", the above executable program can be run directly in any directory;
+    Otherwise, you need to switch to the installation directory and run with ./hisat2-gtz.
   
 [-Back to Top-](#index)  
   
