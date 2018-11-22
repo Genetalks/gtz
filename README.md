@@ -542,9 +542,10 @@ No. | Species | Official Url
 	
 ## 5、HISAT2 for GTZ <span id="hisat2"></span>  
 - **How to Install?**
-	
+
 	##### For installation you can (recommended)   
-		`sudo curl -sSL https://gtz.io/hisat2gtz_latest.run -o /tmp/hisat2gtz.run && sudo sh /tmp/hisat2gtz.run`  
+	
+	`sudo curl -sSL https://gtz.io/hisat2gtz_latest.run -o /tmp/hisat2gtz.run && sudo sh /tmp/hisat2gtz.run`  
 	##### or 
 	download installation files：[-GTX.Zip hisat2-gtz-]( https://gtz.io/hisat2gtz_latest.run )  
 	Run commands in the installation file directory 
