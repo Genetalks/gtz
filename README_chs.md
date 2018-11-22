@@ -569,7 +569,28 @@ No. | 物种 | 官方链接
 	在安装文件目录下运行命令  
 		`sudo sh hisat2gtz_latest.run`  
 	根据提示完成安装
+
+- **使用说明**
+
+    安装完成后，会在安装目录生成hisat2-gtz、hisat2-build等执行程序和相关脚本。
+    如果安装时"create a soft link to /usr/bin"选择y，则在任意目录可以直接运行hisat2-gtz和hisat2-build执行程序；否则需要切换到安装目录，以./hisat2-gtz方式运行。
+    GTX.Zip对hisat2的支持包中，基于hisat2（2.1.0）版本，其中：添加了对gtz文件的直接读取能力，各项功能与hisat2主代码功能完全一致。
+
+	#### 使用举例
+
+
+	##### 步骤一：使用hisat2制作index
+
+	`hisat2-build -p 4 ~/GCF_000001405.37_GRCh38.p11_genomic.fna  genome`
 	
+
+	##### 步骤二：执行比对
+
+	`export GTZ_RBIN_PATH=/path/rbin/`
+	
+	`hisat2-gtz -x genome -1　reads_1.fq.gtz -2 reads_2.fq.gtz -S result.sam`
+	
+	>  <font size=1>\* 该例子中通过环境变量GTZ_RBIN_PATH指定了rbin文件所在路径，这里"export GTZ_RBIN_PATH=/path/rbin/"不是必须的，但如果您知道rbin所在路径，建议您指定，这样可以加快hisat2-gtz处理速度。因为，当hisat2-gtz需要rbin文件，且在默认路径~/.config/gtz下找不到该rbin文件时，则会通过网络下载，下载过程将消耗时间。</font>
 	
   
 [-回顶-](#index)  
