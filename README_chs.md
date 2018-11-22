@@ -592,6 +592,26 @@ No. | 物种 | 官方链接
 	
 	>  <font size=1>\* 该例子中通过环境变量GTZ_RBIN_PATH指定了rbin文件所在路径，这里"export GTZ_RBIN_PATH=/path/rbin/"不是必须的，但如果您知道rbin所在路径，建议您指定，这样可以加快hisat2-gtz处理速度。因为，当hisat2-gtz需要rbin文件，且在默认路径~/.config/gtz下找不到该rbin文件时，则会通过网络下载，下载过程将消耗时间。</font>
 	
+- **性能**
+	#####	测试命令
+	
+	`export GTZ_RBIN_PATH=/path/rbin/`
+	
+	`hisat2 -x genome -1 reads_1.fq.gz -2 reads_2.fq.gz -S gz.sam -p 16 --reorder`
+	
+	`hisat2-gtz -x genome -1 reads_1.fq.gtz -2 reads_2.fq.gtz -S gtz.sam -p 16 --reorder`
+	
+	
+	#####	测试环境
+	
+	服务器配置：16核CPU,64G内存; 测试文件大小: read1.fq.gz(7.3G), read2.fq.gz(7.3G), read1.fq.gtz(1.6G), read2.fq.gtz(1.8G)
+	
+	#####	性能数据
+	
+	软件  |hisat2|hisat2-gtz
+	:---:|:---:|:--:
+ 	时间消耗|8m25.845s|10m47.930s	
+	
   
 [-回顶-](#index)  
   
