@@ -322,7 +322,7 @@ No. | 物种 | 官方链接
 	##### 方式二  
 	下载安装文件：[-GTX.Zip bwa-gtz-]( https://gtz.io/bwagtz_latest.run )  
 	在安装文件目录下运行命令  
-	`sudo sh bwagtz_lastest.run`  
+		`sudo sh bwagtz_lastest.run`  
 	根据提示完成安装  
 	
 - **使用说明**
@@ -579,7 +579,7 @@ No. | 物种 | 官方链接
 	#### 使用举例
 
 
-	##### 步骤一：使用hisat2制作index
+	##### 步骤一：使用hisat2-build制作index
 
 	`hisat2-build -p 4 ~/GCF_000001405.37_GRCh38.p11_genomic.fna  genome`
 	
