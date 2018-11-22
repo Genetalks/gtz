@@ -309,6 +309,7 @@ No. | 物种 | 官方链接
 - [2、BOWTIE for GTZ](#bowtie)  
 - [3、BOWTIE2 for GTZ](#bowtie2) 
 - [4、TOPHAT for GTZ](#tophat) 
+- [5、HISAT2 for GTZ](#hisat2) 
 
 
 ## 1、BWA for GTZ <span id="bwa"></span>  
@@ -555,6 +556,18 @@ No. | 物种 | 官方链接
 	软件  |tophat|tophat-gtz
 	:---:|:---:|:--:
  	时间消耗|133m12.61s|134m43.02s
+	
+## 5、HISAT2 for GTZ <span id="hisat2"></span> 
+
+	##### 方式一  
+	运行命令（推荐）  
+		`sudo curl -sSL https://gtz.io/hisat2gtz_latest.run -o /tmp/hisat2gtz.run && sudo sh /tmp/hisat2gtz.run`  
+	##### 方式二  
+	下载安装文件：[-GTX.Zip hisat2-gtz-]( https://gtz.io/hisat2gtz_latest.run )  
+	在安装文件目录下运行命令  
+	`sudo sh hisat2gtz_latest.run`  
+	根据提示完成安装
+	
 	
   
 [-回顶-](#index)  
