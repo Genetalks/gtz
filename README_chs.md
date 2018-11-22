@@ -559,13 +559,15 @@ No. | 物种 | 官方链接
 	
 ## 5、HISAT2 for GTZ <span id="hisat2"></span> 
 
+- **安装方法**
+
 	##### 方式一  
 	运行命令（推荐）  
 		`sudo curl -sSL https://gtz.io/hisat2gtz_latest.run -o /tmp/hisat2gtz.run && sudo sh /tmp/hisat2gtz.run`  
 	##### 方式二  
 	下载安装文件：[-GTX.Zip hisat2-gtz-]( https://gtz.io/hisat2gtz_latest.run )  
 	在安装文件目录下运行命令  
-	`sudo sh hisat2gtz_latest.run`  
+		`sudo sh hisat2gtz_latest.run`  
 	根据提示完成安装
 	
 	
