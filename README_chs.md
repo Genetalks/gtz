@@ -5,7 +5,7 @@
 ### QQ交流群：934492381
 
 ### 微信交流群:
-![GTX.Zip WebChat groups](https://i.loli.net/2018/11/19/5bf20877763c1.jpg "GTX.Zip WebChat groups")
+![GTX.Zip WebChat groups](https://i.loli.net/2018/11/26/5bfb4203bcf5c.jpg "GTX.Zip WebChat groups")
 
 Powered by GTXLab of Genetalks.
 
