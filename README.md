@@ -628,7 +628,7 @@ No. | Species | Official Url
 	`megahit-gtz -1 pe1.fq -2 pe2.fq -o out`
 	
 
-	##### Example 1: support gtz
+	##### Example 2: support gtz
 
 	`export GTZ_RBIN_PATH=/path/rbin/`
     
