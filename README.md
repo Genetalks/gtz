@@ -293,6 +293,7 @@ No. | Species | Official Url
 - [3、BOWTIE2 for GTZ](#bowtie2) 
 - [4、TOPHAT for GTZ](#tophat) 
 - [5、HISAT2 for GTZ](#hisat2) 
+- [6、MEGAHIT for GTZ](#megahit) 
 
 
 ## 1、BWA for GTZ <span id="bwa"></span>  
@@ -597,6 +598,66 @@ No. | Species | Official Url
 	Software  |hisat2|hisat2-gtz
 	:---:|:---:|:--:
  	Time consumption|8m25.845s|10m47.930s
+	
+	
+## 6、MEGAHIT for GTZ <span id="megahit"></span>  
+
+- **How to Install?**
+
+	##### For installation you can (recommended)   
+		`sudo curl -sSL https://gtz.io/megahitgtz_latest.run -o /tmp/megahitgtz.run && sudo sh /tmp/megahitgtz.run`  
+	##### or 
+	download installation files：[-GTX.Zip megahit-gtz-]( https://gtz.io/megahitgtz_latest.run )  
+	Run commands in the installation file directory 
+	`sudo sh megahitgtz_latest.run`  
+	complete installation according to prompt.
+	
+- **How to Use?**
+
+    After installation, megahit-gtz (and megahit_asm_core, megahit_sdbg_build, megahit_toolkit) will be generated.
+    
+    If y is selected when installing "create a soft link to /usr/bin", you can run megahit-gtz in any directory; Otherwise, you need to switch to the installation directory and run with ./megahit-gtz.
+    
+    GTX.Zip's support package for megahit based on 1.1.3 version. Among them: the ability to read GTZ files directly is added, and all functions are completely consistent with the main code function of megahit.
+
+	#### Use examples
+
+
+	##### Example 1: support fq
+
+	`megahit-gtz -1 pe1.fq -2 pe2.fq -o out`
+	
+
+	##### Example 1: support gtz
+
+	`export GTZ_RBIN_PATH=/path/rbin/`
+    
+    `megahit-gtz -1 pe1.fq.gtz -2 pe2.fq.gtz -o out`
+
+	>  <font size=1>\* In this example, the path of the RBIN file is specified by the environment variable GTZ_RBIN_PATH, where "export GTZ_RBIN_PATH=/path/rbin/" is not necessary, but if you know the path of rbin, you are advised to specify it, which can speed up the processing of megahit-gtz. Because when megahit-gtz needs RBIN file and cannot find the RBIN file under the default path ~/.config/gtz, it will be downloaded through the network, which will consume time.</font>
+	
+	
+- **performance**
+
+	
+	#####	Test command
+	
+	`megahit -t 16 -o out -1 pe1.fq.gz -2 pe2.fq.gz`
+	
+	`export GTZ_RBIN_PATH=/path/rbin/`
+	
+	`megahit-gtz -t 16 -o out -1 pe1.fq.gtz -2 pe2.fq.gtz`
+	
+	
+	#####	Testing environment
+	
+	Server configuration: 16 core CPU, 64G memory; file size: read1.fq.gz(1.55G), read2.fq.gz(1.78G), read1.fq.gtz(0.43G), read2.fq.gtz(0.61G)
+	
+	#####	Performance data
+	
+	Software  |megahit|megahit-gtz
+	:---:|:---:|:--:
+ 	Time consumption|67m38.381s|66m44.151s
     
   
 [-Back to Top-](#index)  
