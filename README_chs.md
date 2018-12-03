@@ -310,6 +310,7 @@ No. | 物种 | 官方链接
 - [3、BOWTIE2 for GTZ](#bowtie2) 
 - [4、TOPHAT for GTZ](#tophat) 
 - [5、HISAT2 for GTZ](#hisat2) 
+- [6、MEGAHIT for GTZ](#megahit) 
 
 
 ## 1、BWA for GTZ <span id="bwa"></span>  
@@ -611,6 +612,66 @@ No. | 物种 | 官方链接
 	软件  |hisat2|hisat2-gtz
 	:---:|:---:|:--:
  	时间消耗|8m25.845s|10m47.930s	
+	
+	
+## 6、MEGAHIT for GTZ <span id="megahit"></span>  
+
+- **安装方法**
+
+	##### 方式一  
+	运行命令（推荐）  
+		`sudo curl -sSL https://gtz.io/megahitgtz_latest.run -o /tmp/megahitgtz.run && sudo sh /tmp/megahitgtz.run`  
+	##### 方式二  
+	下载安装文件：[-GTX.Zip megahit-gtz-]( https://gtz.io/megahitgtz_latest.run )  
+	在安装文件目录下运行命令  
+	`sudo sh megahitgtz_latest.run`  
+	根据提示完成安装
+	
+- **使用说明**
+
+    安装完成后会生成megahit-gtz（及megahit_asm_core、megahit_sdbg_build、megahit_toolkit）
+    
+    如果安装时"create a soft link to /usr/bin"选择y，则在任意目录可以直接运行megahit-gtz；否则需要切换到安装目录，以./megahit-gtz方式运行
+    
+    GTX.Zip对megahit的支持包中，基于MEGAHIT v1.1.3版本，其中：添加了对gtz文件的直接读取能力，各项功能与megahit主代码功能完全一致。
+
+	#### 使用举例
+
+    ##### 示例一: 支持fq
+
+    `megahit-gtz -1 pe1.fq -2 pe2.fq -o out`
+    
+
+    ##### 示例一: 支持gtz
+    
+    `export GTZ_RBIN_PATH=/path/rbin/`
+    
+    `megahit-gtz -1 pe1.fq.gtz -2 pe2.fq.gtz -o out`
+
+	>  <font size=1>\* 该例子中通过环境变量GTZ_RBIN_PATH指定了rbin文件所在路径，这里"export GTZ_RBIN_PATH=/path/rbin/"不是必须的，但如果您知道rbin所在路径，建议您指定，这样可以加快megahit-gtz处理速度。因为，当megahit-gtz需要rbin文件，且在默认路径~/.config/gtz下找不到该rbin文件时，则会通过网络下载，下载过程将消耗时间。</font>
+	
+	
+- **性能**
+
+	
+	#####	测试命令
+	
+	`megahit -t 16 -o out -1 pe1.fq.gz -2 pe2.fq.gz`
+	
+	`export GTZ_RBIN_PATH=/path/rbin/`
+	
+	`megahit-gtz -t 16 -o out -1 pe1.fq.gtz -2 pe2.fq.gtz`
+	
+	
+	#####	测试环境
+	
+	服务器配置：16核CPU,64G内存; 文件大小: read1.fq.gz(1.55G), read2.fq.gz(1.78G), read1.fq.gtz(0.43G), read2.fq.gtz(0.61G)
+	
+	#####	性能数据
+	
+	软件  |megahit|megahit-gtz
+	:---:|:---:|:--:
+ 	时间消耗|67m38.381s|66m44.151s
 	
   
 [-回顶-](#index)  
