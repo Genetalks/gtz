@@ -642,7 +642,7 @@ No. | 物种 | 官方链接
     `megahit-gtz -1 pe1.fq -2 pe2.fq -o out`
     
 
-    ##### 示例一: 支持gtz
+    ##### 示例二: 支持gtz
     
     `export GTZ_RBIN_PATH=/path/rbin/`
     
