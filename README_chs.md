@@ -767,7 +767,7 @@ No. | 物种 | 官方链接
   >因此，问题中的两个gz文件其实是两个不同的文件，所以md5不同，但是里面的fq文件相同且fq文件的md5值是一样的。  
   
 **10、GTX.Zip Pro目前支持多少个物种的智能选择压缩？**<span id="10"></span>  
-  >38个物种，点击[-这里-](https://github.com/Genetalks/gtz/blob/master/README_chs.md#rbin-download)查看列表:。    
+  >39个物种，点击[-这里-](https://github.com/Genetalks/gtz/blob/master/README_chs.md#rbin-download)查看列表:。    
   >如果您希望将某个物种加入支持列表，请联系邮箱: contact@gtz.io, 或者在GitHub创建一个[新的issue](https://github.com/Genetalks/gtz/issues/new)。  
   
 **11、GTX.Zip Pro软件包里的bin，rbin文件是做什么的？**<span id="11"></span>  
