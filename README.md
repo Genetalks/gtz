@@ -294,6 +294,7 @@ No. | Species | Official Url
 - [4、TOPHAT for GTZ](#tophat) 
 - [5、HISAT2 for GTZ](#hisat2) 
 - [6、MEGAHIT for GTZ](#megahit) 
+- [7、FASTQC for GTZ](#fastqc) 
 
 
 ## 1、BWA for GTZ <span id="bwa"></span>  
@@ -658,6 +659,9 @@ No. | Species | Official Url
 	Software  |megahit|megahit-gtz
 	:---:|:---:|:--:
  	Time consumption|67m38.381s|66m44.151s
+	
+## 7、FASTQC for GTZ <span id="fastqc"></span>  
+
     
   
 [-Back to Top-](#index)  
