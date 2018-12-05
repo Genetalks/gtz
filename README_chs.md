@@ -311,6 +311,7 @@ No. | 物种 | 官方链接
 - [4、TOPHAT for GTZ](#tophat) 
 - [5、HISAT2 for GTZ](#hisat2) 
 - [6、MEGAHIT for GTZ](#megahit) 
+- [7、FASTQC for GTZ](#fastqc) 
 
 
 ## 1、BWA for GTZ <span id="bwa"></span>  
@@ -672,6 +673,35 @@ No. | 物种 | 官方链接
 	软件  |megahit|megahit-gtz
 	:---:|:---:|:--:
  	时间消耗|67m38.381s|66m44.151s
+	
+## 7、FASTQC for GTZ <span id="fastqc"></span> 
+
+- **安装方法**
+
+	##### 方式一  
+	运行命令（推荐）  
+		`sudo curl -sSL https://gtz.io/fastqc_gtz_latest.run -o /tmp/fastqc2gtz.run && sudo sh /tmp/fastqc2gtz.run`  
+	##### 方式二  
+	下载安装文件：[-GTX.Zip fastqc-gtz-]( https://gtz.io/fastqc_gtz_latest.run )  
+	在安装文件目录下运行命令  
+		`sudo sh fastqc_gtz_latest.run`  
+	根据提示完成安装
+
+- **使用说明**
+
+    安装完成后，会在安装目录生成fastqc-gtz等执行程序和相关脚本。
+    如果安装时"create a soft link to /usr/bin"选择y，则在任意目录可以直接运行fastqc-gtz执行程序；否则需要切换到安装目录，以./fastqc-gtz方式运行。
+    GTX.Zip对fastqc的支持包中，基于fastqc（0.11.8）版本，其中：添加了对gtz文件的直接读取能力，各项功能与fastqc主代码功能完全一致。
+
+	#### 使用举例
+
+	`export GTZ_RBIN_PATH=/path/rbin/`
+	
+	`fastqc-gtz -t 1 reads_1.fq.gtz -o ~/result_directory`
+	
+	>  <font size=1>\* 该例子中通过环境变量GTZ_RBIN_PATH指定了rbin文件所在路径，这里"export GTZ_RBIN_PATH=/path/rbin/"不是必须的，但如果您知道rbin所在路径，建议您指定，这样可以加快fastqc-gtz处理速度。因为，当fastqc-gtz需要rbin文件，且在默认路径~/.config/gtz下找不到该rbin文件时，则会通过网络下载，下载过程将消耗时间。</font>
+	
+	
 	
   
 [-回顶-](#index)  
