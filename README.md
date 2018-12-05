@@ -661,7 +661,31 @@ No. | Species | Official Url
  	Time consumption|67m38.381s|66m44.151s
 	
 ## 7、FASTQC for GTZ <span id="fastqc"></span>  
+- **How to Install?**
 
+	##### For installation you can (recommended)   
+	
+	`sudo curl -sSL https://gtz.io/fastqc_gtz_latest.run -o /tmp/fastqc2gtz.run && sudo sh /tmp/fastqc2gtz.run`  
+	##### or 
+	download installation files：[-GTX.Zip fastqc-gtz-]( https://gtz.io/fastqc_gtz_latest.run )  
+	Run commands in the installation file directory 
+	
+	`sudo sh fastqc_gtz_latest.run`  
+	complete installation according to prompt.
+
+- **How to Use?**
+
+    After the installation is complete, the execution program and related scripts will be generated in the installation directory.
+    If you select "y" in the "create a soft link to /usr/bin" installation, you can run the fastqc-gtz executables directly in any directory; 
+    otherwise you need to switch to the installation directory and run it in ./fastqc-gtz mode. GTX.Zip support package for fastqc, based on fastqc (0.11.8) version, which: Added direct reading capability for gtz files, all functions are exactly the same as fastqc main code function.
+    
+    #### Use examples
+
+	`export GTZ_RBIN_PATH=/path/rbin/`
+	
+	`fastqc-gtz -t 1 reads_1.fq.gtz -o ~/result_directory`
+
+	>  <font size=1>\* In this example, the path of the RBIN file is specified by the environment variable GTZ_RBIN_PATH, where "export GTZ_RBIN_PATH=/path/rbin/" is not necessary, but if you know the path of rbin, you are advised to specify it, which can speed up the processing of fastqc-gtz. Because when fastqc-gtz needs RBIN file and cannot find the RBIN file under the default path ~/.config/gtz, it will be downloaded through the network, which will consume time.</font>
     
   
 [-Back to Top-](#index)  
