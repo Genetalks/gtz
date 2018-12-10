@@ -2,6 +2,7 @@
 
 ### If the species you need is not in our [species list](#rbin-download), please [contact us](#contact-us) !  
 ### QQ group(s): 934492381 
+![GTX.Zip QQ groups](https://i.loli.net/2018/12/10/5c0df947eddde.png "GTX.Zip QQ groups")
 
 ### WeChat group(s):
 ![GTX.Zip WebChat groups](https://i.loli.net/2018/12/03/5c047b3204fc2.jpg "GTX.Zip WebChat groups")
