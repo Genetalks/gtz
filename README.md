@@ -298,12 +298,13 @@ No. | Species | Official Url
 
 ## Ecology Softwares<span id="ecology"></span>  
 - [1、BWA for GTZ](#bwa)  
-- [2、BOWTIE for GTZ](#bowtie)  
-- [3、BOWTIE2 for GTZ](#bowtie2) 
-- [4、TOPHAT for GTZ](#tophat) 
-- [5、HISAT2 for GTZ](#hisat2) 
-- [6、MEGAHIT for GTZ](#megahit) 
-- [7、FASTQC for GTZ](#fastqc) 
+- [2、STAR for GTZ](#star)  
+- [3、BOWTIE for GTZ](#bowtie)  
+- [4、BOWTIE2 for GTZ](#bowtie2) 
+- [5、TOPHAT for GTZ](#tophat) 
+- [6、HISAT2 for GTZ](#hisat2) 
+- [7、MEGAHIT for GTZ](#megahit) 
+- [8、FASTQC for GTZ](#fastqc) 
 
 
 ## 1、BWA for GTZ <span id="bwa"></span>  
@@ -382,8 +383,26 @@ No. | Species | Official Url
 	---|:---:|:--:|---:
  	Time consumption|50m14.06s|51m37.67s|39m18.86s
 	Memory consumption|5.888G|10.56G|19.84G
+	
+## 2、STAR for GTZ <span id="star"></span> 
 
-## 2、BOWTIE for GTZ <span id="bowtie"></span>  
+　The official website star directly supports the GTZ format, using examples such as the following
+
+- **method one**
+
+    export GTZ_RBIN_PATH=/path/rbin/
+    
+    STAR --genomeDir /path/to/genomeDir --readFilesIn read1.fq.gtz read2.fq.gtz --readFilesCommand gtz -c -d
+
+    >  <font size=1>\* In this example, the path of the RBIN file is specified by the environment variable GTZ_RBIN_PATH, where "export GTZ_RBIN_PATH=/path/rbin/" is not necessary, but if you know the path of rbin, you are advised to specify it, which can speed up GTZ processing. Because when GTZ needs RBIN file and cannot find the RBIN file under the default path ~/.config/gtz, it will be downloaded through the network, and the download process will consume time.</font>
+
+- **method two**
+
+    STAR --genomeDir /path/to/genomeDir --readFilesIn read1.fq.gtz read2.fq.gtz --readFilesCommand gtz -r /path/to/gtz_rbin_dir/ -c -d
+
+    >  <font size=1>\* In this example, the directory where the RBIN file is located is specified by -r, it's same as method one.</font>
+
+## 3、BOWTIE for GTZ <span id="bowtie"></span>  
 
 - **How to Install?**
 
@@ -430,7 +449,7 @@ No. | Species | Official Url
 	
  	
  	
-## 3、BOWTIE2 for GTZ <span id="bowtie2"></span>  
+## 4、BOWTIE2 for GTZ <span id="bowtie2"></span>  
 
 - **How to Install?**
 
@@ -495,7 +514,7 @@ No. | Species | Official Url
  	Time consumption|63m41.06s|61m56.67s
 	
 	
-## ４、TOPHAT for GTZ <span id="tophat"></span>  
+## 5、TOPHAT for GTZ <span id="tophat"></span>  
 
 - **How to Install?**
 
@@ -557,7 +576,7 @@ No. | Species | Official Url
 	:---:|:---:|:--:
  	Time consumption|133m12.61s|134m43.02s
 	
-## 5、HISAT2 for GTZ <span id="hisat2"></span>  
+## 6、HISAT2 for GTZ <span id="hisat2"></span>  
 - **How to Install?**
 
 	##### For installation you can (recommended)   
@@ -610,7 +629,7 @@ No. | Species | Official Url
  	Time consumption|8m25.845s|10m47.930s
 	
 	
-## 6、MEGAHIT for GTZ <span id="megahit"></span>  
+## 7、MEGAHIT for GTZ <span id="megahit"></span>  
 
 - **How to Install?**
 
@@ -669,7 +688,7 @@ No. | Species | Official Url
 	:---:|:---:|:--:
  	Time consumption|67m38.381s|66m44.151s
 	
-## 7、FASTQC for GTZ <span id="fastqc"></span>  
+## 8、FASTQC for GTZ <span id="fastqc"></span>  
 - **How to Install?**
 
 	##### For installation you can (recommended)   
