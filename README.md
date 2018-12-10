@@ -7,8 +7,6 @@
   	<td>QQ group(s): 934492381 </td>
 	<td>WeChat group(s):</td>
 	
-</tr>
-<tr>									      
   	<td>  <img src="https://i.loli.net/2018/12/10/5c0df947eddde.png" alt="GTX.Zip QQ groups"/></td>
 	<td><img src="https://i.loli.net/2018/12/03/5c047b3204fc2.jpg" alt="GTX.Zip WebChat groups"/></td>
 </tr>
