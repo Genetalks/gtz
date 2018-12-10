@@ -312,13 +312,14 @@ No. | 物种 | 官方链接
   
   
 ## GTZ生态圈软件<span id="ecology"></span>  
-- [1、BWA for GTZ](#bwa)  
-- [2、BOWTIE for GTZ](#bowtie)  
-- [3、BOWTIE2 for GTZ](#bowtie2) 
-- [4、TOPHAT for GTZ](#tophat) 
-- [5、HISAT2 for GTZ](#hisat2) 
-- [6、MEGAHIT for GTZ](#megahit) 
-- [7、FASTQC for GTZ](#fastqc) 
+- [1、BWA for GTZ](#bwa)
+- [2、STAR for GTZ](#star)
+- [3、BOWTIE for GTZ](#bowtie)  
+- [4、BOWTIE2 for GTZ](#bowtie2) 
+- [5、TOPHAT for GTZ](#tophat) 
+- [6、HISAT2 for GTZ](#hisat2) 
+- [7、MEGAHIT for GTZ](#megahit) 
+- [8、FASTQC for GTZ](#fastqc) 
 
 
 ## 1、BWA for GTZ <span id="bwa"></span>  
@@ -397,7 +398,26 @@ No. | 物种 | 官方链接
  	时间消耗|50m14.06s|51m37.67s|39m18.86s
 	内存消耗|5.888G|10.56G|19.84G
 	
-## 2、BOWTIE for GTZ <span id="bowtie"></span>  
+## 2、STAR for GTZ <span id="star"></span> 
+
+　官网STAR直接支持GTZ格式，使用示例如下
+
+- **方式一**
+
+    export GTZ_RBIN_PATH=/path/rbin/
+    
+    STAR --genomeDir /path/to/genomeDir --readFilesIn read1.fq.gtz read2.fq.gtz --readFilesCommand gtz -c -d
+
+    >  <font size=1>\* 该例子中通过环境变量GTZ_RBIN_PATH指定了rbin文件所在路径，这里"export GTZ_RBIN_PATH=/path/rbin/"不是必须的，但如果您知道rbin所在路径，建议您指定，这样可以加快gtz处理速度。因为，当gtz需要rbin文件，且在默认路径~/.config/gtz下找不到该rbin文件，则会通过网络下载，下载过程将消耗时间。</font>
+
+- **方式二**
+
+    STAR --genomeDir /path/to/genomeDir --readFilesIn read1.fq.gtz read2.fq.gtz --readFilesCommand gtz -r /path/to/gtz_rbin_dir/ -c -d
+
+    >  <font size=1>\* 该例子中通过-r指定rbin文件所在目录，效果与方式一相同</font>
+
+	
+## 3、BOWTIE for GTZ <span id="bowtie"></span>  
 
 - **安装方法**
 
@@ -442,7 +462,7 @@ No. | 物种 | 官方链接
 	
  	
  	
-## 3、BOWTIE2 for GTZ <span id="bowtie2"></span>  
+## 4、BOWTIE2 for GTZ <span id="bowtie2"></span>  
 
 - **安装方法**
 
@@ -505,7 +525,7 @@ No. | 物种 | 官方链接
  	时间消耗|63m41.06s|61m56.67s
 	
  
-## ４、TOPHAT for GTZ <span id="tophat"></span>  
+## 5、TOPHAT for GTZ <span id="tophat"></span>  
 
 - **安装方法**
 
@@ -566,7 +586,7 @@ No. | 物种 | 官方链接
 	:---:|:---:|:--:
  	时间消耗|133m12.61s|134m43.02s
 	
-## 5、HISAT2 for GTZ <span id="hisat2"></span> 
+## 6、HISAT2 for GTZ <span id="hisat2"></span> 
 
 - **安装方法**
 
@@ -622,7 +642,7 @@ No. | 物种 | 官方链接
  	时间消耗|8m25.845s|10m47.930s	
 	
 	
-## 6、MEGAHIT for GTZ <span id="megahit"></span>  
+## 7、MEGAHIT for GTZ <span id="megahit"></span>  
 
 - **安装方法**
 
@@ -681,7 +701,7 @@ No. | 物种 | 官方链接
 	:---:|:---:|:--:
  	时间消耗|67m38.381s|66m44.151s
 	
-## 7、FASTQC for GTZ <span id="fastqc"></span> 
+## 8、FASTQC for GTZ <span id="fastqc"></span> 
 
 - **安装方法**
 
