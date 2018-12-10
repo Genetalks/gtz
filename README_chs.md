@@ -2,12 +2,18 @@
 
 **如果我们提供的[-物种列表-](#rbin-download)不在您的需求范围内，请[-联系我们-](#contact-us)，我们将免费为您制作所需物种的rbin跟bin文件。**  
 
-### QQ交流群：934492381
-![GTX.Zip QQ groups](https://i.loli.net/2018/12/10/5c0df947eddde.png "GTX.Zip QQ groups")
-
-### 微信交流群:
-![GTX.Zip WebChat groups](https://i.loli.net/2018/12/03/5c047b3204fc2.jpg "GTX.Zip WebChat groups")
-
+<table style="width:100%">
+<tr>
+	<td>
+		<h3>QQ 交流群: 934492381 </h3>
+		<img src="https://i.loli.net/2018/12/10/5c0df947eddde.png" alt="GTX.Zip QQ groups"/>
+	</td>
+	<td>
+		<h3>微信交流群:</h3>
+		<img src="https://i.loli.net/2018/12/03/5c047b3204fc2.jpg" alt="GTX.Zip WebChat groups"/>
+	</td>
+</tr>
+</table>
 Powered by GTXLab of Genetalks.
 
 [-English Manual-](https://github.com/Genetalks/gtz/blob/master/README.md "Markdown").
