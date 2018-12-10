@@ -4,11 +4,11 @@
 
 <div>
 <span>
-  <span>QQ group(s): 934492381 </span><br/>
+  <span>QQ group(s): 934492381 </span>
   <img src="https://i.loli.net/2018/12/10/5c0df947eddde.png" alt="GTX.Zip QQ groups"/>
 </span>
 <span>									      
-  <span>WeChat group(s):</span><br/>
+  <span>WeChat group(s):</span>
   <img src="https://i.loli.net/2018/12/03/5c047b3204fc2.jpg" alt="GTX.Zip WebChat groups"/>
 </span>
 </div>
