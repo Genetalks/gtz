@@ -386,7 +386,7 @@ No. | Species | Official Url
 	
 ## 2、STAR for GTZ <span id="star"></span> 
 
-　The official website star directly supports the GTZ format, using examples such as the following
+　The official website STAR directly supports the GTZ format, after the installation of GTZ, first make the index file with STAR, and then perform the mapping operation. The mapping process uses the following examples:
 
 - **method one**
 
