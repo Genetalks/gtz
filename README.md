@@ -2,7 +2,7 @@
 
 ### If the species you need is not in our [species list](#rbin-download), please [contact us](#contact-us) !  
 
-<table>
+<table style="width:100%">
 <tr>
 	<td>
 		<h3>QQ group(s): 934492381 </h3>
