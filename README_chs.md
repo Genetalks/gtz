@@ -3,6 +3,7 @@
 **如果我们提供的[-物种列表-](#rbin-download)不在您的需求范围内，请[-联系我们-](#contact-us)，我们将免费为您制作所需物种的rbin跟bin文件。**  
 
 ### QQ交流群：934492381
+![GTX.Zip QQ groups](https://i.loli.net/2018/12/10/5c0df947eddde.png "GTX.Zip QQ groups")
 
 ### 微信交流群:
 ![GTX.Zip WebChat groups](https://i.loli.net/2018/12/03/5c047b3204fc2.jpg "GTX.Zip WebChat groups")
