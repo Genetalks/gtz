@@ -400,7 +400,7 @@ No. | 物种 | 官方链接
 	
 ## 2、STAR for GTZ <span id="star"></span> 
 
-　官网STAR直接支持GTZ格式，使用示例如下
+　官网STAR直接支持GTZ格式，在安装gtz之后，首先用STAR制作索引文件，其次执行对比操作。对比过程使用实例如下：
 
 - **方式一**
 
