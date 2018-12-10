@@ -2,16 +2,16 @@
 
 ### If the species you need is not in our [species list](#rbin-download), please [contact us](#contact-us) !  
 
-<div>
-<span>
-  <span>QQ group(s): 934492381 </span>
-  <img src="https://i.loli.net/2018/12/10/5c0df947eddde.png" alt="GTX.Zip QQ groups"/>
-</span>
-<span>									      
-  <span>WeChat group(s):</span>
-  <img src="https://i.loli.net/2018/12/03/5c047b3204fc2.jpg" alt="GTX.Zip WebChat groups"/>
-</span>
-</div>
+<table>
+<tr>
+  <td>QQ group(s): 934492381 </td>
+	<td>  <img src="https://i.loli.net/2018/12/10/5c0df947eddde.png" alt="GTX.Zip QQ groups"/></td>
+</tr>
+<tr>									      
+  <td>WeChat group(s):</td>
+	<td><img src="https://i.loli.net/2018/12/03/5c047b3204fc2.jpg" alt="GTX.Zip WebChat groups"/></td>
+</tr>
+</table>
 
 Powered by GTXLab of Genetalks.  
 
