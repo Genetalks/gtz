@@ -10,7 +10,7 @@
 	</td>
 	<td>
 		<h3>WeChat group(s):</h3>
-		<img src="https://i.loli.net/2018/12/03/5c047b3204fc2.jpg" alt="GTX.Zip WebChat groups"/>
+		<img src="https://i.loli.net/2018/12/10/5c0e0afa8d12d.jpg" alt="GTX.Zip WebChat groups"/>
 	</td>
 </tr>
 </table>
