@@ -305,6 +305,7 @@ No. | Species | Official Url
 - [6、HISAT2 for GTZ](#hisat2) 
 - [7、MEGAHIT for GTZ](#megahit) 
 - [8、FASTQC for GTZ](#fastqc) 
+- [9、FASTP for GTZ](#fastp)
 
 
 ## 1、BWA for GTZ <span id="bwa"></span>  
@@ -715,6 +716,128 @@ No. | Species | Official Url
 
 	>  <font size=1>\* In this example, the path of the RBIN file is specified by the environment variable GTZ_RBIN_PATH, where "export GTZ_RBIN_PATH=/path/rbin/" is not necessary, but if you know the path of rbin, you are advised to specify it, which can speed up the processing of fastqc-gtz. Because when fastqc-gtz needs RBIN file and cannot find the RBIN file under the default path ~/.config/gtz, it will be downloaded through the network, which will consume time.</font>
     
+  
+## 9、FASTP for GTZ <span id="fastp"></span>
+
+- **How to Install?**
+    
+    ##### Mode one: Install to the current user, no sudo permissions required
+    For installation you can (recommended)  
+    
+    `curl -sSL https://gtz.io/fastpgtz_latest.run -o /tmp/fastpgtz.run && sh /tmp/fastpgtz.run`  
+	
+    After the first installation, you need to perform a source ~/.bashrc or exit to log back in, and then you can execute fastp-gtz in any directory
+    
+    ###### or
+    download installation files：[-GTX.Zip fastp-gtz-]( https://gtz.io/fastpgtz_latest.run )，then install
+    
+    `sh fastpgtz_latest.run`
+	
+    Similarly, after the first installation, you need to perform a source ~/.bashrc or exit and log back in again
+        
+    ##### Mode two: Install to all users, need sudo permissions
+    For installation you can (recommended)  
+    
+	`sudo curl -sSL https://gtz.io/fastpgtz_latest.run -o /tmp/fastpgtz.run && sudo sh /tmp/fastpgtz.run`  
+	
+    ###### or
+    download installation files：[-GTX.Zip fastp-gtz-]( https://gtz.io/fastpgtz_latest.run )，then install  
+    
+	`sudo sh fastpgtz_latest.run`
+	
+	After the installation is complete, you can perform fastp-gtz in any directory
+
+
+- **How to Use?**
+
+
+    Gtx. Zip to fastp in the support package, based on FASTP version 0.19.5.
+    Both input and output support GTZ and non-GTZ format files, and when the output file name ends with the .gtz, fastp-gtz compresses the output file GTZ
+    
+    #### 1. Input is not GTZ format
+        
+	examples:
+
+	Output GTZ Format:  
+	
+	`fastp-gtz -i in.fq -o out.fq.gtz --bin_file in.fq.species.bin`
+
+	Output non-GTZ format: 
+	
+	`fastp-gtz -i in.fq -o out.fq`
+
+	For --bin_file use, refer to the following sections for instructions
+    
+    #### 2. Input is GTZ format
+    
+	examples:
+
+	export GTZ_RBIN_PATH=/path/rbin/
+
+	fastp-gtz -i in.R1.fq.gtz -I in.R2.fq.gtz -o out.R1.fq.gtz -O out.R2.fq.gtz --bin_file in.fq.species.bin
+
+
+	Command Description:
+
+	1) export GTZ_RBIN_PATH=/path/rbin/
+	  The environment variable is recommended for setting, but is not required, to specify the search path for the Rbin file when reading the file as a high-magnification compressed GTZ file, with detailed readable working principles
+
+	2) --bin_file
+	  This parameter is recommended to specify, but is not required, to specify the two-ended read into the file belongs to the species corresponding to the bin file, specified when the FASTP-GTZ will be high magnification to compress the output result file, detailed readable working principle
+
+
+  ###### How it works:
+
+	When entered as a GTZ file, FASTP-GTZ can be briefly described as four procedures:
+	
+	    (A) read into In.gtz-> (B) unzip into In.fq-> (C) processing Data-> (D) compressed into IN.GTZ
+
+	Note
+	##### 1) Process B
+
+	   If IN.GTZ in Process A is a high-magnification compressed file, procedure B requires the corresponding Rbin file, and there are two ways to work:
+	   Mode one: 
+	       You have the Rbin file locally and specify the path of the file with the following environment variables: 
+	       
+		   export GTZ_RBIN_PATH=/path/rbin
+	       Then the program will complete step b using the local Rbin file
+	   Mode two:
+	       You do not have the Rbin file locally, or you do not specify it through an environment variable, in which case the program automatically downloads the rbin from the network, and of course the process consumes a certain amount of time
+
+	##### 2) Process C
+
+	    fastp-gtz Analysis Data
+
+	##### 3) Process D
+
+	   Mode one: 
+	       Bin file not specified through--bin_file
+	       The fastp-gtz automatically recognizes in based on the bin and rec files under the ~/.config/gtz/path. Which species R1.fq.gtz and in.R2.fq.gtz each belong to, and then use the bin file of the corresponding species for compression, the automatic identification process will consume a certain amount of time.
+	       Of course, if there is no bin and rec under ~/.config/gtz/or no species information is identified, normal compression is used
+	   Mode two:
+	       The bin file is specified by--bin_file, fastp-gtz the bin file is used to do the high magnification compression directly
+           
+        
+- **performance**
+
+	
+	#####	Test command
+
+	`fastp -i in.R1.fq.gz -I in.R2.fq.gz -o out.R1.fq.gz -O out.R2.fq.gz`
+
+	`export GTZ_RBIN_PATH=/path/rbin/`
+
+	`fastp-gtz -i in.R1.fq.gtz -I in.R2.fq.gtz -o out.R1.fq.gtz -O out.R2.fq.gtz --bin_file in.fq.species.bin`
+
+
+	#####	Testing environment
+
+	Server configuration: 16 core CPU, 64G memory; file size: in.R1.fq.gz(1.55G), in.R2.fq.gz(1.78G), in.R1.fq.gtz(0.43G), in.R2.fq.gtz(0.61G)
+
+	#####	Performance data
+
+	fastp output file out. The total size of R1.fq.gz and out.R2.fq.gz is 3.3G, and the fastp-gtz output file out. The total size of R1.fq.gtz and out.R2.fq.gtz is 1G
+	
   
 [-Back to Top-](#index)  
   
