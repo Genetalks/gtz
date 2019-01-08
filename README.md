@@ -836,7 +836,7 @@ No. | Species | Official Url
 
 	#####	Performance data
 
-	fastp output file out. The total size of R1.fq.gz and out.R2.fq.gz is 3.3G, and the fastp-gtz output file out. The total size of R1.fq.gtz and out.R2.fq.gtz is 1G
+	fastp total output file size of R1.fq.gz and out.R2.fq.gz is 3.3G, and the fastp-gtz total output file size of R1.fq.gtz and out.R2.fq.gtz is 1G
 	
   
 [-Back to Top-](#index)  
