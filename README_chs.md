@@ -320,6 +320,7 @@ No. | 物种 | 官方链接
 - [6、HISAT2 for GTZ](#hisat2) 
 - [7、MEGAHIT for GTZ](#megahit) 
 - [8、FASTQC for GTZ](#fastqc) 
+- [9、FASTP for GTZ](#fastp)
 
 
 ## 1、BWA for GTZ <span id="bwa"></span>  
@@ -728,6 +729,125 @@ No. | 物种 | 官方链接
 	
 	>  <font size=1>\* 该例子中通过环境变量GTZ_RBIN_PATH指定了rbin文件所在路径，这里"export GTZ_RBIN_PATH=/path/rbin/"不是必须的，但如果您知道rbin所在路径，建议您指定，这样可以加快fastqc-gtz处理速度。因为，当fastqc-gtz需要rbin文件，且在默认路径~/.config/gtz下找不到该rbin文件时，则会通过网络下载，下载过程将消耗时间。</font>
 	
+	
+## 9、FASTP for GTZ <span id="fastp"></span>
+
+- **安装方法**
+    
+    ##### 方式一: 给当前用户安装，不需要sudo权限
+    运行命令（推荐） 
+    
+    `curl -sSL https://gtz.io/fastpgtz_latest.run -o /tmp/fastpgtz.run && sh /tmp/fastpgtz.run`  
+	
+    首次安装后，需要执行一次source ~/.bashrc或者退出去后重新登录，然后在任意目录可以执行fastp-gtz
+    
+    ###### 或者
+    下载安装文件：[-GTX.Zip fastp-gtz-]( https://gtz.io/fastpgtz_latest.run )，然后安装
+    
+    `sh fastpgtz_latest.run`
+	
+    同样，首次安装后，需要执行一次source ~/.bashrc或者退出去后重新登录
+        
+    ##### 方式二：给所有用户安装，需要sudo权限
+    运行命令（推荐）  
+    
+	`sudo curl -sSL https://gtz.io/fastpgtz_latest.run -o /tmp/fastpgtz.run && sudo sh /tmp/fastpgtz.run`  
+	
+    ###### 或者
+    先下载安装文件：[-GTX.Zip fastp-gtz-]( https://gtz.io/fastpgtz_latest.run )，然后安装  
+    
+	`sudo sh fastpgtz_latest.run`
+	
+	安装完成后，在任意目录可以执行fastp-gtz
+
+
+- **使用说明**
+
+
+    输入和输出均支持gtz和非gtz格式文件，当输出文件名以.gtz结尾时，fastp-gtz会对输出文件进行gtz压缩
+    
+    #### 1. 输入不是gtz格式
+        
+	示例：
+
+	输出gtz格式:  
+	
+	`fastp-gtz -i in.fq -o out.fq.gtz --bin_file in.fq.species.bin`
+
+	输出非gtz格式: 
+	
+	`fastp-gtz -i in.fq -o out.fq`
+
+	关于--bin_file使用可以参考下面的章节说明
+    
+    #### 2. 输入是gtz格式
+    
+	示例：
+
+	export GTZ_RBIN_PATH=/path/rbin/
+
+	fastp-gtz -i in.R1.fq.gtz -I in.R2.fq.gtz -o out.R1.fq.gtz -O out.R2.fq.gtz --bin_file in.fq.species.bin
+
+
+	命令说明：
+
+	1) export GTZ_RBIN_PATH=/path/rbin/
+	  该环境变量建议设定，但不是必须的，用于在读入文件为高倍率压缩的GTZ文件时，指定rbin文件的搜索路径，详细可阅读工作原理
+
+	2) --bin_file
+	  该参数建议指定，但不是必须的，用于指定双端读入文件所属物种对应的BIN文件，指定时fastp-gtz会高倍率压缩输出结果文件，详细可阅读工作原理
+
+
+  #### 工作原理：
+
+	当输入为gtz文件时，fastp-gtz可以简单描述为四个过程：
+	
+	    (A)读入in.gtz -> (B)解压成in.fq -> (C)处理数据 -> (D)压缩成in.gtz
+
+	说明：
+	##### 1) 过程B
+
+	   如果过程A中in.gtz是高倍率压缩文件，则过程B需要对应的rbin文件， 这时有两种工作方式：
+	   方式一： 
+	       您本地有该rbin文件，并通过以下环境变量指定了该文件所在路径:    
+		   export GTZ_RBIN_PATH=/path/rbin
+	       那么程序会使用本地的rbin文件完成步骤B
+	   方式二：
+	       您本地没有该rbin文件，或者有但没有通过环境变量指定，这种情形下程序会自动从网络下载该rbin，当然该过程将消耗一定的时间
+
+	##### 2) 过程C
+
+	    fastp-gtz分析数据
+
+	###### 3) 过程D
+
+	   方式一：
+	       没有通过--bin_file指定bin文件
+	       fastp-gtz会根据~/.config/gtz/路径下的bin和rec文件，自动识别in.R1.fq.gtz和in.R2.fq.gtz分别属于哪个物种，然后使用对应物种的bin文件做压缩，自动识别过程将消耗一定的时间。
+	       当然，如果~/.config/gtz/下没有bin和rec或者没有识别出物种信息，则采用普通压缩
+	   方式二：
+	       通过--bin_file指定了bin文件，则fastp-gtz采用该bin文件直接做高倍率压缩
+           
+        
+- **性能**
+
+	
+	#####	测试命令
+
+	`fastp -i in.R1.fq.gz -I in.R2.fq.gz -o out.R1.fq.gz -O out.R2.fq.gz`
+
+	`export GTZ_RBIN_PATH=/path/rbin/`
+
+	`fastp-gtz -i in.R1.fq.gtz -I in.R2.fq.gtz -o out.R1.fq.gtz -O out.R2.fq.gtz --bin_file in.fq.species.bin`
+
+
+	#####	测试环境
+
+	服务器配置：16核CPU,64G内存; 文件大小: in.R1.fq.gz(1.55G), in.R2.fq.gz(1.78G), in.R1.fq.gtz(0.43G), in.R2.fq.gtz(0.61G)
+
+	#####	性能数据
+
+	fastp输出文件out.R1.fq.gz和out.R2.fq.gz总大小为3.3G， fastp-gtz输出文件out.R1.fq.gtz和out.R2.fq.gtz总大小为1G
 	
 	
   
