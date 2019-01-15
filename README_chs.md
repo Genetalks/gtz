@@ -301,7 +301,10 @@ No. | 物种 | 官方链接
 36|Sus scrofa|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Sus_scrofa_fa17a95f7b8532dfb932210977bebc77.rbin  
 37|Homo sapiens meth|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Homo_sapiens_meth_d497f0f9f716dff930ae92146c950576.rbin
 38|Mus musculus meth|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Mus_musculus_meth_42a6bd57204889412125be9111bca783.rbin  
-39|Equus caballus|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Equus_caballus_48fb76cc859b80aff9818361dce3e735.rbin  
+39|Equus caballus|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Equus_caballus_48fb76cc859b80aff9818361dce3e735.rbin
+40|Gallus gallus|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Gallus_gallus_5a5d9581b4af55381d19b742c518d079.rbin
+41|Egretta garzetta |https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Egretta_garzetta_2a63683b2a15b1cbbb276f80df9f8fd9.rbin
+42|Taeniopygia guttata|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Taeniopygia_guttata_004df52b216ca9306ed56d907128870c.rbin
 
 **如果以上物种不在您的需求范围内，请[-联系我们-](#contact-us)，我们将免费为您制作所需物种的rbin跟bin文件。**  
   
