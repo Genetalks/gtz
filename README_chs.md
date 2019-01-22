@@ -438,6 +438,7 @@ No. | 物种 | 官方链接
 
 
     GTX.Zip对bcl2fastq的支持包中，基于bcl2fastq的v2.20.0.422版本。
+    
     默认输出gtz格式，命令加--no-bgtzf-compression参数时，输出gz格式
     
     #### 示例1. 默认情况，输出结果文件为gtz格式，走普通压缩 
