@@ -316,14 +316,15 @@ No. | 物种 | 官方链接
   
 ## GTZ生态圈软件<span id="ecology"></span>  
 - [1、BWA for GTZ](#bwa)
-- [2、STAR for GTZ](#star)
-- [3、BOWTIE for GTZ](#bowtie)  
-- [4、BOWTIE2 for GTZ](#bowtie2) 
-- [5、TOPHAT for GTZ](#tophat) 
-- [6、HISAT2 for GTZ](#hisat2) 
-- [7、MEGAHIT for GTZ](#megahit) 
-- [8、FASTQC for GTZ](#fastqc) 
-- [9、FASTP for GTZ](#fastp)
+- [2、BCL2FASTQ for GTZ](#bcl2fastq)
+- [3、STAR for GTZ](#star)
+- [4、BOWTIE for GTZ](#bowtie)  
+- [5、BOWTIE2 for GTZ](#bowtie2) 
+- [6、TOPHAT for GTZ](#tophat) 
+- [7、HISAT2 for GTZ](#hisat2) 
+- [8、MEGAHIT for GTZ](#megahit) 
+- [9、FASTQC for GTZ](#fastqc) 
+- [10、FASTP for GTZ](#fastp)
 
 
 ## 1、BWA for GTZ <span id="bwa"></span>  
@@ -402,7 +403,76 @@ No. | 物种 | 官方链接
  	时间消耗|50m14.06s|51m37.67s|39m18.86s
 	内存消耗|5.888G|10.56G|19.84G
 	
-## 2、STAR for GTZ <span id="star"></span> 
+## 2、BCL2FASTQ for GTZ <span id="bcl2fastq"></span>
+
+- **安装方法**
+    
+    ##### 方式一: 给当前用户安装，不需要sudo权限
+    运行命令（推荐） 
+    
+    `curl -sSL https://gtz.io/bcl2fastq_gtz_latest.run -o /tmp/bcl2fastqgtz.run && sh /tmp/bcl2fastqgtz.run`  
+	
+    首次安装后，需要执行一次source ~/.bashrc或者退出去后重新登录，然后在任意目录可以执行bcl2fastq-gtz
+    
+    ###### 或者
+    下载安装文件：[-GTX.Zip bcl2fastq-gtz-]( https://gtz.io/bcl2fastq_gtz_latest.run )，然后安装
+    
+    `sh bcl2fastq_gtz_latest.run`
+	
+    同样，首次安装后，需要执行一次source ~/.bashrc或者退出去后重新登录
+        
+    ##### 方式二：给所有用户安装，需要sudo权限
+    运行命令（推荐）  
+    
+	`sudo curl -sSL https://gtz.io/bcl2fastq_gtz_latest.run -o /tmp/bcl2fastqgtz.run && sudo sh /tmp/bcl2fastqgtz.run`  
+	
+    ###### 或者
+    先下载安装文件：[-GTX.Zip bcl2fastq-gtz-]( https://gtz.io/bcl2fastq_gtz_latest.run )，然后安装  
+    
+	`sudo sh bcl2fastq_gtz_latest.run`
+	
+	安装完成后，在任意目录可以执行bcl2fastq-gtz
+
+
+- **使用说明**
+
+
+    GTX.Zip对bcl2fastq的支持包中，基于bcl2fastq的v2.20.0.422版本。
+    默认输出gtz格式，命令加--no-bgtzf-compression参数时，输出gz格式
+    
+    #### 示例1. 默认情况，输出结果文件为gtz格式，走普通压缩 
+	
+	`bcl2fastq-gtz -i ./data/BaseCalls -R ./outdir/run --interop-dir ./outdir/interop -o ./outdir/result --ignore-missing-bcls --ignore-missing-filter --ignore-missing-positions --barcode-mismatches 0 --use-bases-mask y*,i7,i7,y* >./outdir/bcl2fastq.log 2>&1 || touch bcl2fastq.err`
+
+	#### 示例2. 输出结果文件为gtz格式，走高倍压缩，通过--bin_file指定bin文件
+	
+	`bcl2fastq-gtz -i ./data/BaseCalls -R ./outdir/run --interop-dir ./outdir/interop -o ./outdir/result --ignore-missing-bcls --ignore-missing-filter --ignore-missing-positions --barcode-mismatches 0 --use-bases-mask y*,i7,i7,y* --bin_file Homo_sapiens_bcacac9064331276504f27c6cf40e580.bin >./outdir/bcl2fastq.log 2>&1 || touch bcl2fastq.err`
+           
+    #### 示例3. 输出结果文件为gz格式，运行时加--no-bgtzf-compression参数
+        
+    `bcl2fastq-gtz -i ./data/BaseCalls -R ./outdir/run --interop-dir ./outdir/interop -o ./outdir/result --ignore-missing-bcls --ignore-missing-filter --ignore-missing-positions --barcode-mismatches 0 --use-bases-mask y*,i7,i7,y* --no-bgtzf-compression >./outdir/bcl2fastq.log 2>&1 || touch bcl2fastq.err`
+
+- **性能**
+
+	
+	#####	测试命令
+
+	`bcl2fastq -i ./data/BaseCalls -R ./outdir/run --interop-dir ./outdir/interop -o ./outdir/result --ignore-missing-bcls --ignore-missing-filter --ignore-missing-positions --barcode-mismatches 0 --use-bases-mask y*,i7,i7,y* >./outdir/bcl2fastq.log 2>&1 || touch bcl2fastq.err`
+
+	`bcl2fastq-gtz -i ./data/BaseCalls -R ./outdir/run --interop-dir ./outdir/interop -o ./outdir/result --ignore-missing-bcls --ignore-missing-filter --ignore-missing-positions --barcode-mismatches 0 --use-bases-mask y*,i7,i7,y* >./outdir/bcl2fastq.log 2>&1 || touch bcl2fastq.err`
+
+
+	#####	测试环境
+
+	服务器配置：16核CPU,64G内存; 文件大小: ./data/BaseCalls总计40G
+
+	#####	性能数据
+
+	bcl2fastq输出目标文件夹总大小40G，bcl2fastq-gtz输出目标文件夹总大小16G
+	
+	
+	
+## 3、STAR for GTZ <span id="star"></span> 
 
 　官网STAR直接支持GTZ格式，在安装gtz之后，首先用STAR制作索引文件，其次执行对比操作。对比过程使用实例如下：
 
@@ -421,7 +491,7 @@ No. | 物种 | 官方链接
     >  <font size=1>\* 该例子中通过-r指定rbin文件所在目录，效果与方式一相同</font>
 
 	
-## 3、BOWTIE for GTZ <span id="bowtie"></span>  
+## 4、BOWTIE for GTZ <span id="bowtie"></span>  
 
 - **安装方法**
 
@@ -462,11 +532,9 @@ No. | 物种 | 官方链接
 	
 - **性能**
 
-	
-	
  	
  	
-## 4、BOWTIE2 for GTZ <span id="bowtie2"></span>  
+## 5、BOWTIE2 for GTZ <span id="bowtie2"></span>  
 
 - **安装方法**
 
@@ -529,7 +597,7 @@ No. | 物种 | 官方链接
  	时间消耗|63m41.06s|61m56.67s
 	
  
-## 5、TOPHAT for GTZ <span id="tophat"></span>  
+## 6、TOPHAT for GTZ <span id="tophat"></span>  
 
 - **安装方法**
 
@@ -590,7 +658,7 @@ No. | 物种 | 官方链接
 	:---:|:---:|:--:
  	时间消耗|133m12.61s|134m43.02s
 	
-## 6、HISAT2 for GTZ <span id="hisat2"></span> 
+## 7、HISAT2 for GTZ <span id="hisat2"></span> 
 
 - **安装方法**
 
@@ -646,7 +714,7 @@ No. | 物种 | 官方链接
  	时间消耗|8m25.845s|10m47.930s	
 	
 	
-## 7、MEGAHIT for GTZ <span id="megahit"></span>  
+## 8、MEGAHIT for GTZ <span id="megahit"></span>  
 
 - **安装方法**
 
@@ -705,7 +773,7 @@ No. | 物种 | 官方链接
 	:---:|:---:|:--:
  	时间消耗|67m38.381s|66m44.151s
 	
-## 8、FASTQC for GTZ <span id="fastqc"></span> 
+## 9、FASTQC for GTZ <span id="fastqc"></span> 
 
 - **安装方法**
 
@@ -733,7 +801,7 @@ No. | 物种 | 官方链接
 	>  <font size=1>\* 该例子中通过环境变量GTZ_RBIN_PATH指定了rbin文件所在路径，这里"export GTZ_RBIN_PATH=/path/rbin/"不是必须的，但如果您知道rbin所在路径，建议您指定，这样可以加快fastqc-gtz处理速度。因为，当fastqc-gtz需要rbin文件，且在默认路径~/.config/gtz下找不到该rbin文件时，则会通过网络下载，下载过程将消耗时间。</font>
 	
 	
-## 9、FASTP for GTZ <span id="fastp"></span>
+## 10、FASTP for GTZ <span id="fastp"></span>
 
 - **安装方法**
     
