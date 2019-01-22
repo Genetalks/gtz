@@ -301,14 +301,15 @@ No. | Species | Official Url
 
 ## Ecology Softwares<span id="ecology"></span>  
 - [1、BWA for GTZ](#bwa)  
-- [2、STAR for GTZ](#star)  
-- [3、BOWTIE for GTZ](#bowtie)  
-- [4、BOWTIE2 for GTZ](#bowtie2) 
-- [5、TOPHAT for GTZ](#tophat) 
-- [6、HISAT2 for GTZ](#hisat2) 
-- [7、MEGAHIT for GTZ](#megahit) 
-- [8、FASTQC for GTZ](#fastqc) 
-- [9、FASTP for GTZ](#fastp)
+- [2、BCL2FASTQ for GTZ](#bcl2fastq)  
+- [3、STAR for GTZ](#star)  
+- [4、BOWTIE for GTZ](#bowtie)  
+- [5、BOWTIE2 for GTZ](#bowtie2) 
+- [6、TOPHAT for GTZ](#tophat) 
+- [7、HISAT2 for GTZ](#hisat2) 
+- [8、MEGAHIT for GTZ](#megahit) 
+- [9、FASTQC for GTZ](#fastqc) 
+- [10、FASTP for GTZ](#fastp)
 
 
 ## 1、BWA for GTZ <span id="bwa"></span>  
@@ -388,7 +389,75 @@ No. | Species | Official Url
  	Time consumption|50m14.06s|51m37.67s|39m18.86s
 	Memory consumption|5.888G|10.56G|19.84G
 	
-## 2、STAR for GTZ <span id="star"></span> 
+## 2、BCL2FASTQ for GTZ <span id="bcl2fastq"></span>
+
+- **How to Install?**
+    
+    ##### Mode one: Install to the current user, no sudo permissions required
+    For installation you can (recommended) 
+    
+    `curl -sSL https://gtz.io/bcl2fastq_gtz_latest.run -o /tmp/bcl2fastqgtz.run && sh /tmp/bcl2fastqgtz.run`  
+	
+    After the first installation, you need to perform a source ~/.bashrc or exit to log back in, and then you can execute bcl2fastq-gtz in any directory
+    
+    ###### or
+    download installation files：[-GTX.Zip bcl2fastq-gtz-]( https://gtz.io/bcl2fastq_gtz_latest.run )，then install
+    
+    `sh bcl2fastq_gtz_latest.run`
+	
+    Similarly, after the first installation, you need to perform a source ~/.bashrc or exit and log back in again
+        
+    ##### Mode two: Install to all users, need sudo permissions
+    For installation you can (recommended)   
+    
+	`sudo curl -sSL https://gtz.io/bcl2fastq_gtz_latest.run -o /tmp/bcl2fastqgtz.run && sudo sh /tmp/bcl2fastqgtz.run`  
+	
+    ###### or
+    download installation files：[-GTX.Zip bcl2fastq-gtz-]( https://gtz.io/bcl2fastq_gtz_latest.run )，then install 
+    
+	`sudo sh bcl2fastq_gtz_latest.run`
+	
+	After the installation is complete, you can perform bcl2fastq-gtz in any directory
+
+
+- **How to Use?**
+
+
+    Gtx. Zip's support package for bcl2fastq, based on the v2.20.0.422 version of bcl2fastq.
+
+    Default output gtz format, output gz format when command use --no-bgtzf-compression parameter
+    
+    #### Example 1. by default, the output result file is in gtz format, taking normal compression
+	
+	`bcl2fastq-gtz -i ./data/BaseCalls -R ./outdir/run --interop-dir ./outdir/interop -o ./outdir/result --ignore-missing-bcls --ignore-missing-filter --ignore-missing-positions --barcode-mismatches 0 --use-bases-mask y*,i7,i7,y* >./outdir/bcl2fastq.log 2>&1 || touch bcl2fastq.err`
+
+	#### Example 2. output result file is gtz format, go high compression, specify bin file by --bin_file
+	
+	`bcl2fastq-gtz -i ./data/BaseCalls -R ./outdir/run --interop-dir ./outdir/interop -o ./outdir/result --ignore-missing-bcls --ignore-missing-filter --ignore-missing-positions --barcode-mismatches 0 --use-bases-mask y*,i7,i7,y* --bin_file Homo_sapiens_bcacac9064331276504f27c6cf40e580.bin >./outdir/bcl2fastq.log 2>&1 || touch bcl2fastq.err`
+           
+    #### Example 3. output result file is gz format, use --no-bgtzf-compression parameter
+        
+    `bcl2fastq-gtz -i ./data/BaseCalls -R ./outdir/run --interop-dir ./outdir/interop -o ./outdir/result --ignore-missing-bcls --ignore-missing-filter --ignore-missing-positions --barcode-mismatches 0 --use-bases-mask y*,i7,i7,y* --no-bgtzf-compression >./outdir/bcl2fastq.log 2>&1 || touch bcl2fastq.err`
+
+- **performance**
+
+	
+	#####	Test command
+
+	`bcl2fastq -i ./data/BaseCalls -R ./outdir/run --interop-dir ./outdir/interop -o ./outdir/result --ignore-missing-bcls --ignore-missing-filter --ignore-missing-positions --barcode-mismatches 0 --use-bases-mask y*,i7,i7,y* >./outdir/bcl2fastq.log 2>&1 || touch bcl2fastq.err`
+
+	`bcl2fastq-gtz -i ./data/BaseCalls -R ./outdir/run --interop-dir ./outdir/interop -o ./outdir/result --ignore-missing-bcls --ignore-missing-filter --ignore-missing-positions --barcode-mismatches 0 --use-bases-mask y*,i7,i7,y* >./outdir/bcl2fastq.log 2>&1 || touch bcl2fastq.err`
+
+
+	#####	Testing environment
+
+	Server configuration: 16 core CPU, 64G memory; file size: ./data/BaseCalls total size 40G
+
+	#####	Performance data
+
+	bcl2fastq output destination folder total size 40G，bcl2fastq-gtz output destination folder total size 16G
+	
+## 3、STAR for GTZ <span id="star"></span> 
 
 　The official website STAR directly supports the GTZ format, after the installation of GTZ, first make the index file with STAR, and then perform the mapping operation. The mapping process uses the following examples:
 
@@ -406,7 +475,7 @@ No. | Species | Official Url
 
     >  <font size=1>\* In this example, the directory where the RBIN file is located is specified by -r, it's same as method one.</font>
 
-## 3、BOWTIE for GTZ <span id="bowtie"></span>  
+## 4、BOWTIE for GTZ <span id="bowtie"></span>  
 
 - **How to Install?**
 
@@ -450,10 +519,8 @@ No. | Species | Official Url
 - **performance**
 
 	
-	
  	
- 	
-## 4、BOWTIE2 for GTZ <span id="bowtie2"></span>  
+## 5、BOWTIE2 for GTZ <span id="bowtie2"></span>  
 
 - **How to Install?**
 
@@ -518,7 +585,7 @@ No. | Species | Official Url
  	Time consumption|63m41.06s|61m56.67s
 	
 	
-## 5、TOPHAT for GTZ <span id="tophat"></span>  
+## 6、TOPHAT for GTZ <span id="tophat"></span>  
 
 - **How to Install?**
 
@@ -580,7 +647,7 @@ No. | Species | Official Url
 	:---:|:---:|:--:
  	Time consumption|133m12.61s|134m43.02s
 	
-## 6、HISAT2 for GTZ <span id="hisat2"></span>  
+## 7、HISAT2 for GTZ <span id="hisat2"></span>  
 - **How to Install?**
 
 	##### For installation you can (recommended)   
@@ -633,7 +700,7 @@ No. | Species | Official Url
  	Time consumption|8m25.845s|10m47.930s
 	
 	
-## 7、MEGAHIT for GTZ <span id="megahit"></span>  
+## 8、MEGAHIT for GTZ <span id="megahit"></span>  
 
 - **How to Install?**
 
@@ -692,7 +759,7 @@ No. | Species | Official Url
 	:---:|:---:|:--:
  	Time consumption|67m38.381s|66m44.151s
 	
-## 8、FASTQC for GTZ <span id="fastqc"></span>  
+## 9、FASTQC for GTZ <span id="fastqc"></span>  
 - **How to Install?**
 
 	##### For installation you can (recommended)   
@@ -720,7 +787,7 @@ No. | Species | Official Url
 	>  <font size=1>\* In this example, the path of the RBIN file is specified by the environment variable GTZ_RBIN_PATH, where "export GTZ_RBIN_PATH=/path/rbin/" is not necessary, but if you know the path of rbin, you are advised to specify it, which can speed up the processing of fastqc-gtz. Because when fastqc-gtz needs RBIN file and cannot find the RBIN file under the default path ~/.config/gtz, it will be downloaded through the network, which will consume time.</font>
     
   
-## 9、FASTP for GTZ <span id="fastp"></span>
+## 10、FASTP for GTZ <span id="fastp"></span>
 
 - **How to Install?**
     
