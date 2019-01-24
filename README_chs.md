@@ -352,7 +352,7 @@ No. | 物种 | 官方链接
 
 	##### 方式一  
 	运行命令（推荐）  
-		`sudo curl -sSL https://gtz.io/bwagtz_latest.run -o /tmp/bwagtz.run && sudo sh /tmp/bwagtz.run`  
+		`sudo curl -SL https://gtz.io/bwagtz_latest.run -o /tmp/bwagtz.run && sudo sh /tmp/bwagtz.run`  
 	##### 方式二  
 	下载安装文件：[-GTX.Zip bwa-gtz-]( https://gtz.io/bwagtz_latest.run )  
 	在安装文件目录下运行命令  
@@ -429,7 +429,7 @@ No. | 物种 | 官方链接
     ##### 方式一: 给当前用户安装，不需要sudo权限
     运行命令（推荐） 
     
-    `curl -sSL https://gtz.io/bcl2fastq_gtz_latest.run -o /tmp/bcl2fastqgtz.run && sh /tmp/bcl2fastqgtz.run`  
+    `curl -SL https://gtz.io/bcl2fastq_gtz_latest.run -o /tmp/bcl2fastqgtz.run && sh /tmp/bcl2fastqgtz.run`  
 	
     首次安装后，需要执行一次source ~/.bashrc或者退出去后重新登录，然后在任意目录可以执行bcl2fastq-gtz
     
@@ -443,7 +443,7 @@ No. | 物种 | 官方链接
     ##### 方式二：给所有用户安装，需要sudo权限
     运行命令（推荐）  
     
-	`sudo curl -sSL https://gtz.io/bcl2fastq_gtz_latest.run -o /tmp/bcl2fastqgtz.run && sudo sh /tmp/bcl2fastqgtz.run`  
+	`sudo curl -SL https://gtz.io/bcl2fastq_gtz_latest.run -o /tmp/bcl2fastqgtz.run && sudo sh /tmp/bcl2fastqgtz.run`  
 	
     ###### 或者
     先下载安装文件：[-GTX.Zip bcl2fastq-gtz-]( https://gtz.io/bcl2fastq_gtz_latest.run )，然后安装  
@@ -517,7 +517,7 @@ No. | 物种 | 官方链接
 
 	##### 方式一  
 	运行命令（推荐）  
-		`sudo curl -sSL https://gtz.io/bowtiegtz_latest.run -o /tmp/bowtiegtz.run && sudo sh /tmp/bowtiegtz.run`  
+		`sudo curl -SL https://gtz.io/bowtiegtz_latest.run -o /tmp/bowtiegtz.run && sudo sh /tmp/bowtiegtz.run`  
 	##### 方式二  
 	下载安装文件：[-GTX.Zip bowtie-gtz-]( https://gtz.io/bowtiegtz_latest.run )  
 	在安装文件目录下运行命令  
@@ -560,7 +560,7 @@ No. | 物种 | 官方链接
 
 	##### 方式一  
 	运行命令（推荐）  
-		`sudo curl -sSL https://gtz.io/bowtie2gtz_latest.run -o /tmp/bowtie2gtz.run && sudo sh /tmp/bowtie2gtz.run`  
+		`sudo curl -SL https://gtz.io/bowtie2gtz_latest.run -o /tmp/bowtie2gtz.run && sudo sh /tmp/bowtie2gtz.run`  
 	##### 方式二  
 	下载安装文件：[-GTX.Zip bowtie2-gtz-]( https://gtz.io/bowtie2gtz_latest.run )  
 	在安装文件目录下运行命令  
@@ -623,7 +623,7 @@ No. | 物种 | 官方链接
 
 	##### 方式一  
 	运行命令（推荐）  
-		`sudo curl -sSL https://gtz.io/tophatgtz_latest.run -o /tmp/tophatgtz.run && sudo sh /tmp/tophatgtz.run`  
+		`sudo curl -SL https://gtz.io/tophatgtz_latest.run -o /tmp/tophatgtz.run && sudo sh /tmp/tophatgtz.run`  
 	##### 方式二  
 	下载安装文件：[-GTX.Zip tophat-gtz-]( https://gtz.io/tophatgtz_latest.run )  
 	在安装文件目录下运行命令  
@@ -684,7 +684,7 @@ No. | 物种 | 官方链接
 
 	##### 方式一  
 	运行命令（推荐）  
-		`sudo curl -sSL https://gtz.io/hisat2gtz_latest.run -o /tmp/hisat2gtz.run && sudo sh /tmp/hisat2gtz.run`  
+		`sudo curl -SL https://gtz.io/hisat2gtz_latest.run -o /tmp/hisat2gtz.run && sudo sh /tmp/hisat2gtz.run`  
 	##### 方式二  
 	下载安装文件：[-GTX.Zip hisat2-gtz-]( https://gtz.io/hisat2gtz_latest.run )  
 	在安装文件目录下运行命令  
@@ -740,7 +740,7 @@ No. | 物种 | 官方链接
 
 	##### 方式一  
 	运行命令（推荐）  
-		`sudo curl -sSL https://gtz.io/megahitgtz_latest.run -o /tmp/megahitgtz.run && sudo sh /tmp/megahitgtz.run`  
+		`sudo curl -SL https://gtz.io/megahitgtz_latest.run -o /tmp/megahitgtz.run && sudo sh /tmp/megahitgtz.run`  
 	##### 方式二  
 	下载安装文件：[-GTX.Zip megahit-gtz-]( https://gtz.io/megahitgtz_latest.run )  
 	在安装文件目录下运行命令  
@@ -799,7 +799,7 @@ No. | 物种 | 官方链接
 
 	##### 方式一  
 	运行命令（推荐）  
-		`sudo curl -sSL https://gtz.io/fastqc_gtz_latest.run -o /tmp/fastqc2gtz.run && sudo sh /tmp/fastqc2gtz.run`  
+		`sudo curl -SL https://gtz.io/fastqc_gtz_latest.run -o /tmp/fastqc2gtz.run && sudo sh /tmp/fastqc2gtz.run`  
 	##### 方式二  
 	下载安装文件：[-GTX.Zip fastqc-gtz-]( https://gtz.io/fastqc_gtz_latest.run )  
 	在安装文件目录下运行命令  
@@ -828,7 +828,7 @@ No. | 物种 | 官方链接
     ##### 方式一: 给当前用户安装，不需要sudo权限
     运行命令（推荐） 
     
-    `curl -sSL https://gtz.io/fastpgtz_latest.run -o /tmp/fastpgtz.run && sh /tmp/fastpgtz.run`  
+    `curl -SL https://gtz.io/fastpgtz_latest.run -o /tmp/fastpgtz.run && sh /tmp/fastpgtz.run`  
 	
     首次安装后，需要执行一次source ~/.bashrc或者退出去后重新登录，然后在任意目录可以执行fastp-gtz
     
@@ -842,7 +842,7 @@ No. | 物种 | 官方链接
     ##### 方式二：给所有用户安装，需要sudo权限
     运行命令（推荐）  
     
-	`sudo curl -sSL https://gtz.io/fastpgtz_latest.run -o /tmp/fastpgtz.run && sudo sh /tmp/fastpgtz.run`  
+	`sudo curl -SL https://gtz.io/fastpgtz_latest.run -o /tmp/fastpgtz.run && sudo sh /tmp/fastpgtz.run`  
 	
     ###### 或者
     先下载安装文件：[-GTX.Zip fastp-gtz-]( https://gtz.io/fastpgtz_latest.run )，然后安装  
