@@ -932,7 +932,9 @@ No. | 物种 | 官方链接
   
 ## 版本日志<span id="change-log"></span>
 
-[-版本日志-](https://github.com/Genetalks/gtz/blob/master/Changelog_chs.md "Markdown").
+目前最新版本：gtz-1.2.2 [2018/11/09]
+
+历史版本见：	[-版本日志-](https://github.com/Genetalks/gtz/blob/master/Changelog_chs.md "Markdown")
   
 [-回顶-](#index)  
   
