@@ -102,12 +102,33 @@ As an enterprise-level software, GTX.Zip has developed a nirvana program for hig
 - To achieve good performance, the computing server with **32-core 64GB** memory is recommended (**at least 4-core and 8GB memory**), or that has the same configuration with the **AWS C4.8xlarge** machine)
   
 ## How to Install？ <span id="install"></span>	
-- **For installation you can (recommended)**  
+- **Way one**
+##### Install to the current user, no sudo permissions required
+Run command (recommended)   
 
-	`sudo curl -sSL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`
-	
-- **Or**  
-	Download the [gtz_latest.run](https://gtz.io/gtz_latest.run), and then execute it.   
+`curl -sSL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sh /tmp/gtz.run`  
+
+after the first installation, you need to perform a source ~/.bashrc or exit to log back in, and then you can execute gtz and gtz_index in any directory
+
+###### or
+download the installation file：[-GTX.Zip Professional-]( https://gtz.io/gtz_latest.run )，then install
+
+`sh gtz_latest.run`
+
+similarly, after the first installation, you need to perform a source ~/.bashrc or exit and log back in again
+
+- **Way two**  
+##### Install for all users and require sudo permissions
+Run command (recommended)  
+
+`sudo curl -sSL https://gtz.io/gtz_lastest -o /tmp/gtz.run && sudo sh /tmp/gtz.run`  
+
+###### or
+download the installation file：[-GTX.Zip Professional-]( https://gtz.io/gtz_latest.run )，then install  
+
+`sudo sh gtz_latest.run`
+
+after the installation is complete, you can perform gtz and gtz_index in any directory  
   
 - **Verify installation**    
 	run  
