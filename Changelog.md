@@ -1,6 +1,6 @@
 ### gtz-1.2.3 [2019/01/24]
 
-The main changes are as follows:
+  The main changes are as follows:
 1. Improved performance of compressed gz file and decompression into gz file
 
 2. fix: gtz can not run on some specific CPU models
@@ -13,7 +13,7 @@ The main changes are as follows:
 
 ### gtz-1.2.2 [2018/11/09]
 
-Mainly optimize the loading speed of index files, the compression speed will be significantly improved
+  Mainly optimize the loading speed of index files, the compression speed will be significantly improved
 
 
 
@@ -35,7 +35,7 @@ Mainly optimize the loading speed of index files, the compression speed will be 
 
 ### gtz-1.1 [2018/10/16]
 
-Add Features:
+  Add Features:
 
 1. -c/--stdout, decompress to Terminal
 
