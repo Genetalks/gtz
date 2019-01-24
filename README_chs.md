@@ -123,7 +123,7 @@ nova_rna_2.fq|5.39%|18.94%
 
 `curl -sSL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sh /tmp/gtz.run`  
 
-首次安装后，需要执行一次source ~/.bashrc或者退出去后重新登录，然后在任意目录可以执行gtz
+首次安装后，需要执行一次source ~/.bashrc或者退出去后重新登录，然后在任意目录可以执行gtz和gtz_index
 
 ###### 或者
 下载安装文件：[-GTX.Zip Professional-]( https://gtz.io/gtz_latest.run )，然后安装
@@ -143,9 +143,9 @@ nova_rna_2.fq|5.39%|18.94%
 
 `sudo sh gtz_latest.run`
 
-安装完成后，在任意目录可以执行gtz	
+安装完成后，在任意目录可以执行gtz和gtz_index
 
-- **验证安装是否成功**  
+- **验证安装是否成功**
 运行命令  
 `gtz -v`  
 出现相应的软件版本信息则说明安装成功
@@ -951,7 +951,7 @@ No. | 物种 | 官方链接
   
 ## 版本日志<span id="change-log"></span>
 
-目前最新版本：gtz-1.2.2 [2018/11/09]
+目前最新版本：gtz-1.2.3 [2019/01/24]
 
 历史版本见：	[-版本日志-](https://github.com/Genetalks/gtz/blob/master/Changelog_chs.md "Markdown")
   
