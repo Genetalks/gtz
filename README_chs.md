@@ -117,14 +117,33 @@ nova_rna_2.fq|5.39%|18.94%
   
 
 ## 安装GTX.Zip Pro<span id="install"></span>  
-- **方式一 :**  
+- **方式一**
+##### 给当前用户安装，不需要sudo权限
+运行命令（推荐）   
+
+`curl -sSL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sh /tmp/gtz.run`  
+
+首次安装后，需要执行一次source ~/.bashrc或者退出去后重新登录，然后在任意目录可以执行gtz
+
+###### 或者
+下载安装文件：[-GTX.Zip Professional-]( https://gtz.io/gtz_latest.run )，然后安装
+
+`sh gtz_latest.run`
+
+同样，首次安装后，需要执行一次source ~/.bashrc或者退出去后重新登录
+
+- **方式二**  
+##### 给所有用户安装，需要sudo权限
 运行命令（推荐）  
-	`sudo curl -sSL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`  
-- **方式二：**  
-下载安装文件：[-GTX.Zip Professional-]( https://gtz.io/gtz_latest.run)  
-在安装文件目录下运行命令  
-`sudo sh gtz_lastest.run`  
-根据提示完成安装  
+
+`sudo curl -sSL https://gtz.io/gtz_lastest -o /tmp/gtz.run && sudo sh /tmp/gtz.run`  
+
+###### 或者
+先下载安装文件：[-GTX.Zip Professional-]( https://gtz.io/gtz_latest.run )，然后安装  
+
+`sudo sh gtz_latest.run`
+
+安装完成后，在任意目录可以执行gtz	
 
 - **验证安装是否成功**  
 运行命令  
