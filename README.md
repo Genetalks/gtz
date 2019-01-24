@@ -916,28 +916,9 @@ No. | Species | Official Url
 ## Change Log  
 
 
-#### 1.2.2 - 2018/11/09
-mainly optimize the loading speed of index files, the compression speed will be significantly improved
-  
-#### 1.2.1
-fix : validation might be slow sometimes
+Current Latest Version：gtz-1.2.2 [2018/11/09]
 
-fix : when decompressed with -c, -e does not work  
-
-#### 1.2
-fix : GTZ load slowly sometimes
-
-fix : GTZ cann't be quit by Ctrl+C sometimes  
-
-#### 1.1
-add function:
-
--c/--stdout                   decompress to terminal
-
--z/--fastq-to-fastq-gz        decompress fastq to fastq.gz, it's valid only for FASTQ
-
-#### 1.0
-base revision
+historical version: [-Change Log-](https://github.com/Genetalks/gtz/blob/master/Changelog.md "Markdown")
 
 
     
