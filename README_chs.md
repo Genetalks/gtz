@@ -932,29 +932,7 @@ No. | 物种 | 官方链接
   
 ## 版本日志<span id="change-log"></span>
 
-#### 1.2.2 - 2018/11/09
-主要优化索引文件的加载速度，压缩速度会有明显的提升  
-
-#### 1.2.1
-解决压缩完成后做校验时，GTZ有时会比较慢的问题
-
-解决用-c做解压时，-e不工作的问题
-
-#### 1.2
-解决GTZ有时加载慢的问题
-
-解决输入ctrl+c，GTZ有时不能退出的问题  
-
-#### 1.1
-
-增加功能:
-
--c/--stdout                   解压到终端
-
--z/--fastq-to-fastq-gz        将FASTQ解压成GZ格式，该选项只对FASTQ有效，非FASTQ会忽略该选项
-#### 1.0
-
-基础修订
+[-版本日志-](https://github.com/Genetalks/gtz/blob/master/Changelog_chs.md "Markdown").
   
 [-回顶-](#index)  
   
