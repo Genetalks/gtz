@@ -916,7 +916,7 @@ No. | Species | Official Url
 ## Change Log  
 
 
-Current Latest Version：gtz-1.2.2 [2018/11/09]
+Current Latest Version：gtz-1.2.3 [2019/01/24]
 
 historical version: [-Change Log-](https://github.com/Genetalks/gtz/blob/master/Changelog.md "Markdown")
 
