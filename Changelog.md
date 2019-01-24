@@ -1,29 +1,46 @@
+### gtz-1.2.3 [2019/01/24]
+
+The main changes are as follows:
+1. Improved performance of compressed gz file and decompression into gz file
+
+2. fix: gtz can not run on some specific CPU models
+3. fix: progress bar displays more than 100% when compressing a gz format file
+
+4. add: -s parameter for automatic species recognition when compressed. which invalidates when -b specifies a bin file
+5. add: --bin-path parameter, use to specify the directory in which the bin file resides when automatic species recognition is turned on. If the bin default path (~/.CONFIG/GTZ) is not modified, you can not specify
+
+
+
 ### gtz-1.2.2 [2018/11/09]
 
 Mainly optimize the loading speed of index files, the compression speed will be significantly improved
 
 
+
 ### gtz-1.2.1 [2018/10/30]
 
-fix: gtz will be slow in some cases when verify data after the compression is completed
+1. fix: gtz will be slow in some cases when verify data after the compression is completed
 
-fix: -e not working when decompression is done with -c
+2. fix: -e not working when decompression is done with -c
+
 
 
 ### gtz-1.2 [2018/10/25]
 
-fix gtz sometimes loads slowly
+1. fix gtz sometimes loads slowly
 
-fix gtz sometimes cannot be exited when input ctrl+c
+2. fix gtz sometimes cannot be exited when input ctrl+c
+
 
 
 ### gtz-1.1 [2018/10/16]
 
 Add Features:
 
--c/--stdout, decompress to Terminal
+1. -c/--stdout, decompress to Terminal
 
--z/--fastq-to-fastq-gz, decompress fastq to gz format, which is valid only for fastq
+2. -z/--fastq-to-fastq-gz, decompress fastq to gz format, which is valid only for fastq
+
 
 
 ### gtz-1.0 [2018/10/11]
