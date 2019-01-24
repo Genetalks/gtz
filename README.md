@@ -106,7 +106,7 @@ As an enterprise-level software, GTX.Zip has developed a nirvana program for hig
 ##### Install to the current user, no sudo permissions required
 Run command (recommended)   
 
-`curl -sSL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sh /tmp/gtz.run`  
+`curl -SL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sh /tmp/gtz.run`  
 
 after the first installation, you need to perform a source ~/.bashrc or exit to log back in, and then you can execute gtz and gtz_index in any directory
 
@@ -121,7 +121,7 @@ similarly, after the first installation, you need to perform a source ~/.bashrc 
 ##### Install for all users and require sudo permissions
 Run command (recommended)  
 
-`sudo curl -sSL https://gtz.io/gtz_lastest -o /tmp/gtz.run && sudo sh /tmp/gtz.run`  
+`sudo curl -SL https://gtz.io/gtz_lastest -o /tmp/gtz.run && sudo sh /tmp/gtz.run`  
 
 ###### or
 download the installation file：[-GTX.Zip Professional-]( https://gtz.io/gtz_latest.run )，then install  
@@ -339,7 +339,7 @@ No. | Species | Official Url
 
 	##### For installation you can (recommended)  
 	  
-	`sudo curl -sSL https://gtz.io/bwagtz_latest.run -o /tmp/bwagtz.run && sudo sh /tmp/bwagtz.run`    
+	`sudo curl -SL https://gtz.io/bwagtz_latest.run -o /tmp/bwagtz.run && sudo sh /tmp/bwagtz.run`    
 	  
 	##### or 
 	download installation files：[-GTX.Zip bwa-gtz-]( https://gtz.io/bwagtz_latest.run )  
@@ -417,7 +417,7 @@ No. | Species | Official Url
     ##### Mode one: Install to the current user, no sudo permissions required
     For installation you can (recommended) 
     
-    `curl -sSL https://gtz.io/bcl2fastq_gtz_latest.run -o /tmp/bcl2fastqgtz.run && sh /tmp/bcl2fastqgtz.run`  
+    `curl -SL https://gtz.io/bcl2fastq_gtz_latest.run -o /tmp/bcl2fastqgtz.run && sh /tmp/bcl2fastqgtz.run`  
 	
     After the first installation, you need to perform a source ~/.bashrc or exit to log back in, and then you can execute bcl2fastq-gtz in any directory
     
@@ -431,7 +431,7 @@ No. | Species | Official Url
     ##### Mode two: Install to all users, need sudo permissions
     For installation you can (recommended)   
     
-	`sudo curl -sSL https://gtz.io/bcl2fastq_gtz_latest.run -o /tmp/bcl2fastqgtz.run && sudo sh /tmp/bcl2fastqgtz.run`  
+	`sudo curl -SL https://gtz.io/bcl2fastq_gtz_latest.run -o /tmp/bcl2fastqgtz.run && sudo sh /tmp/bcl2fastqgtz.run`  
 	
     ###### or
     download installation files：[-GTX.Zip bcl2fastq-gtz-]( https://gtz.io/bcl2fastq_gtz_latest.run )，then install 
@@ -502,7 +502,7 @@ No. | Species | Official Url
 
 	##### For installation you can (recommended)  
 	
-	`sudo curl -sSL https://gtz.io/bowtiegtz_latest.run -o /tmp/bowtiegtz.run && sudo sh /tmp/bowtiegtz.run`  
+	`sudo curl -SL https://gtz.io/bowtiegtz_latest.run -o /tmp/bowtiegtz.run && sudo sh /tmp/bowtiegtz.run`  
 	##### or 
 	download installation files：[-GTX.Zip bowtie-gtz-]( https://gtz.io/bowtiegtz_latest.run )  
 	Run commands in the installation file directory 
@@ -547,7 +547,7 @@ No. | Species | Official Url
 
 	##### For installation you can (recommended)   
 	
-	`sudo curl -sSL https://gtz.io/bowtie2gtz_latest.run -o /tmp/bowtie2gtz.run && sudo sh /tmp/bowtie2gtz.run`  
+	`sudo curl -SL https://gtz.io/bowtie2gtz_latest.run -o /tmp/bowtie2gtz.run && sudo sh /tmp/bowtie2gtz.run`  
 	##### or  
 	download installation files：[-GTX.Zip bowtie2-gtz-]( https://gtz.io/bowtie2gtz_latest.run )  
 	Run commands in the installation file directory  
@@ -612,7 +612,7 @@ No. | Species | Official Url
 
 	##### For installation you can (recommended)   
 	
-	`sudo curl -sSL https://gtz.io/tophatgtz_latest.run -o /tmp/tophatgtz.run && sudo sh /tmp/tophatgtz.run`  
+	`sudo curl -SL https://gtz.io/tophatgtz_latest.run -o /tmp/tophatgtz.run && sudo sh /tmp/tophatgtz.run`  
 	##### or 
 	download installation files：[-GTX.Zip tophat-gtz-]( https://gtz.io/tophatgtz_latest.run )  
 	Run commands in the installation file directory 
@@ -673,7 +673,7 @@ No. | Species | Official Url
 
 	##### For installation you can (recommended)   
 	
-	`sudo curl -sSL https://gtz.io/hisat2gtz_latest.run -o /tmp/hisat2gtz.run && sudo sh /tmp/hisat2gtz.run`  
+	`sudo curl -SL https://gtz.io/hisat2gtz_latest.run -o /tmp/hisat2gtz.run && sudo sh /tmp/hisat2gtz.run`  
 	##### or 
 	download installation files：[-GTX.Zip hisat2-gtz-]( https://gtz.io/hisat2gtz_latest.run )  
 	Run commands in the installation file directory 
@@ -726,7 +726,7 @@ No. | Species | Official Url
 - **How to Install?**
 
 	##### For installation you can (recommended)   
-		`sudo curl -sSL https://gtz.io/megahitgtz_latest.run -o /tmp/megahitgtz.run && sudo sh /tmp/megahitgtz.run`  
+		`sudo curl -SL https://gtz.io/megahitgtz_latest.run -o /tmp/megahitgtz.run && sudo sh /tmp/megahitgtz.run`  
 	##### or 
 	download installation files：[-GTX.Zip megahit-gtz-]( https://gtz.io/megahitgtz_latest.run )  
 	Run commands in the installation file directory 
@@ -785,7 +785,7 @@ No. | Species | Official Url
 
 	##### For installation you can (recommended)   
 	
-	`sudo curl -sSL https://gtz.io/fastqc_gtz_latest.run -o /tmp/fastqc2gtz.run && sudo sh /tmp/fastqc2gtz.run`  
+	`sudo curl -SL https://gtz.io/fastqc_gtz_latest.run -o /tmp/fastqc2gtz.run && sudo sh /tmp/fastqc2gtz.run`  
 	##### or 
 	download installation files：[-GTX.Zip fastqc-gtz-]( https://gtz.io/fastqc_gtz_latest.run )  
 	Run commands in the installation file directory 
@@ -815,7 +815,7 @@ No. | Species | Official Url
     ##### Mode one: Install to the current user, no sudo permissions required
     For installation you can (recommended)  
     
-    `curl -sSL https://gtz.io/fastpgtz_latest.run -o /tmp/fastpgtz.run && sh /tmp/fastpgtz.run`  
+    `curl -SL https://gtz.io/fastpgtz_latest.run -o /tmp/fastpgtz.run && sh /tmp/fastpgtz.run`  
 	
     After the first installation, you need to perform a source ~/.bashrc or exit to log back in, and then you can execute fastp-gtz in any directory
     
@@ -829,7 +829,7 @@ No. | Species | Official Url
     ##### Mode two: Install to all users, need sudo permissions
     For installation you can (recommended)  
     
-	`sudo curl -sSL https://gtz.io/fastpgtz_latest.run -o /tmp/fastpgtz.run && sudo sh /tmp/fastpgtz.run`  
+	`sudo curl -SL https://gtz.io/fastpgtz_latest.run -o /tmp/fastpgtz.run && sudo sh /tmp/fastpgtz.run`  
 	
     ###### or
     download installation files：[-GTX.Zip fastp-gtz-]( https://gtz.io/fastpgtz_latest.run )，then install  
