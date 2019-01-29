@@ -29,6 +29,7 @@ Powered by GTXLab of Genetalks.
 - [使用方法](#usage)
 - [Rbin文件下载](#rbin-download)  
 - [GTZ生态圈软件](#ecology)  
+- [sdk](#sdk)  
 - [版本日志](#change-log)  
 - [常见问题](#faq)  
 - [联系我们](#contact-us)
@@ -947,7 +948,40 @@ No. | 物种 | 官方链接
 [-回顶-](#index)  
   
 --------    
-  
+
+## sdk<span id="sdk"></span>
+
+- [1、perl sdk](#sdk-perl)
+- [2、cpp_sdk](#sdk-cpp)
+
+## 1、sdk for perl <span id="sdk-perl"></span>
+
+- **安装方法**
+
+`curl -SL https://gtz.io/sdk/gtz_perl_sdk-1.0.0-linux-x86_64.tar.gz -o gtz_perl_sdk-1.0.0.tar.gz`
+
+`tar -xvf gtz_perl_sdk-1.0.0.tar.gz`
+
+`cd gtz_perl_sdk/IO-GTZ`
+
+`perl Makefile.PL`
+
+`make && make install`
+
+- **校验安装**
+
+`cd gtz_perl_sdk`
+
+`perl example.pl`
+
+如果能正常显示fastq内容，说明安装成功，在自己流程中要使用perl sdk时，可以参考example.pl脚本内容
+
+- **运行环境**
+
+perl <= 5.10
+
+--------    
+
   
 ## 版本日志<span id="change-log"></span>
 
