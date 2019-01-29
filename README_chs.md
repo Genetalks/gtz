@@ -971,7 +971,9 @@ No. | 物种 | 官方链接
 
 `perl Makefile.PL`
 
-`make && make install`
+`make`
+
+`sudo make install`
 
 - **校验安装**
 
