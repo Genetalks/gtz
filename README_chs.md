@@ -29,7 +29,7 @@ Powered by GTXLab of Genetalks.
 - [使用方法](#usage)
 - [Rbin文件下载](#rbin-download)  
 - [GTZ生态圈软件](#ecology)  
-- [SDK](#sdk)  
+- [解压SDK](#decompress-sdk)  
 - [版本日志](#change-log)  
 - [常见问题](#faq)  
 - [联系我们](#contact-us)
@@ -949,9 +949,9 @@ No. | 物种 | 官方链接
   
 --------    
 
-## sdk<span id="sdk"></span>
+## sdk<span id="decompress-sdk"></span>
 
-### 注意：目前SDK均是beta版本，欢迎大家试用！！
+### 注意：目前解压SDK均是beta版本，欢迎大家试用！！
 
 - [1、perl sdk(beta)](#sdk-perl)
 - [2、python_sdk(beta)](#sdk-python)
