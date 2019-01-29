@@ -136,7 +136,7 @@ nova_rna_2.fq|5.39%|18.94%
 ##### 给所有用户安装，需要sudo权限
 运行命令（推荐）  
 
-`sudo curl -SL https://gtz.io/gtz_lastest -o /tmp/gtz.run && sudo sh /tmp/gtz.run`  
+`sudo curl -SL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`  
 
 ###### 或者
 先下载安装文件：[-GTX.Zip Professional-]( https://gtz.io/gtz_latest.run )，然后安装  
