@@ -954,7 +954,10 @@ No. | 物种 | 官方链接
 ### 注意：目前SDK均是beta版本，欢迎大家试用！！
 
 - [1、perl sdk(beta)](#sdk-perl)
-- [2、cpp_sdk(beta)](#sdk-cpp)
+- [2、python_sdk(beta)](#sdk-python)
+- [3、cpp_sdk(beta)](#sdk-cpp)
+- [4、c_sdk(beta)](#sdk-c)
+- [5、java_sdk(beta)](#sdk-java)
 
 ## 1、sdk for perl(beta) <span id="sdk-perl"></span>
 
@@ -976,14 +979,42 @@ No. | 物种 | 官方链接
 
 `perl example.pl`
 
-如果能正常显示fastq内容，说明安装成功，在自己流程中要使用perl sdk时，可以参考example.pl脚本内容
+如果能正常显示fastq内容，说明安装成功，在自己流程中要使用perl sdk时，可以参考example.pl内容
 
 - **运行环境**
 
 perl <= 5.10
 
 
-## 2、sdk for cpp(beta) <span id="sdk-cpp"></span>
+## 2、sdk for python(beta) <span id="sdk-python"></span>
+
+- **安装方法**
+
+`curl -SL https://gtz.io/sdk/gtz_python_sdk-1.0.0-linux-x86_64.tar.gz -o gtz_python_sdk-1.0.0.tar.gz`
+
+`tar -xvf gtz_python_sdk-1.0.0.tar.gz`
+
+`cd gtz_python_sdk`
+
+#### python2
+`pip install gtz-1.0.0-py2-none-any.whl`
+
+#### python3
+`pip3 install gtz-1.0.0-py3-none-any.whl`
+
+- **校验安装**
+
+`cd gtz_python_sdk`
+
+`python example.py`
+
+如果能正常显示fastq内容，说明安装成功，在自己流程中要使用python sdk时，可以参考example.py内容
+
+- **运行环境**
+
+python2或python3
+
+## 3、sdk for cpp(beta) <span id="sdk-cpp"></span>
 
 - **安装方法**
 
@@ -1004,11 +1035,68 @@ perl <= 5.10
 
 `./example`
 
-如果能正常显示fastq内容，说明安装成功，在自己流程中要使用cpp sdk时，可以参考example.pl脚本内容
+如果能正常显示fastq内容，说明安装成功，在自己流程中要使用cpp sdk时，可以参考example.cpp内容
 
 - **运行环境**
 
 编译时可能需要加　#define _GLIBCXX_USE_CXX11_ABI 0
+
+## 4、sdk for c(beta) <span id="sdk-c"></span>
+
+- **安装方法**
+
+`curl -SL https://gtz.io/sdk/gtz_c_sdk-1.0.0-linux-x86_64.tar.gz -o gtz_c_sdk-1.0.0.tar.gz`
+
+`tar -xvf gtz_c_sdk-1.0.0.tar.gz`
+
+`cd gtz_c_sdk`
+
+`sudo make install`
+
+
+- **校验安装**
+
+`cd gtz_c_sdk`
+
+`make example`
+
+`./example`
+
+如果能正常显示fastq内容，说明安装成功，在自己流程中要使用c sdk时，可以参考example.c内容
+
+- **运行环境**
+
+## 5、sdk for java(beta) <span id="sdk-java"></span>
+
+- **安装方法**
+
+`curl -SL https://gtz.io/sdk/gtz_java_sdk-1.0.0-linux-x86_64.tar.gz -o gtz_java_sdk-1.0.0.tar.gz`
+
+`tar -xvf gtz_java_sdk-1.0.0.tar.gz`
+
+`cd gtz_java_sdk`
+
+
+#### 步骤一：
+
+首先将libgtzjava.so拷贝到java.path.library所指向的路径
+
+#### 步骤二：
+
+将io文件夹拷贝到工程目录，或者将gtz_sdk.tar拷贝到工程目录
+
+
+- **校验安装**
+
+`cd gtz_java_sdk`
+
+`javac example.java`
+
+`java example`
+
+如果能正常显示fastq内容，说明安装成功，在自己流程中要使用java sdk时，可以参考example.java内容
+
+- **运行环境**
 
 --------    
 
