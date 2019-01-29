@@ -121,7 +121,7 @@ similarly, after the first installation, you need to perform a source ~/.bashrc 
 ##### Install for all users and require sudo permissions
 Run command (recommended)  
 
-`sudo curl -SL https://gtz.io/gtz_lastest -o /tmp/gtz.run && sudo sh /tmp/gtz.run`  
+`sudo curl -SL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`  
 
 ###### or
 download the installation file：[-GTX.Zip Professional-]( https://gtz.io/gtz_latest.run )，then install  
