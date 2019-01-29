@@ -949,17 +949,17 @@ No. | 物种 | 官方链接
   
 --------    
 
-## sdk<span id="decompress-sdk"></span>
+## 解压sdk<span id="decompress-sdk"></span>
 
 ### 注意：目前解压SDK均是beta版本，欢迎大家试用！！
 
-- [1、perl sdk(beta)](#sdk-perl)
-- [2、python_sdk(beta)](#sdk-python)
-- [3、cpp_sdk(beta)](#sdk-cpp)
-- [4、c_sdk(beta)](#sdk-c)
-- [5、java_sdk(beta)](#sdk-java)
+- [1、decompress sdk for perl (beta)](#sdk-perl)
+- [2、decompress sdk for python (beta)](#sdk-python)
+- [3、decompress sdk for cpp (beta)](#sdk-cpp)
+- [4、decompress sdk for c (beta)](#sdk-c)
+- [5、decompress sdk for java (beta)](#sdk-java)
 
-## 1、sdk for perl(beta) <span id="sdk-perl"></span>
+## 1、decompress sdk for perl (beta) <span id="sdk-perl"></span>
 
 - **安装方法**
 
@@ -986,7 +986,7 @@ No. | 物种 | 官方链接
 perl <= 5.10
 
 
-## 2、sdk for python(beta) <span id="sdk-python"></span>
+## 2、decompress sdk for python (beta) <span id="sdk-python"></span>
 
 - **安装方法**
 
@@ -1014,7 +1014,7 @@ perl <= 5.10
 
 python2或python3
 
-## 3、sdk for cpp(beta) <span id="sdk-cpp"></span>
+## 3、decompress sdk for cpp (beta) <span id="sdk-cpp"></span>
 
 - **安装方法**
 
@@ -1041,7 +1041,7 @@ python2或python3
 
 编译时可能需要加　#define _GLIBCXX_USE_CXX11_ABI 0
 
-## 4、sdk for c(beta) <span id="sdk-c"></span>
+## 4、decompress sdk for c (beta) <span id="sdk-c"></span>
 
 - **安装方法**
 
@@ -1066,7 +1066,7 @@ python2或python3
 
 - **运行环境**
 
-## 5、sdk for java(beta) <span id="sdk-java"></span>
+## 5、decompress sdk for java (beta) <span id="sdk-java"></span>
 
 - **安装方法**
 
