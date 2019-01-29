@@ -1014,7 +1014,7 @@ perl <= 5.10
 
 - **运行环境**
 
-python2或python3
+python >= 2.7, <=3
 
 ## 3、decompress sdk for cpp (beta) <span id="sdk-cpp"></span>
 
