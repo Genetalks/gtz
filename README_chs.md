@@ -999,10 +999,10 @@ perl <= 5.10
 `cd gtz_python_sdk`
 
 #### python2
-`pip install gtz-1.0.0-py2-none-any.whl`
+`sudo pip install gtz-1.0.0-py2-none-any.whl`
 
 #### python3
-`pip3 install gtz-1.0.0-py3-none-any.whl`
+`sudo pip3 install gtz-1.0.0-py3-none-any.whl`
 
 - **校验安装**
 
