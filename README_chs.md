@@ -979,10 +979,9 @@ No. | 物种 | 官方链接
 - **使用说明**	
 	安装完成后会生成minimap2-gtz。
 	
-#### 使用举例
-    `export GTZ_RBIN_PATH=/path/rbin/`
-    
-    `minimap2-gtz -ax asm20 ref.fa pacbio-ccs.fq.gtz > aln.sam`
+	#### 使用举例
+  	  	`export GTZ_RBIN_PATH=/path/rbin/`
+    		`minimap2-gtz -ax asm20 ref.fa pacbio-ccs.fq.gtz > aln.sam`
 
 	>  <font size=1>\* 该例子中通过环境变量GTZ_RBIN_PATH指定了rbin文件所在路径，这里"export GTZ_RBIN_PATH=/path/rbin/"不是必须的，但如果您知道rbin所在路径，建议您指定，这样可以加快minimap2-gtz处理速度。因为，当minimap2-gtz需要rbin文件，且在默认路径~/.config/gtz下找不到该rbin文件时，则会通过网络下载，下载过程将消耗时间。</font>
 	
@@ -998,11 +997,11 @@ No. | 物种 | 官方链接
 	`minimap2-gtz -t 16 -a Arab.mmi Arab_E822-R02-I_good_1.fq.gz.gtz > Arab_gtz_p.sam`
 		
 	
-	#####	测试环境
+	#### 测试环境
 	
 	服务器配置：16核CPU,64G内存;
 	
-	#####	性能数据
+	#### 性能数据
 	
 	软件  |minimap2|minimap2-gtz
 	:---:|:---:|:--:
