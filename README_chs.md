@@ -345,6 +345,8 @@ No. | 物种 | 官方链接
 - [8、MEGAHIT for GTZ](#megahit) 
 - [9、FASTQC for GTZ](#fastqc) 
 - [10、FASTP for GTZ](#fastp)
+- [11、MINIMAP2 for GTZ](#minimap2)
+
 
 
 ## 1、BWA for GTZ <span id="bwa"></span>  
