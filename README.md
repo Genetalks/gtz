@@ -961,6 +961,36 @@ No. | Species | Official Url
 	
 	After the installation is complete, you can perform fastp-gtz in any directory	
 	
+	
+   - **How to Use?**
+
+    After installation, minimap2-gtz will be generated.
+    
+    	#### Use examples
+	`export GTZ_RBIN_PATH=/path/rbin/`
+    
+    `minimap2-gtz -ax asm20 ref.fa pacbio-ccs.fq.gtz > aln.sam`
+        
+	>  <font size=1>\* In this example, the path of the RBIN file is specified by the environment variable GTZ_RBIN_PATH, where "export GTZ_RBIN_PATH=/path/rbin/" is not necessary, but if you know the path of rbin, you are advised to specify it, which can speed up the processing of minimap2-gtz. Because when minimap2-gtz needs RBIN file and cannot find the RBIN file under the default path ~/.config/gtz, it will be downloaded through the network, which will consume time.</font>
+	
+	#####	Test command
+	
+	`minimap2 -t 16 -a Arab.mmi Arab_E822-R02-I_good_1.fq.gz > Arab_p.sam`
+	
+	`export GTZ_RBIN_PATH=/path/rbin/`
+	
+	`minimap2-gtz -t 16 -a Arab.mmi Arab_E822-R02-I_good_1.fq.gz.gtz > Arab_gtz_p.sam`
+		
+	#####	Testing environment
+	
+	Server configuration: 16 core CPU, 64G memory; 
+	
+	#####	Performance data
+	
+	Software  |minimap2|minimap2-gtz
+	:---:|:---:|:--:
+ 	Time consumption|02m57s|03m57.151s
+	
   
 [-Back to Top-](#index)  
   
