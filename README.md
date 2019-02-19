@@ -929,6 +929,36 @@ No. | Species | Official Url
 
 	fastp total output file size of R1.fq.gz and out.R2.fq.gz is 3.3G, and the fastp-gtz total output file size of R1.fq.gtz and out.R2.fq.gtz is 1G
 	
+## 11、MINIMAP2 for GTZ <span id="minimap2"></span>
+
+- **How to Install?**
+    
+    ##### Mode one: Install to the current user, no sudo permissions required
+    For installation you can (recommended)  
+    
+    `curl -SL https://gtz.io/minimap2_gtz_latest.run -o /tmp/minimap2_gtz_latest.run && sh /tmp/minimap2_gtz_latest.run`  
+	
+    After the first installation, you need to perform a source ~/.bashrc or exit to log back in, and then you can execute minimap2-gtz in any directory
+    
+    ###### or
+    download installation files：[-GTX.Zip minimap2-gtz-]( https://gtz.io/minimap2_gtz_latest.run )，then install
+    
+    `sh minimap2_gtz_latest.run`
+	
+    Similarly, after the first installation, you need to perform a source ~/.bashrc or exit and log back in again
+        
+    ##### Mode two: Install to all users, need sudo permissions
+    For installation you can (recommended)  
+    
+	`sudo curl -SL https://gtz.io/minimap2_gtz_latest.run -o /tmp/minimap2_gtz_latest.run && sudo sh /tmp/minimap2_gtz_latest.run`  
+	
+    ###### or
+    download installation files：[-GTX.Zip minimap2-gtz-]( https://gtz.io/minimap2_gtz_latest.run )，then install  
+    
+	`sudo sh minimap2_gtz_latest.run`
+	
+	After the installation is complete, you can perform fastp-gtz in any directory	
+	
   
 [-Back to Top-](#index)  
   
