@@ -219,6 +219,9 @@ usage: gtz [-h] [-o OUT] [-b INDEX_BIN] [-d DECOMPRESS] [-O OUT_DIR]
 -h, --help                                                    显示帮助信息  
 -o OUT, --out OUT                                             指定GTZ压缩文件的输出路径  
 -b BIN_FILE, --bin-file BIN_FILE                              通过指定所需物种bin文件进行高倍率压缩  
+-s, --suggest         					      压缩时开启物种自动识别。注意，当-b选项被指定时，该参数无效
+-B BIN_PATH, --bin-path BIN_PATH			      压缩开启自动识别时，用该参数指定bin文件所在目录
+-n, --no-verify       					      压缩完成之后不做校验
 -d DECOMPRESS, --decompress DECOMPRESS                        解压缩GTZ文件  
 -O OUT_DIR, --out-dir OUT_DIR                                 指定解压后文件的保存路径  
 -c, --stdout                                                  解压到终端
