@@ -207,6 +207,11 @@ usage: gtz [-h] [-o OUT] [-b INDEX_BIN] [-d DECOMPRESS] [-O OUT_DIR]
 -h, --help                                      show this help message and exit  
 -o OUT, --out OUT                               specify the GTZ file name after compression  
 -b BIN_FILE, --bin-file BIN_FILE                specify the bin file name for high compression  
+-s, --suggest         				turn on automatic species identification for
+                        			compression, it's invalid when -b is specified
+-B BIN_PATH, --bin-path BIN_PATH		specify the directory in which the bin file resides
+                        			when automatic species recognition is turned on.
+-n, --no-verify       				do not verify after compression is completed.
 -d DECOMPRESS, --decompress DECOMPRESS          decompress  
 -O OUT_DIR, --out-dir OUT_DIR                   specify the save path of the extracted file 
 -c, --stdout                                    decompress to terminal
