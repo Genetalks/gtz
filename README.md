@@ -487,7 +487,19 @@ No. | Species | Official Url
 	
 ## 3、STAR for GTZ <span id="star"></span> 
 
-　The official website STAR directly supports the GTZ format, after the installation of GTZ, first make the index file with STAR, and then perform the mapping operation. The mapping process uses the following examples:
+　The official website STAR directly supports the GTZ format, after the installation of GTZ, 
+ 
+  ### First step
+  
+  make the index file with STAR
+  
+  `STAR --runMode genomeGenerate --genomeDir /path/to/genomeDir --genomeFastaFiles /path/xxx.fasta`
+  
+  Detailed reference to the official website documents: https://github.com/alexdobin/STAR/blob/master/doc/STARmanual.pdf
+  
+  ### Second Step
+  
+  perform the mapping operation. an example as follows:
 
 - **method one**
 
