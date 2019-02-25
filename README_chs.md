@@ -500,29 +500,29 @@ No. | 物种 | 官方链接
 	
 ## 3、STAR for GTZ <span id="star"></span> 
 
-　官网STAR直接支持GTZ格式，在安装gtz之后，
+  官网STAR直接支持GTZ格式，在安装gtz和STAR之后，
  
-   ### 步骤一 用STAR制作索引文件
- 
-   STAR --runMode genomeGenerate --genomeDir /path/to/genomeDir --genomeFastaFiles /path/xxx.fasta
-   
-   详细可参考官网文档： https://github.com/alexdobin/STAR/blob/master/doc/STARmanual.pdf
-	
-   ### 步骤二 执行对比操作
- 
-对比过程使用实例如下：
+- **步骤一** 用STAR制作索引文件
 
-- **方式一**
+    `STAR --runMode genomeGenerate --genomeDir /path/to/genomeDir --genomeFastaFiles /path/xxx.fasta`
 
-    export GTZ_RBIN_PATH=/path/rbin/
-    
-    STAR --genomeDir /path/to/genomeDir --readFilesIn read1.fq.gtz read2.fq.gtz --readFilesCommand gtz -c -d
+    详细可参考官网文档： https://github.com/alexdobin/STAR/blob/master/doc/STARmanual.pdf
+
+- **步骤二** 执行对比操作
+
+    对比过程使用实例如下：
+
+    ##### 方式一
+
+    `export GTZ_RBIN_PATH=/path/rbin/`
+
+    `STAR --genomeDir /path/to/genomeDir --readFilesIn read1.fq.gtz read2.fq.gtz --readFilesCommand gtz -c -d`
 
     >  <font size=1>\* 该例子中通过环境变量GTZ_RBIN_PATH指定了rbin文件所在路径，这里"export GTZ_RBIN_PATH=/path/rbin/"不是必须，但如果您知道rbin所在路径，建议您指定，这样可以加快gtz处理速度。因为，当gtz需要rbin文件，且在默认路径~/.config/gtz下找不到该rbin文件时，则会通过网络下载，下载过程将消耗时间。</font>
 
-- **方式二**
+    ##### 方式二
 
-    STAR --genomeDir /path/to/genomeDir --readFilesIn read1.fq.gtz read2.fq.gtz --readFilesCommand gtz -r /path/to/gtz_rbin_dir/ -c -d
+    `STAR --genomeDir /path/to/genomeDir --readFilesIn read1.fq.gtz read2.fq.gtz --readFilesCommand gtz -r /path/to/gtz_rbin_dir/ -c -d`
 
     >  <font size=1>\* 该例子中通过-r指定rbin文件所在目录，效果与方式一相同</font>
 
