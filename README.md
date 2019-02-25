@@ -487,7 +487,7 @@ No. | Species | Official Url
 	
 ## 3、STAR for GTZ <span id="star"></span> 
 
-The official website STAR directly supports the GTZ format, after the installation of GTZ, 
+	The official website STAR directly supports the GTZ format, after the installation of GTZ, 
 
 - **First step**
 
