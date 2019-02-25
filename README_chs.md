@@ -502,13 +502,15 @@ No. | 物种 | 官方链接
 
 　官网STAR直接支持GTZ格式，在安装gtz之后，
  
-### 步骤一 用STAR制作索引文件
+   ### 步骤一 用STAR制作索引文件
  
    STAR --runMode genomeGenerate --genomeDir /path/to/genomeDir --genomeFastaFiles /path/xxx.fasta
+   
+   详细可参考官网文档： https://github.com/alexdobin/STAR/blob/master/doc/STARmanual.pdf
 	
-### 步骤二 执行对比操作
+   ### 步骤二 执行对比操作
  
-     对比过程使用实例如下：
+对比过程使用实例如下：
 
 - **方式一**
 
