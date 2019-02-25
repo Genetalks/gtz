@@ -487,21 +487,23 @@ No. | Species | Official Url
 	
 ## 3、STAR for GTZ <span id="star"></span> 
 
-　The official website STAR directly supports the GTZ format, after the installation of GTZ, 
- 
-  ### First step
-  
-  make the index file with STAR
-  
-  `STAR --runMode genomeGenerate --genomeDir /path/to/genomeDir --genomeFastaFiles /path/xxx.fasta`
-  
-  Detailed reference to the official website documents: https://github.com/alexdobin/STAR/blob/master/doc/STARmanual.pdf
-  
-  ### Second Step
-  
-  perform the mapping operation. an example as follows:
+The official website STAR directly supports the GTZ format, after the installation of GTZ, 
 
-- **method one**
+- **First step**
+
+	make the index file with STAR
+
+	`STAR --runMode genomeGenerate --genomeDir /path/to/genomeDir --genomeFastaFiles /path/xxx.fasta`
+
+	Detailed reference to the official website documents:
+
+	https://github.com/alexdobin/STAR/blob/master/doc/STARmanual.pdf
+
+- **Second Step**
+
+	perform the mapping operation. an example as follows:
+
+	##### method one
 
     export GTZ_RBIN_PATH=/path/rbin/
     
@@ -509,7 +511,7 @@ No. | Species | Official Url
 
     >  <font size=1>\* In this example, the path of the RBIN file is specified by the environment variable GTZ_RBIN_PATH, where "export GTZ_RBIN_PATH=/path/rbin/" is not necessary, but if you know the path of rbin, you are advised to specify it, which can speed up GTZ processing. Because when GTZ needs RBIN file and cannot find the RBIN file under the default path ~/.config/gtz, it will be downloaded through the network, and the download process will consume time.</font>
 
-- **method two**
+	##### method two
 
     STAR --genomeDir /path/to/genomeDir --readFilesIn read1.fq.gtz read2.fq.gtz --readFilesCommand gtz -r /path/to/gtz_rbin_dir/ -c -d
 
