@@ -510,7 +510,7 @@ No. | 物种 | 官方链接
  
      对比过程使用实例如下：
 
-- **方式一**
+#### 方式一
 
     export GTZ_RBIN_PATH=/path/rbin/
     
@@ -518,7 +518,7 @@ No. | 物种 | 官方链接
 
     >  <font size=1>\* 该例子中通过环境变量GTZ_RBIN_PATH指定了rbin文件所在路径，这里"export GTZ_RBIN_PATH=/path/rbin/"不是必须，但如果您知道rbin所在路径，建议您指定，这样可以加快gtz处理速度。因为，当gtz需要rbin文件，且在默认路径~/.config/gtz下找不到该rbin文件时，则会通过网络下载，下载过程将消耗时间。</font>
 
-- **方式二**
+#### 方式二
 
     STAR --genomeDir /path/to/genomeDir --readFilesIn read1.fq.gtz read2.fq.gtz --readFilesCommand gtz -r /path/to/gtz_rbin_dir/ -c -d
 
