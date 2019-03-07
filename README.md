@@ -317,6 +317,7 @@ No. | Species | Official Url
 40|Gallus gallus|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Gallus_gallus_5a5d9581b4af55381d19b742c518d079.rbin
 41|Egretta garzetta |https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Egretta_garzetta_2a63683b2a15b1cbbb276f80df9f8fd9.rbin
 42|Taeniopygia guttata|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Taeniopygia_guttata_004df52b216ca9306ed56d907128870c.rbin
+43|Anas platyrhynchos|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Anas_platyrhynchos_057b871e6efb3fb37e233dbaf8db8c06.rbin
 
 **If the species you need is not in our [species list](#rbin-download) , please [contact us](#contact-us) !**    
   
