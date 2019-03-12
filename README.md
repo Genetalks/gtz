@@ -319,7 +319,7 @@ No. | Species | Official Url
 42|Taeniopygia guttata|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Taeniopygia_guttata_004df52b216ca9306ed56d907128870c.rbin
 43|Anas platyrhynchos|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Anas_platyrhynchos_057b871e6efb3fb37e233dbaf8db8c06.rbin
 44|Brassica pekinensis|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Brassica_pekinensis_47ea766162bb5de4bacaa6bc1cd7a7e2.rbin
-45|Barley|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Barley_6ed06228ba53c0fc794a97adcebf9da4.rbin
+45|Barley|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Barley_c920837c76a36040560c51f4cca7628a.rbin
 
 **If the species you need is not in our [species list](#rbin-download) , please [contact us](#contact-us) !**    
   
