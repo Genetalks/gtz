@@ -814,14 +814,28 @@ No. | 物种 | 官方链接
 - **安装方法**
 
 	##### 方式一  
-	运行命令（推荐）  
-		`sudo curl -SL https://gtz.io/fastqc_gtz_latest.run -o /tmp/fastqc2gtz.run && sudo sh /tmp/fastqc2gtz.run`  
-	##### 方式二  
-	下载安装文件：[-GTX.Zip fastqc-gtz-]( https://gtz.io/fastqc_gtz_latest.run )  
-	在安装文件目录下运行命令  
-		`sudo sh fastqc_gtz_latest.run`  
-	根据提示完成安装
+	给当前用户安装，不需要sudo权限
+	运行命令（推荐）
+		`curl -SL https://gtz.io/fastqc_gtz_latest.run -o /tmp/fastqc2gtz.run &&  sh /tmp/fastqc2gtz.run`  
+	
+	首次安装后，需要执行一次source ~/.bashrc或者退出去后重新登录，然后在任意目录可以执行fastqc-gtz
 
+	或者:
+	下载安装文件：[-GTX.Zip fastqc-gtz-]( https://gtz.io/fastqc_gtz_latest.run )  
+	然后安装:
+		`sh fastqc_gtz_latest.run`  
+	根据提示完成安装。同样，首次安装后，需要执行一次source ~/.bashrc或者退出去后重新登录
+	
+	##### 方式二  
+	给所有用户安装，需要sudo权限
+	运行命令（推荐）
+		`sudo curl -SL https://gtz.io/fastqc_gtz_latest.run -o /tmp/fastqc2gtz.run && sudo sh /tmp/fastqc2gtz.run`
+	或者:
+	下载安装文件：[-GTX.Zip fastqc-gtz-]( https://gtz.io/fastqc_gtz_latest.run )  
+	然后安装:
+		`sudo sh fastqc_gtz_latest.run`  
+	
+	安装完成后，在任意目录可以执行fastqc-gtz。
 - **使用说明**
 
     安装完成后，会在安装目录生成fastqc-gtz等执行程序和相关脚本。
