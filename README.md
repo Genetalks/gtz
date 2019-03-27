@@ -810,7 +810,7 @@ No. | Species | Official Url
     ##### Mode one: Install to the current user, no sudo permissions required
     For installation you can (recommended)  
     
-	`curl -SL https://gtz.io/fastqc_gtz_latest.run -o /tmp/fastqc2gtz.run &&  sh /tmp/fastqc2gtz.run`  
+    `curl -SL https://gtz.io/fastqc_gtz_latest.run -o /tmp/fastqc2gtz.run &&  sh /tmp/fastqc2gtz.run`  
 
     After the first installation, you need to perform a source ~/.bashrc or exit to log back in, and then you can execute minimap2-gtz in any directory.
     
@@ -819,7 +819,7 @@ No. | Species | Official Url
     
     then install
     
-	`sh fastqc_gtz_latest.run`  
+    `sh fastqc_gtz_latest.run`  
 	
     Similarly, after the first installation, you need to perform a source ~/.bashrc or exit and log back in again
         
@@ -827,20 +827,21 @@ No. | Species | Official Url
     
     For installation you can (recommended) 
     
-    	`sudo curl -SL https://gtz.io/fastqc_gtz_latest.run -o /tmp/fastqc2gtz.run && sudo sh /tmp/fastqc2gtz.run`
+    `sudo curl -SL https://gtz.io/fastqc_gtz_latest.run -o /tmp/fastqc2gtz.run && sudo sh /tmp/fastqc2gtz.run`
 
     ###### or
     
     download installation files： [-GTX.Zip fastqc-gtz-]( https://gtz.io/fastqc_gtz_latest.run ) ，then install  
     
-    	`sudo sh fastqc_gtz_latest.run`  
+    
+    `sudo sh fastqc_gtz_latest.run`  
 	
-	After the installation is complete, you can perform fastqc-gtz in any directory	
+    After the installation is complete, you can perform fastqc-gtz in any directory	
 
 - **How to Use?**
 
     After the installation is complete, the execution program and related scripts will be generated in the installation directory.
-    otherwise you need to switch to the installation directory and run it in ./fastqc-gtz mode. GTX.Zip support package for fastqc, based on fastqc (0.11.8) version, which: Added direct reading capability for gtz files, all functions are exactly the same as fastqc main code function.
+    GTX.Zip support package for fastqc, based on fastqc (0.11.8) version, which: Added direct reading capability for gtz files, all functions are exactly the same as fastqc main code function.
     
     #### Use examples
 
