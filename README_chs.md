@@ -850,7 +850,6 @@ No. | 物种 | 官方链接
 - **使用说明**
 
     安装完成后，会在安装目录生成fastqc-gtz等执行程序和相关脚本。
-    如果安装时"create a soft link to /usr/bin"选择y，则在任意目录可以直接运行fastqc-gtz执行程序；否则需要切换到安装目录，以./fastqc-gtz方式运行。
     GTX.Zip对fastqc的支持包中，基于fastqc（0.11.8）版本，其中：添加了对gtz文件的直接读取能力，各项功能与fastqc主代码功能完全一致。
 
 	#### 使用举例
