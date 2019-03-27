@@ -807,20 +807,39 @@ No. | Species | Official Url
 ## 9、FASTQC for GTZ <span id="fastqc"></span>  
 - **How to Install?**
 
-	##### For installation you can (recommended)   
+    ##### Mode one: Install to the current user, no sudo permissions required
+    For installation you can (recommended)  
+    
+	`curl -SL https://gtz.io/fastqc_gtz_latest.run -o /tmp/fastqc2gtz.run &&  sh /tmp/fastqc2gtz.run`  
+
+    After the first installation, you need to perform a source ~/.bashrc or exit to log back in, and then you can execute minimap2-gtz in any directory.
+    
+        ###### or
+    download installation files：[-GTX.Zip fastqc-gtz-]( https://gtz.io/fastqc_gtz_latest.run ) ，
+    
+    then install
+    
+	`sh fastqc_gtz_latest.run`  
 	
-	`sudo curl -SL https://gtz.io/fastqc_gtz_latest.run -o /tmp/fastqc2gtz.run && sudo sh /tmp/fastqc2gtz.run`  
-	##### or 
-	download installation files：[-GTX.Zip fastqc-gtz-]( https://gtz.io/fastqc_gtz_latest.run )  
-	Run commands in the installation file directory 
+    Similarly, after the first installation, you need to perform a source ~/.bashrc or exit and log back in again
+        
+    ##### Mode two: Install to all users, need sudo permissions
+    
+    For installation you can (recommended) 
+    
+    	`sudo curl -SL https://gtz.io/fastqc_gtz_latest.run -o /tmp/fastqc2gtz.run && sudo sh /tmp/fastqc2gtz.run`
+
+    ###### or
+    
+    download installation files： [-GTX.Zip fastqc-gtz-]( https://gtz.io/fastqc_gtz_latest.run ) ，then install  
+    
+    	`sudo sh fastqc_gtz_latest.run`  
 	
-	`sudo sh fastqc_gtz_latest.run`  
-	complete installation according to prompt.
+	After the installation is complete, you can perform fastqc-gtz in any directory	
 
 - **How to Use?**
 
     After the installation is complete, the execution program and related scripts will be generated in the installation directory.
-    If you select "y" in the "create a soft link to /usr/bin" installation, you can run the fastqc-gtz executables directly in any directory; 
     otherwise you need to switch to the installation directory and run it in ./fastqc-gtz mode. GTX.Zip support package for fastqc, based on fastqc (0.11.8) version, which: Added direct reading capability for gtz files, all functions are exactly the same as fastqc main code function.
     
     #### Use examples
