@@ -814,7 +814,7 @@ No. | Species | Official Url
 
     After the first installation, you need to perform a source ~/.bashrc or exit to log back in, and then you can execute minimap2-gtz in any directory.
     
-        ###### or
+     ###### or
     download installation files：[-GTX.Zip fastqc-gtz-]( https://gtz.io/fastqc_gtz_latest.run ) ，
     
     then install
@@ -1000,7 +1000,7 @@ No. | Species | Official Url
     
 	`sudo sh minimap2_gtz_latest.run`
 	
-	After the installation is complete, you can perform fastp-gtz in any directory	
+	After the installation is complete, you can perform minimap2-gtz in any directory	
 	
 	
    - **How to Use?**
