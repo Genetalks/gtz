@@ -816,8 +816,7 @@ No. | 物种 | 官方链接
 	##### 方式一  
 	给当前用户安装，不需要sudo权限
 	运行命令（推荐）
-	
-		`curl -SL https://gtz.io/fastqc_gtz_latest.run -o /tmp/fastqc2gtz.run &&  sh /tmp/fastqc2gtz.run`  
+	`curl -SL https://gtz.io/fastqc_gtz_latest.run -o /tmp/fastqc2gtz.run &&  sh /tmp/fastqc2gtz.run`  
 	
 	首次安装后，需要执行一次source ~/.bashrc或者退出去后重新登录，然后在任意目录可以执行fastqc-gtz
 
@@ -827,7 +826,7 @@ No. | 物种 | 官方链接
 	
 	然后安装:
 	
-		`sh fastqc_gtz_latest.run`  
+	`sh fastqc_gtz_latest.run`  
 	
 	根据提示完成安装。同样，首次安装后，需要执行一次source ~/.bashrc或者退出去后重新登录
 	
@@ -836,7 +835,7 @@ No. | 物种 | 官方链接
 	
 	运行命令（推荐）
 	
-		`sudo curl -SL https://gtz.io/fastqc_gtz_latest.run -o /tmp/fastqc2gtz.run && sudo sh /tmp/fastqc2gtz.run`
+	`sudo curl -SL https://gtz.io/fastqc_gtz_latest.run -o /tmp/fastqc2gtz.run && sudo sh /tmp/fastqc2gtz.run`
 	
 	或者:
 	
@@ -844,7 +843,7 @@ No. | 物种 | 官方链接
 	
 	然后安装:
 	
-		`sudo sh fastqc_gtz_latest.run`  
+	`sudo sh fastqc_gtz_latest.run`  
 	
 	安装完成后，在任意目录可以执行fastqc-gtz。
 - **使用说明**
