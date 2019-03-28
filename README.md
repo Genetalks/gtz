@@ -730,9 +730,9 @@ No. | Species | Official Url
 
     After the installation is complete, the execution program and related scripts will be generated in the installation directory,such as hisat2-gtz,hisat2-build,etc.
 
-    otherwise you need to switch to the installation directory and run it in ./hisat2-gtz mode. GTX.Zip support package for hisat2, based on hisat2 (2.1.0) version, which: Added direct reading capability for gtz files, all functions are exactly the same as hisat2 main code function.
+    GTX.Zip support package for hisat2, based on hisat2 (2.1.0) version, which: Added direct reading capability for gtz files, all functions are exactly the same as hisat2 main code function.
     
-    #### Use examples
+    #### Use examplesgtz
 	##### Step one: use hisat2-build to make index.
 
 	`hisat2-build -p 4 ~/GCF_000001405.37_GRCh38.p11_genomic.fna genome`
