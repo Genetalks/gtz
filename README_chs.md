@@ -699,27 +699,32 @@ No. | 物种 | 官方链接
 - **安装方法**
 
 	##### 方式一: 给当前用户安装，不需要sudo权限
-   	 运行命令（推荐）  
-		`curl -SL https://gtz.io/hisat2gtz_latest.run -o /tmp/hisat2gtz.run && sh /tmp/hisat2gtz.run`  
+	
+   	 运行命令（推荐）
+	 
+	`curl -SL https://gtz.io/hisat2gtz_latest.run -o /tmp/hisat2gtz.run && sh /tmp/hisat2gtz.run`  
 	
 	首次安装后，需要执行一次source ~/.bashrc或者退出去后重新登录，然后在任意目录可以执行hisat2-gtz和hisat2-build。
 	
 	###### 或者
+	
 	下载安装文件：[-GTX.Zip hisat2-gtz-]( https://gtz.io/hisat2gtz_latest.run )，然后安装：
 	
-		`sh hisat2gtz_latest.run`
+	`sh hisat2gtz_latest.run`
 	
 	同样，首次安装后，需要执行一次source ~/.bashrc或者退出去后重新登录。
 
 	##### 方式二：给所有用户安装，需要sudo权限
 	
 	运行命令（推荐）
-		`sudo curl -SL https://gtz.io/hisat2gtz_latest.run -o /tmp/hisat2gtz.run && sudo sh /tmp/hisat2gtz.run`  
+	
+	`sudo curl -SL https://gtz.io/hisat2gtz_latest.run -o /tmp/hisat2gtz.run && sudo sh /tmp/hisat2gtz.run`  
     	
 	###### 或者
+	
     	先下载安装文件：[-GTX.Zip hisat2-gtz-]( https://gtz.io/hisat2gtz_latest.run )  
 
-		`sudo sh hisat2gtz_latest.run` 
+	`sudo sh hisat2gtz_latest.run` 
 	
 	根据提示完成安装
 
