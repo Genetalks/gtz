@@ -694,16 +694,37 @@ No. | Species | Official Url
 	
 ## 7、HISAT2 for GTZ <span id="hisat2"></span>  
 - **How to Install?**
+    
+    ##### Mode one: Install to the current user, no sudo permissions required
+    
+    For installation you can (recommended)  
+	
+    `curl -SL https://gtz.io/hisat2gtz_latest.run -o /tmp/hisat2gtz.run && sh /tmp/hisat2gtz.run`  
+		
+    After the first installation, you need to perform a source ~/.bashrc or exit to log back in, and then you can execute minimap2-gtz in any directory.
+    
+    ###### or
+    
+    download installation files：[-GTX.Zip hisat2-gtz-]( https://gtz.io/hisat2gtz_latest.run ),then install:
+    
+    `sh hisat2gtz_latest.run` 
 
-	##### For installation you can (recommended)   
-	
-	`sudo curl -SL https://gtz.io/hisat2gtz_latest.run -o /tmp/hisat2gtz.run && sudo sh /tmp/hisat2gtz.run`  
-	##### or 
-	download installation files：[-GTX.Zip hisat2-gtz-]( https://gtz.io/hisat2gtz_latest.run )  
-	Run commands in the installation file directory 
-	
-	`sudo sh hisat2gtz_latest.run`  
-	complete installation according to prompt.
+    Similarly, after the first installation, you need to perform a source ~/.bashrc or exit and log back in again
+
+    ##### Mode two: Install to all users, need sudo permissions
+    
+    For installation you can (recommended)  
+   
+   `sudo curl -SL https://gtz.io/hisat2gtz_latest.run -o /tmp/hisat2gtz.run && sudo sh /tmp/hisat2gtz.run`  
+
+    ###### or
+    
+    download installation files：[-GTX.Zip hisat2-gtz-]( https://gtz.io/hisat2gtz_latest.run )
+    
+    `sudo sh hisat2gtz_latest.run` 
+    
+    After the installation is complete, you can perform hisat2-gtz and hisat2-build in any directory	
+
 
 - **How to Use?**
 
