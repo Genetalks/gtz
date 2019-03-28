@@ -698,19 +698,35 @@ No. | 物种 | 官方链接
 
 - **安装方法**
 
-	##### 方式一  
-	运行命令（推荐）  
+	##### 方式一: 给当前用户安装，不需要sudo权限
+   	 运行命令（推荐）  
+		`curl -SL https://gtz.io/hisat2gtz_latest.run -o /tmp/hisat2gtz.run && sh /tmp/hisat2gtz.run`  
+	
+	首次安装后，需要执行一次source ~/.bashrc或者退出去后重新登录，然后在任意目录可以执行hisat2-gtz和hisat2-build。
+	
+	###### 或者
+	下载安装文件：[-GTX.Zip hisat2-gtz-]( https://gtz.io/hisat2gtz_latest.run )，然后安装：
+	
+		`sh hisat2gtz_latest.run`
+	
+	同样，首次安装后，需要执行一次source ~/.bashrc或者退出去后重新登录。
+
+	##### 方式二：给所有用户安装，需要sudo权限
+	
+	运行命令（推荐）
 		`sudo curl -SL https://gtz.io/hisat2gtz_latest.run -o /tmp/hisat2gtz.run && sudo sh /tmp/hisat2gtz.run`  
-	##### 方式二  
-	下载安装文件：[-GTX.Zip hisat2-gtz-]( https://gtz.io/hisat2gtz_latest.run )  
-	在安装文件目录下运行命令  
-		`sudo sh hisat2gtz_latest.run`  
+    	
+	###### 或者
+    	先下载安装文件：[-GTX.Zip hisat2-gtz-]( https://gtz.io/hisat2gtz_latest.run )  
+
+		`sudo sh hisat2gtz_latest.run` 
+	
 	根据提示完成安装
 
 - **使用说明**
 
     安装完成后，会在安装目录生成hisat2-gtz、hisat2-build等执行程序和相关脚本。
-    如果安装时"create a soft link to /usr/bin"选择y，则在任意目录可以直接运行hisat2-gtz和hisat2-build执行程序；否则需要切换到安装目录，以./hisat2-gtz方式运行。
+
     GTX.Zip对hisat2的支持包中，基于hisat2（2.1.0）版本，其中：添加了对gtz文件的直接读取能力，各项功能与hisat2主代码功能完全一致。
 
 	#### 使用举例
