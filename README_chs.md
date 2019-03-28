@@ -721,8 +721,7 @@ No. | 物种 | 官方链接
 	`sudo curl -SL https://gtz.io/hisat2gtz_latest.run -o /tmp/hisat2gtz.run && sudo sh /tmp/hisat2gtz.run`  
     	
 	###### 或者
-	
-    	先下载安装文件：[-GTX.Zip hisat2-gtz-]( https://gtz.io/hisat2gtz_latest.run )  
+    	下载安装文件：[-GTX.Zip hisat2-gtz-]( https://gtz.io/hisat2gtz_latest.run )，然后安装：
 
 	`sudo sh hisat2gtz_latest.run` 
 	
