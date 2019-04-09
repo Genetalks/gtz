@@ -1092,27 +1092,11 @@ No. | Species | Official Url
     ### Use examples
 	`export GTZ_RBIN_PATH=/path/rbin/`
     
-   	`wtdbg2-gtz -ax asm20 ref.fa pacbio-ccs.fq.gtz > aln.sam`
+   	`wtdbg2-gtz -x rs -g 4.6m -t 16 -i wtdbg2_test.fastq.gtz -fo prefix`
+	`wtpoa-cns -t 16 -i prefix.ctg.lay.gz -fo prefix.ctg.fa`
         
 	>  <font size=1>\* In this example, the path of the RBIN file is specified by the environment variable GTZ_RBIN_PATH, where "export GTZ_RBIN_PATH=/path/rbin/" is not necessary, but if you know the path of rbin, you are advised to specify it, which can speed up the processing of wtdbg2-gtz. Because when wtdbg2-gtz needs RBIN file and cannot find the RBIN file under the default path ~/.config/gtz, it will be downloaded through the network, which will consume time.</font>
 	
-	#### Test command
-	
-	`wtdbg2 -t 16 -a Arab.mmi Arab_E822-R02-I_good_1.fq.gz > Arab_p.sam`
-	
-	`export GTZ_RBIN_PATH=/path/rbin/`
-	
-	`wtdbg2-gtz -t 16 -a Arab.mmi Arab_E822-R02-I_good_1.fq.gz.gtz > Arab_gtz_p.sam`
-		
-	#### Testing environment
-	
-	Server configuration: 16 core CPU, 64G memory; 
-	
-	#### Performance data
-	
-	Software  |wtdbg2|wtdbg2-gtz
-	:---:|:---:|:--:
- 	Time consumption|2m57s|3m57.151s
   
 [-Back to Top-](#index)  
   
