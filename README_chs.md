@@ -1101,9 +1101,9 @@ No. | 物种 | 官方链接
 	
 	#### 使用举例
   	`export GTZ_RBIN_PATH=/path/rbin/`
-	
-    	`wtdbg2-gtz -x rs -g 4.6m -t 16 -i  ~/source_dir/wtdbg2_test2.fastq.gtz -fo prefix`
-	
+
+	`wtdbg2-gtz -x rs -g 4.6m -t 16 -i  ~/source_dir/wtdbg2_test2.fastq.gtz -fo prefix`
+
 	`wtpoa-cns -t 16 -i prefix.ctg.lay.gz -fo prefix.ctg.fa`
 
 	>  <font size=1>\* 该例子中通过环境变量GTZ_RBIN_PATH指定了rbin文件所在路径，这里"export GTZ_RBIN_PATH=/path/rbin/"不是必须的，但如果您知道rbin所在路径，建议您指定，这样可以加快wtdbg2-gtz处理速度。因为，当wtdbg2-gtz需要rbin文件，且在默认路径~/.config/gtz下找不到该rbin文件时，则会通过网络下载，下载过程将消耗时间。</font>
