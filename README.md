@@ -340,7 +340,7 @@ No. | Species | Official Url
 - [9、FASTQC for GTZ](#fastqc) 
 - [10、FASTP for GTZ](#fastp)
 - [11、MINIMAP2 for GTZ](#minimap2)
-
+- [12、WTDBG2 for GTZ](#wtdbg2)
 
 
 ## 1、BWA for GTZ <span id="bwa"></span>  
@@ -1054,6 +1054,65 @@ No. | Species | Official Url
 	:---:|:---:|:--:
  	Time consumption|2m57s|3m57.151s
 	
+	
+## 12、WTDBG2 for GTZ <span id="wtdbg2"></span>
+- **How to Install?**
+    
+    ##### Mode one: Install to the current user, no sudo permissions required
+    For installation you can (recommended)  
+    
+    `curl -SL https://gtz.io/wtdbg2_gtz_latest.run -o /tmp/wtdbg2_gtz_latest.run && sh /tmp/wtdbg2_gtz_latest.run`  
+	
+    After the first installation, you need to perform a source ~/.bashrc or exit to log back in, and then you can execute wtdbg2-gtz in any directory
+    
+    ###### or
+    download installation files：[-GTX.Zip wtdbg2-gtz-]( https://gtz.io/wtdbg2_gtz_latest.run )，then install
+    
+    `sh wtdbg2_gtz_latest.run`
+	
+    Similarly, after the first installation, you need to perform a source ~/.bashrc or exit and log back in again
+        
+    ##### Mode two: Install to all users, need sudo permissions
+    For installation you can (recommended)  
+    
+	`sudo curl -SL https://gtz.io/wtdbg2_gtz_latest.run -o /tmp/wtdbg2_gtz_latest.run && sudo sh /tmp/wtdbg2_gtz_latest.run`  
+	
+    ###### or
+    download installation files：[-GTX.Zip wtdbg2-gtz-]( https://gtz.io/wtdbg2_gtz_latest.run )，then install  
+    
+	`sudo sh wtdbg2_gtz_latest.run`
+	
+	After the installation is complete, you can perform wtdbg2-gtz in any directory	
+	
+	
+   - **How to Use?**
+
+    After installation, wtdbg2-gtz will be generated.
+    
+    ### Use examples
+	`export GTZ_RBIN_PATH=/path/rbin/`
+    
+   	`wtdbg2-gtz -ax asm20 ref.fa pacbio-ccs.fq.gtz > aln.sam`
+        
+	>  <font size=1>\* In this example, the path of the RBIN file is specified by the environment variable GTZ_RBIN_PATH, where "export GTZ_RBIN_PATH=/path/rbin/" is not necessary, but if you know the path of rbin, you are advised to specify it, which can speed up the processing of wtdbg2-gtz. Because when wtdbg2-gtz needs RBIN file and cannot find the RBIN file under the default path ~/.config/gtz, it will be downloaded through the network, which will consume time.</font>
+	
+	#### Test command
+	
+	`wtdbg2 -t 16 -a Arab.mmi Arab_E822-R02-I_good_1.fq.gz > Arab_p.sam`
+	
+	`export GTZ_RBIN_PATH=/path/rbin/`
+	
+	`wtdbg2-gtz -t 16 -a Arab.mmi Arab_E822-R02-I_good_1.fq.gz.gtz > Arab_gtz_p.sam`
+		
+	#### Testing environment
+	
+	Server configuration: 16 core CPU, 64G memory; 
+	
+	#### Performance data
+	
+	Software  |wtdbg2|wtdbg2-gtz
+	:---:|:---:|:--:
+ 	Time consumption|2m57s|3m57.151s
   
 [-Back to Top-](#index)  
   
