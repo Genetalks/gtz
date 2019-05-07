@@ -1,4 +1,4 @@
-# GTX.Zip Professional Version   
+# GTX.Zip Professional Version   [中文说明](https://github.com/Genetalks/gtz/blob/master/README_chs.md "Markdown").
 
 ### If the species you need is not in our [species list](#rbin-download), please [contact us](#contact-us) !  
 
@@ -17,7 +17,7 @@
 
 Powered by GTXLab of Genetalks.  
 
-[中文说明](https://github.com/Genetalks/gtz/blob/master/README_chs.md "Markdown").
+
 ## Index<span id="index"></span>
 - [What is GTX.Zip?](#intro)  
 - [Product Series](#product-series)  
