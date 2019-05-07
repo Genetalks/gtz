@@ -106,8 +106,7 @@ nova_rna_2.fq|5.39%|18.94%
   
 
 ## 安装GTX.Zip Pro<span id="install"></span>  
-- **方式一**
-##### 通过命令行直接安装（建议安装方式）  
+- **方式一 通过命令行直接安装（建议安装方式）**
 
 如果安装后只希望给当前用户使用，请执行
 
@@ -119,8 +118,7 @@ nova_rna_2.fq|5.39%|18.94%
 
 
 
-- **方式二**  
-##### 先下载软件然后安装
+- **方式二 先下载软件然后安装**  
 
 首先从[-GTX.Zip Professional-]( https://gtz.io/gtz_latest.run )下载软件。
 
@@ -1039,7 +1037,7 @@ nova_rna_2.fq|5.39%|18.94%
   
 ## 版本日志<span id="change-log"></span>
 
-目前最新版本：gtz-2.0.0 [2019/01/24]
+目前最新版本：gtz-2.0.0 [2019/05/07]
 
 历史版本见：	[-版本日志-](https://github.com/Genetalks/gtz/blob/master/Changelog_chs.md "Markdown")
   
