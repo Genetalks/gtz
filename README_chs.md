@@ -96,7 +96,7 @@ nova_rna_2.fq|5.39%|18.94%
   
 	
 ## 运行环境<span id="environment"></span>
-- **64位 Linux 系统（CentOS >= 6.5；Ubuntu >= 12.04， < 18.04)**
+- **64位 Linux 系统（CentOS >= 6.1；Ubuntu >= 12.04， < 18.04)**
   
 [-回顶-](#index)  
   
