@@ -171,7 +171,26 @@ nova_rna_2.fq|5.39%|18.94%
 ## 使用方法<span id="usage"></span>  
 ### 功能说明
 
-插入图片
+<table style="width:100%">
+<tr>
+	<td>
+		<img src="https://i.loli.net/2019/05/07/5cd14cc9ba4cb.png">
+	</td>
+<tr>
+<tr>
+<tr>
+	<td>
+		<img src="https://i.loli.net/2019/05/07/5cd14cc9e6f08.png">
+	</td>
+<tr>
+<tr>
+<tr>
+	<td>
+		<img src="https://i.loli.net/2019/05/07/5cd14cc9dabac.png">
+	</td>
+</tr>
+</table>
+
 
 ### 参数说明
 ```
