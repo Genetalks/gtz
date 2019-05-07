@@ -1,7 +1,6 @@
 # GTX.Zip Professional Version   
 
 [中文说明](https://github.com/Genetalks/gtz/blob/master/README_chs.md "Markdown").
-
 <table style="width:100%">
 <tr>
 	<td>
