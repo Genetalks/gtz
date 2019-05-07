@@ -1,7 +1,5 @@
 # GTX.Zip Professional Version  
 
-**如果我们提供的[-物种列表-](#rbin-download)不在您的需求范围内，请[-联系我们-](#contact-us)，我们将免费为您制作所需物种的rbin跟bin文件。**  
-
 <table style="width:100%">
 <tr>
 	<td>
