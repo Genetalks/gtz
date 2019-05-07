@@ -26,8 +26,7 @@ Powered by GTXLab of Genetalks.
 - [运行环境](#environment)  
 - [安装软件](#install)
 - [快速上手](#quick-start)
-- [使用方法](#usage)
-- [Rbin文件下载](#rbin-download)  
+- [使用方法](#usage) 
 - [GTZ生态圈软件](#ecology)  
 - [解压SDK](#decompress-sdk)  
 - [版本日志](#change-log)  
@@ -50,7 +49,7 @@ GTX.Zip（简称GTZ）是面向基因行业，结合行业数据特征，对基�
   
 产品名称 | 版本 | 描述 | 获得方式
 ----|---- | -------- | --------
-**GTX.Zip Professional**|V1.0.1|本地测序数据量大的基因公司、研究机构及个人用户|[-安装软件-](#install)
+**GTX.Zip Professional**|V2.0.0|本地测序数据量大的基因公司、研究机构及个人用户|[-安装软件-](#install)
 **GTX.Zip Enterprise**|V1.0.1|拥有PB级本地测序数据，需要通过自有计算集群对数据进行分布式压缩的大型企业和数据中心|[-联系我们-](#contact-us)
 **GTX.Zip Cloud**|V1.0.1|云端测序数据分发、存储占比高的企业| http://gtz.io
   
@@ -92,25 +91,14 @@ nova_rna_2.fq|5.39%|18.94%
 -	**生态完整**
 	- GTX.Zip 提供 Linux 、Mac OSX以及Windows等全平台命令行以及图形化解压工具。并提供Python、C、C++等语言的SDK接口，方便第三方开发者接入数据的读写处理。目前已免费提供能支持直接读写gtz格式（GTX.Zip压缩文件）的 bcl2fastq, fastp和BWA等常用测序分析软件。  
 	- 详情请见[-GTZ生态圈软件-](#ecology)。  
-	
-
--	**涅槃计划**<span id="nirvana"></span>
-	- GTX.Zip作为企业级软件，针对高可用性需求制定了“涅磐计划”，以确保用户在最为极端、无法获得任何GTX.Zip系统支持的情况下，也能将压缩数据解压为原始数据。涅磐计划的双重可用性保护策略如下：  
-	**1.GTX.Zip多站托管，确保全网随时可下载：**  
-	gtz.io网站与GitHub等多个站点永久托管GTX.Zip所有版本，确保全网不掉线，免费随时可得。  
-	**2.内嵌应急解压程序，确保极端情况下仍可还原数据：**  
-	压缩数据中预嵌微型程序，支持在极端特殊情况时，先一键抽取出解压程序再直接还原数据。  
-	- 具体操作方式请点击[-这里-](#nirvana-example)。  
   
 [-回顶-](#index)  
   
 --------    
   
-
 	
 ## 运行环境<span id="environment"></span>
 - **64位 Linux 系统（CentOS >= 6.5；Ubuntu >= 12.04， < 18.04)**
-- 4核以上，最小8GB内存的主机系统（若要达到最大并发性，推荐32核 64GB内存，或与AWS C4.8xlarge机器相同配置）
   
 [-回顶-](#index)  
   
@@ -119,38 +107,38 @@ nova_rna_2.fq|5.39%|18.94%
 
 ## 安装GTX.Zip Pro<span id="install"></span>  
 - **方式一**
-##### 给当前用户安装，不需要sudo权限
-运行命令（推荐）   
+##### 通过命令行直接安装（建议安装方式）  
 
-`curl -SL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sh /tmp/gtz.run`  
+如果安装后只希望给当前用户使用，请执行
 
-首次安装后，需要执行一次source ~/.bashrc或者退出去后重新登录，然后在任意目录可以执行gtz和gtz_index
+`curl -SL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sh /tmp/gtz.run && source ~/.bashrc`  
 
-###### 或者
-下载安装文件：[-GTX.Zip Professional-]( https://gtz.io/gtz_latest.run )，然后安装
+如果安装后希望所有用户都能使用，请执行
 
-`sh gtz_latest.run`
+`sudo curl -SL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`
 
-同样，首次安装后，需要执行一次source ~/.bashrc或者退出去后重新登录
+
 
 - **方式二**  
-##### 给所有用户安装，需要sudo权限
-运行命令（推荐）  
+##### 先下载软件然后安装
 
-`sudo curl -SL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`  
+首先从[-GTX.Zip Professional-]( https://gtz.io/gtz_latest.run )下载软件。
 
-###### 或者
-先下载安装文件：[-GTX.Zip Professional-]( https://gtz.io/gtz_latest.run )，然后安装  
+如果安装后只希望给当前用户使用，请执行
+
+`sh gtz_latest.run && source ~/.bashrc`
+
+如果安装后希望所有用户都能使用，请执行
 
 `sudo sh gtz_latest.run`
 
-安装完成后，在任意目录可以执行gtz和gtz_index
-
 - **验证安装是否成功**
-运行命令  
+
+运行以下命令，出现相应的软件版本信息则说明安装成功  
+
 `gtz -v`  
-出现相应的软件版本信息则说明安装成功
-  
+
+
 [-回顶-](#index)  
   
 --------    
@@ -159,183 +147,88 @@ nova_rna_2.fq|5.39%|18.94%
 ## 快速上手<span id="quick-start"></span>  
 前提：当前机器中已经安装了GTX.Zip Professional软件，如未安装请参考[-安装软件-](#install)
 
-**1、制作参考基因组bin文件**  
- 以人类（Homo_sapiens）为样本数据的物种，利用软件包里自带的gtz_index 工具下载rbin文件并制作bin文件  
-- 通过工具下载人类rbin文件   
-` gtz_index download 1`  
->命令中的“1”为人类物种在gtz_index 列表中的编号，可以通过gtz_index list命令查看物种列表  
-- 或者直接下载rbin文件并保存到“\~/.config/gtz”目录  
-[-homo_sapiens.rbin-](https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin)
-- 下载完毕之后，制作bin文件(需要至少100GB的空闲磁盘空间跟28GB内存空间，耗时10分钟    
-`gtz_index makeindex ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin  `    
 
-><font size=1>\*  **bin文件**：高倍压缩时用到的参考序列索引文件。文件默认存放路径为："\~/.config/gtz/"</font>  
-><font size=1>\*  **rbin文件**：解压缩时用到的紧致参考序列文件。文件默认存放路径为："\~/.config/gtz/"</font>   
-
-**2、下载待压缩样本**	  
+**1、下载待压缩样本**	  
 样本下载：[-sample.fq-](https://gtz.io/sample.fq)  
 >  <font size=1>\* 样本文件大小2GB , 从Novaseq的WES数据提取</font>
+
+参考基因组下载: [-GCF_000001405.37_GRCh38.p11_genomic.fna.gz-](https://gtz.io/GCF_000001405.37_GRCh38.p11_genomic.fna.gz)
  
-**3、开始压缩**	  
- `gtz  sample.fq -o  sample.fq.gtz --bin-file  ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.bin`  
+**2、开始压缩**	  
+
+ `gtz sample.fq --ref GCF_000001405.37_GRCh38.p11_genomic.fna.gz`  
 >  <font size=1>\* GTX.Zip 同时支持压缩fq.gz文件</font>
-  
+
+**3、解压还原**
+
+`gtz -d sample.fq.gtz`
+
 [-回顶-](#index)  
   
 --------    
   
 
 ## 使用方法<span id="usage"></span>  
-### 压缩示例
+### 功能说明
+
+插入图片
+
+### 参数说明
 ```
-1:将文件sample.fq压缩到当前目录 
-    gtz sample.fq 
-
-2:将文件sample.fq压缩到当前目录的out文件夹内  
-    gtz sample.fq -o ./out/sample.fq.gtz
-    
-/***如果没有通过--bin-file参数指定物种的话，则采用自动判断物种模式，自动判断比指定耗时更长 ***/
-
-3:通过指定物种bin文件的方式来进行高倍压缩（Homo_sapiens_bcacac9064331276504f27c6cf40e580.bin为人类的bin文件）   
-    gtz sample.fq -o sample.fq.gtz --bin-file ./Homo_sapiens_bcacac9064331276504f27c6cf40e580.bin
-
-```
-### 解压示例
-```
-1:将文件sample.fq解压到当前路径，如果"~/.config/gtz/"下没有对应的rbin文件，程序会自动从云下载至"~/.config/gtz/"   
-    gtz -d sample.fq.gtz
-
-2:指定已有的rbin文件所在文件夹 --rbin-path; 
-  当rbin文件存在于"~/.config/gtz/"的其它地方，则可以指定rbin所在文件夹的形式进行解压，示例中rbin文件存在于“~/Homo”  
-    gtz -d sample.gtz --rbin-path ~/Homo
-
-3:将文件sample.fq.gtz解压至当前路径的Homo文件夹下   
-    gtz -d sample.fq.gtz --out-dir ./Homo		
+--ref <string>
+    @ 用于压缩时: 指定压缩数据对应的Fasta文件（支持gz格式）
+    @ 用于解压时: 如果压缩通过--ref指定了Fasta，并且使用了参数--donot-pack-ref，那么解压时会需要通过--ref指定对应的Fasta
+-z,  --fastq-to-fastq-gz
+    @ 压缩不使用
+    @ 用于解压时: 将fastq解压成fastq.gz，只对fastq有效
+--cache-path <string>
+    @ 用于压缩时: 当通过--ref指定了fasta时，GTZ会将该fasta转换为对应的二进制文件，然后缓存至默认路径，这样当同一个fasta被使用时，
+                 GTZ直接从缓存路径读取，这样会非常迅速。默认的缓存路径是~/.config/gtz，你可以通过--cache-path指定另外的路径
+    @ 用于解压时: 与压缩使用方式一致
+--donot-pack-ref
+    @ 用于压缩时: 这个选项不建议使用。默认情况下，当压缩使用fasta时，GTZ会从巧妙地从fasta中提取必要信息然后压缩至GTZ文件，这样解压时
+                 不再需要fasta信息，不使用该参数对压缩率影响很小。一旦使用该参数解压时会需要通过--ref指定压缩时所使用的fasta
+    @ 解压不使用
+--verify
+    @ 用于压缩时: 压缩完成后，使用该参数后GTZ会再次对生成的GTZ文件解压一次，这样保证生成的GTZ一定能解压。通常情况下，这个参数是不需要的，
+                 因为gtz压缩时保证了数据的正确性。当然如果压缩用于存档，你也可以使用该参数
+    @ 解压不使用
+-l <number>,  --level <number>
+    @ 用于压缩时: [1-5]是快速压缩模式，目前1-5使用的压缩算法相同，这里预留是为了后面的扩展；6是默认的压缩级别；[6-9]是最高压缩，目前6-9
+                 压缩算法也相同，保留同样是为了以后扩展
+    @ 解压不使用
+-r <string>,  --rbin-path <string>
+    @ 压缩不使用
+    @ 用于解压时: 该参数对2.0.0不需要。该参数只是为了保证2.0.0能解压更低版本，使用了bin压缩出来的GTZ数据，解压这种数据时通过该参数指定rbin
+                 文件或者rbin所在的路径
+-O <string>,  --out-dir <string>
+    @ 压缩不使用
+    @ 用于解压时: 指定解压文件的保存路径
+-f,  --force
+    @ 用于压缩时: 强制覆盖输出问题
+    @ 用于解压时: 与压缩使用方式一致
+-c,  --stdout
+    @ 压缩不使用
+    @ 用于解压时: 解压到终端
+-d,  --decompress
+    @ 压缩不使用
+    @ 用于解压时: 指定要解压的GTZ文件
+-p <number>,  --parallel <number>
+    @ 用于压缩时: 指定并发线程，不指定时等于cpu的核数
+    @ 用于解压时: 与压缩使用方式一致
+-o <string>,  --out <string>
+    @ 用于压缩时: 指定压缩后输出的GTZ文件名
+    @ 解压不使用
+-e,  --no-keep
+    @ 用于压缩时: 不保存原始文件
+    @ 解压不使用
+--version
+    显示版本信息并退出
+-h,  --help
+    显示帮助信息并退出
+	
 ```  
-### 主程序gtz 
-```  
-usage: gtz [-h] [-o OUT] [-b INDEX_BIN] [-d DECOMPRESS] [-O OUT_DIR]  
 
--h, --help                                                    显示帮助信息  
--o OUT, --out OUT                                             指定GTZ压缩文件的输出路径  
--b BIN_FILE, --bin-file BIN_FILE                              通过指定所需物种bin文件进行高倍率压缩  
--s, --suggest         					      压缩时开启物种自动识别。注意，当-b选项被指定时，该参数无效
--B BIN_PATH, --bin-path BIN_PATH			      压缩开启自动识别时，用该参数指定bin文件所在目录
--n, --no-verify       					      压缩完成之后不做校验
--d DECOMPRESS, --decompress DECOMPRESS                        解压缩GTZ文件  
--O OUT_DIR, --out-dir OUT_DIR                                 指定解压后文件的保存路径  
--c, --stdout                                                  解压到终端
--z, --fastq-to-fastq-gz                                       将FASTQ解压成GZ格式，该选项只对FASTQ有效，非FASTQ会忽略该选项
--r RBIN_PATH, --rbin-path RBIN_PATH                           通过指定rbin文件解压  
--p PARALLEL_NUM,--parallel				      指定并行压缩/解压的线程数，默认等于CPU逻辑核数
--f, --force                                                   输出覆盖同名文件  
--e, --erase                                                   删除源文件  
--v, --version                                                 显示版本号  
-```
-
-
-### gtz_index
-```
--交互模式：
- 显示当前支持的物种列表，并且通过人机交互的模式逐步制作成BIN文件  
-    gtz_index
-
--手动模式：  
-1:显示当前支持的物种列表，其中index编号为gtz_index download 命令的输入，下载对应物种的rbin文件  
-    gtz_index list  
-
-2:下载编号为1的Homo(人类)物种的rbin文件  
-    gtz_index download 1
-
-3:通过指定rbin文件 “./Homo/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin"制作Homo_sapiens物种的bin、rec文件  
-    gtz_index makeindex ./Homo/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin
-		
-```
-
-
-### gtz_index工具
-```
-gtz_index <command> [options]  
-Command:  
-   list                                                         查看现在支持的所有物种信息  
-   download <index> <path_to>                                   下载紧致参考序列rbin文件  
-   makeindex <rbin_path>                                        制作参考序列索引bin文件  
-```  
-  
-[-回顶-](#index)  
-  
---------    
-### 涅槃计划<span id="nirvana-example"></span>  
-```
-假定gtz文件名为: sample.fq.gtz
-
-步骤一:  
-    运行以下命令提取解压缩内嵌程序gtz_reborn到当前目录下会生成可执行文件gtz_reborn  
-    sed -e 's/\[GTZ_REBORN_BEGIN\]/\n&/;' sample.fq.gtz | sed -n '/\[GTZ_REBORN_BEGIN\]/,/\[GTZ_REBORN_END\]/p' | sed -e 's/.*\[GTZ_REBORN_BEGIN\]//g' -e 's/\[GTZ_REBORN_END\].*//g' | tar -zxvf -
-
-步骤二:  
-    运行:  
-    `./gtz_reborn -d sample.fq.gtz`  
-	情形一: 如果sample.fq.gtz是高倍率压缩文件，需要按提示下载对应的fasta文件，然后再解压  
-	情形二: 如果sample.fq.gtz不是高倍压缩文件，则该命令可以直接解压出原始的fastq文件  
-```
-  
-## Rbin下载列表<span id="rbin-download"></span>
-
-当前支持物种的rbin文件下载地址列表：
-
-No. | 物种 | 官方链接
-----|---- | --------
-1|Homo sapiens|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin
-2|Triticum aestivum|Https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Triticum_aestivum_8e2da4d2c18d5fadd1d3cd0c15e918d0.rbin
-3|Arabidopsis thaliana|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Arabidopsis_thaliana_3dcb9b7a5a8b46c8ebbdbbdb3e0fa233.rbin
-4|Mus musculus|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Mus_musculus_def651daa3884affc85be8a74f7ba67e.rbin
-5|Rattus norvegicus|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Rattus_norvegicus_6cb6204aeddde515414059bcc3f048af.rbin
-6|Oryza sativa Japonica Group|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Oryza_sativa_Japonica_Group_90b8919fd938ce2eb40a83da674d8b3f.rbin
-7|Zea mays|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Zea_mays_898a827cde37664a7c0ac710d79b333f.rbin
-8|Ailuropoda melanoleuca|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Ailuropoda_melanoleuca_9d59370cb06760b671353b20224ec2de.rbin
-9|Apis mellifera|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Apis_mellifera_10a768025aad33307a53bc077b60e4c8.rbin
-10|Bombyx mori|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Bombyx_mori_3ad2e80daa1d88f3339ac968e97f72eb.rbin
-11|Bos taurus|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Bos_taurus_2726c844c35a2576a513a0b578955a70.rbin
-12|Brassica napus|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Brassica_napus_39b086ee1025ab9d96e59639c4ce87f7.rbin
-13|Caenorhabditis elegans|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Caenorhabditis_elegans_2fa2b1575d9e722f076bafcf3b755fed.rbin
-14|Canis lupus familiaris|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Canis_lupus_familiaris_ddd3c39e58079f740ae2d21613f923ba.rbin
-15|Capra hircus|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Capra_hircus_d58b5bac5ee5baf3cb4873be119d86fe.rbin
-16|Capsicum annuum|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Capsicum_annuum_9d1dac11540dbee75ea81868a5c52cc3.rbin
-17|Chlorocebus sabaeus|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Chlorocebus_sabaeus_6c0f80b3ca9404dc83ddffdad72c206b.rbin
-18|Citrus sinensis|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Citrus_sinensis_704f1f26af39ba2e78d562e85ce974c4.rbin
-19|Danio rerio|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Danio_rerio_7b1f24b449248a08ddab86d19b686818.rbin
-20|Drosophila elegans|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Drosophila_elegans_ac9318016d83e7234b35aee177545225.rbin
-21|Felis catus|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Felis_catus_9af1182789a93a7b7c00eb657928a270.rbin
-22|Glycine max|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Glycine_max_8761f4855d9396ff38f5a6201edc6080.rbin
-23|Gossypium hirsutum|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Gossypium_hirsutum_3f2a7ca4b7cc58f57022c24f1cc24094.rbin
-24|Macaca mulatta|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Macaca_mulatta_e75fcb8d26d9a316f1da1983b584b142.rbin
-25|Manihot esculenta|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Manihot_esculenta_45e8f4480f267cf82f51f08af5dd1fa8.rbin
-26|Medicago truncatula|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Medicago_truncatula_4b0ad793b3a8a7bcc1c1bcb0dee5c3c9.rbin
-27|Momordica charantia|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Momordica_charantia_30f2c8beae3bb8d7beb990c522ae454d.rbin
-28|Nicotiana tabacum|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Nicotiana_tabacum_c8d4659974cfc88753b60684aadb9ca3.rbin
-29|Oryctolagus cuniculus|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Oryctolagus_cuniculus_2d37f28080f4caff68fd164c567f18be.rbin
-30|Populus trichocarpa|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Populus_trichocarpa_72f0a29abc20570aa3691445160b584c.rbin
-31|Prunus persica|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Prunus_persica_cb65aac20158fa3e8075963e8ff45cfa.rbin
-32|Raphanus sativus|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Raphanus_sativus_fc9dc14c13511a3cd8ed2377d2c8f472.rbin
-33|Sesamum indicum|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Sesamum_indicum_18e9ca5868589ab3851ee39536577784.rbin
-34|Solanum tuberosum|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Solanum_tuberosum_11117f289d350ac2727d5136941986f0.rbin
-35|Sorghum bicolor|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Sorghum_bicolor_ad3fb597e71a3d3cc1a50606865207a5.rbin
-36|Sus scrofa|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Sus_scrofa_fa17a95f7b8532dfb932210977bebc77.rbin  
-37|Homo sapiens meth|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Homo_sapiens_meth_d497f0f9f716dff930ae92146c950576.rbin
-38|Mus musculus meth|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Mus_musculus_meth_42a6bd57204889412125be9111bca783.rbin  
-39|Equus caballus|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Equus_caballus_48fb76cc859b80aff9818361dce3e735.rbin
-40|Gallus gallus|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Gallus_gallus_5a5d9581b4af55381d19b742c518d079.rbin
-41|Egretta garzetta |https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Egretta_garzetta_2a63683b2a15b1cbbb276f80df9f8fd9.rbin
-42|Taeniopygia guttata|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Taeniopygia_guttata_004df52b216ca9306ed56d907128870c.rbin
-
-**如果以上物种不在您的需求范围内，请[-联系我们-](#contact-us)，我们将免费为您制作所需物种的rbin跟bin文件。**  
-  
-[-回顶-](#index)  
-  
---------    
-  
-  
   
 ## GTZ生态圈软件<span id="ecology"></span>  
 - [1、BWA for GTZ](#bwa)
@@ -1118,154 +1011,7 @@ No. | 物种 | 官方链接
 
 ## 解压sdk<span id="decompress-sdk"></span>
 
-### 注意：目前解压SDK均是beta版本，欢迎大家试用！！
-
-- [1、decompress sdk for perl (beta)](#sdk-perl)
-- [2、decompress sdk for python (beta)](#sdk-python)
-- [3、decompress sdk for cpp (beta)](#sdk-cpp)
-- [4、decompress sdk for c (beta)](#sdk-c)
-- [5、decompress sdk for java (beta)](#sdk-java)
-
-## 1、decompress sdk for perl (beta) <span id="sdk-perl"></span>
-
-- **安装方法**
-
-`curl -SL https://gtz.io/sdk/gtz_perl_sdk-1.0.0-linux-x86_64.tar.gz -o gtz_perl_sdk-1.0.0.tar.gz`
-
-`tar -xvf gtz_perl_sdk-1.0.0.tar.gz`
-
-`cd gtz_perl_sdk/IO-GTZ`
-
-`perl Makefile.PL`
-
-`make`
-
-`sudo make install`
-
-- **校验安装**
-
-`cd gtz_perl_sdk`
-
-`perl example.pl`
-
-如果能正常显示fastq内容，说明安装成功，在自己流程中要使用perl sdk时，可以参考example.pl内容
-
-- **运行环境**
-
-perl <= 5.10
-
-
-## 2、decompress sdk for python (beta) <span id="sdk-python"></span>
-
-- **安装方法**
-
-`curl -SL https://gtz.io/sdk/gtz_python_sdk-1.0.0-linux-x86_64.tar.gz -o gtz_python_sdk-1.0.0.tar.gz`
-
-`tar -xvf gtz_python_sdk-1.0.0.tar.gz`
-
-`cd gtz_python_sdk`
-
-#### python2
-`sudo pip install gtz-1.0.0-py2-none-any.whl`
-
-#### python3
-`sudo pip3 install gtz-1.0.0-py3-none-any.whl`
-
-- **校验安装**
-
-`cd gtz_python_sdk`
-
-`python example.py`
-
-如果能正常显示fastq内容，说明安装成功，在自己流程中要使用python sdk时，可以参考example.py内容
-
-- **运行环境**
-
-python >= 2.7, <=3
-
-## 3、decompress sdk for cpp (beta) <span id="sdk-cpp"></span>
-
-- **安装方法**
-
-`curl -SL https://gtz.io/sdk/gtz_cpp_sdk-1.0.0-linux-x86_64.tar.gz -o gtz_cpp_sdk-1.0.0.tar.gz`
-
-`tar -xvf gtz_cpp_sdk-1.0.0.tar.gz`
-
-`cd gtz_cpp_sdk`
-
-`sudo make install`
-
-
-- **校验安装**
-
-`cd gtz_cpp_sdk`
-
-`make example`
-
-`./example`
-
-如果能正常显示fastq内容，说明安装成功，在自己流程中要使用cpp sdk时，可以参考example.cpp内容
-
-- **运行环境**
-
-编译时可能需要加　#define _GLIBCXX_USE_CXX11_ABI 0
-
-## 4、decompress sdk for c (beta) <span id="sdk-c"></span>
-
-- **安装方法**
-
-`curl -SL https://gtz.io/sdk/gtz_c_sdk-1.0.0-linux-x86_64.tar.gz -o gtz_c_sdk-1.0.0.tar.gz`
-
-`tar -xvf gtz_c_sdk-1.0.0.tar.gz`
-
-`cd gtz_c_sdk`
-
-`sudo make install`
-
-
-- **校验安装**
-
-`cd gtz_c_sdk`
-
-`make example`
-
-`./example`
-
-如果能正常显示fastq内容，说明安装成功，在自己流程中要使用c sdk时，可以参考example.c内容
-
-- **运行环境**
-
-## 5、decompress sdk for java (beta) <span id="sdk-java"></span>
-
-- **安装方法**
-
-`curl -SL https://gtz.io/sdk/gtz_java_sdk-1.0.0-linux-x86_64.tar.gz -o gtz_java_sdk-1.0.0.tar.gz`
-
-`tar -xvf gtz_java_sdk-1.0.0.tar.gz`
-
-`cd gtz_java_sdk`
-
-
-#### 步骤一：
-
-首先将libgtzjava.so拷贝到java.path.library所指向的路径
-
-#### 步骤二：
-
-将io文件夹拷贝到工程目录，或者将gtz_sdk.tar拷贝到工程目录
-
-
-- **校验安装**
-
-`cd gtz_java_sdk`
-
-`javac example.java`
-
-`java example`
-
-如果能正常显示fastq内容，说明安装成功，在自己流程中要使用java sdk时，可以参考example.java内容
-
-- **运行环境**
+### 待更新
 
 [-回顶-](#index)  
 
@@ -1274,7 +1020,7 @@ python >= 2.7, <=3
   
 ## 版本日志<span id="change-log"></span>
 
-目前最新版本：gtz-1.2.3 [2019/01/24]
+目前最新版本：gtz-2.0.0 [2019/01/24]
 
 历史版本见：	[-版本日志-](https://github.com/Genetalks/gtz/blob/master/Changelog_chs.md "Markdown")
   
@@ -1296,13 +1042,12 @@ python >= 2.7, <=3
 - [11、GTX.Zip Pro软件包里的bin，rbin文件是做什么的？](#11)  
 - [12、有参与无参压缩模式相比有什么不同，GTX.Zip Pro采用的哪种模式？](#12)  
 - [13、为什么有些物种的数据文件的压缩率没有达到官宣中的级别？](#13)  
-- [14、如果你们公司不做这个项目了，我们压缩完的文件怎么办?](#14)  
-- [15、是否有工具软件能够支持GTX.Zip的压缩格式作为输入?](#15)  
-- [16、GTX.Zip Pro是否支持所有下机数据格式？比如fasta](#16)  
-- [17、是否允许将GTX.Zip Pro二次打包进其他软件的商业发布中？](#17)  
-- [18、怎样让GTX.Zip Pro增加高倍压缩所需的新物种的参考基因组信息？](#18)  
-- [19、bwa-gtz计算gtz压缩格式的性能与官方bwa相比会有差异么？](#19)  
-- [20、尝试用GTX.Zip对bam文件进行压缩，但文件大小几乎没变。](#20)    
+- [14、是否有工具软件能够支持GTX.Zip的压缩格式作为输入?](#14)  
+- [15、GTX.Zip Pro是否支持所有下机数据格式？比如fasta](#15)  
+- [16、是否允许将GTX.Zip Pro二次打包进其他软件的商业发布中？](#16)  
+- [17、怎样让GTX.Zip Pro增加高倍压缩所需的新物种的参考基因组信息？](#17)  
+- [18、bwa-gtz计算gtz压缩格式的性能与官方bwa相比会有差异么？](#18)  
+- [19、尝试用GTX.Zip对bam文件进行压缩，但文件大小几乎没变。](#19)    
 
 
  <!--- [15、为什么不允许我们自己生成rbin文件以增加物种支持？](#15)-->  
@@ -1356,34 +1101,28 @@ python >= 2.7, <=3
   >通常这是因为这些物种暂时不在GTX.Zip Pro支持的列表范围内。GTX.Zip Pro默认采用基于参考基因组的压缩模式以提供最优压缩率，但是当物种不在支持列表范围内，GTX.Zip Pro会自动改用无参考基因组的次优倍率压缩模式，无参的压缩率通常逊于有参压缩率。  
   
   >如果遇到此情况，请您能及时跟我们联系，制作您需要的物种bin文件。  
-  >邮箱: contact@gtz.io, 或者在GitHub创建一个[新的issue](https://github.com/Genetalks/gtz/issues/new)。   
-
-**14、如果你们公司不做这个项目了，我们压缩完的文件怎么办？**<span id="14"></span>  
-  >首先我们不会不做这个项目，其次GTX.Zip作为企业级软件，针对高可用性需求制定了“涅磐计划”，以确保用户在最为极端、无法获得任何GTX.Zip系统支持的情况下，也能将压缩数据解压为原始数据。涅磐计划的双重可用性保护策略如下：  
-  >- 1）GTX.Zip多站托管，确保全网随时可下载：gtz.io网站与GitHub等多个站点永久托管GTX.Zip所有版本，确保全网不掉线，免费随时可得；  
-  >- 2）内嵌应急解压程序，确保极端情况下仍可还原数据：压缩数据中预嵌微型程序，支持在极端特殊情况时，先一键抽取出解压程序再直接还原数据。  
-  >- 3）详情请参考[-涅槃计划-](#nirvana)  
+  >邮箱: contact@gtz.io, 或者在GitHub创建一个[新的issue](https://github.com/Genetalks/gtz/issues/new)。    
   
-**15、是否有工具软件能够支持GTX.Zip的压缩格式作为输入？**<span id="15"></span>  
+**14、是否有工具软件能够支持GTX.Zip的压缩格式作为输入？**<span id="15"></span>  
   >我们提供直接读写gtz格式的上下游工具软件（比如，bcl2fastq, fastp, bwa 等）和各种程序语言的API接口（Perl/Python/C/C++）。 
   >详细内容可以参考[-GTZ生态圈软件-](ecology).
   
-**16、GTX.Zip Pro是否支持所有下机数据格式？比如fasta**<span id="16"></span>  
+**15、GTX.Zip Pro是否支持所有下机数据格式？比如fasta**<span id="16"></span>  
   >全部支持，只是fastq格式压缩效果最好。  
    
-**17、是否允许将GTX.Zip Pro二次打包进其他软件的商业发布中？**<span id="17"></span>  
+**16、是否允许将GTX.Zip Pro二次打包进其他软件的商业发布中？**<span id="17"></span>  
   >不允许直接将 GTZ-Perfessional版本 二次 打包进 其他商业发布系统中。但如果由此需求的客户，请联系 ：contact@gtz.io , 我们会确认身份后，跟您签署一份合作协议，并为您发布一份专有重打包协议。  
   
-**18、怎样让GTX.Zip Pro增加高倍压缩所需的新物种的参考基因组信息？**<span id="18"></span>  
+**17、怎样让GTX.Zip Pro增加高倍压缩所需的新物种的参考基因组信息？**<span id="18"></span>  
   >邮箱: contact@gtz.io, 或者在GitHub创建一个[新的issue](https://github.com/Genetalks/gtz/issues/new) 或者加入我们的[微信交流群](https://github.com/Genetalks/gtz/)提出需求。  
   >我们将免费制作用户所需的新物种的参考基因组文件。  
   
-**19、bwa-gtz计算gtz压缩格式的性能与官方bwa相比会有差异么？**<span id="19"></span>  
+**18、bwa-gtz计算gtz压缩格式的性能与官方bwa相比会有差异么？**<span id="19"></span>  
   >bwa-gtz做了很好的性能优化，性能上跟官方bwa相同，同时百分之百保证与官方bwa比对结果一致，完全原汁原味。  
   >深度优化的bwa-opt-gtz工具，可以在完全保证比对结果一致的前提下，使每一次bwa运算节约1/3的时间。  。  
   >详细内容可以参考[-BWA for GTZ-](#bwa).  
   
-**20、尝试用GTX.Zip对bam文件进行压缩，但文件大小几乎没变。**<span id="20"></span>  
+**19、尝试用GTX.Zip对bam文件进行压缩，但文件大小几乎没变。**<span id="20"></span>  
   >暂时不支持bam文件的高倍压缩，
   >因为bam文件已经是压缩过的，所以常规压缩模式下bam文件的大小也不会有太多变化。
   >如有相关的功能更新，会第一时间在交流群里通知大家。
