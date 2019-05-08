@@ -1,4 +1,4 @@
-# GTX.Zip Professional Version   
+# GTX.Zip Professional Version (Latest Version GTZ 2.0.0)
 
 [中文说明](https://github.com/Genetalks/gtz/blob/master/README_chs.md "Markdown").
 <table style="width:100%">
