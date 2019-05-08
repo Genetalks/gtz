@@ -290,34 +290,6 @@ Reference genome Download: [-GCF_000001405.37_GRCh38.p11_genomic.fna.gz-](https:
    GTX Lab Compressor
 ```  
 
-
-## Example of gtz_index  
-```
-Interaction mode:  
-	gtz_index  
-	
-Show supported species and you can gradually create bin files through human-machine interaction mode.  
-
-Manual mode  
-1:Show supported species list，the index number is the input of the gtz_index download command.  
-	gtz_index list  
-	
-2:Download the rbin file in the species list with No.1 index  
-	gtz_index download 1  
-	
-3:Make BIN,rec file by specifying the rbin file". /Homo/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin "  
-	gtz_index makeindex ./Homo/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin  
-	
-```
-
-### Options of gtz_index：  
-```
-gtz_index <command> [options]
-	list					show species which current support
-	download <index> <path_to>		download species reference sequence rbin file , path_to is not necessary.  
-	makeindex <rbin_path>			making reference sequence  
-```
-
 ### Nirvana Plan<span id="nirvana-example"></span>  
 Let’s start Nirvana plan!
 At first, we have a gtz file named sample.fq.gtz.    
