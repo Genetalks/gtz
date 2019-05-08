@@ -1,4 +1,4 @@
-# GTX.Zip Professional Version  （最新版本 GTZ 2.0.0）
+# GTX.Zip Professional Version（最新版本 GTZ 2.0.0）
 
 <table style="width:100%">
 <tr>
