@@ -1,3 +1,10 @@
+## gtz-2.0.0 [2019/05/08]
+1. No longer need to make bin, direct use --ref designated species Fasta (fast)
+
+2. By default, after the pressurized use of the reference genome, decompression is no longer required unless --donot-pack-ref is used
+
+3. Parameters with speed and compression level added (-l 0~9)
+
 ### gtz-1.2.3 [2019/01/24]
 
 The main changes are as follows:
