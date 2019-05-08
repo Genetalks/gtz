@@ -289,21 +289,6 @@ Reference genome Download: [-GCF_000001405.37_GRCh38.p11_genomic.fna.gz-](https:
 
    GTX Lab Compressor
 ```  
-
-### Nirvana Plan<span id="nirvana-example"></span>  
-Let’s start Nirvana plan!
-At first, we have a gtz file named sample.fq.gtz.    
-```
-Step 1:  
-Run the following command to extract the embeded programe gtz_reborn to current directory:  
-	sed -e 's/\[GTZ_REBORN_BEGIN\]/\n&/;' sample.fq.gtz | sed -n '/\[GTZ_REBORN_BEGIN\]/,/\[GTZ_REBORN_END\]/p' | sed -e 's/.*\[GTZ_REBORN_BEGIN\]//g' -e 's/\[GTZ_REBORN_END\].*//g' | tar -zxvf -
-
-Step2:  
-If sample.fq.gtz is a high compression file, download the corresponding fasta file according to the prompt, and then extract the file.  
-If sample.fq.gtz is not a high compression file, the FASTQ file can be extracted directly  
-	./gtz_reborn -d sample.fq.gtz  
-	
-```  
     
 [-Back to Top-](#index)  
   
