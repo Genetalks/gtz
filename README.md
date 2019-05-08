@@ -27,7 +27,6 @@ Powered by GTXLab of Genetalks.
 - [How to Install?](#install)
 - [Let's Do It!](#quick-start)
 - [Usage](#usage)
-- [Rbin Files Downloads](#rbin-download)  
 - [GTZ Ecology Softwares](#ecology)  
 - [Change Log](#change-log) 
 - [FAQ](#faq)  
@@ -47,7 +46,7 @@ GTX.Zip(or GTZ for short) is a professional fastq/bam compressor and also can be
   
 Product | Version | Description | How to Get
 ----|---- | -------- | --------
-**GTX.Zip Professional**|V1.0.1|Companies, Institutions and individual users that with large local sequencing data|[Install](#install)
+**GTX.Zip Professional**|V2.0.0|Companies, Institutions and individual users that with large local sequencing data|[Install](#install)
 **GTX.Zip Enterprise**|V1.0.1|Large-scale enterprises and data centers that with PB-level sequencing data and require distributed compression by their own computing clusters|[Contact Us](#contact-us)
 **GTX.Zip Cloud**|V1.0.1|Companies that with large amounts of sequencing data distribution and storage in the cloud| http://gtz.io
   
@@ -98,44 +97,41 @@ As an enterprise-level software, GTX.Zip has developed a nirvana program for hig
 --------  
 
 ## System Environment Requirements<span id="environment"></span>
-- **64-bit Linux system (CentOS >= 6.5；Ubuntu >= 12.04， < 18.04)**                                                                                                                            
-- To achieve good performance, the computing server with **32-core 64GB** memory is recommended (**at least 4-core and 8GB memory**), or that has the same configuration with the **AWS C4.8xlarge** machine)
+- **64-bit Linux system (CentOS >= 6.1；Ubuntu >= 12.04， < 18.04)**                                                                                                                            
+- To achieve good performance, the computing server with **32-core 64GB** memory is recommended, or that has the same configuration with the **AWS C4.8xlarge** machine)
   
-## How to Install？ <span id="install"></span>	
+## How to Install？<span id="install"></span>  
 - **Way one**
-##### Install to the current user, no sudo permissions required
-Run command (recommended)   
+##### Install directly from the command line (recommended installation method)  
 
-`curl -SL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sh /tmp/gtz.run`  
+If you only want to use it for the current user after installation, perform the 
 
-after the first installation, you need to perform a source ~/.bashrc or exit to log back in, and then you can execute gtz and gtz_index in any directory
+`curl -SL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sh /tmp/gtz.run && source ~/.bashrc`  
 
-###### or
-download the installation file：[-GTX.Zip Professional-]( https://gtz.io/gtz_latest.run )，then install
+If you want all users to be able to use it after installation, do 
 
-`sh gtz_latest.run`
+`sudo curl -SL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`
 
-similarly, after the first installation, you need to perform a source ~/.bashrc or exit and log back in again
+
 
 - **Way two**  
-##### Install for all users and require sudo permissions
-Run command (recommended)  
+##### Download the software first then install it 
 
-`sudo curl -SL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`  
+First download the software from [-GTX.Zip Professional-]( https://gtz.io/gtz_latest.run ).
 
-###### or
-download the installation file：[-GTX.Zip Professional-]( https://gtz.io/gtz_latest.run )，then install  
+If you only want to use it for the current user after installation, perform the 
+
+`sh gtz_latest.run && source ~/.bashrc`
+
+If you want all users to be able to use it after installation, do 
 
 `sudo sh gtz_latest.run`
 
-after the installation is complete, you can perform gtz and gtz_index in any directory  
-  
-- **Verify installation**    
-	run  
-	
-	`gtz -v`  
-	
-	If software version information appears, the installation is successful.    
+- **Verify that the installation was successful**
+
+Running the following command, the corresponding software version information appears, indicates that the installation was successful  
+
+`gtz -v`      
 	  
 	    
 [-Back to Top-](#index)  
@@ -145,83 +141,153 @@ after the installation is complete, you can perform gtz and gtz_index in any dir
 ## Quick Start <span id="quick-start"></span>	
 GTX.Zip Professional needs to be installed on the current machine. If not, please see [-How to Install-](#install) .
 
-1. **Make bin file to enable high rate compression**
-   Take the human sample species as an example, make the index file (*bin* file) required for GTX.Zip high rate compression
-   
-   - Download the 1th *rbin* file ("1" is the number of the human *rbin* file in the gtx_index list) and gtz_index will save it to the default path (~/.config/gtz):
-   
-      `gtz_index download 1`
-      
-      or
-      
-      You can download *rbin* file from  here ( [Homo_sapiens rbin file](https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin) )
+**1. Download samples file to be compressed**	  
+Sample Download: [-sample.fq-](https://gtz.io/sample.fq)  
+>  <font size=1>\* 2GB fastq file, extracted from a real WES data produced by Novaseq</font>
 
-   - Make the *bin* file ( may need 100GB free disk space, and >28GB memory, and 10 mins)
-   
-     `gtz_index makeindex ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin`  
-     
-     ><font size=1>\*  **bin file**：The index file used for hight compression.The default file path is："\~/.config/gtz/"</font>    
-     ><font size=1>\*  **rbin file**：The compact index file used for decompression.The default file  path is："\~/.config/gtz/"</font>  
-
-2. **Compress sample fastq file**
-
-    `gtz  sample.fq -o  sample.fq.gtz --bin-file  ~/.config/gtz/Homo_sapiens_bcacac9064331276504f27c6cf40e580.bin` 
+Reference genome Download: [-GCF_000001405.37_GRCh38.p11_genomic.fna.gz-](https://gtz.io/GCF_000001405.37_GRCh38.p11_genomic.fna.gz)
  
-    sample.fq can be downloaded from https://gtz.io/sample.fq. (2GB fastq file, extracted from a real WES data produced by Novaseq)  
-    > \*gtz can also directly compress fastq.gz file.
-  
-      
-[-Back to Top-](#index)  
-  
---------  
-## Usage <span id="usage"></span>    
-### Example of Compression 
-```
-1:Compress the sample.fq to the current directory.
-	gtz sample.fq    
+**2. Start compression**	  
 
-2:Compress the file sample.fq into the out folder of the current directory.
-	gtz sample.fq -o ./out/sample.fq.gtz    
+ `gtz sample.fq --ref GCF_000001405.37_GRCh38.p11_genomic.fna.gz`  
+>  <font size=1>\* gtz can also directly compress fastq.gz file</font>
 
-***If the species is not specified by the '--bin-file' , GTZ will automatically recognize the species to compress.  ***  
+**3、decompress**
 
-3.GTZ performs high compression by specifying bin files in the Homo folder under the current directory.  
-	gtz sample.fq --bin-file ./Homo/Homo_sapiens_bcacac9064331276504f27c6cf40e580.bin  
-```
+`gtz -d sample.fq.gtz`
 
-### Example of Decompression  
-```
-1.Deompress the file sample.fq to the current directory.If there is no species rbin file under "\~/.config/ gtz/", GTZ will be automatically downloaded from the Cloud to "\~/.config/ gtz /".  
-	gtz -d sample.fq.gtz 
 
-2.Specify the directory of the rbin path “~/Homo” for decompress sample.fq.gtz.  
-	gtz -d sample.fq.gtz --rbin-path ~/Homo 
+## How to use:
 
-3.Decompress sample.fq.gtz to the Homo folder in the current path  
-	gtz -d sample.fq.gtz --out-dir ./Homo    
+### Feature description:
+
+<table style="width:100%">
+<tr>
+	<td>
+		<img src="https://i.loli.net/2019/05/07/5cd14cc9ba4cb.png">
+	</td>
+<tr>
+<tr>
+<tr>
+	<td>
+		<img src="https://i.loli.net/2019/05/07/5cd14cc9e6f08.png">
+	</td>
+<tr>
+<tr>
+<tr>
+	<td>
+		<img src="https://i.loli.net/2019/05/07/5cd14cc9dabac.png">
+	</td>
+</tr>
+</table>
+
+### Parameter description:
 ```  
-### Options of gtz:
-```  
-usage: gtz [-h] [-o OUT] [-b INDEX_BIN] [-d DECOMPRESS] [-O OUT_DIR]  
+   --ref <string>
+     @ compress : specifies Fasta corresponding to the compressed file,
+     which results in a higher compression rate
 
--h, --help                                      show this help message and exit  
--o OUT, --out OUT                               specify the GTZ file name after compression  
--b BIN_FILE, --bin-file BIN_FILE                specify the bin file name for high compression  
--s, --suggest         				turn on automatic species identification for
-                        			compression, it's invalid when -b is specified
--B BIN_PATH, --bin-path BIN_PATH		specify the directory in which the bin file resides
-                        			when automatic species recognition is turned on.
--n, --no-verify       				do not verify after compression is completed.
--d DECOMPRESS, --decompress DECOMPRESS          decompress  
--O OUT_DIR, --out-dir OUT_DIR                   specify the save path of the extracted file 
--c, --stdout                                    decompress to terminal
--z, --fastq-to-fastq-gz                         decompress fastq to fastq.gz, it's valid only for FASTQ
--r RBIN_PATH, --rbin-path RBIN_PATH             specify the path where the rbin file resides  
--p PARALLEL_NUM,--parallel			specify parallel number for compression or decompression, 
-						default equal CPU logical cores
--f, --force                                     force overwrite of output file  
--e, --no-keep                                   don't keep input files  
--v, --version                                   display version number  
+     @ decompress : if compression uses Fasta and parameter
+     --donot-pack-ref is used, the corresponding Fasta needs to be
+     specified by this parameter when decompressing
+
+   -z,  --fastq-to-fastq-gz
+     @ compress : do not use
+
+     @ decompress : decompress fastq to fastq.gz, it's valid only for
+     FASTQ
+
+   --cache-path <string>
+     @ compress : when Fasta is specified by --ref, GTZ converts the Fasta
+     to the corresponding binary file and then caches it to the default
+     path, so that when the same Fasta is specified for compression, GTZ
+     can read directly data from cache path, which is relatively fast.
+     default cache path is /home/xuxl/.config/gtz, you can use this
+     parameter to change it
+
+     @ decompress : same as compress
+
+   --donot-pack-ref
+     @ compress : this option is not recommended. By default, when
+     compression uses Fasta, GTZ extracts data from the Fasta and then
+     compresses it to the GTZ file, so that the resulting GTZ file is no
+     longer required Fasta when decompressed. use this option or not, the
+     compression rate has a low impact, but if you use this option, you
+     need to specify the corresponding Fasta when decompressing
+
+     @ decompress : do not use
+
+   --verify
+     @ compress : after data compression, decompress the generated GTZ file
+     again to ensure that the generated GTZ file must be decompressed.
+     Usually it's not necessary, but if it's used for archiving, you can
+     use this parameter.
+
+     @ decompress : do not use
+
+   -l <number>,  --level <number>
+     @ compress : [1-5] is fast compress mode, at present, 1-5 compression
+     algorithm is same, here is for later expansion. 6 is default. [6-9] is
+     best compress level, compression algorithm is also the same, here is
+     for later expansion
+
+     @ decompress : do not use
+
+   -r <string>,  --rbin-path <string>
+     @ compress : do not use
+
+     @ decompress : use only for version less than 2.0.0, mainly for
+     compatibility with older versions. when compression specifies the BIN
+     file, You can use this parameter to specify the corresponding RBIN
+     file or the directory in which the RBIN file is located to
+     decompress.
+
+   -O <string>,  --out-dir <string>
+     @ compress : do not use
+
+     @ decompress : specify the save directory of decompression file
+
+   -f,  --force
+     @ compress : force overwrite of output file
+
+     @ decompress : same as compress
+
+   -c,  --stdout
+     @ compress : do not use
+
+     @ decompress : decompression output to terminal
+
+   -d,  --decompress
+     @ compress : do not use
+
+     @ decompress : specify the GTZ file to decompress
+
+   -p <number>,  --parallel <number>
+     @ compress : specify parallel number, default is CPU logical cores
+
+     @ decompress : same as compress
+
+   -o <string>,  --out <string>
+     @ compress : specify output GTZ file name                 
+
+     @ decompress : do not use
+
+   -e,  --no-keep
+     @ compress : don't keep input files                 
+
+     @ decompress : do not use
+
+   --version
+     Displays version information and exits.
+
+   -h,  --help
+     Displays usage information and exits.
+
+   <file name>
+     input file name
+
+
+   GTX Lab Compressor
 ```  
 
 
@@ -269,64 +335,7 @@ If sample.fq.gtz is not a high compression file, the FASTQ file can be extracted
     
 [-Back to Top-](#index)  
   
---------  
 
-## Rbin Files Download <span id="rbin-download"></span> 
-
-No. | Species | Official Url
-----|-------- | -------------
-1|Homo sapiens|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin
-2|Triticum aestivum|Https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Triticum_aestivum_8e2da4d2c18d5fadd1d3cd0c15e918d0.rbin
-3|Arabidopsis thaliana|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Arabidopsis_thaliana_3dcb9b7a5a8b46c8ebbdbbdb3e0fa233.rbin
-4|Mus musculus|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Mus_musculus_def651daa3884affc85be8a74f7ba67e.rbin
-5|Rattus norvegicus|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Rattus_norvegicus_6cb6204aeddde515414059bcc3f048af.rbin
-6|Oryza sativa Japonica Group|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Oryza_sativa_Japonica_Group_90b8919fd938ce2eb40a83da674d8b3f.rbin
-7|Zea mays|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Zea_mays_898a827cde37664a7c0ac710d79b333f.rbin
-8|Ailuropoda melanoleuca|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Ailuropoda_melanoleuca_9d59370cb06760b671353b20224ec2de.rbin
-9|Apis mellifera|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Apis_mellifera_10a768025aad33307a53bc077b60e4c8.rbin
-10|Bombyx mori|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Bombyx_mori_3ad2e80daa1d88f3339ac968e97f72eb.rbin
-11|Bos taurus|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Bos_taurus_2726c844c35a2576a513a0b578955a70.rbin
-12|Brassica napus|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Brassica_napus_39b086ee1025ab9d96e59639c4ce87f7.rbin
-13|Caenorhabditis elegans|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Caenorhabditis_elegans_2fa2b1575d9e722f076bafcf3b755fed.rbin
-14|Canis lupus familiaris|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Canis_lupus_familiaris_ddd3c39e58079f740ae2d21613f923ba.rbin
-15|Capra hircus|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Capra_hircus_d58b5bac5ee5baf3cb4873be119d86fe.rbin
-16|Capsicum annuum|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Capsicum_annuum_9d1dac11540dbee75ea81868a5c52cc3.rbin
-17|Chlorocebus sabaeus|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Chlorocebus_sabaeus_6c0f80b3ca9404dc83ddffdad72c206b.rbin
-18|Citrus sinensis|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Citrus_sinensis_704f1f26af39ba2e78d562e85ce974c4.rbin
-19|Danio rerio|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Danio_rerio_7b1f24b449248a08ddab86d19b686818.rbin
-20|Drosophila elegans|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Drosophila_elegans_ac9318016d83e7234b35aee177545225.rbin
-21|Felis catus|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Felis_catus_9af1182789a93a7b7c00eb657928a270.rbin
-22|Glycine max|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Glycine_max_8761f4855d9396ff38f5a6201edc6080.rbin
-23|Gossypium hirsutum|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Gossypium_hirsutum_3f2a7ca4b7cc58f57022c24f1cc24094.rbin
-24|Macaca mulatta|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Macaca_mulatta_e75fcb8d26d9a316f1da1983b584b142.rbin
-25|Manihot esculenta|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Manihot_esculenta_45e8f4480f267cf82f51f08af5dd1fa8.rbin
-26|Medicago truncatula|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Medicago_truncatula_4b0ad793b3a8a7bcc1c1bcb0dee5c3c9.rbin
-27|Momordica charantia|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Momordica_charantia_30f2c8beae3bb8d7beb990c522ae454d.rbin
-28|Nicotiana tabacum|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Nicotiana_tabacum_c8d4659974cfc88753b60684aadb9ca3.rbin
-29|Oryctolagus cuniculus|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Oryctolagus_cuniculus_2d37f28080f4caff68fd164c567f18be.rbin
-30|Populus trichocarpa|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Populus_trichocarpa_72f0a29abc20570aa3691445160b584c.rbin
-31|Prunus persica|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Prunus_persica_cb65aac20158fa3e8075963e8ff45cfa.rbin
-32|Raphanus sativus|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Raphanus_sativus_fc9dc14c13511a3cd8ed2377d2c8f472.rbin
-33|Sesamum indicum|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Sesamum_indicum_18e9ca5868589ab3851ee39536577784.rbin
-34|Solanum tuberosum|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Solanum_tuberosum_11117f289d350ac2727d5136941986f0.rbin
-35|Sorghum bicolor|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Sorghum_bicolor_ad3fb597e71a3d3cc1a50606865207a5.rbin
-36|Sus scrofa|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Sus_scrofa_fa17a95f7b8532dfb932210977bebc77.rbin  
-37|Homo sapiens methylation|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Homo_sapiens_meth_d497f0f9f716dff930ae92146c950576.rbin
-38|Mus musculus methylation|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Mus_musculus_meth_42a6bd57204889412125be9111bca783.rbin  
-39|Equus caballus|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Equus_caballus_48fb76cc859b80aff9818361dce3e735.rbin
-40|Gallus gallus|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Gallus_gallus_5a5d9581b4af55381d19b742c518d079.rbin
-41|Egretta garzetta |https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Egretta_garzetta_2a63683b2a15b1cbbb276f80df9f8fd9.rbin
-42|Taeniopygia guttata|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Taeniopygia_guttata_004df52b216ca9306ed56d907128870c.rbin
-43|Anas platyrhynchos|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Anas_platyrhynchos_057b871e6efb3fb37e233dbaf8db8c06.rbin
-44|Brassica pekinensis|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Brassica_pekinensis_47ea766162bb5de4bacaa6bc1cd7a7e2.rbin
-45|Barley|https://gtzdata.oss-cn-hangzhou.aliyuncs.com/Barley_c920837c76a36040560c51f4cca7628a.rbin
-
-**If the species you need is not in our [species list](#rbin-download) , please [contact us](#contact-us) !**    
-  
-    
-[-Back to Top-](#index)  
-  
---------  
 
 ## Ecology Softwares<span id="ecology"></span>  
 - [1、BWA for GTZ](#bwa)  
@@ -1106,7 +1115,7 @@ No. | Species | Official Url
 ## Change Log  
 
 
-Current Latest Version：gtz-1.2.3 [2019/01/24]
+Current Latest Version：gtz-2.0.0 [2019/05/08]
 
 historical version: [-Change Log-](https://github.com/Genetalks/gtz/blob/master/Changelog.md "Markdown")
 
