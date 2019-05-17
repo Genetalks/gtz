@@ -187,6 +187,104 @@ nova_rna_2.fq|5.39%|18.94%
 </tr>
 </table>
 
+### 使用实例
+
+#### 一、压缩fastq/fastq.gz（高倍压缩）
+
+##### 1、默认压缩方式
+
+`gtz /data/nova.fastq.gz --ref /fasta/genomic.fna(.gz)`
+
+--ref参数用于指定nova.fastq.gz对应物种的参考基因组fasta文件，fasta文件也支持gz格式。注意：压缩完成后的文件，解压时不再需要fasta文件
+
+##### 2、指定输出文件名
+
+`gtz /data/nova.fastq.gz --ref /fasta/genomic.fna -o /out/nova.gtz`
+
+-o参数指定输出文件名，注意是小写字母o
+
+##### 3、压缩完成后解压校验
+
+`gtz /data/nova.fastq.gz --ref /fasta/genomic.fna --verify`
+
+数据压缩完成后再解压一次，当压缩后文件用于存档时可以加--verify参数，但是gtz压缩时对每个块都有校验，平时使用不需要加该参数
+
+##### 4、快速压缩
+
+`gtz /data/nova.fastq.gz --ref /fasta/genomic.fna -l 1`
+
+-l参数指定压缩level，1-5是快速压缩模式，目前1-5使用的压缩算法是同一个，这里主要是为了以后的扩展，同样6-9使用的压缩算法也是同一个，也是为了以后的扩展，6目前是默认的压缩级别，即最高压缩算法
+
+##### 5、限定压缩资源
+
+`gtz /data/nova.fastq.gz --ref /fasta/genomic.fna -p 4`
+
+-p参数指定压缩时所使用的线程数，这里-p 4表示整个压缩过程只会使用4个线程，该功能在计算资源不够的时候非常实用
+
+##### 6、修改默认缓存路径
+
+`gtz /data/nova.fastq.gz --ref /fasta/genomic.fna --cache-path /path/cache/`
+
+--cache-path参数可以修改gtz默认缓存路径。当使用了--ref指定了fasta时，gtz会将fasta转换为相应的二进制文件，然后将其缓存到默认路径（/home/user/.config/gtz），以便在下次压缩指定了相同的fasta时，gtz可以直接从缓存路径读取数据，这种处理相对较快。如果有要需要时（譬如/home/user空间不够）可以使用该参数
+
+##### 7、不打包fasta文件
+
+`gtz /data/nova.fastq.gz --ref /fasta/genomic.fna --donot-pack-ref`
+
+使用--donot-pack-ref选项，生成的目标gtz文件会更小，但是解压时需要指定对应的fasta。我们不建议使用这个选项，因为不加这个选项相比加这个选项，压缩率影响很小，但如果使用此选项，则在解压缩时需要指定相应的fasta
+
+### 二、普通压缩
+
+##### 1、 压缩fastq/fastq.gz
+
+`gtz /data/nova.fastq.gz`
+
+不使用--ref指定fasta时，gtz对该fastq文件进行普通压缩，普通压缩压缩率相比高倍压缩大部分情况下会低很多。
+
+##### 2、 压缩非fastq/fastq.gz文件
+
+`gtz /data/test.bam`
+
+gtz可以压缩任何文件
+
+### 三、 解压
+
+##### 1、 解压带fasta压缩的gtz文件，不需要fasta
+
+`gtz -d nova.fastq.gtz`
+
+默认情况下解压带fasta压缩的gtz文件，不需要fasta文件，这是gtz2.0.0的特性
+
+##### 2、 解压带fasta压缩的gtz文件，需要指定fasta
+
+`gtz -d nova.fastq.gtz --ref /fasta/genomic.fna(.gz)`
+
+如果压缩带了fasta，且使用了--donot-pack-ref参数，那么解压时需要指定压缩时所使用的fasta
+
+##### 3、 解压到终端
+
+`gtz -d nova.fastq.gtz -c 2>/dev/null`
+
+-c参数表示解压到终端。2>/dev/null表示将其他打印去除，只打印解压出来的fastq的内容
+
+##### 4、解压到指定路径
+
+`gtz -d nova.fastq.gtz -O /path/out/`
+
+-O参数指定解压文件的输出目录，注意是大小字母O
+
+##### 5、限定解压资源
+
+`gtz -d nova.fastq.gtz -p 4`
+
+-p参数同样适用解压，这里-p 4表示解压时只使用4个线程
+
+##### 6、解压低版本带bin压缩的gtz文件
+
+`gtz -d nova.fastq.old.gtz -r Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin`
+
+-r参数用于兼容比2.0.0低的gtz版本，2.0.0版本可以解压老版本压缩任意gtz文件。当老版本gtz压缩fastq文，使用了-b参数指定了对应的bin文件时，那么2.0.0版本可以用-r指定对应的rbin文件解压老版本的gtz的该文件
+
 
 ### 参数说明
 ```
