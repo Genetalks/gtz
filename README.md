@@ -177,21 +177,21 @@ Reference genome Download: [-GCF_000001405.37_GRCh38.p11_genomic.fna.gz-](https:
 <tr>
 	<td>
 		<h3>high compression rate with fasta, Decompress without using fasta anymore(recommended)</h3>
-		<img src="https://i.loli.net/2019/05/17/5cde62a3492d318537.png" alt=""/>
+		<img src="https://i.loli.net/2019/05/17/5cde6e52e228653046.png" alt=""/>
 	</td>
 <tr>
 <tr>
 <tr>
 	<td>
 		<h3>Higher compression rate, Decompress use the fasta exactly the same as compressing (Note: You and your client must properly store the fasta file for decompression in future)</h3>
-		<img src="https://i.loli.net/2019/05/17/5cde62a35047795989.png" alt="">
+		<img src="https://i.loli.net/2019/05/17/5cde6e52e885555936.png" alt="">
 	</td>
 <tr>
 <tr>
 <tr>
 	<td>
 		<h3>Lower compression rate than above, but can compress arbitrary files</h3>
-		<img src="https://i.loli.net/2019/05/17/5cde62a35e61a46242.png">
+		<img src="https://i.loli.net/2019/05/17/5cde6e530557297295.png">
 	</td>
 </tr>
 </table>
