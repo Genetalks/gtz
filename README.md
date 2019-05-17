@@ -35,8 +35,11 @@ Powered by GTXLab of Genetalks.
 
 ## What is GTX.Zip？<span id="intro"></span>
 
-GTX.Zip(or GTZ for short) is a professional fastq/bam compressor and also can be used as a universal data compression software, developed by GTXLab of Genetalks Inc. GTX.Zip can rapidly compress any DNA sequencing files and directories with very high compression rate, and generate a single compressed data files, thus facilitating the data storage, distribution and transmission. Different from other compression tools, GTX.Zip system focuses on **high compression rate, high speed, and convenient data extraction**. 
-- **[GTX.Zip Professional](#install)** is a stand-alone version which supports local compression service. GTX.Zip Professional runs by command lines for compression and decompression of local genomic data.  
+GTX.Zip (GTZ for short) is a high performance lossless compression tool for
+arbitrary files, and has a particularly high compression rate for genetic data which can
+compress the FASTQ to 2% ( almost 1/6 ~1/8 of fastq.gz ) of the original size even at
+the speed of 1100MB/s for fastq file. GTX.Zip also support to recompress fastq.gz file
+directly.
   
 [-Back to Top-](#index)  
   
@@ -100,32 +103,39 @@ As an enterprise-level software, GTX.Zip has developed a nirvana program for hig
 - **64-bit Linux system (CentOS >= 6.1；Ubuntu >= 12.04， < 18.04)**                                                                                                                            
 - To achieve good performance, the computing server with **32-core 64GB** memory is recommended, or that has the same configuration with the **AWS C4.8xlarge** machine)
   
-## How to Install？<span id="install"></span>  
-- **Way one**
-##### Install directly from the command line (recommended installation method)  
+## Installation method <span id="install"></span>  
+- **Mode 1: Install directly from the command line(recommended installation method)**
 
-If you only want to use it for the current user after installation, perform the 
+##### Install for ALL USERS:
 
-`curl -SL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sh /tmp/gtz.run && source ~/.bashrc`  
+`sudo curl -SL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`  
 
-If you want all users to be able to use it after installation, do 
+Once installed, a GTZ executable and a license file are placed in /usr/local/GTZ directory, GTZ's softlink is created to /usr/bin
 
-`sudo curl -SL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`
+##### Only install for CURRENT USER:
 
+`curl -SL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sh /tmp/gtz.run && source ~/.bashrc`
 
+Once installed, a GTZ executable and a license file are placed in the current user's
+~/.config/GTZ directory, GTZ's alias is added to ~/.bashrc
 
-- **Way two**  
-##### Download the software first then install it 
+- **Mode 2: First download the software and then install it.**  
 
 First download the software from [-GTX.Zip Professional-]( https://gtz.io/gtz_latest.run ).
 
-If you only want to use it for the current user after installation, perform the 
+Commercially authorized users get from contact@gtz.io .
 
-`sh gtz_latest.run && source ~/.bashrc`
+##### Install for ALL USERS:
 
-If you want all users to be able to use it after installation, do 
+`sudo curl -SL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`  
 
-`sudo sh gtz_latest.run`
+Once installed, a GTZ executable and a license file are placed in /usr/local/GTZ directory, GTZ's softlink is created to /usr/bin
+
+##### Only install for CURRENT USER:
+
+`curl -SL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sh /tmp/gtz.run && source ~/.bashrc`
+
+Once installed, a GTZ executable and a license file are placed in the current user's ~/.config/GTZ directory, GTZ's alias is added to ~/.bashrc
 
 - **Verify that the installation was successful**
 
