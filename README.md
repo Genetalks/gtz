@@ -170,7 +170,7 @@ Reference genome Download: [-GCF_000001405.37_GRCh38.p11_genomic.fna.gz-](https:
 
 ## How to use:
 
-### Feature description:
+### Command navigation:
 
 <table style="width:100%">
 <tr>
@@ -195,113 +195,211 @@ Reference genome Download: [-GCF_000001405.37_GRCh38.p11_genomic.fna.gz-](https:
 </tr>
 </table>
 
+### Usage example:
+
+#### 1. Compression fastq/fastq.gz (high-power compression)
+
+##### 1.1 Default compression mode
+
+`gtz /data/nova.fastq.gz --ref /fasta/genomic.fna(.gz)`
+
+The ref parameter is used to specify the reference genome fasta file for the nova.fastq.gz corresponding species, and the fasta file also supports the gz format.Note: After compression, and the fasta file is no longer needed when decompress.
+
+##### 1.2 Specify the output file name
+
+`gtz /data/nova.fastq.gz --ref /fasta/genomic.fna -o /out/nova.gtz`
+
+-o parameter specifies the output file name, note that the lowercase letter o
+
+##### 1.3 Decompression and Check after Compression Completion
+
+`gtz /data/nova.fastq.gz --ref /fasta/genomic.fna --verify`
+
+After the data compression is completed, GTX.Zip will decompress it again to verify data MD5 and ensure that data can be fully restored. When the compressed file is used for archiving, this verify parameter isrecommended to be added. It is not necessary to add this parameter in peacetime.
+
+##### 1.4 Fast compression
+
+`gtz /data/nova.fastq.gz --ref /fasta/genomic.fna -l 1`
+
+-l Parametric specified compression level. 1-5 is a fast compression mode. The current compression algorithm used in 1-5 is the same, here is mainly for future expansion. The same compression algorithm used in 6-9, which is also for future expansion. 6 is the default compression level, that is, the highest compression algorithm.
+
+##### 1.5 Limit compressed threads
+
+`gtz /data/nova.fastq.gz --ref /fasta/genomic.fna -p 4`
+
+-p parameter specifies the number of threads used for compression,Here -p 4 means that only 4 threads will be used in the entire compression process, which is very useful when there are not enough computing resources.
+
+##### 1.6 Modify the default cache path
+
+`gtz /data/nova.fastq.gz --ref /fasta/genomic.fna --cache-path /path/cache/`
+
+When using -- ref to specify fasta, GTZ converts FASTA to the corresponding binary file and caches it to the default path (/ home / user /. config / gtz), so that when the same FASTA is specified for the next compression, GTZ can read data directly from the cache path, which is relatively fast. You can use this parameter if you need it (for example, / home/user does not have enough space)
+
+##### 1.7 Do not package fasta files
+
+`gtz /data/nova.fastq.gz --ref /fasta/genomic.fna --donot-pack-ref`
+
+Using the-donot-pack-ref option, the resulting target gtz file is smaller, but the corresponding fasta needs to be specified when unzipping. We do not recommend using this option because without this option, the compression ratio has little effectcompared to this option, but if you use this option, you need to specify the appropriate fasta when unzipping and you have to ensure the fasta is properly saved in safe disk.
+
+#### 2. Ordinary compression
+
+##### 2.1 compression fastq/fastq.gz
+
+`gtz /data/nova.fastq.gz`
+
+When not using --ref to specify fasta, GTZ compresses the fastq file normally, and the compression rate of common compression is much lower than that of high compression in most cases.
+
+##### 2.2 Compression of non-fastq/fastq.gz files
+
+`gtz /data/test.bam`
+
+GTZ can compress any file
+
+#### 3. Decompression
+
+##### 3.1 Decompress the GTZ file with FASTA compression without FASTA
+
+`gtz -d nova.fastq.gtz`
+
+Unzipping gtz files with fasta compression by default does not require fasta files, which is a feature of gtz2.0.0
+
+##### 3.2 Unzip the gtz file with fasta compression. You need to specify fasta
+
+`gtz -d nova.fastq.gtz --ref /fasta/genomic.fna(.gz)`
+
+If the compression takes fasta, and uses the-donot-pack-ref parameter, you need to specify the fasta to be used when decompressing.
+
+##### 3.3 Decompress to terminal
+
+`gtz -d nova.fastq.gtz -c 2>/dev/null`
+
+-C parameter represents decompression to the terminal. 2>/dev/null means that other prints are removed and only the extracted fastq content is printed.
+
+##### 3.4 Unzip to the specified path
+
+`gtz -d nova.fastq.gtz -O /path/out/`
+
+-O parameter specifies the output directory of the decompressed file. Note that the capital letter O
+
+##### 3.5 Limit decompression threads
+
+`gtz -d nova.fastq.gtz -p 4`
+
+The -P parameter is also suitable for decompression, here the -P 4 means that only four threads are used for decompression.
+
+##### 3.6 Unzip low version gtz files with bin compression
+
+`gtz -d nova.fastq.old.gtz -r Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin`
+
+The -r parameter is used for compatibility with GTZ version, which is lower than 2.0.0. Version 2.0 can compress any GTZ file in the old version. When the old version of GTZ compresses fastq text and uses the -b parameter to specify the corresponding bin file, then version 2.0.0 can use - r to specify the corresponding RBIN file to decompress the old version of GTZ file.
+
 ### Parameter description:
 ```  
-   --ref <string>
-     @ compress : specifies Fasta corresponding to the compressed file,
-     which results in a higher compression rate
+--ref <string>
+	@ compress : specifies Fasta corresponding to the compressed file,
+	which results in a higher compression rate
 
-     @ decompress : if compression uses Fasta and parameter
-     --donot-pack-ref is used, the corresponding Fasta needs to be
-     specified by this parameter when decompressing
+	@ decompress : if compression uses Fasta and parameter
+	--donot-pack-ref is used, the corresponding Fasta needs to be
+	specified by this parameter when decompressing
 
-   -z,  --fastq-to-fastq-gz
-     @ compress : do not use
+-z,  --fastq-to-fastq-gz
+	@ compress : do not use
 
-     @ decompress : decompress fastq to fastq.gz, it's valid only for
-     FASTQ
+	@ decompress : decompress fastq to fastq.gz, it's valid only for
+	FASTQ
 
-   --cache-path <string>
-     @ compress : when Fasta is specified by --ref, GTZ converts the Fasta
-     to the corresponding binary file and then caches it to the default
-     path, so that when the same Fasta is specified for compression, GTZ
-     can read directly data from cache path, which is relatively fast.
-     default cache path is /home/xuxl/.config/gtz, you can use this
-     parameter to change it
+--cache-path <string>
+	@ compress : when Fasta is specified by --ref, GTZ converts the Fasta
+	to the corresponding binary file and then caches it to the default
+	path, so that when the same Fasta is specified for compression, GTZ
+	can read directly data from cache path, which is relatively fast.
+	default cache path is /home/xuxl/.config/gtz, you can use this
+	parameter to change it
 
-     @ decompress : same as compress
+	@ decompress : same as compress
 
-   --donot-pack-ref
-     @ compress : this option is not recommended. By default, when
-     compression uses Fasta, GTZ extracts data from the Fasta and then
-     compresses it to the GTZ file, so that the resulting GTZ file is no
-     longer required Fasta when decompressed. use this option or not, the
-     compression rate has a low impact, but if you use this option, you
-     need to specify the corresponding Fasta when decompressing
+--donot-pack-ref
+@ compress : this option is not recommended. By default, when
+compression uses Fasta, GTZ extracts data from the Fasta and then
+compresses it to the GTZ file, so that the resulting GTZ file is no
+longer required Fasta when decompressed. use this option or not, the
+compression rate has a low impact, but if you use this option, you
+need to specify the corresponding Fasta when decompressing
 
-     @ decompress : do not use
+@ decompress : do not use
 
-   --verify
-     @ compress : after data compression, decompress the generated GTZ file
-     again to ensure that the generated GTZ file must be decompressed.
-     Usually it's not necessary, but if it's used for archiving, you can
-     use this parameter.
+--verify
+@ compress : after data compression, decompress the generated GTZ file
+again to ensure that the generated GTZ file must be decompressed.
+Usually it's not necessary, but if it's used for archiving, you can
+use this parameter.
 
-     @ decompress : do not use
+@ decompress : do not use
 
-   -l <number>,  --level <number>
-     @ compress : [1-5] is fast compress mode, at present, 1-5 compression
-     algorithm is same, here is for later expansion. 6 is default. [6-9] is
-     best compress level, compression algorithm is also the same, here is
-     for later expansion
+-l <number>,  --level <number>
+@ compress : [1-5] is fast compress mode, at present, 1-5 compression
+algorithm is same, here is for later expansion. 6 is default. [6-9] is
+best compress level, compression algorithm is also the same, here is
+for later expansion
 
-     @ decompress : do not use
+@ decompress : do not use
 
-   -r <string>,  --rbin-path <string>
-     @ compress : do not use
+-r <string>,  --rbin-path <string>
+@ compress : do not use
 
-     @ decompress : use only for version less than 2.0.0, mainly for
-     compatibility with older versions. when compression specifies the BIN
-     file, You can use this parameter to specify the corresponding RBIN
-     file or the directory in which the RBIN file is located to
-     decompress.
+@ decompress : use only for version less than 2.0.0, mainly for
+compatibility with older versions. when compression specifies the BIN
+file, You can use this parameter to specify the corresponding RBIN
+file or the directory in which the RBIN file is located to
+decompress.
 
-   -O <string>,  --out-dir <string>
-     @ compress : do not use
+-O <string>,  --out-dir <string>
+@ compress : do not use
 
-     @ decompress : specify the save directory of decompression file
+@ decompress : specify the save directory of decompression file
 
-   -f,  --force
-     @ compress : force overwrite of output file
+-f,  --force
+@ compress : force overwrite of output file
 
-     @ decompress : same as compress
+@ decompress : same as compress
 
-   -c,  --stdout
-     @ compress : do not use
+-c,  --stdout
+@ compress : do not use
 
-     @ decompress : decompression output to terminal
+@ decompress : decompression output to terminal
 
-   -d,  --decompress
-     @ compress : do not use
+-d,  --decompress
+@ compress : do not use
 
-     @ decompress : specify the GTZ file to decompress
+@ decompress : specify the GTZ file to decompress
 
-   -p <number>,  --parallel <number>
-     @ compress : specify parallel number, default is CPU logical cores
+-p <number>,  --parallel <number>
+@ compress : specify parallel number, default is CPU logical cores
 
-     @ decompress : same as compress
+@ decompress : same as compress
 
-   -o <string>,  --out <string>
-     @ compress : specify output GTZ file name                 
+-o <string>,  --out <string>
+@ compress : specify output GTZ file name                 
 
-     @ decompress : do not use
+@ decompress : do not use
 
-   -e,  --no-keep
-     @ compress : don't keep input files                 
+-e,  --no-keep
+@ compress : don't keep input files                 
 
-     @ decompress : do not use
+@ decompress : do not use
 
-   --version
-     Displays version information and exits.
+--version
+Displays version information and exits.
 
-   -h,  --help
-     Displays usage information and exits.
+-h,  --help
+Displays usage information and exits.
 
-   <file name>
-     input file name
+<file name>
+input file name
 
 
-   GTX Lab Compressor
+GTX Lab Compressor
 ```  
     
 [-Back to Top-](#index)  
