@@ -103,7 +103,8 @@ As an enterprise-level software, GTX.Zip has developed a nirvana program for hig
 - **64-bit Linux system (CentOS >= 6.1；Ubuntu >= 12.04， < 18.04)**                                                                                                                            
 - To achieve good performance, the computing server with **32-core 64GB** memory is recommended, or that has the same configuration with the **AWS C4.8xlarge** machine)
   
-## Installation method <span id="install"></span>  
+## How to Install <span id="install"></span>  
+
 - **Mode 1: Install directly from the command line(recommended installation method)**
 
 ##### Install for ALL USERS:
@@ -174,19 +175,22 @@ Reference genome Download: [-GCF_000001405.37_GRCh38.p11_genomic.fna.gz-](https:
 <table style="width:100%">
 <tr>
 	<td>
-		<img src="https://i.loli.net/2019/05/07/5cd14cc9ba4cb.png">
+		<h3>high compression rate with fasta, Decompress without using fasta anymore(recommended)</h3>
+		<img src="https://i.loli.net/2019/05/17/5cde62a3492d318537.png" alt=""/>
 	</td>
 <tr>
 <tr>
 <tr>
 	<td>
-		<img src="https://i.loli.net/2019/05/07/5cd14cc9e6f08.png">
+		<h3>Higher compression rate, Decompress use the fasta exactly the same as compressing (Note: You and your client must properly store the fasta file for decompression in future)</h3>
+		<img src="https://i.loli.net/2019/05/17/5cde62a35047795989.png" alt="">
 	</td>
 <tr>
 <tr>
 <tr>
 	<td>
-		<img src="https://i.loli.net/2019/05/07/5cd14cc9dabac.png">
+		<h3>Lower compression rate than above, but can compress arbitrary files</h3>
+		<img src="https://i.loli.net/2019/05/17/5cde62a35e61a46242.png">
 	</td>
 </tr>
 </table>
