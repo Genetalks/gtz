@@ -26,6 +26,7 @@ Powered by GTXLab of Genetalks.
 - [Environment Requirements](#environment)  
 - [How to Install?](#install)
 - [Let's Do It!](#quick-start)
+- [How to use?](#use)
 - [Usage](#usage)
 - [GTZ Ecology Softwares](#ecology)  
 - [Change Log](#change-log) 
@@ -168,7 +169,7 @@ Reference genome Download: [-GCF_000001405.37_GRCh38.p11_genomic.fna.gz-](https:
 `gtz -d sample.fq.gtz`
 
 
-## How to use:
+## How to use <span id="use"></span>	
 
 ### Command navigation:
 
@@ -320,84 +321,83 @@ The -r parameter is used for compatibility with GTZ version, which is lower than
 	@ decompress : same as compress
 
 --donot-pack-ref
-@ compress : this option is not recommended. By default, when
-compression uses Fasta, GTZ extracts data from the Fasta and then
-compresses it to the GTZ file, so that the resulting GTZ file is no
-longer required Fasta when decompressed. use this option or not, the
-compression rate has a low impact, but if you use this option, you
-need to specify the corresponding Fasta when decompressing
+	@ compress : this option is not recommended. By default, when
+	compression uses Fasta, GTZ extracts data from the Fasta and then
+	compresses it to the GTZ file, so that the resulting GTZ file is no
+	longer required Fasta when decompressed. use this option or not, the
+	compression rate has a low impact, but if you use this option, you
+	need to specify the corresponding Fasta when decompressing
 
-@ decompress : do not use
+	@ decompress : do not use
 
 --verify
-@ compress : after data compression, decompress the generated GTZ file
-again to ensure that the generated GTZ file must be decompressed.
-Usually it's not necessary, but if it's used for archiving, you can
-use this parameter.
+	@ compress : after data compression, decompress the generated GTZ file
+	again to ensure that the generated GTZ file must be decompressed.
+	Usually it's not necessary, but if it's used for archiving, you can
+	use this parameter.
 
-@ decompress : do not use
+	@ decompress : do not use
 
 -l <number>,  --level <number>
-@ compress : [1-5] is fast compress mode, at present, 1-5 compression
-algorithm is same, here is for later expansion. 6 is default. [6-9] is
-best compress level, compression algorithm is also the same, here is
-for later expansion
+	@ compress : [1-5] is fast compress mode, at present, 1-5 compression
+	algorithm is same, here is for later expansion. 6 is default. [6-9] is
+	best compress level, compression algorithm is also the same, here is
+	for later expansion
 
-@ decompress : do not use
+	@ decompress : do not use
 
 -r <string>,  --rbin-path <string>
-@ compress : do not use
+	@ compress : do not use
 
-@ decompress : use only for version less than 2.0.0, mainly for
-compatibility with older versions. when compression specifies the BIN
-file, You can use this parameter to specify the corresponding RBIN
-file or the directory in which the RBIN file is located to
-decompress.
+	@ decompress : use only for version less than 2.0.0, mainly for
+	compatibility with older versions. when compression specifies the BIN
+	file, You can use this parameter to specify the corresponding RBIN
+	file or the directory in which the RBIN file is located to
+	decompress.
 
 -O <string>,  --out-dir <string>
-@ compress : do not use
+	@ compress : do not use
 
-@ decompress : specify the save directory of decompression file
+	@ decompress : specify the save directory of decompression file
 
 -f,  --force
-@ compress : force overwrite of output file
+	@ compress : force overwrite of output file
 
-@ decompress : same as compress
+	@ decompress : same as compress
 
 -c,  --stdout
-@ compress : do not use
+	@ compress : do not use
 
-@ decompress : decompression output to terminal
+	@ decompress : decompression output to terminal
 
 -d,  --decompress
-@ compress : do not use
+	@ compress : do not use
 
-@ decompress : specify the GTZ file to decompress
+	@ decompress : specify the GTZ file to decompress
 
 -p <number>,  --parallel <number>
-@ compress : specify parallel number, default is CPU logical cores
+	@ compress : specify parallel number, default is CPU logical cores
 
-@ decompress : same as compress
+	@ decompress : same as compress
 
 -o <string>,  --out <string>
-@ compress : specify output GTZ file name                 
+	@ compress : specify output GTZ file name                 
 
-@ decompress : do not use
+	@ decompress : do not use
 
 -e,  --no-keep
-@ compress : don't keep input files                 
+	@ compress : don't keep input files                 
 
-@ decompress : do not use
+	@ decompress : do not use
 
 --version
-Displays version information and exits.
+	Displays version information and exits.
 
 -h,  --help
-Displays usage information and exits.
+	Displays usage information and exits.
 
 <file name>
-input file name
-
+	input file name
 
 GTX Lab Compressor
 ```  
