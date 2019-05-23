@@ -1,3 +1,7 @@
+## gtz-2.0.1 [2019/05/23]
+
+fix: in one special case, GTZ processing data may be problematic
+
 ## gtz-2.0.0 [2019/05/08]
 1. No longer need to make bin, direct use --ref designated species Fasta (fast)
 
