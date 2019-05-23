@@ -1,4 +1,4 @@
-# GTX.Zip Professional Version（最新版本 GTZ 2.0.0）
+# GTX.Zip Professional Version（最新版本 GTZ 2.0.1）
 
 <table style="width:100%">
 <tr>
@@ -1133,7 +1133,7 @@ gtz可以压缩任何文件
   
 ## 版本日志<span id="change-log"></span>
 
-目前最新版本：gtz-2.0.0 [2019/05/08]
+目前最新版本：gtz-2.0.1 [2019/05/23]
 
 历史版本见：	[-版本日志-](https://github.com/Genetalks/gtz/blob/master/Changelog_chs.md "Markdown")
   
