@@ -1124,7 +1124,163 @@ gtz可以压缩任何文件
 
 ## 解压sdk<span id="decompress-sdk"></span>
 
-### 待更新
+### 注意：目前解压SDK均是beta版本，欢迎大家试用！！
+
+- [1、decompress sdk for perl (beta)](#sdk-perl)
+- [2、decompress sdk for python (beta)](#sdk-python)
+- [3、decompress sdk for R (beta)](#sdk-r)
+- [4、decompress sdk for c (beta)](#sdk-c)
+- [5、decompress sdk for java (beta)](#sdk-java)
+
+## 1、decompress sdk for perl (beta) <span id="sdk-perl"></span>
+
+- **安装方法**
+
+`curl -SL https://gtz.io/sdk/gtz_perl_sdk-2.0.1.beta-linux-x86_64.tar.gz -o gtz_perl_sdk-2.0.1.beta-linux-x86_64.tar.gz`
+
+`tar -xvf gtz_perl_sdk-2.0.1.beta-linux-x86_64.tar.gz`
+
+`cd gtz_perl_sdk-2.0.1.beta-linux-x86_64`
+
+`# 拷贝gtz_api.h到/usr/include，拷贝libgtz.so到/usr/lib或者/usr/lib64(centos)`
+
+`sudo make install`
+
+`cd ./IO-GTZ`
+
+`# 如果没有安装perl的ExtUtils::MakeMaker模块,请先执行cpan install ExtUtils::MakeMaker命令安装`
+
+`perl Makefile.PL`
+
+`make`
+
+`sudo make install`
+
+
+- **校验安装**
+
+`cd gtz_perl_sdk-2.0.1.beta-linux-x86_64`
+
+`perl example.pl`
+
+如果能正常显示fastq内容，说明安装成功，在自己流程中要使用perl sdk时，可以参考example.pl内容
+
+- **运行环境**
+
+perl >= 5.09
+
+
+## 2、decompress sdk for python (beta) <span id="sdk-python"></span>
+
+- **安装方法**
+
+`curl -SL https://gtz.io/sdk/gtz_python_sdk-2.0.1.beta-linux-x86_64.tar.gz -o gtz_python_sdk-2.0.1.beta-linux-x86_64.tar.gz`
+
+`tar -xvf gtz_python_sdk-2.0.1.beta-linux-x86_64.tar.gz`
+
+`cd gtz_python_sdk-2.0.1.beta-linux-x86_64`
+
+#### python2
+`sudo pip install gtz-2.0.1-py2-none-any.whl`
+
+#### python3
+`sudo pip3 install gtz-2.0.1-py3-none-any.whl`
+
+- **校验安装**
+
+`cd gtz_python_sdk-2.0.1.beta-linux-x86_64`
+
+`python example.py`
+
+如果能正常显示fastq内容，说明安装成功，在自己流程中要使用python sdk时，可以参考example.py内容
+
+- **运行环境**
+
+python2 >= 2.6, python3 >=3.5
+
+## 3、decompress sdk for R (beta) <span id="sdk-r"></span>
+
+- **安装方法**
+
+`curl -SL https://gtz.io/sdk/gtz_r_sdk-2.0.1.beta-linux-x86_64.tar.gz -o gtz_r_sdk-2.0.1.beta-linux-x86_64.tar.gz`
+
+`tar -xvf gtz_r_sdk-2.0.1.beta-linux-x86_64.tar.gz`
+
+`cd gtz_r_sdk-2.0.1.beta-linux-x86_64`
+
+`# 拷贝gtz_api.h到/usr/include，拷贝libgtz.so到/usr/lib或者/usr/lib64(centos)`
+
+`sudo make install`
+
+`# 安装R Rcpp包`
+
+`R -e "install.packages(\"Rcpp\", repos=\"https://mirrors.tuna.tsinghua.edu.cn/CRAN/\")"`
+
+`R CMD INSTALL --preclean gtz`
+
+
+- **校验安装**
+
+`cd gtz_r_sdk-2.0.1.beta-linux-x86_64`
+
+`Rscript ./example.r`
+
+
+如果能正常显示fastq内容，说明安装成功，在自己流程中要使用r sdk时，可以参考example.r内容
+
+## 4、decompress sdk for c (beta) <span id="sdk-c"></span>
+
+- **安装方法**
+
+`curl -SL https://gtz.io/sdk/gtz_c_sdk-2.0.1.beta-linux-x86_64.tar.gz -o gtz_c_sdk-2.0.1.beta-linux-x86_64.tar.gz`
+
+`tar -xvf gtz_c_sdk-2.0.1.beta-linux-x86_64.tar.gz`
+
+`cd gtz_c_sdk-2.0.1.beta-linux-x86_64`
+
+`sudo make install`
+
+
+- **校验安装**
+
+`cd gtz_c_sdk-2.0.1.beta-linux-x86_64`
+
+`make example`
+
+`./example`
+
+如果能正常显示fastq内容，说明安装成功，在自己流程中要使用c sdk时，可以参考example.c内容
+
+- **运行环境**
+
+## 5、decompress sdk for java (beta) <span id="sdk-java"></span>
+
+- **安装方法**
+
+`curl -SL https://gtz.io/sdk/gtz_java_sdk-2.0.1.beta-linux-x86_64.tar.gz -o gtz_java_sdk-2.0.1.beta-linux-x86_64.tar.gz`
+
+`tar -xvf gtz_java_sdk-2.0.1.beta-linux-x86_64.tar.gz`
+
+`cd gtz_java_sdk-2.0.1.beta-linux-x86_64`
+
+#### 步骤一：
+
+首先将libgtzjava.so拷贝到java.path.library所指向的路径
+
+#### 步骤二：
+
+将io文件夹拷贝到工程目录，或者将gtz_sdk.tar拷贝到工程目录
+
+
+- **校验安装**
+
+`cd gtz_java_sdk-2.0.1.beta-linux-x86_64`
+
+`javac example.java`
+
+`java example`
+
+如果能正常显示fastq内容，说明安装成功，在自己流程中要使用java sdk时，可以参考example.java内容
 
 [-回顶-](#index)  
 
