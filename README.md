@@ -143,7 +143,7 @@ Once installed, a GTZ executable and a license file are placed in the current us
 
 Running the following command, the corresponding software version information appears, indicates that the installation was successful  
 
-`gtz -v`      
+`gtz --version`      
 	  
 	    
 [-Back to Top-](#index)  
