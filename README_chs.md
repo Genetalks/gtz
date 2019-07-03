@@ -358,7 +358,7 @@ gtz可以压缩任何文件
 - [12、WTDBG2 for GTZ](#wtdbg2)
 
 
-## 1、BWA for GTZ <span id="bwa"></span>  
+## 1、BWA for GTZ <span id="bwa"></span>  (目前只支持版本号小于2.x.x的gtz压缩包)
 
 - **安装方法**
 
@@ -434,7 +434,7 @@ gtz可以压缩任何文件
  	时间消耗|50m14.06s|51m37.67s|39m18.86s
 	内存消耗|5.888G|10.56G|19.84G
 	
-## 2、BCL2FASTQ for GTZ <span id="bcl2fastq"></span>
+## 2、BCL2FASTQ for GTZ <span id="bcl2fastq"></span>　(目前只支持版本号小于2.x.x的gtz压缩包)
 
 - **安装方法**
     
@@ -504,7 +504,7 @@ gtz可以压缩任何文件
 	
 	
 	
-## 3、STAR for GTZ <span id="star"></span> 
+## 3、STAR for GTZ <span id="star"></span> (目前只支持版本号小于2.x.x的gtz压缩包)
 
   官网STAR直接支持GTZ格式，在安装gtz和STAR之后，
  
@@ -533,7 +533,7 @@ gtz可以压缩任何文件
     >  <font size=1>\* 该例子中通过-r指定rbin文件所在目录，效果与方式一相同</font>
 
 	
-## 4、BOWTIE for GTZ <span id="bowtie"></span>  
+## 4、BOWTIE for GTZ <span id="bowtie"></span>  (目前只支持版本号小于2.x.x的gtz压缩包)
 
 - **安装方法**
 
@@ -576,7 +576,7 @@ gtz可以压缩任何文件
 
  	
  	
-## 5、BOWTIE2 for GTZ <span id="bowtie2"></span>  
+## 5、BOWTIE2 for GTZ <span id="bowtie2"></span>  (目前只支持版本号小于2.x.x的gtz压缩包)
 
 - **安装方法**
 
@@ -639,7 +639,7 @@ gtz可以压缩任何文件
  	时间消耗|63m41.06s|61m56.67s
 	
  
-## 6、TOPHAT for GTZ <span id="tophat"></span>  
+## 6、TOPHAT for GTZ <span id="tophat"></span>  (目前只支持版本号小于2.x.x的gtz压缩包)
 
 - **安装方法**
 
@@ -700,7 +700,7 @@ gtz可以压缩任何文件
 	:---:|:---:|:--:
  	时间消耗|133m12.61s|134m43.02s
 	
-## 7、HISAT2 for GTZ <span id="hisat2"></span> 
+## 7、HISAT2 for GTZ <span id="hisat2"></span> (目前只支持版本号小于2.x.x的gtz压缩包)
 
 - **安装方法**
 
@@ -777,7 +777,7 @@ gtz可以压缩任何文件
  	时间消耗|8m25.845s|10m47.930s	
 	
 	
-## 8、MEGAHIT for GTZ <span id="megahit"></span>  
+## 8、MEGAHIT for GTZ <span id="megahit"></span>  (目前只支持版本号小于2.x.x的gtz压缩包)
 
 - **安装方法**
 
@@ -836,7 +836,7 @@ gtz可以压缩任何文件
 	:---:|:---:|:--:
  	时间消耗|67m38.381s|66m44.151s
 	
-## 9、FASTQC for GTZ <span id="fastqc"></span> 
+## 9、FASTQC for GTZ <span id="fastqc"></span> (目前只支持版本号小于2.x.x的gtz压缩包)
 
 - **安装方法**
 
@@ -888,7 +888,7 @@ gtz可以压缩任何文件
 	>  <font size=1>\* 该例子中通过环境变量GTZ_RBIN_PATH指定了rbin文件所在路径，这里"export GTZ_RBIN_PATH=/path/rbin/"不是必须的，但如果您知道rbin所在路径，建议您指定，这样可以加快fastqc-gtz处理速度。因为，当fastqc-gtz需要rbin文件，且在默认路径~/.config/gtz下找不到该rbin文件时，则会通过网络下载，下载过程将消耗时间。</font>
 	
 	
-## 10、FASTP for GTZ <span id="fastp"></span>
+## 10、FASTP for GTZ <span id="fastp"></span>　(目前只支持版本号小于2.x.x的gtz压缩包)
 
 - **安装方法**
     
@@ -1009,7 +1009,7 @@ gtz可以压缩任何文件
 
 	fastp输出文件out.R1.fq.gz和out.R2.fq.gz总大小为3.3G， fastp-gtz输出文件out.R1.fq.gtz和out.R2.fq.gtz总大小为1G
 	
-## 11、MINIMAP2 for GTZ <span id="minimap2"></span>
+## 11、MINIMAP2 for GTZ <span id="minimap2"></span>　(目前只支持版本号小于2.x.x的gtz压缩包)
 
 - **安装方法**
     
@@ -1071,7 +1071,7 @@ gtz可以压缩任何文件
 	:---:|:---:|:--:
  	时间消耗|2m57s|3m57.151s
 	
-## 12、WTDBG2 for GTZ <span id="wtdbg2"></span>
+## 12、WTDBG2 for GTZ <span id="wtdbg2"></span>　(目前只支持版本号小于2.x.x的gtz压缩包)
 
 - **安装方法**
     
