@@ -421,7 +421,7 @@ GTX Lab Compressor
 - [12、WTDBG2 for GTZ](#wtdbg2)
 
 
-## 1、BWA for GTZ <span id="bwa"></span>  
+## 1、BWA for GTZ <span id="bwa"></span> (support gtz version < 2.x.x)  
 
 - **How to Install?**
 
@@ -498,7 +498,7 @@ GTX Lab Compressor
  	Time consumption|50m14.06s|51m37.67s|39m18.86s
 	Memory consumption|5.888G|10.56G|19.84G
 	
-## 2、BCL2FASTQ for GTZ <span id="bcl2fastq"></span>
+## 2、BCL2FASTQ for GTZ <span id="bcl2fastq"></span> (support gtz version < 2.x.x)
 
 - **How to Install?**
     
@@ -566,7 +566,7 @@ GTX Lab Compressor
 
 	bcl2fastq output destination folder total size 40G，bcl2fastq-gtz output destination folder total size 16G
 	
-## 3、STAR for GTZ <span id="star"></span> 
+## 3、STAR for GTZ <span id="star"></span>  (support gtz version < 2.x.x)
 
   The official website STAR directly supports the GTZ format, after the installation of GTZ and STAR,
 
@@ -598,7 +598,7 @@ GTX Lab Compressor
 
     >  <font size=1>\* In this example, the directory where the RBIN file is located is specified by -r, it's same as method one.</font>
 
-## 4、BOWTIE for GTZ <span id="bowtie"></span>  
+## 4、BOWTIE for GTZ <span id="bowtie"></span>  (support gtz version < 2.x.x)
 
 - **How to Install?**
 
@@ -643,7 +643,7 @@ GTX Lab Compressor
 
 	
  	
-## 5、BOWTIE2 for GTZ <span id="bowtie2"></span>  
+## 5、BOWTIE2 for GTZ <span id="bowtie2"></span>  (support gtz version < 2.x.x)
 
 - **How to Install?**
 
@@ -708,7 +708,7 @@ GTX Lab Compressor
  	Time consumption|63m41.06s|61m56.67s
 	
 	
-## 6、TOPHAT for GTZ <span id="tophat"></span>  
+## 6、TOPHAT for GTZ <span id="tophat"></span>  (support gtz version < 2.x.x)
 
 - **How to Install?**
 
@@ -770,7 +770,7 @@ GTX Lab Compressor
 	:---:|:---:|:--:
  	Time consumption|133m12.61s|134m43.02s
 	
-## 7、HISAT2 for GTZ <span id="hisat2"></span>  
+## 7、HISAT2 for GTZ <span id="hisat2"></span>  (support gtz version < 2.x.x)
 - **How to Install?**
     
     ##### Mode one: Install to the current user, no sudo permissions required
@@ -844,7 +844,7 @@ GTX Lab Compressor
  	Time consumption|8m25.845s|10m47.930s
 	
 	
-## 8、MEGAHIT for GTZ <span id="megahit"></span>  
+## 8、MEGAHIT for GTZ <span id="megahit"></span>  (support gtz version < 2.x.x)
 
 - **How to Install?**
 
@@ -903,7 +903,7 @@ GTX Lab Compressor
 	:---:|:---:|:--:
  	Time consumption|67m38.381s|66m44.151s
 	
-## 9、FASTQC for GTZ <span id="fastqc"></span>  
+## 9、FASTQC for GTZ <span id="fastqc"></span>  (support gtz version < 2.x.x)
 - **How to Install?**
 
     ##### Mode one: Install to the current user, no sudo permissions required
@@ -951,7 +951,7 @@ GTX Lab Compressor
 	>  <font size=1>\* In this example, the path of the RBIN file is specified by the environment variable GTZ_RBIN_PATH, where "export GTZ_RBIN_PATH=/path/rbin/" is not necessary, but if you know the path of rbin, you are advised to specify it, which can speed up the processing of fastqc-gtz. Because when fastqc-gtz needs RBIN file and cannot find the RBIN file under the default path ~/.config/gtz, it will be downloaded through the network, which will consume time.</font>
     
   
-## 10、FASTP for GTZ <span id="fastp"></span>
+## 10、FASTP for GTZ <span id="fastp"></span> (support gtz version < 2.x.x)
 
 - **How to Install?**
     
@@ -1072,7 +1072,7 @@ GTX Lab Compressor
 
 	fastp total output file size of R1.fq.gz and out.R2.fq.gz is 3.3G, and the fastp-gtz total output file size of R1.fq.gtz and out.R2.fq.gtz is 1G
 	
-## 11、MINIMAP2 for GTZ <span id="minimap2"></span>
+## 11、MINIMAP2 for GTZ <span id="minimap2"></span> (support gtz version < 2.x.x)
 
 - **How to Install?**
     
@@ -1133,7 +1133,7 @@ GTX Lab Compressor
  	Time consumption|2m57s|3m57.151s
 	
 	
-## 12、WTDBG2 for GTZ <span id="wtdbg2"></span>
+## 12、WTDBG2 for GTZ <span id="wtdbg2"></span> (support gtz version < 2.x.x)
 - **How to Install?**
     
     ##### Mode one: Install to the current user, no sudo permissions required
