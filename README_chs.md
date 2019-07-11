@@ -401,7 +401,7 @@ gtz可以压缩任何文件
 
 	#### bwa-gtz
 	
-	##### 步骤一：如果解压不需要reference则该步骤跳过，否则通过以下方式指定对应reference
+	##### 步骤一：如果解压gtz不需要reference则该步骤跳过，否则通过以下方式指定对应reference
 	
 	`export GTZ_RBIN_PATH=/path/rbin/`          适用于gtx1.x.x版本，指定解压时rbin文件所在路径
 	
@@ -944,30 +944,33 @@ gtz可以压缩任何文件
 
 	输出gtz格式:  
 	
-	`fastp-gtz -i in.fq -o out.fq.gtz --bin_file in.fq.species.bin`
+	`fastp-gtz -i in.fq -o out.fq.gtz --ref in.fq.species.fasta`
 
 	输出非gtz格式: 
 	
 	`fastp-gtz -i in.fq -o out.fq`
 
-	关于--bin_file使用可以参考下面的章节说明
+	关于--ref使用可以参考下面的章节说明
     
     #### 2. 输入是gtz格式
     
 	示例：
 
-	export GTZ_RBIN_PATH=/path/rbin/
+	##### 步骤一：如果解压in.R1.fq.gtz和in.R2.fq.gtz不需要reference则该步骤跳过，否则通过以下方式指定对应reference
 
-	fastp-gtz -i in.R1.fq.gtz -I in.R2.fq.gtz -o out.R1.fq.gtz -O out.R2.fq.gtz --bin_file in.fq.species.bin
+	`export GTZ_RBIN_PATH=/path/rbin/` （适用于gtx1.x.x版本，指定解压时rbin文件所在路径，建议指定；但不是必须的，没指定时gtz会自动下载，会消耗一定的时间）
+
+	`export GTZ_RBIN_PATH=/path/fasta/xxx.fa`  （适用于gtx2.x.x版本，指定解压时对应的fasta文件，必须）
+
+	##### 步骤二：执行分析
+
+	fastp-gtz -i in.R1.fq.gtz -I in.R2.fq.gtz -o out.R1.fq.gtz -O out.R2.fq.gtz --ref in.fq.species.fasta
 
 
 	命令说明：
-
-	1) export GTZ_RBIN_PATH=/path/rbin/
-	  该环境变量建议设定，但不是必须的，用于在读入文件为高倍率压缩的GTZ文件时，指定rbin文件的搜索路径，详细可阅读工作原理
-
-	2) --bin_file
-	  该参数建议指定，但不是必须的，用于指定双端读入文件所属物种对应的BIN文件，指定时fastp-gtz会高倍率压缩输出结果文件，详细可阅读工作原理
+	
+	-ref
+	  该参数建议指定，但不是必须的，用于指定双端读入文件所属物种对应的fasta文件，指定时fastp-gtz会高倍率压缩输出结果文件，详细可阅读工作原理
 
 
   ###### 工作原理：
@@ -979,7 +982,7 @@ gtz可以压缩任何文件
 	说明：
 	##### 1) 过程B
 
-	   如果过程A中in.gtz是高倍率压缩文件，则过程B需要对应的rbin文件， 这时有两种工作方式：
+	   ###### 如果过程A中in.gtz是gtz 1.x.x的高倍率压缩文件版本，则过程B需要对应的rbin文件， 这时有两种工作方式：
 	   方式一： 
 	       您本地有该rbin文件，并通过以下环境变量指定了该文件所在路径:    
 	       
@@ -987,6 +990,15 @@ gtz可以压缩任何文件
 	       那么程序会使用本地的rbin文件完成步骤B
 	   方式二：
 	       您本地没有该rbin文件，或者有但没有通过环境变量指定，这种情形下程序会自动从网络下载该rbin，当然该过程将消耗一定的时间
+	       
+	   ###### 如果过程A中in.gtz是gtz 2.x.x的高倍率压缩文件版本，则过程B也有两种工作方式：
+	   方式一:
+	   　　in.gtz的生成使用了--donot-pack-ref，那么过程B需要通过以下环境变量指定压缩时所使用的fasta文件:
+	     
+	     	export GTZ_RBIN_PATH=/path/fasta/xxx.fa
+	   方式二：
+	       in.gtz的生成没有使用了--donot-pack-ref，那么过程B不需要额外的参数
+	       
 
 	##### 2) 过程C
 
@@ -995,11 +1007,9 @@ gtz可以压缩任何文件
 	##### 3) 过程D
 
 	   方式一：
-	       没有通过--bin_file指定bin文件
-	       fastp-gtz会根据~/.config/gtz/路径下的bin和rec文件，自动识别in.R1.fq.gtz和in.R2.fq.gtz分别属于哪个物种，然后使用对应物种的bin文件做压缩，自动识别过程将消耗一定的时间。
-	       当然，如果~/.config/gtz/下没有bin和rec或者没有识别出物种信息，则采用普通压缩
+	       没有通过--ref指定fasta文，那么out.R1.fq.gtz和out.R2.fq.gtz的生成均采用普通压缩
 	   方式二：
-	       通过--bin_file指定了bin文件，则fastp-gtz采用该bin文件直接做高倍率压缩
+	   　　通过--ref指定了fasta文件，则fastp-gtz采用高倍率压缩输出out.R1.fq.gtz和out.R2.fq.gtz
            
         
 - **性能**
