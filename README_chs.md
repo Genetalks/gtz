@@ -358,18 +358,31 @@ gtz可以压缩任何文件
 - [12、WTDBG2 for GTZ](#wtdbg2)
 
 
-## 1、BWA for GTZ <span id="bwa"></span>  (目前只支持版本号小于2.x.x的gtz压缩包)
+## 1、BWA for GTZ <span id="bwa"></span>  (支持最新的gtz版本)
 
 - **安装方法**
 
-	##### 方式一  
-	运行命令（推荐）  
-		`sudo curl -SL https://gtz.io/bwagtz_latest.run -o /tmp/bwagtz.run && sudo sh /tmp/bwagtz.run`  
-	##### 方式二  
-	下载安装文件：[-GTX.Zip bwa-gtz-]( https://gtz.io/bwagtz_latest.run )  
-	在安装文件目录下运行命令  
-		`sudo sh bwagtz_lastest.run`  
-	根据提示完成安装  
+- **方式一 通过命令行直接安装（建议安装方式）**
+
+如果安装后只希望给当前用户使用，请执行
+
+`curl -SL https://gtz.io/bwagtz_lastest.run -o /tmp/gtz.run && sh /tmp/gtz.run && source ~/.bashrc`
+
+如果安装后希望所有用户都能使用，请执行
+
+`sudo curl -SL https://gtz.io/bwagtz_lastest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`
+
+
+
+- **方式二 先下载软件然后安装**
+
+首先从[-GTX.Zip Professional-]( https://gtz.io/bwagtz_lastest.run )下载软件。
+
+如果安装后只希望给当前用户使用，请执行
+
+`sh bwagtz_lastest.run && source ~/.bashrc`
+
+如果安装后希望所有用户都能使用，请执行 
 	
 - **使用说明**
 
