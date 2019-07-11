@@ -400,14 +400,18 @@ gtz可以压缩任何文件
 	#### 使用举例
 
 	#### bwa-gtz
-
-	###### 如果解压需要指定reference，首先
 	
-	`export GTZ_RBIN_PATH=/path/rbin/` 或 `export GTZ_RBIN_PATH=/path/fasta/h39.fa`
+	##### 步骤一：如果解压不需要reference则该步骤跳过，否则通过以下方式指定对应reference
+	
+	`export GTZ_RBIN_PATH=/path/rbin/`          适用于gtx1.x.x版本，指定解压时rbin文件所在路径
+	
+	`export GTZ_RBIN_PATH=/path/fasta/xxx.fa`   适用于gtx2.x.x版本，指定解压时对应的fasta文件
+	
+	##### 步骤二：执行比对
 	
 	`bwa-gtz mem ref.fa read1.fq.gtz read2.fq.gtz -o aln-pe.sam`
 
-	>  <font size=1>\* 该例子中通过环境变量GTZ_RBIN_PATH指定了rbin文件所在路径，这里"export GTZ_RBIN_PATH=/path/rbin/"不是必须的，但如果您知道rbin所在路径，建议您指定，这样可以加快bwa-gtz处理速度。因为，当bwa-gtz需要rbin文件，且在默认路径~/.config/gtz下找不到该rbin文件，则会通过网络下载，下载过程将消耗时间。</font>
+	>  <font size=1>\* 对应gtx1.x.x版本，当解压时通过环境变量GTZ_RBIN_PATH指定了rbin文件所在路径，这里"export GTZ_RBIN_PATH=/path/rbin/"不是必须的，但如果您知道rbin所在路径，建议您指定，这样可以加快bwa-gtz处理速度。因为，当bwa-gtz需要rbin文件，且在默认路径~/.config/gtz下找不到该rbin文件，则会通过网络下载，下载过程将消耗时间。</font>
 	
 
 	#### bwa-opt-gtz
@@ -416,9 +420,7 @@ gtz可以压缩任何文件
 
 	`bwa-opt-gtz index ref.fa`
 
-	##### 步骤二：执行比对
-
-	`export GTZ_RBIN_PATH=/path/rbin/`
+	##### 步骤二：执行比对，如果解压需要指定reference，可参考bwa-gtz使用举例步骤一
 	
 	`bwa-opt-gtz mem ref.fa read1.fq.gtz read2.fq.gtz -t 4 -o aln-pe.sam`
 	
