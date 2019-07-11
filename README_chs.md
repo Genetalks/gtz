@@ -382,7 +382,7 @@ gtz可以压缩任何文件
 
 	`sh bwagtz_latest.run && source ~/.bashrc`
 
-	如果安装后希望所有用户都能使用，请执行 
+	安装完成后在任意目录可以执行bwa-gtz和bwa-opt-gtz
 	
 - **使用说明**
 
@@ -905,35 +905,31 @@ gtz可以压缩任何文件
 	>  <font size=1>\* 该例子中通过环境变量GTZ_RBIN_PATH指定了rbin文件所在路径，这里"export GTZ_RBIN_PATH=/path/rbin/"不是必须的，但如果您知道rbin所在路径，建议您指定，这样可以加快fastqc-gtz处理速度。因为，当fastqc-gtz需要rbin文件，且在默认路径~/.config/gtz下找不到该rbin文件时，则会通过网络下载，下载过程将消耗时间。</font>
 	
 	
-## 10、FASTP for GTZ <span id="fastp"></span>　(目前只支持版本号小于2.x.x的gtz压缩包)
+## 10、FASTP for GTZ <span id="fastp"></span>　(支持最新的gtz版本)
 
 - **安装方法**
     
-    ##### 方式一: 给当前用户安装，不需要sudo权限
-    运行命令（推荐） 
-    
-    `curl -SL https://gtz.io/fastpgtz_latest.run -o /tmp/fastpgtz.run && sh /tmp/fastpgtz.run`  
-	
-    首次安装后，需要执行一次source ~/.bashrc或者退出去后重新登录，然后在任意目录可以执行fastp-gtz
-    
-    ###### 或者
-    下载安装文件：[-GTX.Zip fastp-gtz-]( https://gtz.io/fastpgtz_latest.run )，然后安装
-    
-    `sh fastpgtz_latest.run`
-	
-    同样，首次安装后，需要执行一次source ~/.bashrc或者退出去后重新登录
-        
-    ##### 方式二：给所有用户安装，需要sudo权限
-    运行命令（推荐）  
-    
-	`sudo curl -SL https://gtz.io/fastpgtz_latest.run -o /tmp/fastpgtz.run && sudo sh /tmp/fastpgtz.run`  
-	
-    ###### 或者
-    先下载安装文件：[-GTX.Zip fastp-gtz-]( https://gtz.io/fastpgtz_latest.run )，然后安装  
-    
-	`sudo sh fastpgtz_latest.run`
-	
-	安装完成后，在任意目录可以执行fastp-gtz
+	##### 方式一 通过命令行直接安装（建议安装方式）
+
+	如果安装后只希望给当前用户使用，请执行
+
+	`curl -SL https://gtz.io/fastpgtz_latest.run -o /tmp/fastpgtz.run && sh /tmp/fastpgtz.run && source ~/.bashrc`
+
+	如果安装后希望所有用户都能使用，请执行
+
+	`sudo curl -SL https://gtz.io/fastpgtz_latest.run -o /tmp/fastpgtz.run && sudo sh /tmp/fastpgtz.run`
+
+
+
+	##### 方式二 先下载软件然后安装
+
+	首先从[-GTX.Zip Professional-]( https://gtz.io/fastpgtz_latest.run )下载软件。
+
+	如果安装后只希望给当前用户使用，请执行
+
+	`sh fastpgtz_latest.run && source ~/.bashrc`
+
+	安装完成后在任意目录可以执行fastp-gtz
 
 
 - **使用说明**
