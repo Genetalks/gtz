@@ -401,7 +401,9 @@ gtz可以压缩任何文件
 
 	#### bwa-gtz
 
-	`export GTZ_RBIN_PATH=/path/rbin/`
+	###### 如果解压需要指定reference，首先
+	
+	`export GTZ_RBIN_PATH=/path/rbin/` 或 `export GTZ_RBIN_PATH=/path/fasta/h39.fa`
 	
 	`bwa-gtz mem ref.fa read1.fq.gtz read2.fq.gtz -o aln-pe.sam`
 
