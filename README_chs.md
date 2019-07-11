@@ -401,7 +401,7 @@ gtz可以压缩任何文件
 
 	#### bwa-gtz
 	
-	##### 步骤一：如果解压gtz不需要reference则该步骤跳过，否则通过以下方式指定对应reference
+	##### 步骤一：如果解压gtz不需要reference则跳过该步骤，否则通过以下方式指定对应reference
 	
 	`export GTZ_RBIN_PATH=/path/rbin/`          适用于gtx1.x.x版本，指定解压时rbin文件所在路径
 	
@@ -956,13 +956,13 @@ gtz可以压缩任何文件
     
 	示例：
 
-	##### 步骤一：如果解压in.R1.fq.gtz和in.R2.fq.gtz不需要reference则该步骤跳过，否则通过以下方式指定对应reference
+	步骤一：如果解压in.R1.fq.gtz和in.R2.fq.gtz不需要reference则跳过该步骤，否则通过以下方式指定对应reference
 
 	`export GTZ_RBIN_PATH=/path/rbin/` （适用于gtx1.x.x版本，指定解压时rbin文件所在路径，建议指定；但不是必须的，没指定时gtz会自动下载，会消耗一定的时间）
 
 	`export GTZ_RBIN_PATH=/path/fasta/xxx.fa`  （适用于gtx2.x.x版本，指定解压时对应的fasta文件，必须）
 
-	##### 步骤二：执行分析
+	步骤二：执行分析
 
 	fastp-gtz -i in.R1.fq.gtz -I in.R2.fq.gtz -o out.R1.fq.gtz -O out.R2.fq.gtz --ref in.fq.species.fasta
 
@@ -982,21 +982,26 @@ gtz可以压缩任何文件
 	说明：
 	##### 1) 过程B
 
-	   ###### 如果过程A中in.gtz是gtz 1.x.x的高倍率压缩文件版本，则过程B需要对应的rbin文件， 这时有两种工作方式：
+	   i. 如果过程A中in.gtz是gtz 1.x.x的高倍率压缩文件版本，则过程B需要对应的rbin文件， 这时有两种工作方式：
+	   
 	   方式一： 
 	       您本地有该rbin文件，并通过以下环境变量指定了该文件所在路径:    
 	       
 		   export GTZ_RBIN_PATH=/path/rbin
 	       那么程序会使用本地的rbin文件完成步骤B
+	       
 	   方式二：
 	       您本地没有该rbin文件，或者有但没有通过环境变量指定，这种情形下程序会自动从网络下载该rbin，当然该过程将消耗一定的时间
 	       
-	   ###### 如果过程A中in.gtz是gtz 2.x.x的高倍率压缩文件版本，则过程B也有两种工作方式：
+	       
+	   ii. 如果过程A中in.gtz是gtz 2.x.x的高倍率压缩文件版本，则过程B也有两种工作方式：
+	   
 	   方式一:
 	   　　in.gtz的生成使用了--donot-pack-ref，那么过程B需要通过以下环境变量指定压缩时所使用的fasta文件:
 	     
 	     	export GTZ_RBIN_PATH=/path/fasta/xxx.fa
 	   方式二：
+	   
 	       in.gtz的生成没有使用了--donot-pack-ref，那么过程B不需要额外的参数
 	       
 
@@ -1007,8 +1012,10 @@ gtz可以压缩任何文件
 	##### 3) 过程D
 
 	   方式一：
+	   
 	       没有通过--ref指定fasta文，那么out.R1.fq.gtz和out.R2.fq.gtz的生成均采用普通压缩
 	   方式二：
+	   
 	   　　通过--ref指定了fasta文件，则fastp-gtz采用高倍率压缩输出out.R1.fq.gtz和out.R2.fq.gtz
            
         
