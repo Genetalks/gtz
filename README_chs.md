@@ -362,27 +362,27 @@ gtz可以压缩任何文件
 
 - **安装方法**
 
-- **方式一 通过命令行直接安装（建议安装方式）**
+	##### 方式一 通过命令行直接安装（建议安装方式）
 
-如果安装后只希望给当前用户使用，请执行
+	如果安装后只希望给当前用户使用，请执行
 
-`curl -SL https://gtz.io/bwagtz_lastest.run -o /tmp/gtz.run && sh /tmp/gtz.run && source ~/.bashrc`
+	`curl -SL https://gtz.io/bwagtz_lastest.run -o /tmp/gtz.run && sh /tmp/gtz.run && source ~/.bashrc`
 
-如果安装后希望所有用户都能使用，请执行
+	如果安装后希望所有用户都能使用，请执行
 
-`sudo curl -SL https://gtz.io/bwagtz_lastest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`
+	`sudo curl -SL https://gtz.io/bwagtz_lastest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`
 
 
 
-- **方式二 先下载软件然后安装**
+	##### 方式二 先下载软件然后安装
 
-首先从[-GTX.Zip Professional-]( https://gtz.io/bwagtz_lastest.run )下载软件。
+	首先从[-GTX.Zip Professional-]( https://gtz.io/bwagtz_lastest.run )下载软件。
 
-如果安装后只希望给当前用户使用，请执行
+	如果安装后只希望给当前用户使用，请执行
 
-`sh bwagtz_lastest.run && source ~/.bashrc`
+	`sh bwagtz_lastest.run && source ~/.bashrc`
 
-如果安装后希望所有用户都能使用，请执行 
+	如果安装后希望所有用户都能使用，请执行 
 	
 - **使用说明**
 
