@@ -1124,7 +1124,7 @@ gtz可以压缩任何文件
 
 ## 解压sdk<span id="decompress-sdk"></span>
 
-### 解压sdk保持与gtz最新版本同步，能解压最新版本gtz生成的压缩包
+#### 解压sdk保持与gtz最新版本同步，能解压最新版本gtz生成的压缩包
 
 - [1、decompress sdk for perl](#sdk-perl)
 - [2、decompress sdk for python](#sdk-python)
