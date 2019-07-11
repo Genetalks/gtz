@@ -1126,21 +1126,21 @@ gtz可以压缩任何文件
 
 ### 注意：目前解压SDK均是beta版本，欢迎大家试用！！
 
-- [1、decompress sdk for perl (beta)](#sdk-perl)
-- [2、decompress sdk for python (beta)](#sdk-python)
-- [3、decompress sdk for R (beta)](#sdk-r)
-- [4、decompress sdk for c (beta)](#sdk-c)
-- [5、decompress sdk for java (beta)](#sdk-java)
+- [1、decompress sdk for perl](#sdk-perl)
+- [2、decompress sdk for python](#sdk-python)
+- [3、decompress sdk for R](#sdk-r)
+- [4、decompress sdk for c](#sdk-c)
+- [5、decompress sdk for java](#sdk-java)
 
-## 1、decompress sdk for perl (beta) <span id="sdk-perl"></span>
+## 1、decompress sdk for perl  <span id="sdk-perl"></span>
 
 - **安装方法**
 
-`curl -SL https://gtz.io/sdk/gtz_perl_sdk-2.0.1.beta-linux-x86_64.tar.gz -o gtz_perl_sdk-2.0.1.beta-linux-x86_64.tar.gz`
+`curl -SL https://gtz.io/sdk/gtz_perl_sdk-2.1.0-linux-x86_64.tar.gz -o gtz_perl_sdk-2.1.0-linux-x86_64.tar.gz`
 
-`tar -xvf gtz_perl_sdk-2.0.1.beta-linux-x86_64.tar.gz`
+`tar -xvf gtz_perl_sdk-2.1.0-linux-x86_64.tar.gz`
 
-`cd gtz_perl_sdk-2.0.1.beta-linux-x86_64`
+`cd gtz_perl_sdk-2.1.0-linux-x86_64`
 
 `# 拷贝gtz_api.h到/usr/include，拷贝libgtz.so到/usr/lib或者/usr/lib64(centos)`
 
@@ -1159,7 +1159,7 @@ gtz可以压缩任何文件
 
 - **校验安装**
 
-`cd gtz_perl_sdk-2.0.1.beta-linux-x86_64`
+`cd gtz_perl_sdk-2.1.0-linux-x86_64`
 
 `perl example.pl`
 
@@ -1170,15 +1170,15 @@ gtz可以压缩任何文件
 perl >= 5.09
 
 
-## 2、decompress sdk for python (beta) <span id="sdk-python"></span>
+## 2、decompress sdk for python  <span id="sdk-python"></span>
 
 - **安装方法**
 
-`curl -SL https://gtz.io/sdk/gtz_python_sdk-2.0.1.beta-linux-x86_64.tar.gz -o gtz_python_sdk-2.0.1.beta-linux-x86_64.tar.gz`
+`curl -SL https://gtz.io/sdk/gtz_python_sdk-2.1.0-linux-x86_64.tar.gz -o gtz_python_sdk-2.1.0-linux-x86_64.tar.gz`
 
-`tar -xvf gtz_python_sdk-2.0.1.beta-linux-x86_64.tar.gz`
+`tar -xvf gtz_python_sdk-2.1.0-linux-x86_64.tar.gz`
 
-`cd gtz_python_sdk-2.0.1.beta-linux-x86_64`
+`cd gtz_python_sdk-2.1.0-linux-x86_64`
 
 #### python2
 `sudo pip install gtz-2.0.1-py2-none-any.whl`
@@ -1188,7 +1188,7 @@ perl >= 5.09
 
 - **校验安装**
 
-`cd gtz_python_sdk-2.0.1.beta-linux-x86_64`
+`cd gtz_python_sdk-2.1.0-linux-x86_64`
 
 `python example.py`
 
@@ -1198,15 +1198,15 @@ perl >= 5.09
 
 python2 >= 2.6, python3 >=3.5
 
-## 3、decompress sdk for R (beta) <span id="sdk-r"></span>
+## 3、decompress sdk for R  <span id="sdk-r"></span>
 
 - **安装方法**
 
-`curl -SL https://gtz.io/sdk/gtz_r_sdk-2.0.1.beta-linux-x86_64.tar.gz -o gtz_r_sdk-2.0.1.beta-linux-x86_64.tar.gz`
+`curl -SL https://gtz.io/sdk/gtz_r_sdk-2.1.0-linux-x86_64.tar.gz -o gtz_r_sdk-2.1.0-linux-x86_64.tar.gz`
 
-`tar -xvf gtz_r_sdk-2.0.1.beta-linux-x86_64.tar.gz`
+`tar -xvf gtz_r_sdk-2.1.0-linux-x86_64.tar.gz`
 
-`cd gtz_r_sdk-2.0.1.beta-linux-x86_64`
+`cd gtz_r_sdk-2.1.0-linux-x86_64`
 
 `# 拷贝gtz_api.h到/usr/include，拷贝libgtz.so到/usr/lib或者/usr/lib64(centos)`
 
@@ -1221,29 +1221,29 @@ python2 >= 2.6, python3 >=3.5
 
 - **校验安装**
 
-`cd gtz_r_sdk-2.0.1.beta-linux-x86_64`
+`cd gtz_r_sdk-2.1.0-linux-x86_64`
 
 `Rscript ./example.r`
 
 
 如果能正常显示fastq内容，说明安装成功，在自己流程中要使用r sdk时，可以参考example.r内容
 
-## 4、decompress sdk for c (beta) <span id="sdk-c"></span>
+## 4、decompress sdk for c  <span id="sdk-c"></span>
 
 - **安装方法**
 
-`curl -SL https://gtz.io/sdk/gtz_c_sdk-2.0.1.beta-linux-x86_64.tar.gz -o gtz_c_sdk-2.0.1.beta-linux-x86_64.tar.gz`
+`curl -SL https://gtz.io/sdk/gtz_c_sdk-2.1.0-linux-x86_64.tar.gz -o gtz_c_sdk-2.1.0-linux-x86_64.tar.gz`
 
-`tar -xvf gtz_c_sdk-2.0.1.beta-linux-x86_64.tar.gz`
+`tar -xvf gtz_c_sdk-2.1.0-linux-x86_64.tar.gz`
 
-`cd gtz_c_sdk-2.0.1.beta-linux-x86_64`
+`cd gtz_c_sdk-2.1.0-linux-x86_64`
 
 `sudo make install`
 
 
 - **校验安装**
 
-`cd gtz_c_sdk-2.0.1.beta-linux-x86_64`
+`cd gtz_c_sdk-2.1.0-linux-x86_64`
 
 `make example`
 
@@ -1253,15 +1253,15 @@ python2 >= 2.6, python3 >=3.5
 
 - **运行环境**
 
-## 5、decompress sdk for java (beta) <span id="sdk-java"></span>
+## 5、decompress sdk for java  <span id="sdk-java"></span>
 
 - **安装方法**
 
-`curl -SL https://gtz.io/sdk/gtz_java_sdk-2.0.1.beta-linux-x86_64.tar.gz -o gtz_java_sdk-2.0.1.beta-linux-x86_64.tar.gz`
+`curl -SL https://gtz.io/sdk/gtz_java_sdk-2.1.0-linux-x86_64.tar.gz -o gtz_java_sdk-2.1.0-linux-x86_64.tar.gz`
 
-`tar -xvf gtz_java_sdk-2.0.1.beta-linux-x86_64.tar.gz`
+`tar -xvf gtz_java_sdk-2.1.0-linux-x86_64.tar.gz`
 
-`cd gtz_java_sdk-2.0.1.beta-linux-x86_64`
+`cd gtz_java_sdk-2.1.0-linux-x86_64`
 
 #### 步骤一：
 
@@ -1274,7 +1274,7 @@ python2 >= 2.6, python3 >=3.5
 
 - **校验安装**
 
-`cd gtz_java_sdk-2.0.1.beta-linux-x86_64`
+`cd gtz_java_sdk-2.1.0-linux-x86_64`
 
 `javac example.java`
 
