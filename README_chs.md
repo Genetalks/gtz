@@ -1124,8 +1124,6 @@ gtz可以压缩任何文件
 
 ## 解压sdk<span id="decompress-sdk"></span>
 
-### 注意：目前解压SDK均是beta版本，欢迎大家试用！！
-
 - [1、decompress sdk for perl](#sdk-perl)
 - [2、decompress sdk for python](#sdk-python)
 - [3、decompress sdk for R](#sdk-r)
