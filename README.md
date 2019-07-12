@@ -1022,7 +1022,7 @@ GTX Lab Compressor
 
 	Output GTZ Format:  
 	
-	`fastp-gtz -i in.fq -o out.fq.gtz --ref in.fq.species.bin`
+	`fastp-gtz -i in.fq -o out.fq.gtz --ref in.fq.species.fasta`
 
 	Output non-GTZ format: 
 	
@@ -1042,7 +1042,7 @@ GTX Lab Compressor
 
 	##### Step two: execution analysis
 
-	`fastp-gtz -i in.R1.fq.gtz -I in.R2.fq.gtz -o out.R1.fq.gtz -O out.R2.fq.gtz --ref in.fq.species.bin` 
+	`fastp-gtz -i in.R1.fq.gtz -I in.R2.fq.gtz -o out.R1.fq.gtz -O out.R2.fq.gtz --ref in.fq.species.fasta` 
 	
 	Other ways to use:
 	
