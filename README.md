@@ -421,7 +421,7 @@ GTX Lab Compressor
 - [12、WTDBG2 for GTZ](#wtdbg2)
 
 
-## 1、BWA for GTZ <span id="bwa"></span> (support gtz version < 2.x.x)  
+## 1、BWA for GTZ <span id="bwa"></span> (support gtz 2.x.x version)  
 
 - **How to Install?**
 
@@ -971,7 +971,7 @@ GTX Lab Compressor
 	>  <font size=1>\* In this example, the path of the RBIN file is specified by the environment variable GTZ_RBIN_PATH, where "export GTZ_RBIN_PATH=/path/rbin/" is not necessary, but if you know the path of rbin, you are advised to specify it, which can speed up the processing of fastqc-gtz. Because when fastqc-gtz needs RBIN file and cannot find the RBIN file under the default path ~/.config/gtz, it will be downloaded through the network, which will consume time.</font>
     
   
-## 10、FASTP for GTZ <span id="fastp"></span> (support gtz version < 2.x.x)
+## 10、FASTP for GTZ <span id="fastp"></span> (support gtz 2.x.x version)  
 
 - **How to Install?**
     
