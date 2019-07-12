@@ -436,8 +436,6 @@ gtz可以压缩任何文件
 	
 	#####	测试命令
 	
-	`export GTZ_RBIN_PATH=/path/rbin/`
-	
 	`bwa mem ref.fa read1.fq.gz read2.fq.gz -t 4 -o aln-pe.sam`
 	
 	`bwa-gtz mem ref.fa read1.fq.gtz read2.fq.gtz -t 4 -o aln-pe.sam`
@@ -1019,7 +1017,7 @@ gtz可以压缩任何文件
 	     	export GTZ_RBIN_PATH=/path/fasta/xxx.fa
 	   方式二：
 	   
-	       in.gtz的生成没有使用了--donot-pack-ref，那么过程B不需要额外的参数
+	       in.gtz的生成没有使用--donot-pack-ref，那么过程B不需要额外的参数
 	       
 
 	##### 2) 过程C
@@ -1030,7 +1028,8 @@ gtz可以压缩任何文件
 
 	   方式一：
 	   
-	       没有通过--ref指定fasta文，那么out.R1.fq.gtz和out.R2.fq.gtz的生成均采用普通压缩
+	       没有通过--ref指定fasta文件，那么out.R1.fq.gtz和out.R2.fq.gtz的生成均采用普通压缩
+	       
 	   方式二：
 	   
 	   　　通过--ref指定了fasta文件，则fastp-gtz采用高倍率压缩输出out.R1.fq.gtz和out.R2.fq.gtz
@@ -1043,9 +1042,7 @@ gtz可以压缩任何文件
 
 	`fastp -i in.R1.fq.gz -I in.R2.fq.gz -o out.R1.fq.gz -O out.R2.fq.gz`
 
-	`export GTZ_RBIN_PATH=/path/rbin/`
-
-	`fastp-gtz -i in.R1.fq.gtz -I in.R2.fq.gtz -o out.R1.fq.gtz -O out.R2.fq.gtz --bin_file in.fq.species.bin`
+	`fastp-gtz -i in.R1.fq.gtz -I in.R2.fq.gtz -o out.R1.fq.gtz -O out.R2.fq.gtz --ref in.fq.species.fasta`
 
 
 	#####	测试环境
