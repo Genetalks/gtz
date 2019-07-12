@@ -966,12 +966,16 @@ gtz可以压缩任何文件
 
 	fastp-gtz -i in.R1.fq.gtz -I in.R2.fq.gtz -o out.R1.fq.gtz -O out.R2.fq.gtz --ref in.fq.species.fasta
 
-
+	fastp-gtz -i in.R1.fq.gtz -I in.R2.fq.gtz -o out.R1.fq.gtz -O out.R2.fq.gtz --ref in.fq.species.fasta　--donot_pack_ref　--cache_path /cache/path/
+	
 	命令说明：
 	
 	-ref
 	  该参数建议指定，但不是必须的，用于指定双端读入文件所属物种对应的fasta文件，指定时fastp-gtz会高倍率压缩输出结果文件，详细可阅读工作原理
-
+	--donot_pack_ref
+	  带该参数说明生成的out.fq.gtz在解压时需要指定reference文件，在这里即对应in.fq.species.fasta
+	--cache_path
+	  默认的cache路径是~/.config/gtz，你也可以通过该参数用于指定其他路径
 
   ###### 工作原理：
 
