@@ -405,17 +405,15 @@ gtz可以压缩任何文件
 
 	#### bwa-gtz
 	
-	##### 步骤一：如果解压gtz不需要reference则跳过该步骤，否则通过以下方式指定对应reference
-	
-	`export GTZ_RBIN_PATH=/path/rbin/`          适用于gtx1.x.x版本，指定解压时rbin文件所在路径
-	
-	`export GTZ_RBIN_PATH=/path/fasta/xxx.fa`   适用于gtx2.x.x版本，指定解压时对应的fasta文件
+	##### 步骤一：如果解压read.gtz不需要reference则跳过该步骤，否则通过以下方式指定对应reference
+
+	`export GTZ_RBIN_PATH=/path/rbin/` （适用于gtx1.x.x版本，指定解压时rbin文件所在路径，建议指定；但不是必须的，没指定时gtz会自动下载，会消耗一定的时间）
+
+	`export GTZ_RBIN_PATH=/path/fasta/xxx.fa`  （适用于gtx2.x.x版本，指定解压时对应的fasta文件，必须）
 	
 	##### 步骤二：执行比对
 	
 	`bwa-gtz mem ref.fa read1.fq.gtz read2.fq.gtz -o aln-pe.sam`
-
-	>  <font size=1>\* 对应gtx1.x.x版本，当解压时通过环境变量GTZ_RBIN_PATH指定了rbin文件所在路径，这里"export GTZ_RBIN_PATH=/path/rbin/"不是必须的，但如果您知道rbin所在路径，建议您指定，这样可以加快bwa-gtz处理速度。因为，当bwa-gtz需要rbin文件，且在默认路径~/.config/gtz下找不到该rbin文件，则会通过网络下载，下载过程将消耗时间。</font>
 	
 
 	#### bwa-opt-gtz
@@ -970,7 +968,9 @@ gtz可以压缩任何文件
 
 	步骤二：执行分析
 
-	`fastp-gtz -i in.R1.fq.gtz -I in.R2.fq.gtz -o out.R1.fq.gtz -O out.R2.fq.gtz --ref in.fq.species.fasta`
+	`fastp-gtz -i in.R1.fq.gtz -I in.R2.fq.gtz -o out.R1.fq.gtz -O out.R2.fq.gtz --ref in.fq.species.fasta` 
+	
+	其他使用方式：
 
 	`fastp-gtz -i in.R1.fq.gtz -I in.R2.fq.gtz -o out.R1.fq.gtz -O out.R2.fq.gtz --ref in.fq.species.fasta　--donot_pack_ref　--cache_path /cache/path/`
 	
