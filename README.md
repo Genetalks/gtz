@@ -472,13 +472,15 @@ GTX Lab Compressor
 
 	#### Use examples
 
-	#### bwa-gtz
+	##### Step one: Skip this step if the decompression read.gtz does not require a reference file,  otherwise specify the corresponding reference as follows
 
-	`export GTZ_RBIN_PATH=/path/rbin/`
+	`export GTZ_RBIN_PATH=/path/rbin/` (Suitable for gtx1.x.x version, specify the rbin file path for unzip, it's recommended but not required, when not specified gtz will download automatically, will consume a certain amount of time)
+
+	`export GTZ_RBIN_PATH=/path/fasta/xxx.fa`  (Suitable for gtx2.x.x version, specifies the corresponding fasta file for decompression, must)
+
+	##### Step two: execution comparison
 	
-	`bwa-gtz mem ref.fa read1.fq.gtz read2.fq.gtz -o aln-pe.sam`
-
-	>  <font size=1>\* In this example, the path of the RBIN file is specified by the environment variable GTZ_RBIN_PATH, where "export GTZ_RBIN_PATH=/path/rbin/" is not necessary, but if you know the path of rbin, you are advised to specify it, which can speed up the processing of bwa-gtz. Because when bwa-gtz needs RBIN file and cannot find the RBIN file under the default path ~/.config/gtz, it will be downloaded through the network, and the download process will consume time.</font>
+	`bwa-opt-gtz mem ref.fa read1.fq.gtz read2.fq.gtz -t 4 -o aln-pe.sam`
 	
 
 	#### bwa-opt-gtz
@@ -487,9 +489,7 @@ GTX Lab Compressor
 
 	`bwa-opt-gtz index ref.fa`
 
-	##### Step two: execution comparison
-
-	`export GTZ_RBIN_PATH=/path/rbin/`
+	##### Step two: execution comparison，if the decompression requires a specified reference file, refer to bwa-gtz using the example step one
 	
 	`bwa-opt-gtz mem ref.fa read1.fq.gtz read2.fq.gtz -t 4 -o aln-pe.sam`
 	
@@ -975,29 +975,37 @@ GTX Lab Compressor
 
 - **How to Install?**
     
-    ##### Mode one: Install to the current user, no sudo permissions required
-    For installation you can (recommended)  
-    
-    `curl -SL https://gtz.io/fastpgtz_latest.run -o /tmp/fastpgtz.run && sh /tmp/fastpgtz.run`  
-	
-    After the first installation, you need to perform a source ~/.bashrc or exit to log back in, and then you can execute fastp-gtz in any directory
-    
-    ###### or
-    download installation files：[-GTX.Zip fastp-gtz-]( https://gtz.io/fastpgtz_latest.run )，then install
-    
-    `sh fastpgtz_latest.run`
-	
-    Similarly, after the first installation, you need to perform a source ~/.bashrc or exit and log back in again
-        
-    ##### Mode two: Install to all users, need sudo permissions
-    For installation you can (recommended)  
-    
+    #### Mode 1: Install directly from the command line(recommended installation method)
+
+	##### Install for ALL USERS:
+
 	`sudo curl -SL https://gtz.io/fastpgtz_latest.run -o /tmp/fastpgtz.run && sudo sh /tmp/fastpgtz.run`  
-	
-    ###### or
-    download installation files：[-GTX.Zip fastp-gtz-]( https://gtz.io/fastpgtz_latest.run )，then install  
-    
-	`sudo sh fastpgtz_latest.run`
+
+	Once installed, fastp-gtz executable file is placed in /usr/local/fastp-gtz directory, fastp-gtz's softlink is created to /usr/bin
+
+	##### Only install for CURRENT USER:
+
+	`curl -SL https://gtz.io/fastpgtz_latest.run -o /tmp/fastpgtz.run && sh /tmp/fastpgtz.run && source ~/.bashrc`
+
+	Once installed, fastp-gtz executable file are placed in the current user's ~/.config/fastp-gtz directory, fastp-gtz's alias is added to ~/.bashrc
+
+	#### Mode 2: First download the software and then install it. 
+
+	First download the software from [-GTX.Zip Professional-]( https://gtz.io/fastpgtz_latest.run ).
+
+	Commercially authorized users get from contact@gtz.io .
+
+	##### Install for ALL USERS:
+
+	`sudo sh fastpgtz_latest.run` 
+
+	Once installed, fastp-gtz executable file is placed in /usr/local/fastp-gtz directory, fastp-gtz's softlink is created to /usr/bin
+
+	##### Only install for CURRENT USER:
+
+	`sh fastpgtz_latest.run && source ~/.bashrc`
+
+	Once installed, fastp-gtz executable file are placed in the current user's ~/.config/fastp-gtz directory, fastp-gtz's alias is added to ~/.bashrc
 	
 	After the installation is complete, you can perform fastp-gtz in any directory
 
@@ -1014,30 +1022,43 @@ GTX Lab Compressor
 
 	Output GTZ Format:  
 	
-	`fastp-gtz -i in.fq -o out.fq.gtz --bin_file in.fq.species.bin`
+	`fastp-gtz -i in.fq -o out.fq.gtz --ref in.fq.species.bin`
 
 	Output non-GTZ format: 
 	
 	`fastp-gtz -i in.fq -o out.fq`
 
-	For --bin_file use, refer to the following sections for instructions
+	For --ref use, refer to the following sections for instructions
     
     #### 2. Input is GTZ format
     
 	examples:
 
-	export GTZ_RBIN_PATH=/path/rbin/
+	##### Step one: Skip this step if the decompression read.gtz does not require a reference file,  otherwise specify the corresponding reference as follows
 
-	fastp-gtz -i in.R1.fq.gtz -I in.R2.fq.gtz -o out.R1.fq.gtz -O out.R2.fq.gtz --bin_file in.fq.species.bin
+	`export GTZ_RBIN_PATH=/path/rbin/` (Suitable for gtx1.x.x version, specify the rbin file path for unzip, it's recommended but not required, when not specified gtz will download automatically, will consume a certain amount of time)
+
+	`export GTZ_RBIN_PATH=/path/fasta/xxx.fa`  (Suitable for gtx2.x.x version, specifies the corresponding fasta file for decompression, must)
+
+	##### Step two: execution analysis
+
+	`fastp-gtz -i in.R1.fq.gtz -I in.R2.fq.gtz -o out.R1.fq.gtz -O out.R2.fq.gtz --ref in.fq.species.bin` 
+	
+	Other ways to use:
+	
+	`fastp-gtz -i in.R1.fq.gtz -I in.R2.fq.gtz -o out.R1.fq.gtz -O out.R2.fq.gtz --ref in.fq.species.fasta　--donot_pack_ref　--cache_path /cache/path/`
 
 
 	Command Description:
 
-	1) export GTZ_RBIN_PATH=/path/rbin/
-	  The environment variable is recommended for setting, but is not required, to specify the search path for the Rbin file when reading the file as a high-magnification compressed GTZ file, with detailed readable working principles
-
-	2) --bin_file
-	  This parameter is recommended to specify, but is not required, to specify the two-ended read into the file belongs to the species corresponding to the bin file, specified when the FASTP-GTZ will be high magnification to compress the output result file, detailed readable working principle
+	1) --ref
+	  This parameter is recommended to specify, specifies Fasta corresponding to the compressed file
+	  
+	2) --donot_pack_ref
+	  if use this parameter,  it needs to specify the reference file when unzips, here is in.fq.species.fasta
+	  
+	3) --cache_path
+	  The default cache path is ~/.config/gtz, you can also use this to specify other path
 
 
   ###### How it works:
@@ -1048,6 +1069,8 @@ GTX Lab Compressor
 
 	Note
 	##### 1) Process B
+	
+	   i. If the in.gtz in process A is the version of the high-multiplier compression file of gtz 1.x.x, then Process B requires the corresponding rbin file, then there are two ways to work:
 
 	   If IN.GTZ in Process A is a high-magnification compressed file, procedure B requires the corresponding Rbin file, and there are two ways to work:
 	   Mode one: 
@@ -1057,6 +1080,15 @@ GTX Lab Compressor
 	       Then the program will complete step b using the local Rbin file
 	   Mode two:
 	       You do not have the Rbin file locally, or you do not specify it through an environment variable, in which case the program automatically downloads the rbin from the network, and of course the process consumes a certain amount of time
+	       
+	  ii. If the in.gtz in process A is a high-multiplier compressed file version of gtz 2.x.x, then Process B also works in two ways:
+	  
+	  Mode one:
+	  	In.gtz is generated using --donot-pack-ref, we must specify the fasta file which is used when compression by the following environment variables:
+		
+		export GTZ_RBIN_PATH=/path/fasta/xxx.fa
+	  Mode two:
+	  	in.gtz generation is not used -- donot-pack-ref, then procedure B does not need additional parameters
 
 	##### 2) Process C
 
@@ -1065,11 +1097,9 @@ GTX Lab Compressor
 	##### 3) Process D
 
 	   Mode one: 
-	       Bin file not specified through--bin_file
-	       The fastp-gtz automatically recognizes in based on the bin and rec files under the ~/.config/gtz/path. Which species R1.fq.gtz and in.R2.fq.gtz each belong to, and then use the bin file of the corresponding species for compression, the automatic identification process will consume a certain amount of time.
-	       Of course, if there is no bin and rec under ~/.config/gtz/or no species information is identified, normal compression is used
+	       No FASTA file is specified, out.R1.fq.gtz and out.R2.fq.gtz are generated by ordinary compression
 	   Mode two:
-	       The bin file is specified by--bin_file, fastp-gtz the bin file is used to do the high magnification compression directly
+	       FASTA file is specified by --ref, out.R1.fq.gtz and out.R2.fq.gtz are generated by High-ratio compressioncompression directly
            
         
 - **performance**
@@ -1079,9 +1109,7 @@ GTX Lab Compressor
 
 	`fastp -i in.R1.fq.gz -I in.R2.fq.gz -o out.R1.fq.gz -O out.R2.fq.gz`
 
-	`export GTZ_RBIN_PATH=/path/rbin/`
-
-	`fastp-gtz -i in.R1.fq.gtz -I in.R2.fq.gtz -o out.R1.fq.gtz -O out.R2.fq.gtz --bin_file in.fq.species.bin`
+	`fastp-gtz -i in.R1.fq.gtz -I in.R2.fq.gtz -o out.R1.fq.gtz -O out.R2.fq.gtz --ref in.fq.species.bin`
 
 
 	#####	Testing environment
