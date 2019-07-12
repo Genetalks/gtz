@@ -129,13 +129,13 @@ Commercially authorized users get from contact@gtz.io .
 
 ##### Install for ALL USERS:
 
-`sudo curl -SL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`  
+`sudo sh gtz_latest.run`  
 
 Once installed, a GTZ executable and a license file are placed in /usr/local/GTZ directory, GTZ's softlink is created to /usr/bin
 
 ##### Only install for CURRENT USER:
 
-`curl -SL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sh /tmp/gtz.run && source ~/.bashrc`
+`sh gtz_latest.run && source ~/.bashrc`
 
 Once installed, a GTZ executable and a license file are placed in the current user's ~/.config/GTZ directory, GTZ's alias is added to ~/.bashrc
 
@@ -425,17 +425,37 @@ GTX Lab Compressor
 
 - **How to Install?**
 
-	##### For installation you can (recommended)  
-	  
-	`sudo curl -SL https://gtz.io/bwagtz_latest.run -o /tmp/bwagtz.run && sudo sh /tmp/bwagtz.run`    
-	  
-	##### or 
-	download installation files：[-GTX.Zip bwa-gtz-]( https://gtz.io/bwagtz_latest.run )  
-	Run commands in the installation file directory   
-	  
-	`sudo sh bwagtz_lastest.run`  
-	  
-	complete installation according to prompt. 
+	#### Mode 1: Install directly from the command line(recommended installation method)
+
+	##### Install for ALL USERS:
+
+	`sudo curl -SL https://gtz.io/bwagtz_latest.run -o /tmp/bwagtz.run && sudo sh /tmp/bwagtz.run`  
+
+	Once installed, bwa-gtz and bwa-opt-gtz executable file are placed in /usr/local/bwa-gtz directory, bwa-gtz's and bwa-opt-gtz's softlink is created to /usr/bin
+
+	##### Only install for CURRENT USER:
+
+	`curl -SL https://gtz.io/bwagtz_latest.run -o /tmp/bwagtz.run && sh /tmp/bwagtz.run && source ~/.bashrc`
+
+	Once installed, bwa-gtz and bwa-opt-gtz executable file are placed in the current user's ~/.config/bwa-gtz directory, bwa-gtz's and bwa-opt-gtz's alias is added to ~/.bashrc
+
+	#### Mode 2: First download the software and then install it. 
+
+	First download the software from [-GTX.Zip Professional-]( https://gtz.io/bwagtz_latest.run ).
+
+	Commercially authorized users get from contact@gtz.io .
+
+	##### Install for ALL USERS:
+
+	`sudo sh bwagtz_latest.run` 
+
+	Once installed, bwa-gtz and bwa-opt-gtz executable file are placed in /usr/local/bwa-gtz directory, bwa-gtz's and bwa-opt-gtz'2 softlink is created to /usr/bin
+
+	##### Only install for CURRENT USER:
+
+	`sh bwagtz_latest.run && source ~/.bashrc`
+
+	Once installed, bwa-gtz and bwa-opt-gtz executable file are placed in the current user's ~/.config/bwa-gtz directory, bwa-gtz's and bwa-opt-gtz's alias is added to ~/.bashrc
 	
 - **How to Use?**
 
