@@ -1052,12 +1052,15 @@ GTX Lab Compressor
 	Command Description:
 
 	1) --ref
+	
 	  This parameter is recommended to specify, specifies Fasta corresponding to the compressed file
 	  
 	2) --donot_pack_ref
+	
 	  if use this parameter,  it needs to specify the reference file when unzips, here is in.fq.species.fasta
 	  
 	3) --cache_path
+	
 	  The default cache path is ~/.config/gtz, you can also use this to specify other path
 
 
@@ -1071,8 +1074,7 @@ GTX Lab Compressor
 	##### 1) Process B
 	
 	   i. If the in.gtz in process A is the version of the high-multiplier compression file of gtz 1.x.x, then Process B requires the corresponding rbin file, then there are two ways to work:
-
-	   If IN.GTZ in Process A is a high-magnification compressed file, procedure B requires the corresponding Rbin file, and there are two ways to work:
+	   
 	   Mode one: 
 	       You have the Rbin file locally and specify the path of the file with the following environment variables: 
 	       
