@@ -980,8 +980,10 @@ gtz可以压缩任何文件
 	
 	-ref
 	  该参数建议指定，但不是必须的，用于指定双端读入文件所属物种对应的fasta文件，指定时fastp-gtz会高倍率压缩输出结果文件，详细可阅读工作原理
+	  
 	--donot_pack_ref
 	  带该参数说明生成的out.fq.gtz在解压时需要指定reference文件，在这里即对应in.fq.species.fasta
+	  
 	--cache_path
 	  默认的cache路径是~/.config/gtz，你也可以通过该参数用于指定其他路径
 
