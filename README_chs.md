@@ -381,6 +381,10 @@ gtz可以压缩任何文件
 	如果安装后只希望给当前用户使用，请执行
 
 	`sh bwagtz_latest.run && source ~/.bashrc`
+	
+	如果安装后希望所有用户都能使用，请执行
+
+	`sudo sh bwagtz_latest.run`
 
 	安装完成后在任意目录可以执行bwa-gtz和bwa-opt-gtz
 	
@@ -928,6 +932,10 @@ gtz可以压缩任何文件
 	如果安装后只希望给当前用户使用，请执行
 
 	`sh fastpgtz_latest.run && source ~/.bashrc`
+	
+	如果安装后希望所有用户都能使用，请执行
+
+	`sudo sh fastpgtz_latest.run`
 
 	安装完成后在任意目录可以执行fastp-gtz
 
