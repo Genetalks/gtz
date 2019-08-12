@@ -1062,7 +1062,7 @@ gtz可以压缩任何文件
     
     `curl -SL https://gtz.io/minimap2_gtz_latest.run -o /tmp/minimap2_gtz_latest.run && sh /tmp/minimap2_gtz_latest.run`  
 	
-    首次安装后，需要执行一次source ~/.bashrc或者退出去后重新登录，然后在任意目录可以执行fastp-gtz
+    首次安装后，需要执行一次source ~/.bashrc或者退出去后重新登录，然后在任意目录可以执行minimap2-gtz
     
     ###### 或者
     下载安装文件：[-GTX.Zip minimap2-gtz-]( https://gtz.io/minimap2_gtz_latest.run )，然后安装
@@ -1081,7 +1081,7 @@ gtz可以压缩任何文件
     
 	`sudo sh minimap2_gtz_latest.run`
 	
-	安装完成后，在任意目录可以执行fastp-gtz
+	安装完成后，在任意目录可以执行minimap2-gtz
 
 
 - **使用说明**	
@@ -1124,7 +1124,7 @@ gtz可以压缩任何文件
     
     `curl -SL https://gtz.io/wtdbg2_gtz_latest.run -o /tmp/wtdbg2_gtz_latest.run && sh /tmp/wtdbg2_gtz_latest.run`  
 	
-    首次安装后，需要执行一次source ~/.bashrc或者退出去后重新登录，然后在任意目录可以执行fastp-gtz
+    首次安装后，需要执行一次source ~/.bashrc或者退出去后重新登录，然后在任意目录可以执行wtdbg2-gtz
     
     ###### 或者
     下载安装文件：[-GTX.Zip wtdbg2-gtz-]( https://gtz.io/wtdbg2_gtz_latest.run )，然后安装
@@ -1143,7 +1143,7 @@ gtz可以压缩任何文件
     
     `sudo sh wtdbg2_gtz_latest.run`
 	
-    安装完成后，在任意目录可以执行fastp-gtz
+    安装完成后，在任意目录可以执行wtdbg2-gtz
 
 
 - **使用说明**	
