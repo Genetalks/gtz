@@ -170,7 +170,13 @@ nova_rna_2.fq|5.39%|18.94%
 <table style="width:100%">
 <tr>
 	<td>
-		<img src="https://i.loli.net/2019/08/21/fXIBUgvHdN3Tatr.png">
+		<img src="https://i.loli.net/2019/08/21/KDQmz387AldYHvF.png">
+	</td>
+<tr>
+<tr>
+<tr>
+	<td>
+		<img src="https://i.loli.net/2019/08/21/IzUtNb6YXFqOdrJ.png">
 	</td>
 <tr>
 <tr>
@@ -188,13 +194,7 @@ nova_rna_2.fq|5.39%|18.94%
 <tr>
 <tr>
 	<td>
-		<img src="https://i.loli.net/2019/08/21/IzUtNb6YXFqOdrJ.png">
-	</td>
-<tr>
-<tr>
-<tr>
-	<td>
-		<img src="https://i.loli.net/2019/08/21/KDQmz387AldYHvF.png">
+		<img src="https://i.loli.net/2019/08/21/fXIBUgvHdN3Tatr.png">
 	</td>
 </tr>
 </table>
