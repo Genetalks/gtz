@@ -182,7 +182,7 @@ nova_rna_2.fq|5.39%|18.94%
 <tr>
 <tr>
 	<td>
-		<img src="https://i.loli.net/2019/08/21/J1zuLneZCjRxUfm.png">
+		<img src="https://i.loli.net/2019/08/21/qQHvu3ib75WTcIZ.png">
 	</td>
 <tr>
 <tr>
