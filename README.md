@@ -1268,7 +1268,7 @@ GTX Lab Compressor
 ## Change Log  
 
 
-Current Latest Version：gtz-2.0.1 [2019/05/23]
+Current Latest Version：gtz-2.1.0 [2019/08/21]
 
 historical version: [-Change Log-](https://github.com/Genetalks/gtz/blob/master/Changelog.md "Markdown")
 
