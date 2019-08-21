@@ -191,7 +191,7 @@ Reference genome Download: [-GCF_000001405.37_GRCh38.p11_genomic.fna.gz-](https:
 <tr>
 	<td>
 		<h3>compress BAM, Decompress without using fasta anymore(recommended)</h3>
-		<img src="https://i.loli.net/2019/08/21/MU7EkGq81XyQz2b.png" alt="">
+		<img src="https://i.loli.net/2019/08/21/ejNtE4JimApkxKs.png" alt="">
 	</td>
 <tr>
 <tr>
