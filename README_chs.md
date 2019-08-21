@@ -263,9 +263,9 @@ nova_rna_2.fq|5.39%|18.94%
 
 不使用--ref指定fasta时，gtz对该fastq文件进行普通压缩，普通压缩压缩率相比高倍压缩大部分情况下会低很多。
 
-##### 2、 压缩非fastq/fastq.gz文件
+##### 2、 压缩非fastq/fastq.gz/bam文件
 
-`gtz /data/test.bam`
+`gtz /data/test.video`
 
 gtz可以压缩任何文件
 
