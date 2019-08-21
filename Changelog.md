@@ -1,8 +1,19 @@
-## gtz-2.0.1 [2019/05/23]
+
+### gtz-2.1.0 [2019/08/21]
+
+1. Support for bam compression
+
+2. When compressing fastq.gz files, performance is more than doubled
+
+3. Fixes previous version feedback some issues that fasta can't handle
+
+4. When you unzip the gtz of the fastq format into gz format, you can modify the compression level of the gz format by -l/-level
+
+### gtz-2.0.1 [2019/05/23]
 
 fix: an abnormal problem of GTZ decompression in very special cases
 
-## gtz-2.0.0 [2019/05/08]
+### gtz-2.0.0 [2019/05/08]
 1. No longer need to make bin, direct use --ref designated species Fasta (fast)
 
 2. By default, after the pressurized use of the reference genome, decompression is no longer required unless --donot-pack-ref is used
