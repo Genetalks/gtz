@@ -324,6 +324,9 @@ gtz可以压缩任何文件
 -z,  --fastq-to-fastq-gz
     @ 压缩不使用
     @ 用于解压时: 将fastq解压成fastq.gz，只对fastq有效
+--bam-to-sam
+　　 @ 压缩不使用
+   　@ 用于解压时：将bam.gtz解压成sam文件，如果不指定该参数，则解压成bam格式文件
 --cache-path <string>
     @ 用于压缩时: 当通过--ref指定了fasta时，GTZ会将该fasta转换为对应的二进制文件，然后缓存至默认路径，这样当同一个fasta被使用时，
                  GTZ直接从缓存路径读取，这样会非常迅速。默认的缓存路径是~/.config/gtz，你可以通过--cache-path指定另外的路径
