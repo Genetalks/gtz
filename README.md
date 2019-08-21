@@ -214,43 +214,49 @@ Reference genome Download: [-GCF_000001405.37_GRCh38.p11_genomic.fna.gz-](https:
 
 #### 1. Compression fastq/fastq.gz (high-power compression)
 
-##### 1.1 Default compression mode
+##### 1.1 Default compression mode for fastq
 
 `gtz /data/nova.fastq.gz --ref /fasta/genomic.fna(.gz)`
 
 The ref parameter is used to specify the reference genome fasta file for the nova.fastq.gz corresponding species, and the fasta file also supports the gz format.Note: After compression, and the fasta file is no longer needed when decompress.
 
-##### 1.2 Specify the output file name
+##### 1.2 Default compression mode for bam
+
+`gtz /data/nova.bam --ref /fasta/genomic.fna(.gz)`
+
+The ref parameter is used to specify the reference genome fasta file for the nova.bam corresponding species, and it's necessary. After compression, and the fasta file is no longer needed when decompress.
+
+##### 1.3 Specify the output file name
 
 `gtz /data/nova.fastq.gz --ref /fasta/genomic.fna -o /out/nova.gtz`
 
 -o parameter specifies the output file name, note that the lowercase letter o
 
-##### 1.3 Decompression and Check after Compression Completion
+##### 1.4 Decompression and Check after Compression Completion
 
 `gtz /data/nova.fastq.gz --ref /fasta/genomic.fna --verify`
 
 After the data compression is completed, GTX.Zip will decompress it again to verify data MD5 and ensure that data can be fully restored. When the compressed file is used for archiving, this verify parameter isrecommended to be added. It is not necessary to add this parameter in peacetime.
 
-##### 1.4 Fast compression
+##### 1.5 Fast compression
 
 `gtz /data/nova.fastq.gz --ref /fasta/genomic.fna -l 1`
 
 -l Parametric specified compression level. 1-5 is a fast compression mode. The current compression algorithm used in 1-5 is the same, here is mainly for future expansion. The same compression algorithm used in 6-9, which is also for future expansion. 6 is the default compression level, that is, the highest compression algorithm.
 
-##### 1.5 Limit compressed threads
+##### 1.6 Limit compressed threads
 
 `gtz /data/nova.fastq.gz --ref /fasta/genomic.fna -p 4`
 
 -p parameter specifies the number of threads used for compression,Here -p 4 means that only 4 threads will be used in the entire compression process, which is very useful when there are not enough computing resources.
 
-##### 1.6 Modify the default cache path
+##### 1.7 Modify the default cache path
 
 `gtz /data/nova.fastq.gz --ref /fasta/genomic.fna --cache-path /path/cache/`
 
 When using -- ref to specify fasta, GTZ converts FASTA to the corresponding binary file and caches it to the default path (/ home / user /. config / gtz), so that when the same FASTA is specified for the next compression, GTZ can read data directly from the cache path, which is relatively fast. You can use this parameter if you need it (for example, / home/user does not have enough space)
 
-##### 1.7 Do not package fasta files
+##### 1.8 Do not package fasta files
 
 `gtz /data/nova.fastq.gz --ref /fasta/genomic.fna --donot-pack-ref`
 
@@ -272,13 +278,21 @@ GTZ can compress any file
 
 #### 3. Decompression
 
-##### 3.1 Decompress the GTZ file with FASTA compression without FASTA
+##### 3.1 Decompress the fastq.gtz file with FASTA compression without FASTA
 
 `gtz -d nova.fastq.gtz`
 
-Unzipping gtz files with fasta compression by default does not require fasta files, which is a feature of gtz2.0.0
+Unzipping gtz files with fasta compression by default does not require fasta files, which is a feature of gtz2.x.x
 
-##### 3.2 Unzip the gtz file with fasta compression. You need to specify fasta
+##### 3.2 Decompress the fastq.gtz file with FASTA compression without FASTA
+
+`gtz -d nova.bam.gtz`
+
+`gtz -d nova.bam.gtz --bam-to-sam`
+
+default, bam.gtz is unzip to bam, if want to unzip to sam, add paramters --bam-to-sam
+
+##### 3.3 Unzip the gtz file with fasta compression. You need to specify fasta
 
 `gtz -d nova.fastq.gtz --ref /fasta/genomic.fna(.gz)`
 
@@ -317,6 +331,12 @@ The -r parameter is used for compatibility with GTZ version, which is lower than
 	@ decompress : if compression uses Fasta and parameter
 	--donot-pack-ref is used, the corresponding Fasta needs to be
 	specified by this parameter when decompressing
+
+--bam-to-sam	
+     	@ compress : do not use
+
+     	@ decompress : decompress bam to sam, it's valid only for BAM,
+     	otherwise bam decompressed to bam
 
 -z,  --fastq-to-fastq-gz
 	@ compress : do not use
