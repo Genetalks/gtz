@@ -198,7 +198,7 @@ Reference genome Download: [-GCF_000001405.37_GRCh38.p11_genomic.fna.gz-](https:
 <tr>
 	<td>
 		<h3>Decompress use the fasta exactly the same as compressing (Note: You and your client must properly store the fasta file for decompression in future)</h3>
-		<img src="https://i.loli.net/2019/08/21/KLG8cUFbnzRtoxZ.png" alt="">
+		<img src="https://i.loli.net/2019/08/21/BUfoJHru5jQGwpA.png" alt="">
 	</td>
 <tr>
 <tr>
