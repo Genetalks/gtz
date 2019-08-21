@@ -245,7 +245,17 @@ nova_rna_2.fq|5.39%|18.94%
 
 使用--donot-pack-ref选项，生成的目标gtz文件会更小，但是解压时需要指定对应的fasta。我们不建议使用这个选项，因为不加这个选项相比加这个选项，压缩率影响很小，但如果使用此选项，则在解压缩时需要指定相应的fasta
 
-### 二、普通压缩
+#### 二、压缩bam
+
+##### 1、默认压缩方式
+
+`gtz /data/nova.bam --ref /fasta/genomic.fna(.gz)`
+
+--ref参数用于指定nova.bam对应物种的参考基因组fasta文件，fasta文件也支持gz格式。注意：压缩完成后的文件，解压时不再需要fasta文件
+
+###### 压缩bam时必须指定bam文件对应的fasta文件，其他压缩方式与fastq压缩方式一致
+
+### 三、普通压缩
 
 ##### 1、 压缩fastq/fastq.gz
 
@@ -261,37 +271,45 @@ gtz可以压缩任何文件
 
 ### 三、 解压
 
-##### 1、 解压带fasta压缩的gtz文件，不需要fasta
+##### 1、 解压带fasta压缩的fastq.gtz文件，不需要fasta
 
 `gtz -d nova.fastq.gtz`
 
 默认情况下解压带fasta压缩的gtz文件，不需要fasta文件，这是gtz2.0.0的特性
 
-##### 2、 解压带fasta压缩的gtz文件，需要指定fasta
+##### 2、 解压带fasta压缩的fastq.gtz文件，需要指定fasta
 
 `gtz -d nova.fastq.gtz --ref /fasta/genomic.fna(.gz)`
 
 如果压缩带了fasta，且使用了--donot-pack-ref参数，那么解压时需要指定压缩时所使用的fasta
 
-##### 3、 解压到终端
+##### 3、 解压bam.gtz文件
+
+`gtz -d nova.bam.gtz`
+
+`gtz -d nova.bam.gtz --bam-to-sam`
+
+默认情况下bam.gtz解压成bam文件，如果需要解压成sam文件，需要带参数--bam-to-sam。如果该bam.gtz解压需要指定fasta可以通过--ref指定，参考fastq的解压即可
+
+##### 4、 解压到终端
 
 `gtz -d nova.fastq.gtz -c 2>/dev/null`
 
 -c参数表示解压到终端。2>/dev/null表示将其他打印去除，只打印解压出来的fastq的内容
 
-##### 4、解压到指定路径
+##### 5、解压到指定路径
 
 `gtz -d nova.fastq.gtz -O /path/out/`
 
 -O参数指定解压文件的输出目录，注意是大小字母O
 
-##### 5、限定解压资源
+##### 6、限定解压资源
 
 `gtz -d nova.fastq.gtz -p 4`
 
 -p参数同样适用解压，这里-p 4表示解压时只使用4个线程
 
-##### 6、解压低版本带bin压缩的gtz文件
+##### 7、解压低版本带bin压缩的gtz文件
 
 `gtz -d nova.fastq.old.gtz -r Homo_sapiens_bcacac9064331276504f27c6cf40e580.rbin`
 
