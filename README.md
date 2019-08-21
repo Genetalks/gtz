@@ -284,7 +284,7 @@ GTZ can compress any file
 
 Unzipping gtz files with fasta compression by default does not require fasta files, which is a feature of gtz2.x.x
 
-##### 3.2 Decompress the fastq.gtz file with FASTA compression without FASTA
+##### 3.2 Decompress the bam.gtz file with FASTA compression without FASTA
 
 `gtz -d nova.bam.gtz`
 
