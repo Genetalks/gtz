@@ -1,4 +1,4 @@
-# GTX.Zip Professional Version (Latest Version GTZ 2.0.1)
+# GTX.Zip Professional Version (Latest Version GTZ 2.1.0)
 
 [中文说明](https://github.com/Genetalks/gtz/blob/master/README_chs.md "Markdown").
 <table style="width:100%">
@@ -177,21 +177,35 @@ Reference genome Download: [-GCF_000001405.37_GRCh38.p11_genomic.fna.gz-](https:
 <tr>
 	<td>
 		<h3>high compression rate with fasta, Decompress without using fasta anymore(recommended)</h3>
-		<img src="https://i.loli.net/2019/05/17/5cde6e52e228653046.png" alt=""/>
+		<img src="https://i.loli.net/2019/08/21/HXWTwqVya4dMFmL.png" alt=""/>
 	</td>
 <tr>
 <tr>
 <tr>
 	<td>
 		<h3>Higher compression rate, Decompress use the fasta exactly the same as compressing (Note: You and your client must properly store the fasta file for decompression in future)</h3>
-		<img src="https://i.loli.net/2019/05/17/5cde6e52e885555936.png" alt="">
+		<img src="https://i.loli.net/2019/08/21/lJNmCwEhFU3XszI.png" alt="">
+	</td>
+<tr>
+<tr>
+<tr>
+	<td>
+		<h3>compress BAM, Decompress without using fasta anymore(recommended)</h3>
+		<img src="https://i.loli.net/2019/08/21/CqTi7a3QA8YDlsV.png" alt="">
+	</td>
+<tr>
+<tr>
+<tr>
+	<td>
+		<h3>Decompress use the fasta exactly the same as compressing (Note: You and your client must properly store the fasta file for decompression in future)</h3>
+		<img src="https://i.loli.net/2019/08/21/KLG8cUFbnzRtoxZ.png" alt="">
 	</td>
 <tr>
 <tr>
 <tr>
 	<td>
 		<h3>Lower compression rate than above, but can compress arbitrary files</h3>
-		<img src="https://i.loli.net/2019/05/17/5cde6e530557297295.png">
+		<img src="https://i.loli.net/2019/08/21/MU7EkGq81XyQz2b.png">
 	</td>
 </tr>
 </table>
