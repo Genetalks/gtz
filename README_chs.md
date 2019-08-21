@@ -1,4 +1,4 @@
-# GTX.Zip Professional Version（最新版本 GTZ 2.0.1）
+# GTX.Zip Professional Version（最新版本 GTZ 2.1.0）
 
 <table style="width:100%">
 <tr>
@@ -170,19 +170,31 @@ nova_rna_2.fq|5.39%|18.94%
 <table style="width:100%">
 <tr>
 	<td>
-		<img src="https://i.loli.net/2019/05/07/5cd14cc9ba4cb.png">
+		<img src="https://i.loli.net/2019/08/21/fXIBUgvHdN3Tatr.png">
 	</td>
 <tr>
 <tr>
 <tr>
 	<td>
-		<img src="https://i.loli.net/2019/05/07/5cd14cc9e6f08.png">
+		<img src="https://i.loli.net/2019/08/21/J1zuLneZCjRxUfm.png">
 	</td>
 <tr>
 <tr>
 <tr>
 	<td>
-		<img src="https://i.loli.net/2019/05/07/5cd14cc9dabac.png">
+		<img src="https://i.loli.net/2019/08/21/pDsleVQB2SC5kL9.png">
+	</td>
+<tr>
+<tr>
+<tr>
+	<td>
+		<img src="https://i.loli.net/2019/08/21/IzUtNb6YXFqOdrJ.png">
+	</td>
+<tr>
+<tr>
+<tr>
+	<td>
+		<img src="https://i.loli.net/2019/08/21/KDQmz387AldYHvF.png">
 	</td>
 </tr>
 </table>
