@@ -656,7 +656,7 @@ GTX Lab Compressor
 
 - **How to Install?**
 
-	    #### Mode 1: Install directly from the command line(recommended installation method)
+	#### Mode 1: Install directly from the command line(recommended installation method)
 
 	##### Install for ALL USERS:
 
