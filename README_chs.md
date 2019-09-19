@@ -583,7 +583,7 @@ gtz可以压缩任何文件
     >  <font size=1>\* 该例子中通过-r指定rbin文件所在目录，效果与方式一相同</font>
 
 	
-## 4、BOWTIE for GTZ <span id="bowtie"></span>  (目前只支持版本号小于2.x.x的gtz压缩包)
+## 4、BOWTIE for GTZ <span id="bowtie"></span>  (支持最新的gtz版本)
 
 - **安装方法**
 
@@ -631,7 +631,7 @@ gtz可以压缩任何文件
 
 	##### 步骤二：执行比对
 
-	###### 1) 如果解压read.gtz不需要reference则跳过该步骤，否则通过以下方式指定对应reference
+	###### 1) 如果解压reads.fq.gtz不需要reference则跳过该步骤，否则通过以下方式指定对应reference
 
 	`export GTZ_RBIN_PATH=/path/rbin/` （适用于gtx1.x.x版本，指定解压时rbin文件所在路径，建议指定；但不是必须的，没指定时gtz会自动下载，会消耗一定的时间）
 
