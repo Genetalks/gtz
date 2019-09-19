@@ -626,18 +626,35 @@ gtz可以压缩任何文件
 
  	
  	
-## 5、BOWTIE2 for GTZ <span id="bowtie2"></span>  (目前只支持版本号小于2.x.x的gtz压缩包)
+## 5、BOWTIE2 for GTZ <span id="bowtie2"></span>   (支持最新的gtz版本)
 
 - **安装方法**
 
-	##### 方式一  
-	运行命令（推荐）  
-		`sudo curl -SL https://gtz.io/bowtie2gtz_latest.run -o /tmp/bowtie2gtz.run && sudo sh /tmp/bowtie2gtz.run`  
-	##### 方式二  
-	下载安装文件：[-GTX.Zip bowtie2-gtz-]( https://gtz.io/bowtie2gtz_latest.run )  
-	在安装文件目录下运行命令  
-	`sudo sh bowtie2gtz_latest.run`  
-	根据提示完成安装  
+	##### 方式一 通过命令行直接安装（建议安装方式）
+
+	如果安装后只希望给当前用户使用，请执行
+
+	`curl -SL https://gtz.io/bowtie2gtz_latest.run -o /tmp/bowtie2gtz.run && sh /tmp/bowtie2gtz.run && source ~/.bashrc`
+
+	如果安装后希望所有用户都能使用，请执行
+
+	`sudo curl -SL https://gtz.io/bowtie2gtz_latest.run -o /tmp/bowtie2gtz.run && sudo sh /tmp/bowtie2gtz.run`
+
+
+
+	##### 方式二 先下载软件然后安装
+
+	首先从[-GTX.Zip Professional-]( https://gtz.io/bowtie2gtz_latest.run )下载软件。
+
+	如果安装后只希望给当前用户使用，请执行
+
+	`sh bowtie2gtz_latest.run && source ~/.bashrc`
+	
+	如果安装后希望所有用户都能使用，请执行
+
+	`sudo sh bowtie2gtz_latest.run`
+
+	安装完成后在任意目录可以执行bowtie2-build-gtz，bowtie2-gtz和bowtie2-inspect-gtz
 	
 - **使用说明**
 
@@ -657,11 +674,15 @@ gtz可以压缩任何文件
 
 	##### 步骤二：执行比对
 
-	`export GTZ_RBIN_PATH=/path/rbin/`
+	###### 1) 如果解压reads_1.fq.gtz和reads_2.fq.gtz不需要reference则跳过该步骤，否则通过以下方式指定对应reference
+
+	`export GTZ_RBIN_PATH=/path/rbin/` （适用于gtx1.x.x版本，指定解压时rbin文件所在路径，建议指定；但不是必须的，没指定时gtz会自动下载，会消耗一定的时间）
+
+	`export GTZ_RBIN_PATH=/path/fasta/xxx.fa`  （适用于gtx2.x.x版本，指定解压时对应的fasta文件，必须）
+	
+	###### 2) 
 	
 	`bowtie2-gtz -x ref_index -1 reads_1.fq.gtz -2 reads_2.fq.gtz -S eg2.sam -p 4 --reorder`
-
-	>  <font size=1>\* 该例子中通过环境变量GTZ_RBIN_PATH指定了rbin文件所在路径，这里"export GTZ_RBIN_PATH=/path/rbin/"不是必须的，但如果您知道rbin所在路径，建议您指定，这样可以加快bowtie2-gtz处理速度。因为，当bowtie2-gtz需要rbin文件，且在默认路径~/.config/gtz下找不到该rbin文件时，则会通过网络下载，下载过程将消耗时间。</font>
 	
 
 	
@@ -669,8 +690,6 @@ gtz可以压缩任何文件
 
 	
 	#####	测试命令
-	
-	`export GTZ_RBIN_PATH=/path/rbin/`
 	
 	`bowtie2 -x ref_index -1 reads_1.fq.gz -2 reads_2.fq.gz -S eg2.sam -p 4 --reorder`
 	
