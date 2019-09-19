@@ -652,19 +652,42 @@ GTX Lab Compressor
 
     >  <font size=1>\* In this example, the directory where the RBIN file is located is specified by -r, it's same as method one.</font>
 
-## 4、BOWTIE for GTZ <span id="bowtie"></span>  (support gtz version < 2.x.x)
+## 4、BOWTIE for GTZ <span id="bowtie"></span>  (support gtz 2.x.x version)
 
 - **How to Install?**
 
-	##### For installation you can (recommended)  
-	
+	#### Mode 1: Install directly from the command line(recommended installation method)
+
+	##### Install for ALL USERS:
+
 	`sudo curl -SL https://gtz.io/bowtiegtz_latest.run -o /tmp/bowtiegtz.run && sudo sh /tmp/bowtiegtz.run`  
-	##### or 
-	download installation files：[-GTX.Zip bowtie-gtz-]( https://gtz.io/bowtiegtz_latest.run )  
-	Run commands in the installation file directory 
-	
-	`sudo sh bowtiegtz_latest.run`  
-	complete installation according to prompt.  
+
+	Once installed, bowtie-gtz and bowtie-opt-gtz executable file are placed in /usr/local/bowtie-gtz directory, bowtie-gtz's and bowtie-build-gtz's and bowtie-inspect-gtz's softlink is created to /usr/bin
+
+	##### Only install for CURRENT USER:
+
+	`curl -SL https://gtz.io/bowtiegtz_latest.run -o /tmp/bowtiegtz.run && sh /tmp/bowtiegtz.run && source ~/.bashrc`
+
+	Once installed, bowtie-gtz and bowtie-opt-gtz executable file are placed in the current user's ~/.config/bowtie-gtz directory, bowtie-gtz's and bowtie-build-gtz's and bowtie-inspect-gtz's alias is added to ~/.bashrc
+
+	#### Mode 2: First download the software and then install it. 
+
+	First download the software from [-GTX.Zip Professional-]( https://gtz.io/bowtiegtz_latest.run ).
+
+	Commercially authorized users get from contact@gtz.io .
+
+	##### Install for ALL USERS:
+
+	`sudo sh bowtiegtz_latest.run` 
+
+	Once installed, bowtie-gtz and bowtie-opt-gtz executable file are placed in /usr/local/bowtie-gtz directory, bowtie-gtz's and bowtie-build-gtz's and bowtie-inspect-gtz's softlink is created to /usr/bin
+
+	##### Only install for CURRENT USER:
+
+	`sh bowtiegtz_latest.run && source ~/.bashrc`
+
+	Once installed, bowtie-gtz and bowtie-opt-gtz executable file are placed in the current user's ~/.config/bowtie-gtz directory, bowtie-gtz's and bowtie-build-gtz's and bowtie-inspect-gtz's alias is added to ~/.bashrc
+
 	
 - **How to Use?**
 
@@ -685,7 +708,13 @@ GTX Lab Compressor
 
 	##### Step two: execution comparison
 
-	`export GTZ_RBIN_PATH=/path/rbin/`
+	###### 1) Skip this step if the decompression read1.fq.gtz　and read2.fq.gtz does not require a reference file,  otherwise specify the corresponding reference as follows
+
+	`export GTZ_RBIN_PATH=/path/rbin/` (Suitable for gtx1.x.x version, specify the rbin file path for unzip, it's recommended but not required, when not specified gtz will download automatically, will consume a certain amount of time)
+
+	`export GTZ_RBIN_PATH=/path/fasta/xxx.fa`  (Suitable for gtx2.x.x version, specifies the corresponding fasta file for decompression, must)
+
+	###### 2) execution command
 	
 	`bowtie-gtz -S ref_index reads.fq.gtz eg.sam`
 
@@ -697,7 +726,7 @@ GTX Lab Compressor
 
 	
  	
-## 5、BOWTIE2 for GTZ <span id="bowtie2"></span>  (support gtz version < 2.x.x)
+## 5、BOWTIE2 for GTZ <span id="bowtie2"></span>  (support gtz 2.x.x version)
 
 - **How to Install?**
 
