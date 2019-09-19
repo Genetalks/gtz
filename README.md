@@ -709,7 +709,7 @@ GTX Lab Compressor
 
 	##### Step two: execution comparison
 
-	###### 1) Skip this step if the decompression read1.fq.gtz　and read2.fq.gtz does not require a reference file,  otherwise specify the corresponding reference as follows
+	###### 1) Skip this step if the decompression read1.fq.gtz and read2.fq.gtz does not require a reference file,  otherwise specify the corresponding reference as follows
 
 	`export GTZ_RBIN_PATH=/path/rbin/` (Suitable for gtx1.x.x version, specify the rbin file path for unzip, it's recommended but not required, when not specified gtz will download automatically, will consume a certain amount of time)
 
@@ -781,7 +781,7 @@ GTX Lab Compressor
 
 	##### Step two: execution comparison
 
-	###### 1) Skip this step if the decompression read1.fq.gtz　and read2.fq.gtz does not require a reference file,  otherwise specify the corresponding reference as follows
+	###### 1) Skip this step if the decompression read1.fq.gtz and read2.fq.gtz does not require a reference file,  otherwise specify the corresponding reference as follows
 
 	`export GTZ_RBIN_PATH=/path/rbin/` (Suitable for gtx1.x.x version, specify the rbin file path for unzip, it's recommended but not required, when not specified gtz will download automatically, will consume a certain amount of time)
 
@@ -797,8 +797,6 @@ GTX Lab Compressor
 
 	
 	#####	Test command
-	
-	`export GTZ_RBIN_PATH=/path/rbin/`
 	
 	`bowtie2 -x ref_index -1 reads_1.fq.gz -2 reads_2.fq.gz -S eg2.sam -p 4 --reorder`
 	
