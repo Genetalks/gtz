@@ -140,7 +140,8 @@ nova_rna_2.fq|5.39%|18.94%
 
 
 ## 安装Windows  GTX.Zip Pro<span id="install"></span>  
-	
+- **安装**
+
 安装包下载链接    https://gtz.io/gtz-2.1.2-x64-setup.exe
 	
 
@@ -172,7 +173,9 @@ nova_rna_2.fq|5.39%|18.94%
 	</td>
 <tr>
 
-如果要卸载程序，进入windows 系统快捷菜单栏，选择Uninstall GTZ：
+- **卸载**
+
+在windows 系统快捷菜单栏，选择Uninstall GTZ：
 
 <tr>
 	<td>
