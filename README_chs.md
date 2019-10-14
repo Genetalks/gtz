@@ -107,7 +107,7 @@ nova_rna_2.fq|5.39%|18.94%
 --------    
   
 
-## 安装Linux GTX.Zip Pro<span id="install"></span>  
+## 安装Linux  GTX.Zip Pro<span id="install"></span>  
 - **方式一 通过命令行直接安装（建议安装方式）**
 
 如果安装后只希望给当前用户使用，请执行
@@ -138,7 +138,7 @@ nova_rna_2.fq|5.39%|18.94%
 
 `gtz --version`  
 
-## 安装Windows GTX.Zip Pro<span id="install"></span>  
+## 安装Windows  GTX.Zip Pro<span id="install"></span>  
 
 [-回顶-](#index)  
   
