@@ -152,6 +152,7 @@ Running the following command, the corresponding software version information ap
 ## How to Install （Windows) <span id="install"></span> 
 
 - **Install**
+
 	The download links of Installation package  https://gtz.io/gtz-2.1.2-x64-setup.exe
 	
 	Double-click on gtz-X.X.X-x64-setup.exe to start the installation：
@@ -183,6 +184,7 @@ Running the following command, the corresponding software version information ap
 	<tr>
 
 - **Uninstall**
+
 	Open the windows system shortcut menu and select Uninstall GTZ：
 
 	<tr>
