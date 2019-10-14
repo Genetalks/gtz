@@ -139,6 +139,12 @@ nova_rna_2.fq|5.39%|18.94%
 `gtz --version`  
 
 ## 安装Windows  GTX.Zip Pro<span id="install"></span>  
+	
+	安装包下载链接    https://gtz.io/gtz-2.1.2-x64-setup.exe
+	
+	双击gtz-X.X.X-x64-setup.exe ，开始安装
+	
+
 
 [-回顶-](#index)  
   
