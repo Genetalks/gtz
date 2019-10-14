@@ -98,7 +98,6 @@ nova_rna_2.fq|5.39%|18.94%
 ## 运行环境 Linux<span id="environment"></span>
 - **64位 Linux 系统（CentOS >= 6.1；Ubuntu >= 12.04， < 18.04)**
 
-## 运行环境 Windows <span id="environment"></span>
 - **64位 Windows 系统(win7,win10)**
 
   
