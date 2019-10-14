@@ -138,6 +138,7 @@ nova_rna_2.fq|5.39%|18.94%
 
 `gtz --version`  
 
+
 ## 安装Windows  GTX.Zip Pro<span id="install"></span>  
 	
 安装包下载链接    https://gtz.io/gtz-2.1.2-x64-setup.exe
@@ -157,7 +158,7 @@ nova_rna_2.fq|5.39%|18.94%
 	</td>
 <tr>
 
-选 “是”，完成PATH环境变量的配置，可以在任意路径执行gtz程序：
+选 “是”，完成PATH环境变量配置，就可以在任意路径执行gtz程序：
 <tr>
 	<td>
 		<img src="https://i.loli.net/2019/10/14/8dpKYlsmA5zoEaC.jpg">
@@ -171,6 +172,20 @@ nova_rna_2.fq|5.39%|18.94%
 	</td>
 <tr>
 
+如果要卸载程序，进入windows 系统快捷菜单栏，选择Uninstall GTZ：
+
+<tr>
+	<td>
+		<img src="https://i.loli.net/2019/10/14/KQ1bq4SXHkMLFEf.jpg">
+	</td>
+<tr>
+
+或者进入程序安装目录，运行Uninstall GTX.exe 完成卸载
+<tr>
+	<td>
+		<img src="https://i.loli.net/2019/10/14/ONTe7m1iP8HaJ4g.jpg">
+	</td>
+<tr>
 
 [-回顶-](#index)  
   
