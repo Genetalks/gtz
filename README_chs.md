@@ -95,15 +95,19 @@ nova_rna_2.fq|5.39%|18.94%
 --------    
   
 	
-## 运行环境<span id="environment"></span>
+## 运行环境 Linux<span id="environment"></span>
 - **64位 Linux 系统（CentOS >= 6.1；Ubuntu >= 12.04， < 18.04)**
+
+## 运行环境 Windows <span id="environment"></span>
+- **64位 Windows 系统(win7,win10)**
+
   
 [-回顶-](#index)  
   
 --------    
   
 
-## 安装GTX.Zip Pro<span id="install"></span>  
+## 安装Linux GTX.Zip Pro<span id="install"></span>  
 - **方式一 通过命令行直接安装（建议安装方式）**
 
 如果安装后只希望给当前用户使用，请执行
@@ -134,6 +138,7 @@ nova_rna_2.fq|5.39%|18.94%
 
 `gtz --version`  
 
+## 安装Windows GTX.Zip Pro<span id="install"></span>  
 
 [-回顶-](#index)  
   
