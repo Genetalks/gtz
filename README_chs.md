@@ -144,16 +144,32 @@ nova_rna_2.fq|5.39%|18.94%
 	
 
 双击gtz-X.X.X-x64-setup.exe ，开始安装：
-![install_1.jpg](https://i.loli.net/2019/10/14/NPD3ATahG1jXKIW.jpg)
+<tr>
+	<td>
+	![install_1.jpg](https://i.loli.net/2019/10/14/NPD3ATahG1jXKIW.jpg)
+	</td>
+<tr>
 
 选择安装目录：
-![uninstall_2.jpg](https://i.loli.net/2019/10/14/ONTe7m1iP8HaJ4g.jpg)
+<tr>
+	<td>
+	![install_2.jpg](https://i.loli.net/2019/10/14/b8dj1Btm9QCS3DN.jpg)
+	</td>
+<tr>
 
 选 “是”，完成PATH环境变量的配置，可以在任意路径执行gtz程序：
-![install_3.jpg](https://i.loli.net/2019/10/14/8dpKYlsmA5zoEaC.jpg)
+<tr>
+	<td>
+	![install_3.jpg](https://i.loli.net/2019/10/14/8dpKYlsmA5zoEaC.jpg)
+	</td>
+<tr>
 
 安装完成：
-![install_4.jpg](https://i.loli.net/2019/10/14/lW4A8F9ysEIp5vz.jpg)
+<tr>
+	<td>
+	![install_4.jpg](https://i.loli.net/2019/10/14/lW4A8F9ysEIp5vz.jpg)
+	</td>
+<tr>
 
 
 [-回顶-](#index)  
