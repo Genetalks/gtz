@@ -107,7 +107,7 @@ As an enterprise-level software, GTX.Zip has developed a nirvana program for hig
 - **64-bit Windows system (Win7,Win10)**     
 
   
-## How to Install <span id="install"></span>  
+## How to Install （Linux) <span id="install"></span>  
 
 - **Mode 1: Install directly from the command line(recommended installation method)**
 
@@ -148,6 +148,55 @@ Running the following command, the corresponding software version information ap
 
 `gtz --version`      
 	  
+
+## How to Install （Windows) <span id="install"></span> 
+
+- **Install**
+	The download links of Installation package  https://gtz.io/gtz-2.1.2-x64-setup.exe
+	
+	Double-click on gtz-X.X.X-x64-setup.exe to start the installation：
+	<tr>
+		<td>
+			<img src="https://i.loli.net/2019/10/14/NPD3ATahG1jXKIW.jpg">
+		</td>
+	<tr>
+
+	Select the installation directory：
+	<tr>
+		<td>
+			<img src="https://i.loli.net/2019/10/14/b8dj1Btm9QCS3DN.jpg">
+		</td>
+	<tr>
+
+	Select "Yes" to complete the configuration of the PATH environment variable, then you can execute the gtz program on any path：
+	<tr>
+		<td>
+			<img src="https://i.loli.net/2019/10/14/8dpKYlsmA5zoEaC.jpg">
+		</td>
+	<tr>
+
+	The installation is completed：
+	<tr>
+		<td>
+			<img src="https://i.loli.net/2019/10/14/lW4A8F9ysEIp5vz.jpg">
+		</td>
+	<tr>
+
+- **Uninstall**
+	Open the windows system shortcut menu and select Uninstall GTZ：
+
+	<tr>
+		<td>
+			<img src="https://i.loli.net/2019/10/14/KQ1bq4SXHkMLFEf.jpg">
+		</td>
+	<tr>
+
+	Or enter the installation directory，run Uninstall GTX.exe to complete the uninstallation
+	<tr>
+		<td>
+			<img src="https://i.loli.net/2019/10/14/ONTe7m1iP8HaJ4g.jpg">
+		</td>
+	<tr>
 	    
 [-Back to Top-](#index)  
   
