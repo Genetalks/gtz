@@ -141,53 +141,53 @@ nova_rna_2.fq|5.39%|18.94%
 ## 安装Windows  GTX.Zip Pro<span id="install"></span>  
 - **安装**
 
-安装包下载链接    https://gtz.io/gtz-2.1.2-x64-setup.exe
-	
+	安装包下载链接    https://gtz.io/gtz-2.1.2-x64-setup.exe
 
-双击gtz-X.X.X-x64-setup.exe ，开始安装：
-<tr>
-	<td>
-		<img src="https://i.loli.net/2019/10/14/NPD3ATahG1jXKIW.jpg">
-	</td>
-<tr>
 
-选择安装目录：
-<tr>
-	<td>
-		<img src="https://i.loli.net/2019/10/14/b8dj1Btm9QCS3DN.jpg">
-	</td>
-<tr>
+	双击gtz-X.X.X-x64-setup.exe ，开始安装：
+	<tr>
+		<td>
+			<img src="https://i.loli.net/2019/10/14/NPD3ATahG1jXKIW.jpg">
+		</td>
+	<tr>
 
-选 “是”，完成PATH环境变量配置，就可以在任意路径执行gtz程序：
-<tr>
-	<td>
-		<img src="https://i.loli.net/2019/10/14/8dpKYlsmA5zoEaC.jpg">
-	</td>
-<tr>
+	选择安装目录：
+	<tr>
+		<td>
+			<img src="https://i.loli.net/2019/10/14/b8dj1Btm9QCS3DN.jpg">
+		</td>
+	<tr>
 
-安装完成：
-<tr>
-	<td>
-		<img src="https://i.loli.net/2019/10/14/lW4A8F9ysEIp5vz.jpg">
-	</td>
-<tr>
+	选 “是”，完成PATH环境变量配置，就可以在任意路径执行gtz程序：
+	<tr>
+		<td>
+			<img src="https://i.loli.net/2019/10/14/8dpKYlsmA5zoEaC.jpg">
+		</td>
+	<tr>
+
+	安装完成：
+	<tr>
+		<td>
+			<img src="https://i.loli.net/2019/10/14/lW4A8F9ysEIp5vz.jpg">
+		</td>
+	<tr>
 
 - **卸载**
 
-在windows 系统快捷菜单栏，选择Uninstall GTZ：
+	在windows 系统快捷菜单栏，选择Uninstall GTZ：
 
-<tr>
-	<td>
-		<img src="https://i.loli.net/2019/10/14/KQ1bq4SXHkMLFEf.jpg">
-	</td>
-<tr>
+	<tr>
+		<td>
+			<img src="https://i.loli.net/2019/10/14/KQ1bq4SXHkMLFEf.jpg">
+		</td>
+	<tr>
 
-或者进入程序安装目录，运行Uninstall GTX.exe 完成卸载
-<tr>
-	<td>
-		<img src="https://i.loli.net/2019/10/14/ONTe7m1iP8HaJ4g.jpg">
-	</td>
-<tr>
+	或者进入程序安装目录，运行Uninstall GTX.exe 完成卸载
+	<tr>
+		<td>
+			<img src="https://i.loli.net/2019/10/14/ONTe7m1iP8HaJ4g.jpg">
+		</td>
+	<tr>
 
 [-回顶-](#index)  
   
