@@ -204,7 +204,25 @@ Running the following command, the corresponding software version information ap
   
 --------  
 
-## Quick Start <span id="quick-start"></span>	
+## Quick Start (Linux)<span id="quick-start"></span>	
+GTX.Zip Professional needs to be installed on the current machine. If not, please see [-How to Install-](#install) .
+
+**1. Download samples file to be compressed**	  
+Sample Download: [-sample.fq-](https://gtz.io/sample.fq)  
+>  <font size=1>\* 2GB fastq file, extracted from a real WES data produced by Novaseq</font>
+
+Reference genome Download: [-GCF_000001405.37_GRCh38.p11_genomic.fna.gz-](https://gtz.io/GCF_000001405.37_GRCh38.p11_genomic.fna.gz)
+ 
+**2. Start compression**	  
+
+ `gtz sample.fq --ref GCF_000001405.37_GRCh38.p11_genomic.fna.gz`  
+>  <font size=1>\* gtz can also directly compress fastq.gz file</font>
+
+**3、decompress**
+
+`gtz -d sample.fq.gtz`
+
+## Quick Start （Windows）<span id="quick-start"></span>	
 GTX.Zip Professional needs to be installed on the current machine. If not, please see [-How to Install-](#install) .
 
 **1. Download samples file to be compressed**	  
