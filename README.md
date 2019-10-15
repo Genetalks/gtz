@@ -193,7 +193,7 @@ Running the following command, the corresponding software version information ap
 		</td>
 	<tr>
 
-	Or enter the installation directory，run Uninstall GTX.exe to complete the uninstallation
+	Or enter the installation directory，run Uninstall GTX.exe ：
 	<tr>
 		<td>
 			<img src="https://i.loli.net/2019/10/14/ONTe7m1iP8HaJ4g.jpg">
