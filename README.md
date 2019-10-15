@@ -230,15 +230,36 @@ Sample Download: [-sample.fq-](https://gtz.io/sample.fq)
 >  <font size=1>\* 2GB fastq file, extracted from a real WES data produced by Novaseq</font>
 
 Reference genome Download: [-GCF_000001405.37_GRCh38.p11_genomic.fna.gz-](https://gtz.io/GCF_000001405.37_GRCh38.p11_genomic.fna.gz)
- 
-**2. Start compression**	  
+
+**2. Open Windows command window**	  
+`gtz --version`
+
+<tr>
+	<td>
+		<img src="https://i.loli.net/2019/10/15/L7UtBzQ5GClM9bI.jpg">
+	</td>
+<tr>
+
+**3. Start compression**	  
 
  `gtz sample.fq --ref GCF_000001405.37_GRCh38.p11_genomic.fna.gz`  
 >  <font size=1>\* gtz can also directly compress fastq.gz file</font>
 
-**3、decompress**
+<tr>
+	<td>
+		<img src="https://i.loli.net/2019/10/15/5iPBzuGnRhsoFAw.jpg">
+	</td>
+<tr>
+
+**4、decompress**
 
 `gtz -d sample.fq.gtz`
+
+<tr>
+	<td>
+		<img src="https://i.loli.net/2019/10/15/oik1C4E6plLnwPh.jpg">
+	</td>
+<tr>
 
 
 ## How to use <span id="use"></span>	
