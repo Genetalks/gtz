@@ -194,7 +194,7 @@ nova_rna_2.fq|5.39%|18.94%
 --------    
   
 
-## 快速上手<span id="quick-start"></span>  
+## 快速上手 (Linux)<span id="quick-start"></span>  
 前提：当前机器中已经安装了GTX.Zip Professional软件，如未安装请参考[-安装软件-](#install)
 
 
@@ -212,6 +212,46 @@ nova_rna_2.fq|5.39%|18.94%
 **3、解压还原**
 
 `gtz -d sample.fq.gtz`
+
+## 快速上手 (Windows)<span id="quick-start"></span>  
+前提：当前机器中已经安装了GTX.Zip Professional软件，如未安装请参考[-安装软件-](#install)
+
+
+**1、下载待压缩样本**	  
+样本下载：[-sample.fq-](https://gtz.io/sample.fq)  
+>  <font size=1>\* 样本文件大小2GB , 从Novaseq的WES数据提取</font>
+
+参考基因组下载: [-GCF_000001405.37_GRCh38.p11_genomic.fna.gz-](https://gtz.io/GCF_000001405.37_GRCh38.p11_genomic.fna.gz)
+
+**2、打开Windows命令行窗口**	
+`gtz --version`
+
+<tr>
+	<td>
+		<img src="https://i.loli.net/2019/10/15/L7UtBzQ5GClM9bI.jpg">
+	</td>
+<tr>
+	
+**3、开始压缩**	  
+
+ `gtz sample.fq --ref GCF_000001405.37_GRCh38.p11_genomic.fna.gz`  
+>  <font size=1>\* GTX.Zip 同时支持压缩fq.gz文件</font>
+
+<tr>
+	<td>
+		<img src="https://i.loli.net/2019/10/15/5iPBzuGnRhsoFAw.jpg">
+	</td>
+<tr>
+
+**4、解压还原**
+
+`gtz -d sample.fq.gtz`
+
+<tr>
+	<td>
+		<img src="https://i.loli.net/2019/10/15/oik1C4E6plLnwPh.jpg">
+	</td>
+<tr>
 
 [-回顶-](#index)  
   
