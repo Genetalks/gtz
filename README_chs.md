@@ -223,7 +223,8 @@ nova_rna_2.fq|5.39%|18.94%
 
 参考基因组下载: [-GCF_000001405.37_GRCh38.p11_genomic.fna.gz-](https://gtz.io/GCF_000001405.37_GRCh38.p11_genomic.fna.gz)
 
-**2、打开Windows命令行窗口**	
+**2、打开Windows命令行窗口**
+
 `gtz --version`
 
 <tr>
