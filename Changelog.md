@@ -1,3 +1,9 @@
+### gtz-2.1.2 [2019/11/13]
+
+Fix issue:
+1. Cannot compress the fastq.gz files with very special format
+2. Cannot run on a server for a specific cpu type
+
 ### gtz-2.1.1 [2019/09/16]
 
 1. fix a known issue
