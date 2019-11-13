@@ -752,7 +752,7 @@ gtz可以压缩任何文件
 	如果安装后只希望给当前用户使用，请执行
 
 	`curl -SL https://gtz.io/bowtie2gtz_latest.run -o /tmp/bowtie2gtz.run && sh /tmp/bowtie2gtz.run && source ~/.bashrc`
-
+git config --global user.email
 	如果安装后希望所有用户都能使用，请执行
 
 	`sudo curl -SL https://gtz.io/bowtie2gtz_latest.run -o /tmp/bowtie2gtz.run && sudo sh /tmp/bowtie2gtz.run`
@@ -1502,7 +1502,7 @@ python2 >= 2.6, python3 >=3.5
   
 ## 版本日志<span id="change-log"></span>
 
-目前最新版本：gtz-2.1.1 [2019/09/16]
+目前最新版本：gtz-2.1.2 [2019/11/13]
 
 历史版本见：	[-版本日志-](https://github.com/Genetalks/gtz/blob/master/Changelog_chs.md "Markdown")
   
