@@ -201,8 +201,53 @@ nova_rna_2.fq|5.39%|18.94%
 	<tr>
 	
 	点击“继续”：
+	<tr>
+		<td>
+			<img src="https://i.loli.net/2020/01/21/XuHrKbwy5Z3sQAE.png">
+		</td>
+	<tr>
 	
-	  
+	软件许可协议，点击“继续”，并点“同意”以继续安装 ：
+	<tr>
+		<td>
+			<img src="https://i.loli.net/2020/01/21/zyTeui91DjkBcdC.png">
+		</td>
+	<tr>
+	
+		<tr>
+		<td>
+			<img src="https://i.loli.net/2020/01/21/Irdaxsom2Z48eV3.png">
+		</td>
+	<tr>
+	
+	安装类型，并点“安装”；然后输入您的用户名以及密码，点“安装软件”：
+	<tr>
+		<td>
+			<img src="https://i.loli.net/2020/01/21/quRg9v1malPtEh5.png">
+		</td>
+	<tr>
+	
+	<tr>
+		<td>
+			<img src="https://i.loli.net/2020/01/21/39bZCoTXISmVFMg.png">
+		</td>
+	<tr>
+	
+	安装成功，点“关闭”
+	<tr>
+		<td>
+			<img src="https://i.loli.net/2020/01/21/abQF9PnDChorW2s.png">
+		</td>
+	<tr>
+		
+- **验证安装是否成功**
+
+	打开终端，运行以下命令，出现相应的软件版本信息则说明安装成功：
+	<tr>
+		<td>
+			<img src="https://i.loli.net/2020/01/21/iw1sCTUadqVRmJO.png">
+		</td>
+	<tr>
 
 [-回顶-](#index)  
   
