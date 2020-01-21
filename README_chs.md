@@ -196,7 +196,7 @@ nova_rna_2.fq|5.39%|18.94%
 	双击 gtz-2.1.2-x64-setup.pkg ，开始安装：
 	<tr>
 		<td>
-			<img src="https://sm.ms/image/XuHrKbwy5Z3sQAE">
+			<img src="https://i.loli.net/2020/01/21/XuHrKbwy5Z3sQAE.png">
 		</td>
 	<tr>
 	
