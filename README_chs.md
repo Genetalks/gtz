@@ -194,6 +194,15 @@ nova_rna_2.fq|5.39%|18.94%
 	安装包下载链接    https://gtz.io/gtz-2.1.2-x64-setup.pkg
 
 	双击 gtz-2.1.2-x64-setup.pkg ，开始安装：
+	<tr>
+		<td>
+			<img src="https://sm.ms/image/XuHrKbwy5Z3sQAE">
+		</td>
+	<tr>
+	
+	点击“继续”：
+	
+	  
 
 [-回顶-](#index)  
   
