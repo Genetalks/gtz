@@ -199,7 +199,68 @@ Running the following command, the corresponding software version information ap
 			<img src="https://i.loli.net/2019/10/14/ONTe7m1iP8HaJ4g.jpg">
 		</td>
 	<tr>
-	    
+		
+## How to Install （MacOS) <span id="install"></span>  
+- **Install**		
+	
+	The download links of Installation package  https://gtz.io/gtz-2.1.2-x64-setup.pkg
+
+	Double-click on gtz-2.1.2-x64-setup.pkg to start the installation：
+	<tr>
+		<td>
+			<img src="https://i.loli.net/2020/01/21/XuHrKbwy5Z3sQAE.png">
+		</td>
+	<tr>
+	
+	Select“继续”：
+	<tr>
+		<td>
+			<img src="https://i.loli.net/2020/01/21/XuHrKbwy5Z3sQAE.png">
+		</td>
+	<tr>
+	
+	Software license agreement, click "继续" and click "同意" to continue the installation
+	<tr>
+		<td>
+			<img src="https://i.loli.net/2020/01/21/zyTeui91DjkBcdC.png">
+		</td>
+	<tr>
+	
+	<tr>
+		<td>
+			<img src="https://i.loli.net/2020/01/21/Irdaxsom2Z48eV3.png">
+		</td>
+	<tr>
+	
+	Installation type, click "安装"; then enter your user name and password, click "安装软件":
+	<tr>
+		<td>
+			<img src="https://i.loli.net/2020/01/21/quRg9v1malPtEh5.png">
+		</td>
+	<tr>
+	
+	<tr>
+		<td>
+			<img src="https://i.loli.net/2020/01/21/39bZCoTXISmVFMg.png">
+		</td>
+	<tr>
+	
+	Installation is successful, click "关闭"：
+	<tr>
+		<td>
+			<img src="https://i.loli.net/2020/01/21/abQF9PnDChorW2s.png">
+		</td>
+	<tr>
+		
+- **Verify that the installation was successful**
+
+	Open the terminal and run the following command. If the corresponding software version information appears, the installation is successful. After the installation is successful, you can use the gtz program through the command line in the terminal:：
+	<tr>
+		<td>
+			<img src="https://i.loli.net/2020/01/21/iw1sCTUadqVRmJO.png">
+		</td>
+	<tr>		
+		
 [-Back to Top-](#index)  
   
 --------  
