@@ -214,13 +214,13 @@ nova_rna_2.fq|5.39%|18.94%
 		</td>
 	<tr>
 	
-		<tr>
+	<tr>
 		<td>
 			<img src="https://i.loli.net/2020/01/21/Irdaxsom2Z48eV3.png">
 		</td>
 	<tr>
 	
-	安装类型，并点“安装”；然后输入您的用户名以及密码，点“安装软件”：
+	安装类型，点“安装”；然后输入您的用户名以及密码，点“安装软件”：
 	<tr>
 		<td>
 			<img src="https://i.loli.net/2020/01/21/quRg9v1malPtEh5.png">
