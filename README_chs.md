@@ -188,6 +188,12 @@ nova_rna_2.fq|5.39%|18.94%
 			<img src="https://i.loli.net/2019/10/14/ONTe7m1iP8HaJ4g.jpg">
 		</td>
 	<tr>
+		
+## 安装MacOS  GTX.Zip Pro<span id="install"></span>  
+- **安装**		
+	安装包下载链接    https://gtz.io/gtz-2.1.2-x64-setup.pkg
+
+	双击 gtz-2.1.2-x64-setup.pkg ，开始安装：
 
 [-回顶-](#index)  
   
