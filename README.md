@@ -182,6 +182,13 @@ Running the following command, the corresponding software version information ap
 			<img src="https://i.loli.net/2019/10/14/lW4A8F9ysEIp5vz.jpg">
 		</td>
 	<tr>
+        
+	After the installation is complete, open the cmd command window to see if it has been successfully installed; and use it by entering the command line:
+	<tr>
+		<td>
+			<img src="https://i.loli.net/2020/01/22/Ps7S1ty5ckmQ4W6.jpg">
+		</td>
+	<tr>
 
 - **Uninstall**
 
