@@ -171,6 +171,13 @@ nova_rna_2.fq|5.39%|18.94%
 			<img src="https://i.loli.net/2019/10/14/lW4A8F9ysEIp5vz.jpg">
 		</td>
 	<tr>
+	
+	安装完成之后，打开cmd命令窗口，查看是否已经安装成功；并通过输入命令行进行使用：
+	<tr>
+		<td>
+			<img src="https://i.loli.net/2020/01/22/Ps7S1ty5ckmQ4W6.jpg">
+		</td>
+	<tr>
 
 - **卸载**
 
