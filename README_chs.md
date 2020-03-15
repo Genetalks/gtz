@@ -201,30 +201,24 @@ nova_rna_2.fq|5.39%|18.94%
 	
 	安装包下载链接    https://gtz.io/gtz-2.1.3-x64-setup.pkg
 
-	双击 gtz-2.1.2-x64-setup.pkg ，开始安装：
+	双击 gtz-2.1.3-x64-setup.pkg ，开始安装：
 	<tr>
 		<td>
-			<img src="https://i.loli.net/2020/01/21/XuHrKbwy5Z3sQAE.png">
+			<img src="https://i.loli.net/2020/03/15/Qtrm5Okf2CWVjYX.png">
 		</td>
 	<tr>
 	
-	点击“继续”：
+	点击 “Continue”：
 	<tr>
 		<td>
-			<img src="https://i.loli.net/2020/01/21/XuHrKbwy5Z3sQAE.png">
+			<img src="https://i.loli.net/2020/03/15/zTXxWAPgdC795tG.png">
 		</td>
 	<tr>
 	
-	软件许可协议，点击“继续”，并点“同意”以继续安装 ：
+	软件许可协议，点击 “Continue”，并点 “Agree” 以继续安装 ：
 	<tr>
 		<td>
-			<img src="https://i.loli.net/2020/01/21/zyTeui91DjkBcdC.png">
-		</td>
-	<tr>
-	
-	<tr>
-		<td>
-			<img src="https://i.loli.net/2020/01/21/Irdaxsom2Z48eV3.png">
+			<img src="https://i.loli.net/2020/03/15/KRF4DBsE9PvknVl.png">
 		</td>
 	<tr>
 	
