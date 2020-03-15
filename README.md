@@ -215,11 +215,11 @@ Running the following command, the corresponding software version information ap
 	Double-click on gtz-2.1.2-x64-setup.pkg to start the installation：
 	<tr>
 		<td>
-			<img src="https://i.loli.net/2020/01/21/XuHrKbwy5Z3sQAE.png">
+			<img src="https://i.loli.net/2020/03/15/Qtrm5Okf2CWVjYX.png">
 		</td>
 	<tr>
 	
-	Select“继续”：
+	Select“Continue”：
 	<tr>
 		<td>
 			<img src="https://i.loli.net/2020/01/21/XuHrKbwy5Z3sQAE.png">
