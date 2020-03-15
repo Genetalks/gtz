@@ -247,16 +247,10 @@ Running the following command, the corresponding software version information ap
 		</td>
 	<tr>
 	
+	Installation is successful, click "Close"：
 	<tr>
 		<td>
-			<img src="https://i.loli.net/2020/01/21/39bZCoTXISmVFMg.png">
-		</td>
-	<tr>
-	
-	Installation is successful, click "关闭"：
-	<tr>
-		<td>
-			<img src="https://i.loli.net/2020/01/21/abQF9PnDChorW2s.png">
+			<img src="https://i.loli.net/2020/03/15/KncSw9Xpob5hdLE.png">
 		</td>
 	<tr>
 		
@@ -265,7 +259,7 @@ Running the following command, the corresponding software version information ap
 	Open the terminal and run the following command. If the corresponding software version information appears, the installation is successful. After the installation is successful, you can use the gtz program through the command line in the terminal:：
 	<tr>
 		<td>
-			<img src="https://i.loli.net/2020/01/21/iw1sCTUadqVRmJO.png">
+			<img src="https://i.loli.net/2020/03/15/WK8D7QrwfCgykc9.png">
 		</td>
 	<tr>		
 		
