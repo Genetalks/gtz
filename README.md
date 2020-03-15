@@ -222,16 +222,17 @@ Running the following command, the corresponding software version information ap
 	Select“Continue”：
 	<tr>
 		<td>
-			<img src="https://i.loli.net/2020/01/21/XuHrKbwy5Z3sQAE.png">
+			<img src="https://i.loli.net/2020/03/15/zTXxWAPgdC795tG.png">
 		</td>
 	<tr>
-	
-	Software license agreement, click "继续" and click "同意" to continue the installation
+		
+	Select“Continue”：
 	<tr>
 		<td>
-			<img src="https://i.loli.net/2020/01/21/zyTeui91DjkBcdC.png">
+			<img src="https://i.loli.net/2020/03/15/KRF4DBsE9PvknVl.png">
 		</td>
 	<tr>
+	Select“Agree”：
 	
 	<tr>
 		<td>
