@@ -207,15 +207,15 @@ nova_rna_2.fq|5.39%|18.94%
 			<img src="https://i.loli.net/2020/03/15/Qtrm5Okf2CWVjYX.png">
 		</td>
 	<tr>
-	
 	点击 “Continue”：
+		
 	<tr>
 		<td>
 			<img src="https://i.loli.net/2020/03/15/zTXxWAPgdC795tG.png">
 		</td>
 	<tr>
-	
 	软件许可协议，点击 “Continue”：
+		
 	<tr>
 		<td>
 			<img src="https://i.loli.net/2020/03/15/KRF4DBsE9PvknVl.png">
@@ -223,25 +223,26 @@ nova_rna_2.fq|5.39%|18.94%
 	<tr>
 	点击 “Agree” 以继续安装：
 	
-	安装类型，点“Install ”；然后输入您的用户名以及密码，点“Install Software”：
 	<tr>
 		<td>
 			<img src="https://i.loli.net/2020/03/15/G7ahPbvCWoD5g9e.png">
 		</td>
 	<tr>
-	
+	安装类型，点“Install ”:
+		
 	<tr>
 		<td>
 			<img src="https://i.loli.net/2020/03/15/oVZYgs9K4dqithS.png">
 		</td>
 	<tr>
+	然后输入您的用户名以及密码，点“Install Software”：
 	
-	安装成功，点“Close”
 	<tr>
 		<td>
 			<img src="https://i.loli.net/2020/03/15/KncSw9Xpob5hdLE.png">
 		</td>
 	<tr>
+	安装成功，点“Close”
 		
 - **验证安装是否成功**
 
