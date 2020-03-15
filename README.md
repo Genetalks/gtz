@@ -153,7 +153,7 @@ Running the following command, the corresponding software version information ap
 
 - **Install**
 
-	The download links of Installation package  https://gtz.io/gtz-2.1.2-x64-setup.exe
+	The download links of Installation package  https://gtz.io/gtz-2.1.3-x64-setup.exe
 	
 	Double-click on gtz-X.X.X-x64-setup.exe to start the installation：
 	<tr>
@@ -210,7 +210,7 @@ Running the following command, the corresponding software version information ap
 ## How to Install （MacOS) <span id="install"></span>  
 - **Install**		
 	
-	The download links of Installation package  https://gtz.io/gtz-2.1.2-x64-setup.pkg
+	The download links of Installation package  https://gtz.io/gtz-2.1.3-x64-setup.pkg
 
 	Double-click on gtz-2.1.2-x64-setup.pkg to start the installation：
 	<tr>
