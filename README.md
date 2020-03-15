@@ -212,38 +212,38 @@ Running the following command, the corresponding software version information ap
 	
 	The download links of Installation package  https://gtz.io/gtz-2.1.3-x64-setup.pkg
 
-	Double-click on gtz-2.1.2-x64-setup.pkg to start the installation：
+	Double-click on gtz-2.1.3-x64-setup.pkg to start the installation：
 	<tr>
 		<td>
 			<img src="https://i.loli.net/2020/03/15/Qtrm5Okf2CWVjYX.png">
 		</td>
 	<tr>
 	
-	Select“Continue”：
+	Select “Continue”：
 	<tr>
 		<td>
 			<img src="https://i.loli.net/2020/03/15/zTXxWAPgdC795tG.png">
 		</td>
 	<tr>
 		
-	Select“Continue”：
+	Select “Continue”：
 	<tr>
 		<td>
 			<img src="https://i.loli.net/2020/03/15/KRF4DBsE9PvknVl.png">
 		</td>
 	<tr>
-	Select“Agree”：
-	
+		
+	Select “Agree”：
 	<tr>
 		<td>
-			<img src="https://i.loli.net/2020/01/21/Irdaxsom2Z48eV3.png">
+			<img src="https://i.loli.net/2020/03/15/G7ahPbvCWoD5g9e.png">
 		</td>
 	<tr>
-	
-	Installation type, click "安装"; then enter your user name and password, click "安装软件":
+		
+	Select “Install”, then enter your user name and password, click "Install Software":
 	<tr>
 		<td>
-			<img src="https://i.loli.net/2020/01/21/quRg9v1malPtEh5.png">
+			<img src="https://i.loli.net/2020/03/15/oVZYgs9K4dqithS.png">
 		</td>
 	<tr>
 	
