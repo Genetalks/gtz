@@ -1,3 +1,7 @@
+### gtz-2.1.3 [2020/03/16]
+
+Optimised some features.
+
 ### gtz-2.1.2 [2019/11/13]
 
 Fix issue:
