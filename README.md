@@ -534,7 +534,9 @@ The -r parameter is used for compatibility with GTZ version, which is lower than
 	best compress level, compression algorithm is also the same, here is
 	for later expansion
 
-	@ decompress : do not use
+	@ decompress : when the gtz in FASTQ format is decompressed to
+        fastq.gz, the compression level of gz can be changed by -l/--level,
+        ranging from 0-9, and default level is 4
 
 -r <string>,  --rbin-path <string>
 	@ compress : do not use
