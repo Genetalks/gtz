@@ -1,3 +1,9 @@
+### gtz-2.1.4 [2020/07/02]
+
+Important fixes:
+
+sometimes, it maybe takes multiple times to succeed decompress a gtz packet to FASTQ.gz format, but it work normally when decompress to FASTQ format
+
 ### gtz-2.1.3 [2020/03/16]
 
 Optimised some features.
