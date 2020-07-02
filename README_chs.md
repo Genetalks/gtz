@@ -1566,7 +1566,7 @@ python2 >= 2.6, python3 >=3.5
   
 ## 版本日志<span id="change-log"></span>
 
-目前最新版本：gtz-2.1.3 [2020/03/16]
+目前最新版本：gtz-2.1.4 [2020/07/02]
 
 历史版本见：	[-版本日志-](https://github.com/Genetalks/gtz/blob/master/Changelog_chs.md "Markdown")
   
