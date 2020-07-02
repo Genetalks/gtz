@@ -1,4 +1,4 @@
-# GTX.Zip Professional Version（最新版本 GTZ 2.1.3）
+# GTX.Zip Professional Version（最新版本 GTZ 2.1.4）
 
 <table style="width:100%">
 <tr>
@@ -141,7 +141,7 @@ nova_rna_2.fq|5.39%|18.94%
 ## 安装Windows  GTX.Zip Pro<span id="install"></span>  
 - **安装**
 
-	安装包下载链接    https://gtz.io/gtz-2.1.3-x64-setup.exe
+	安装包下载链接    https://gtz.io/gtz-2.1.4-x64-setup.exe
 
 
 	双击gtz-X.X.X-x64-setup.exe ，开始安装：
@@ -199,9 +199,9 @@ nova_rna_2.fq|5.39%|18.94%
 ## 安装MacOS  GTX.Zip Pro<span id="install"></span>  
 - **安装**		
 	
-	安装包下载链接    https://gtz.io/gtz-2.1.3-x64-setup.pkg
+	安装包下载链接    https://gtz.io/gtz-2.1.4-x64-setup.pkg
 
-	双击 gtz-2.1.3-x64-setup.pkg ，开始安装：
+	双击 gtz-2.1.4-x64-setup.pkg ，开始安装：
 	<tr>
 		<td>
 			<img src="https://i.loli.net/2020/03/15/Qtrm5Okf2CWVjYX.png">
