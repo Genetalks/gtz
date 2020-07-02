@@ -1,4 +1,4 @@
-# GTX.Zip Professional Version (Latest Version GTZ 2.1.3)
+# GTX.Zip Professional Version (Latest Version GTZ 2.1.4)
 
 [中文说明](https://github.com/Genetalks/gtz/blob/master/README_chs.md "Markdown").
 <table style="width:100%">
@@ -153,7 +153,7 @@ Running the following command, the corresponding software version information ap
 
 - **Install**
 
-	The download links of Installation package  https://gtz.io/gtz-2.1.3-x64-setup.exe
+	The download links of Installation package  https://gtz.io/gtz-2.1.4-x64-setup.exe
 	
 	Double-click on gtz-X.X.X-x64-setup.exe to start the installation：
 	<tr>
@@ -210,9 +210,9 @@ Running the following command, the corresponding software version information ap
 ## How to Install （MacOS) <span id="install"></span>  
 - **Install**		
 	
-	The download links of Installation package  https://gtz.io/gtz-2.1.3-x64-setup.pkg
+	The download links of Installation package  https://gtz.io/gtz-2.1.4-x64-setup.pkg
 
-	Double-click on gtz-2.1.3-x64-setup.pkg to start the installation：
+	Double-click on gtz-2.1.4-x64-setup.pkg to start the installation：
 	<tr>
 		<td>
 			<img src="https://i.loli.net/2020/03/15/Qtrm5Okf2CWVjYX.png">
@@ -1479,7 +1479,7 @@ GTX Lab Compressor
 ## Change Log  
 
 
-Current Latest Version：gtz-2.1.3 [2020/03/16]
+Current Latest Version：gtz-2.1.4 [2020/07/02]
 
 historical version: [-Change Log-](https://github.com/Genetalks/gtz/blob/master/Changelog.md "Markdown")
 
