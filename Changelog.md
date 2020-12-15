@@ -1,3 +1,9 @@
+### gtz-3.0.0 [2020/12/15]
+
+1. Support high-ratio compression of three generations of gene data (PacBio/Nanopore)
+
+2. Fixed a known issue
+
 ### gtz-2.1.4 [2020/07/02]
 
 Important fixes:
@@ -11,7 +17,9 @@ Optimised some features.
 ### gtz-2.1.2 [2019/11/13]
 
 Fix issue:
+
 1. Cannot compress the fastq.gz files with very special format
+
 2. Cannot run on a server for a specific cpu type
 
 ### gtz-2.1.1 [2019/09/16]
