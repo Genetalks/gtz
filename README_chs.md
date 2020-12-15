@@ -4,7 +4,7 @@
 <tr>
 	<td>
 		<h3>QQ 交流群: 934492381 </h3>
-		![image]("https://gtz.io/github-resources/qq.png" alt="GTX.Zip QQ groups")
+		<img src="https://gtz.io/github-resources/qq.png" alt="GTX.Zip QQ groups"/>
 	</td>
 	<td>
 		<h3>微信交流群:</h3>
