@@ -1,4 +1,4 @@
-# GTX.Zip Professional Version（最新版本 GTZ 2.1.4）
+# GTX.Zip Professional Version（最新版本 GTZ 3.0.0）
 
 <table style="width:100%">
 <tr>
@@ -1566,7 +1566,7 @@ python2 >= 2.6, python3 >=3.5
   
 ## 版本日志<span id="change-log"></span>
 
-目前最新版本：gtz-2.1.4 [2020/07/02]
+目前最新版本：gtz-3.0.0 [2020/12/15]
 
 历史版本见：	[-版本日志-](https://github.com/Genetalks/gtz/blob/master/Changelog_chs.md "Markdown")
   
@@ -1577,26 +1577,20 @@ python2 >= 2.6, python3 >=3.5
 ## 常见问题<span id="faq"></span>  
 - [1、GTX.Zip Pro的压缩性能怎么样？](#1)  
 - [2、GTX.Zip Pro可以压缩哪些文件？](#2)  
-- [3、GTX.Zip Pro收费模式是怎样的？](#3)  
+- [3、GTX.Zip Pro目前收费吗？](#3)  
 - [4、免费的话，那你们如何盈利？](#4)  
 - [5、为什么GTX.Zip Pro采用免费但不开源的模式？](#5)  
 - [6、GTX.Zip Pro是否支持STDIN 和 STDOUT?](#6)  
 - [7、GTX.Zip Pro为什么要求每半年更新一次？](#7)  
 - [8、怎么并行跑多个压缩任务](#8)  
 - [9、当fq.gz被GTX.Zip Pro压缩成fq.gz.gtz 后再解压回fq.gz，为什么前后两个gz文件的md5值不一致呢？](#9)  
-- [10、GTX.Zip Pro目前支持多少个物种的智能选择压缩？](#10)  
-- [11、GTX.Zip Pro软件包里的bin，rbin文件是做什么的？](#11)  
-- [12、有参与无参压缩模式相比有什么不同，GTX.Zip Pro采用的哪种模式？](#12)  
-- [13、为什么有些物种的数据文件的压缩率没有达到官宣中的级别？](#13)  
-- [14、是否有工具软件能够支持GTX.Zip的压缩格式作为输入?](#14)  
-- [15、GTX.Zip Pro是否支持所有下机数据格式？比如fasta](#15)  
-- [16、是否允许将GTX.Zip Pro二次打包进其他软件的商业发布中？](#16)  
-- [17、怎样让GTX.Zip Pro增加高倍压缩所需的新物种的参考基因组信息？](#17)  
-- [18、bwa-gtz计算gtz压缩格式的性能与官方bwa相比会有差异么？](#18)  
-- [19、尝试用GTX.Zip对bam文件进行压缩，但文件大小几乎没变。](#19)    
-
-
- <!--- [15、为什么不允许我们自己生成rbin文件以增加物种支持？](#15)-->  
+- [10、GTX.Zip Pro软件包里的bin，rbin文件是做什么的？](#10)  
+- [11、有参与无参压缩模式相比有什么不同，GTX.Zip Pro采用的哪种模式？](#11)  
+- [12、为什么有些物种的数据文件的压缩率没有达到官宣中的级别？](#12)  
+- [13、是否有工具软件能够支持GTX.Zip的压缩格式作为输入?](#13)  
+- [14、GTX.Zip Pro是否支持所有下机数据格式？比如fasta](#14)  
+- [15、是否允许将GTX.Zip Pro二次打包进其他软件的商业发布中？](#15)  
+- [16、bwa-gtz计算gtz压缩格式的性能与官方bwa相比会有差异么？](#16)     
  
 -----------------------------------------
 **1、GTX.Zip Pro的压缩性能怎么样？**<span id="1"></span>  
@@ -1628,52 +1622,33 @@ python2 >= 2.6, python3 >=3.5
  
 **9、当fq.gz被GTX.Zip Pro压缩成fq.gz.gtz后再解压回fq.gz，为什么前后两个gz文件的md5值不一致呢？**<span id="9"></span>  
   >GTX.Zip Pro对gz数据进行了重压缩工作，即将gz文件解压成fq（fastq）文件后再将fq文件压缩成gtz；当gtz文件解压成gz文件时会先解压成fq文件后，再压缩成gz格式。  
-  >因此，问题中的两个gz文件其实是两个不同的文件，所以md5不同，但是里面的fq文件相同且fq文件的md5值是一样的。  
+  >因此，问题中的两个gz文件其实是两个不同的文件，所以md5不同，但是里面的fq文件相同且fq文件的md5值是一样的。   
   
-**10、GTX.Zip Pro目前支持多少个物种的智能选择压缩？**<span id="10"></span>  
-  >39个物种，点击[-这里-](https://github.com/Genetalks/gtz/blob/master/README_chs.md#rbin-download)查看列表:。    
-  >如果您希望将某个物种加入支持列表，请联系邮箱: contact@gtz.io, 或者在GitHub创建一个[新的issue](https://github.com/Genetalks/gtz/issues/new)。  
+**10、GTX.Zip Pro生成的rbin文件是做什么的？**<span id="11"></span>   
+  >rbin文件是指定物种的紧致后的参考序列文件。  
   
-**11、GTX.Zip Pro软件包里的bin，rbin文件是做什么的？**<span id="11"></span>  
-  >bin文件是高倍压缩时用到的指定物种的参考序列索引文件；   
-  >rbin文件是解压缩时用到的指定物种的紧致参考序列文件。  
-  
-**12、有参与无参压缩模式相比有什么不同，GTX.Zip Pro采用的哪种模式？**<span id="12"></span>  
+**11、有参与无参压缩模式相比有什么不同，GTX.Zip Pro采用的哪种模式？**<span id="12"></span>  
   >有参考基因组的压缩模式指压缩和解压时需要提前制作好的参考基因组的索引文件，无参则指压缩时不需要索引文件。  
   >因为参考基因组的存在，有参比无参能提供更优的压缩率，通常是无参大小的50%。有些无参压缩算法为了向有参靠拢提高压缩率，会在压缩过程中利用待压缩文件中的序列组装出一个文件特异性的“参考基因组”。这种方式不仅会牺牲大量计算时间，导致压缩时间过长，还会浪费计算资源，因为每个文件都需要重新组装。  
   >GTX.Zip Pro默认采用有参压缩模式，以提供最佳空间和时间上的性能，当遇到无参考基因组时，将改用次优的无参模式。    
   
-**13、为什么有些物种的数据文件的压缩率没有达到官宣中的级别？**<span id="13"></span>  
-  >通常这是因为这些物种暂时不在GTX.Zip Pro支持的列表范围内。GTX.Zip Pro默认采用基于参考基因组的压缩模式以提供最优压缩率，但是当物种不在支持列表范围内，GTX.Zip Pro会自动改用无参考基因组的次优倍率压缩模式，无参的压缩率通常逊于有参压缩率。  
+**12、为什么有些物种的数据文件的压缩率没有达到官宣中的级别？**<span id="13"></span>  
+  >压缩率取决于待压缩文件是否是正确的fastq/fastq.gz格式，取决于待压缩文件与压缩时所使用的参考基因文件的匹配度，以及待压缩文件的质量数的多少等有关。   
   
-  >如果遇到此情况，请您能及时跟我们联系，制作您需要的物种bin文件。  
-  >邮箱: contact@gtz.io, 或者在GitHub创建一个[新的issue](https://github.com/Genetalks/gtz/issues/new)。    
-  
-**14、是否有工具软件能够支持GTX.Zip的压缩格式作为输入？**<span id="15"></span>  
+**13、是否有工具软件能够支持GTX.Zip的压缩格式作为输入？**<span id="15"></span>  
   >我们提供直接读写gtz格式的上下游工具软件（比如，bcl2fastq, fastp, bwa 等）和各种程序语言的API接口（Perl/Python/C/C++）。 
   >详细内容可以参考[-GTZ生态圈软件-](ecology).
   
-**15、GTX.Zip Pro是否支持所有下机数据格式？比如fasta**<span id="16"></span>  
+**14、GTX.Zip Pro是否支持所有下机数据格式？比如fasta**<span id="16"></span>  
   >全部支持，只是fastq格式压缩效果最好。  
    
-**16、是否允许将GTX.Zip Pro二次打包进其他软件的商业发布中？**<span id="17"></span>  
+**15、是否允许将GTX.Zip Pro二次打包进其他软件的商业发布中？**<span id="17"></span>  
   >不允许直接将 GTZ-Perfessional版本 二次 打包进 其他商业发布系统中。但如果由此需求的客户，请联系 ：contact@gtz.io , 我们会确认身份后，跟您签署一份合作协议，并为您发布一份专有重打包协议。  
   
-**17、怎样让GTX.Zip Pro增加高倍压缩所需的新物种的参考基因组信息？**<span id="18"></span>  
-  >邮箱: contact@gtz.io, 或者在GitHub创建一个[新的issue](https://github.com/Genetalks/gtz/issues/new) 或者加入我们的[微信交流群](https://github.com/Genetalks/gtz/)提出需求。  
-  >我们将免费制作用户所需的新物种的参考基因组文件。  
-  
-**18、bwa-gtz计算gtz压缩格式的性能与官方bwa相比会有差异么？**<span id="19"></span>  
+**16、bwa-gtz计算gtz压缩格式的性能与官方bwa相比会有差异么？**<span id="19"></span>  
   >bwa-gtz做了很好的性能优化，性能上跟官方bwa相同，同时百分之百保证与官方bwa比对结果一致，完全原汁原味。  
   >深度优化的bwa-opt-gtz工具，可以在完全保证比对结果一致的前提下，使每一次bwa运算节约1/3的时间。  。  
   >详细内容可以参考[-BWA for GTZ-](#bwa).  
-  
-**19、尝试用GTX.Zip对bam文件进行压缩，但文件大小几乎没变。**<span id="20"></span>  
-  >暂时不支持bam文件的高倍压缩，
-  >因为bam文件已经是压缩过的，所以常规压缩模式下bam文件的大小也不会有太多变化。
-  >如有相关的功能更新，会第一时间在交流群里通知大家。
- 
-<!--**15、为什么不允许我们自己生成rbin文件以增加物种支持？**<span id="15"></span>  -->  
   
 [-回顶-](#index)  
   
