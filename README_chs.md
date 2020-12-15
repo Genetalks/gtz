@@ -4,11 +4,11 @@
 <tr>
 	<td>
 		<h3>QQ 交流群: 934492381 </h3>
-		<img src="https://i.loli.net/2018/12/10/5c0df947eddde.png" alt="GTX.Zip QQ groups"/>
+		<img src="https://gtz.io/github-resources/qq.png" alt="GTX.Zip QQ groups"/>
 	</td>
 	<td>
 		<h3>微信交流群:</h3>
-		<img src="https://i.loli.net/2018/12/10/5c0e0afa8d12d.jpg" alt="GTX.Zip WebChat groups"/>
+		<img src="https://gtz.io/github-resources/webchat.jpeg" alt="GTX.Zip WebChat groups"/>
 	</td>
 </tr>
 </table>
