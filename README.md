@@ -50,7 +50,7 @@ directly.
   
 Product | Version | Description | How to Get
 ----|---- | -------- | --------
-**GTX.Zip Professional**|V2.0.0|Companies, Institutions and individual users that with large local sequencing data|[Install](#install)
+**GTX.Zip Professional**|V3.0.0|Companies, Institutions and individual users that with large local sequencing data|[Install](#install)
 **GTX.Zip Enterprise**|V1.0.1|Large-scale enterprises and data centers that with PB-level sequencing data and require distributed compression by their own computing clusters|[Contact Us](#contact-us)
 **GTX.Zip Cloud**|V1.0.1|Companies that with large amounts of sequencing data distribution and storage in the cloud| http://gtz.io
   
