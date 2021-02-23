@@ -643,7 +643,7 @@ gtz可以压缩任何文件
  	时间消耗|50m14.06s|51m37.67s|39m18.86s
 	内存消耗|5.888G|10.56G|19.84G
 	
-## 2、BCL2FASTQ for GTZ <span id="bcl2fastq"></span>　(目前只支持版本号小于2.x.x的gtz压缩包)
+## 2、BCL2FASTQ for GTZ <span id="bcl2fastq"></span>　(支持gtz3.0.1)
 
 - **安装方法**
     
@@ -681,13 +681,13 @@ gtz可以压缩任何文件
     
     默认输出gtz格式，命令加--no-bgtzf-compression参数时，输出gz格式
     
-    #### 示例1. 默认情况，输出结果文件为gtz格式，走普通压缩 
+    #### 示例1. 默认情况，输出结果文件为gtz格式，走普通压缩．(bcl2fastq生成的fastq文件没有经过质控，建议使用普通压缩，质量不高的fastq文件使用普通压缩效果更好)
 	
 	`bcl2fastq-gtz -i ./data/BaseCalls -R ./outdir/run --interop-dir ./outdir/interop -o ./outdir/result --ignore-missing-bcls --ignore-missing-filter --ignore-missing-positions --barcode-mismatches 0 --use-bases-mask y*,i7,i7,y* >./outdir/bcl2fastq.log 2>&1 || touch bcl2fastq.err`
 
-	#### 示例2. 输出结果文件为gtz格式，走高倍压缩，通过--bin_file指定bin文件
+	#### 示例2. 输出结果文件为gtz格式，走高倍压缩，通过--ref指定参考基因组文件，也可以使用--donot-pack-ref不pack ref文件
 	
-	`bcl2fastq-gtz -i ./data/BaseCalls -R ./outdir/run --interop-dir ./outdir/interop -o ./outdir/result --ignore-missing-bcls --ignore-missing-filter --ignore-missing-positions --barcode-mismatches 0 --use-bases-mask y*,i7,i7,y* --bin_file Homo_sapiens_bcacac9064331276504f27c6cf40e580.bin >./outdir/bcl2fastq.log 2>&1 || touch bcl2fastq.err`
+	`bcl2fastq-gtz -i ./data/BaseCalls -R ./outdir/run --interop-dir ./outdir/interop -o ./outdir/result --ignore-missing-bcls --ignore-missing-filter --ignore-missing-positions --barcode-mismatches 0 --use-bases-mask y*,i7,i7,y* --ref /GCF_000001405.37_GRCh38.p11_genomic.fna.gz >./outdir/bcl2fastq.log 2>&1 || touch bcl2fastq.err`
            
     #### 示例3. 输出结果文件为gz格式，运行时加--no-bgtzf-compression参数
         
