@@ -681,7 +681,7 @@ gtz可以压缩任何文件
     
     默认输出gtz格式，命令加--no-bgtzf-compression参数时，输出gz格式
     
-    #### 示例1. 默认情况，输出结果文件为gtz格式，走普通压缩．(bcl2fastq生成的fastq文件没有经过质控，建议使用普通压缩，质量不高的fastq文件使用普通压缩效果更好)
+    #### 示例1. 默认情况，输出结果文件为gtz格式，走普通压缩．(bcl2fastq生成的fastq文件没有经过质控，可以尝试使用普通压缩，因为质量不高的fastq文件使用普通压缩效果比使用参考基因组压缩效果可能更好，这个可以自己对比下再选择)
 	
 	`bcl2fastq-gtz -i ./data/BaseCalls -R ./outdir/run --interop-dir ./outdir/interop -o ./outdir/result --ignore-missing-bcls --ignore-missing-filter --ignore-missing-positions --barcode-mismatches 0 --use-bases-mask y*,i7,i7,y* >./outdir/bcl2fastq.log 2>&1 || touch bcl2fastq.err`
 
