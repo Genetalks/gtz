@@ -1413,11 +1413,11 @@ git config --global user.email
 
 - **安装方法**
 
-`curl -SL https://gtz.io/sdk/gtz_perl_sdk-2.1.0-linux-x86_64.tar.gz -o gtz_perl_sdk-2.1.0-linux-x86_64.tar.gz`
+`curl -SL https://gtz.io/sdk/gtz_perl_sdk-3.0.1-linux-x86_64.tar.gz -o gtz_perl_sdk-3.0.1-linux-x86_64.tar.gz`
 
-`tar -xvf gtz_perl_sdk-2.1.0-linux-x86_64.tar.gz`
+`tar -xvf gtz_perl_sdk-3.0.1-linux-x86_64.tar.gz`
 
-`cd gtz_perl_sdk-2.1.0-linux-x86_64`
+`cd gtz_perl_sdk-3.0.1-linux-x86_64`
 
 `# 拷贝gtz_api.h到/usr/include，拷贝libgtz.so到/usr/lib或者/usr/lib64(centos)`
 
@@ -1436,7 +1436,7 @@ git config --global user.email
 
 - **校验安装**
 
-`cd gtz_perl_sdk-2.1.0-linux-x86_64`
+`cd gtz_perl_sdk-3.0.1-linux-x86_64`
 
 `perl example.pl`
 
@@ -1451,11 +1451,11 @@ perl >= 5.09
 
 - **安装方法**
 
-`curl -SL https://gtz.io/sdk/gtz_python_sdk-2.1.0-linux-x86_64.tar.gz -o gtz_python_sdk-2.1.0-linux-x86_64.tar.gz`
+`curl -SL https://gtz.io/sdk/gtz_python_sdk-3.0.1-linux-x86_64.tar.gz -o gtz_python_sdk-3.0.1-linux-x86_64.tar.gz`
 
-`tar -xvf gtz_python_sdk-2.1.0-linux-x86_64.tar.gz`
+`tar -xvf gtz_python_sdk-3.0.1-linux-x86_64.tar.gz`
 
-`cd gtz_python_sdk-2.1.0-linux-x86_64`
+`cd gtz_python_sdk-3.0.1-linux-x86_64`
 
 #### python2
 `sudo pip install gtz-2.0.1-py2-none-any.whl`
@@ -1465,7 +1465,7 @@ perl >= 5.09
 
 - **校验安装**
 
-`cd gtz_python_sdk-2.1.0-linux-x86_64`
+`cd gtz_python_sdk-3.0.1-linux-x86_64`
 
 `python example.py`
 
@@ -1479,11 +1479,11 @@ python2 >= 2.6, python3 >=3.5
 
 - **安装方法**
 
-`curl -SL https://gtz.io/sdk/gtz_r_sdk-2.1.0-linux-x86_64.tar.gz -o gtz_r_sdk-2.1.0-linux-x86_64.tar.gz`
+`curl -SL https://gtz.io/sdk/gtz_r_sdk-3.0.1-linux-x86_64.tar.gz -o gtz_r_sdk-3.0.1-linux-x86_64.tar.gz`
 
-`tar -xvf gtz_r_sdk-2.1.0-linux-x86_64.tar.gz`
+`tar -xvf gtz_r_sdk-3.0.1-linux-x86_64.tar.gz`
 
-`cd gtz_r_sdk-2.1.0-linux-x86_64`
+`cd gtz_r_sdk-3.0.1-linux-x86_64`
 
 `# 拷贝gtz_api.h到/usr/include，拷贝libgtz.so到/usr/lib或者/usr/lib64(centos)`
 
@@ -1498,7 +1498,7 @@ python2 >= 2.6, python3 >=3.5
 
 - **校验安装**
 
-`cd gtz_r_sdk-2.1.0-linux-x86_64`
+`cd gtz_r_sdk-3.0.1-linux-x86_64`
 
 `Rscript ./example.r`
 
@@ -1509,18 +1509,18 @@ python2 >= 2.6, python3 >=3.5
 
 - **安装方法**
 
-`curl -SL https://gtz.io/sdk/gtz_c_sdk-2.1.0-linux-x86_64.tar.gz -o gtz_c_sdk-2.1.0-linux-x86_64.tar.gz`
+`curl -SL https://gtz.io/sdk/gtz_c_sdk-3.0.1-linux-x86_64.tar.gz -o gtz_c_sdk-3.0.1-linux-x86_64.tar.gz`
 
-`tar -xvf gtz_c_sdk-2.1.0-linux-x86_64.tar.gz`
+`tar -xvf gtz_c_sdk-3.0.1-linux-x86_64.tar.gz`
 
-`cd gtz_c_sdk-2.1.0-linux-x86_64`
+`cd gtz_c_sdk-3.0.1-linux-x86_64`
 
 `sudo make install`
 
 
 - **校验安装**
 
-`cd gtz_c_sdk-2.1.0-linux-x86_64`
+`cd gtz_c_sdk-3.0.1-linux-x86_64`
 
 `make example`
 
@@ -1534,11 +1534,11 @@ python2 >= 2.6, python3 >=3.5
 
 - **安装方法**
 
-`curl -SL https://gtz.io/sdk/gtz_java_sdk-2.1.0-linux-x86_64.tar.gz -o gtz_java_sdk-2.1.0-linux-x86_64.tar.gz`
+`curl -SL https://gtz.io/sdk/gtz_java_sdk-3.0.1-linux-x86_64.tar.gz -o gtz_java_sdk-3.0.1-linux-x86_64.tar.gz`
 
-`tar -xvf gtz_java_sdk-2.1.0-linux-x86_64.tar.gz`
+`tar -xvf gtz_java_sdk-3.0.1-linux-x86_64.tar.gz`
 
-`cd gtz_java_sdk-2.1.0-linux-x86_64`
+`cd gtz_java_sdk-3.0.1-linux-x86_64`
 
 #### 步骤一：
 
@@ -1551,7 +1551,7 @@ python2 >= 2.6, python3 >=3.5
 
 - **校验安装**
 
-`cd gtz_java_sdk-2.1.0-linux-x86_64`
+`cd gtz_java_sdk-3.0.1-linux-x86_64`
 
 `javac example.java`
 
