@@ -1458,10 +1458,10 @@ perl >= 5.09
 `cd gtz_python_sdk-3.0.1-linux-x86_64`
 
 #### python2
-`sudo pip install gtz-2.0.1-py2-none-any.whl`
+`sudo pip install gtz-3.0.1-py2-none-any.whl`
 
 #### python3
-`sudo pip3 install gtz-2.0.1-py3-none-any.whl`
+`sudo pip3 install gtz-3.0.1-py3-none-any.whl`
 
 - **校验安装**
 
