@@ -611,7 +611,7 @@ GTX Lab Compressor
 - [10、FASTP for GTZ](#fastp)
 - [11、MINIMAP2 for GTZ](#minimap2)
 - [12、WTDBG2 for GTZ](#wtdbg2)
-
+- [13、BWA-MEM2 for GTZ](#bwa-mem2)
 
 ## 1、BWA for GTZ <span id="bwa"></span> (support gtz 2.x.x version)  
 
@@ -1471,6 +1471,72 @@ GTX Lab Compressor
         
 	>  <font size=1>\* In this example, the path of the RBIN file is specified by the environment variable GTZ_RBIN_PATH, where "export GTZ_RBIN_PATH=/path/rbin/" is not necessary, but if you know the path of rbin, you are advised to specify it, which can speed up the processing of wtdbg2-gtz. Because when wtdbg2-gtz needs RBIN file and cannot find the RBIN file under the default path ~/.config/gtz, it will be downloaded through the network, which will consume time.</font>
 	
+  
+## 13、BWA-MEM2 for GTZ <span id="bwa-mem2"></span> (support gtz version 3.0.1)
+- **How to Install?**
+    
+    ##### Mode one: Install to the current user, no sudo permissions required
+    For installation you can (recommended)  
+    
+    `curl -SL https://gtz.io/bwamem2-gtz_latest.run -o /tmp/bwamem2gtz.run && sh /tmp/bwamem2gtz.run`  
+	
+    After the first installation, you need to perform a source ~/.bashrc or exit to log back in, and then you can execute bwa-mem2-gtz in any directory
+    
+    ###### or
+    download installation files：[-GTX.Zip bwa-mem2-gtz-]( https://gtz.io/bwamem2-gtz_latest.run )，then install
+    
+    `sh bwamem2-gtz_latest.run`
+	
+    Similarly, after the first installation, you need to perform a source ~/.bashrc or exit and log back in again
+        
+    ##### Mode two: Install to all users, need sudo permissions
+    For installation you can (recommended)  
+    
+	`sudo curl -SL https://gtz.io/bwamem2-gtz_latest.run -o /tmp/bwamem2gtz.run && sh /tmp/bwamem2gtz.run`  
+	
+    ###### or
+    download installation files：[-GTX.Zip bwa-mem2-gtz-]( https://gtz.io/bwamem2-gtz_latest.run )，then install  
+    
+	`sudo sh bwamem2-gtz_latest.run`
+	
+	After the installation is complete, you can perform bwa-mem2-gtz in any directory	
+	
+	
+   - **How to Use?**
+
+	GTX.Zip support package for bwa-mem2 is based on release 2.1 of bwa-mem2.
+    
+	It is used in the same way as the original bwa-mem2, except that the compressed file in GTZ format is added
+    
+    ##### Step 1: make index
+
+	`bwa-mem2-gtz index ref.fasta`
+
+	##### Step 2: do mapping
+	
+	In case 1, the input file is fq/fq.gz Format, direct mapping
+    
+    `bwa-mem2-gtz mem ref.fasta read.fq.gz -t 20 > out.sam`
+    
+    In case 2, the input file is in GTZ format
+    
+    ##### Step one: Skip this step if the decompression read.gtz does not require a reference file,  otherwise specify the corresponding reference as follows
+
+	`export GTZ_RBIN_PATH=/path/rbin/` (Suitable for gtx1.x.x version, specify the rbin file path for unzip, it's recommended but not required, when not specified gtz will download automatically, will consume a certain amount of time)
+
+	`export GTZ_RBIN_PATH=/path/fasta/xxx.fa`  (Suitable for gtz3.0.1 version, specifies the corresponding fasta file for decompression, must)
+
+	##### Step two: do mapping
+    
+    `bwa-mem2-gtz mem ref.fasta read.gtz -t 20 > out.sam`
+    
+    set the decompression thread to 4 of read.gtz to execute mapping (the default decompression thread is 1 if it is not set)
+    
+    `export GTZ_CONCURRENC=4 && bwa-mem2-gtz mem ref.fasta read.gtz -t 20 > out.sam`
+    
+    
+
+- **performance**
   
 [-Back to Top-](#index)  
   
