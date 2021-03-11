@@ -548,6 +548,7 @@ gtz可以压缩任何文件
 - [10、FASTP for GTZ](#fastp)
 - [11、MINIMAP2 for GTZ](#minimap2)
 - [12、WTDBG2 for GTZ](#wtdbg2)
+- [13、BWA-MEM2 for GTZ](#bwa-mem2)
 
 
 ## 1、BWA for GTZ <span id="bwa"></span>  (支持最新的gtz版本)
@@ -1392,6 +1393,73 @@ git config --global user.email
 	>  <font size=1>\* 该例子中通过环境变量GTZ_RBIN_PATH指定了rbin文件所在路径，这里"export GTZ_RBIN_PATH=/path/rbin/"不是必须的，但如果您知道rbin所在路径，建议您指定，这样可以加快wtdbg2-gtz处理速度。因为，当wtdbg2-gtz需要rbin文件，且在默认路径~/.config/gtz下找不到该rbin文件时，则会通过网络下载，下载过程将消耗时间。</font>
 	
 	
+## 13、BWA-MEM2 for GTZ <span id="bwa-mem2"></span>　(支持gtz3.0.1)
+
+- **安装方法**
+    
+    ##### 方式一: 给当前用户安装，不需要sudo权限
+    运行命令（推荐） 
+    
+    `curl -SL https://gtz.io/bwamem2-gtz_latest.run -o /tmp/bwamem2gtz.run && sh /tmp/bwamem2gtz.run`  
+	
+    首次安装后，需要执行一次source ~/.bashrc或者退出去后重新登录，然后在任意目录可以执行bwa-mem2-gtz
+    
+    ###### 或者
+    下载安装文件：[-GTX.Zip bwa-mem2-gtz-]( https://gtz.io/bwamem2-gtz_latest.run )，然后安装
+    
+    `sh bwamem2-gtz_latest.run`
+	
+    同样，首次安装后，需要执行一次source ~/.bashrc或者退出去后重新登录
+        
+    ##### 方式二：给所有用户安装，需要sudo权限
+    运行命令（推荐）  
+    
+	`sudo curl -SL https://gtz.io/bwamem2-gtz_latest.run -o /tmp/bwamem2gtz.run && sh /tmp/bwamem2gtz.run`  
+	
+    ###### 或者
+    先下载安装文件：[-GTX.Zip bwa-mem2-gtz-]( https://gtz.io/bwamem2-gtz_latest.run )，然后安装  
+    
+	`sudo sh bwamem2-gtz_latest.run`
+	
+	安装完成后，在任意目录可以执行bwa-mem2-gtz
+
+
+- **使用说明**
+
+
+    GTX.Zip对bwa-mem2的支持包中，基于bwa-mem2的release 2.1版本。
+    
+    使用方式与原生的bwa-mem2完全一致, 只是在原有基础上增加了支持读gtz格式的压缩文件.
+    
+    ##### 步骤一：制作index
+
+	`bwa-mem2-gtz index ref.fasta`
+
+	##### 步骤二：执行mapping
+	
+	情形一 输入文件是fq/fq.gz格式, 直接mapping
+    
+    `bwa-mem2-gtz mem ref.fasta read.fq.gz -t 20 > out.sam`
+    
+    情形二 输入文件是gtz格式
+    
+    1. 如果解压read.gtz不需要reference则跳过该步骤，否则通过以下方式指定对应reference
+    
+    `export GTZ_RBIN_PATH=/path/rbin/` （适用于gtx1.x.x版本，指定解压时rbin文件所在路径，建议指定；但不是必须的，没指定时gtz会自动下载，会消耗一定的时间）
+
+	`export GTZ_RBIN_PATH=/path/fasta/xxx.fa`  （适用于>=gtx2.x.x版本，指定解压时对应的fasta文件，必须）
+	
+	2. 执行mapping
+    
+    `bwa-mem2-gtz mem ref.fasta read.gtz -t 20 > out.sam`
+    
+    read.gtz默认解压线程为1, 如果需要调整(如调整为4):
+    
+    `export GTZ_CONCURRENC=4`
+    
+    
+
+- **性能**
 
 	
   
