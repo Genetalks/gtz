@@ -1453,9 +1453,9 @@ git config --global user.email
     
     `bwa-mem2-gtz mem ref.fasta read.gtz -t 20 > out.sam`
     
-    read.gtz默认解压线程为1, 如果需要调整(如调整为4):
+    设置read.gtz解压线程为4执行mapping（没有设置时默认解压线程为1）
     
-    `export GTZ_CONCURRENC=4`
+    `export GTZ_CONCURRENC=4 && bwa-mem2-gtz mem ref.fasta read.gtz -t 20 > out.sam`
     
     
 
