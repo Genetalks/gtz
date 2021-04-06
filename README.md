@@ -1,4 +1,4 @@
-# GTX.Zip Professional Version (Latest Version GTZ 3.0.0)
+# GTX.Zip Professional Version (Latest Version GTZ 3.0.1)
 
 [中文说明](https://github.com/Genetalks/gtz/blob/master/README_chs.md "Markdown").
 <table style="width:100%">
@@ -1545,7 +1545,7 @@ GTX Lab Compressor
 ## Change Log  
 
 
-Current Latest Version：gtz-3.0.0 [2020/12/15]
+Current Latest Version：gtz-3.0.1 [2021/04/06]
 
 historical version: [-Change Log-](https://github.com/Genetalks/gtz/blob/master/Changelog.md "Markdown")
 
