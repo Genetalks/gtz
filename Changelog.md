@@ -1,3 +1,9 @@
+### gtz-3.0.1 [2021/04/06]
+
+1. Improve the compression performance of large files
+
+2. Fixed some compatibility issues
+
 ### gtz-3.0.0 [2020/12/15]
 
 1. Support high-ratio compression of three generations of gene data (PacBio/Nanopore)
