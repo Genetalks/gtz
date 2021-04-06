@@ -1,4 +1,4 @@
-# GTX.Zip Professional Version（最新版本 GTZ 3.0.0）
+# GTX.Zip Professional Version（最新版本 GTZ 3.0.1）
 
 <table style="width:100%">
 <tr>
@@ -1634,7 +1634,7 @@ python2 >= 2.6, python3 >=3.5
   
 ## 版本日志<span id="change-log"></span>
 
-目前最新版本：gtz-3.0.0 [2020/12/15]
+目前最新版本：gtz-3.0.1 [2021/04/06]
 
 历史版本见：	[-版本日志-](https://github.com/Genetalks/gtz/blob/master/Changelog_chs.md "Markdown")
   
