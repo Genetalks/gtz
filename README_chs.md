@@ -8,7 +8,7 @@
 	</td>
 	<td>
 		<h3>微信交流群:</h3>
-		<img src="https://gtz.io/github-resources/webchat.jpeg" alt="GTX.Zip WebChat groups"/>
+		<img src="https://i.loli.net/2018/12/10/5c0e0afa8d12d.jpg" alt="GTX.Zip WebChat groups"/>
 	</td>
 </tr>
 </table>
