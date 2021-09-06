@@ -153,7 +153,7 @@ Running the following command, the corresponding software version information ap
 
 - **Install**
 
-	The download links of Installation package  https://gtz.io/gtz-2.1.4-x64-setup.exe
+	The download links of Installation package  https://gtz.io/gtz-3.0.2-x64-setup.exe
 	
 	Double-click on gtz-X.X.X-x64-setup.exe to start the installation：
 	<tr>
