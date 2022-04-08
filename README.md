@@ -111,158 +111,15 @@ As an enterprise-level software, GTX.Zip has developed a nirvana program for hig
 
 - **Mode 1: Install directly from the command line(recommended installation method)**
 
-##### Install for ALL USERS:
-
-`sudo curl -SL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`  
+Please visit this website to download the installation package  
 `www.gtxlab.com`  
-
-Once installed, a GTZ executable and a license file are placed in /usr/local/GTZ directory, GTZ's softlink is created to /usr/bin
-
-##### Only install for CURRENT USER:
-
-`curl -SL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sh /tmp/gtz.run && source ~/.bashrc`
-
-Once installed, a GTZ executable and a license file are placed in the current user's
-~/.config/GTZ directory, GTZ's alias is added to ~/.bashrc
-
-- **Mode 2: First download the software and then install it.**  
-
-First download the software from [-GTX.Zip Professional-]( https://gtz.io/gtz_latest.run ).
-
-Commercially authorized users get from contact@gtz.io .
-
-##### Install for ALL USERS:
-
-`sudo sh gtz_latest.run`  
-
-Once installed, a GTZ executable and a license file are placed in /usr/local/GTZ directory, GTZ's softlink is created to /usr/bin
-
-##### Only install for CURRENT USER:
-
-`sh gtz_latest.run && source ~/.bashrc`
-
-Once installed, a GTZ executable and a license file are placed in the current user's ~/.config/GTZ directory, GTZ's alias is added to ~/.bashrc
 
 - **Verify that the installation was successful**
 
 Running the following command, the corresponding software version information appears, indicates that the installation was successful  
 
 `gtz --version`      
-	  
 
-## How to Install （Windows) <span id="install"></span> 
-
-- **Install**
-
-	The download links of Installation package  https://gtz.io/gtz-3.0.2-x64-setup.exe
-	
-	Double-click on gtz-X.X.X-x64-setup.exe to start the installation：
-	<tr>
-		<td>
-			<img src="https://i.loli.net/2019/10/14/NPD3ATahG1jXKIW.jpg">
-		</td>
-	<tr>
-
-	Select the installation directory：
-	<tr>
-		<td>
-			<img src="https://i.loli.net/2019/10/14/b8dj1Btm9QCS3DN.jpg">
-		</td>
-	<tr>
-
-	Select "Yes" to complete the configuration of the PATH environment variable, then you can execute the gtz program on any path：
-	<tr>
-		<td>
-			<img src="https://i.loli.net/2019/10/14/8dpKYlsmA5zoEaC.jpg">
-		</td>
-	<tr>
-
-	The installation is completed：
-	<tr>
-		<td>
-			<img src="https://i.loli.net/2019/10/14/lW4A8F9ysEIp5vz.jpg">
-		</td>
-	<tr>
-        
-	After the installation is complete, open the cmd command window to see if it has been successfully installed; and use it by entering the command line:
-	<tr>
-		<td>
-			<img src="https://i.loli.net/2020/01/22/Ps7S1ty5ckmQ4W6.jpg">
-		</td>
-	<tr>
-
-- **Uninstall**
-
-	Open the windows system shortcut menu and select Uninstall GTZ：
-
-	<tr>
-		<td>
-			<img src="https://i.loli.net/2019/10/14/KQ1bq4SXHkMLFEf.jpg">
-		</td>
-	<tr>
-
-	Or enter the installation directory，run Uninstall GTX.exe ：
-	<tr>
-		<td>
-			<img src="https://i.loli.net/2019/10/14/ONTe7m1iP8HaJ4g.jpg">
-		</td>
-	<tr>
-		
-## How to Install （MacOS) <span id="install"></span>  
-- **Install**		
-	
-	The download links of Installation package  https://gtz.io/gtz-2.1.4-x64-setup.pkg
-
-	Double-click on gtz-2.1.4-x64-setup.pkg to start the installation：
-	<tr>
-		<td>
-			<img src="https://i.loli.net/2020/03/15/Qtrm5Okf2CWVjYX.png">
-		</td>
-	<tr>
-	
-	Select “Continue”：
-	<tr>
-		<td>
-			<img src="https://i.loli.net/2020/03/15/zTXxWAPgdC795tG.png">
-		</td>
-	<tr>
-		
-	Select “Continue”：
-	<tr>
-		<td>
-			<img src="https://i.loli.net/2020/03/15/KRF4DBsE9PvknVl.png">
-		</td>
-	<tr>
-		
-	Select “Agree”：
-	<tr>
-		<td>
-			<img src="https://i.loli.net/2020/03/15/G7ahPbvCWoD5g9e.png">
-		</td>
-	<tr>
-		
-	Select “Install”, then enter your user name and password, click "Install Software":
-	<tr>
-		<td>
-			<img src="https://i.loli.net/2020/03/15/oVZYgs9K4dqithS.png">
-		</td>
-	<tr>
-	
-	Installation is successful, click "Close"：
-	<tr>
-		<td>
-			<img src="https://i.loli.net/2020/03/15/KncSw9Xpob5hdLE.png">
-		</td>
-	<tr>
-		
-- **Verify that the installation was successful**
-
-	Open the terminal and run the following command. If the corresponding software version information appears, the installation is successful. After the installation is successful, you can use the gtz program through the command line in the terminal:：
-	<tr>
-		<td>
-			<img src="https://i.loli.net/2020/03/15/WK8D7QrwfCgykc9.png">
-		</td>
-	<tr>		
 		
 [-Back to Top-](#index)  
   
@@ -286,44 +143,6 @@ Reference genome Download: [-GCF_000001405.37_GRCh38.p11_genomic.fna.gz-](https:
 
 `gtz -d sample.fq.gtz`
 
-## Quick Start （Windows）<span id="quick-start"></span>	
-GTX.Zip Professional needs to be installed on the current machine. If not, please see [-How to Install-](#install) .
-
-**1. Download samples file to be compressed**	  
-Sample Download: [-sample.fq-](https://gtz.io/sample.fq)  
->  <font size=1>\* 2GB fastq file, extracted from a real WES data produced by Novaseq</font>
-
-Reference genome Download: [-GCF_000001405.37_GRCh38.p11_genomic.fna.gz-](https://gtz.io/GCF_000001405.37_GRCh38.p11_genomic.fna.gz)
-
-**2. Open Windows command window**	  
-`gtz --version`
-
-<tr>
-	<td>
-		<img src="https://i.loli.net/2019/10/15/L7UtBzQ5GClM9bI.jpg">
-	</td>
-<tr>
-
-**3. Start compression**	  
-
- `gtz sample.fq --ref GCF_000001405.37_GRCh38.p11_genomic.fna.gz`  
->  <font size=1>\* gtz can also directly compress fastq.gz file</font>
-
-<tr>
-	<td>
-		<img src="https://i.loli.net/2019/10/15/5iPBzuGnRhsoFAw.jpg">
-	</td>
-<tr>
-
-**4、decompress**
-
-`gtz -d sample.fq.gtz`
-
-<tr>
-	<td>
-		<img src="https://i.loli.net/2019/10/15/oik1C4E6plLnwPh.jpg">
-	</td>
-<tr>
 
 
 ## How to use <span id="use"></span>	
