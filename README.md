@@ -114,6 +114,7 @@ As an enterprise-level software, GTX.Zip has developed a nirvana program for hig
 ##### Install for ALL USERS:
 
 `sudo curl -SL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`  
+`www.gtxlab.com`  
 
 Once installed, a GTZ executable and a license file are placed in /usr/local/GTZ directory, GTZ's softlink is created to /usr/bin
 
