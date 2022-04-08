@@ -107,29 +107,9 @@ nova_rna_2.fq|5.39%|18.94%
   
 
 ## 安装Linux  GTX.Zip Pro<span id="install"></span>  
-- **方式一 通过命令行直接安装（建议安装方式）**
+请访问这个网站以获取下载安装包
 
-如果安装后只希望给当前用户使用，请执行
-
-`curl -SL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sh /tmp/gtz.run && source ~/.bashrc`  
-
-如果安装后希望所有用户都能使用，请执行
-
-`sudo curl -SL https://gtz.io/gtz_latest.run -o /tmp/gtz.run && sudo sh /tmp/gtz.run`
-
-
-
-- **方式二 先下载软件然后安装**  
-
-首先从[-GTX.Zip Professional-]( https://gtz.io/gtz_latest.run )下载软件。
-
-如果安装后只希望给当前用户使用，请执行
-
-`sh gtz_latest.run && source ~/.bashrc`
-
-如果安装后希望所有用户都能使用，请执行
-
-`sudo sh gtz_latest.run`
+`www.gtxlab.com`
 
 - **验证安装是否成功**
 
