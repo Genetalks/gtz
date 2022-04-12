@@ -17,9 +17,10 @@ Please see the [GTX.Zip website](http://www.gtxlab.com/product/zip), where you c
 	</td>
 </tr>
 </table>
-
-
 Powered by GTXLab of Genetalks.  
+
+
+The following are outdated  
 
 
 ## Index<span id="index"></span>

@@ -2,6 +2,7 @@
 
 访问[GTX.Zip官方网站](http://www.gtxlab.com/product/zip),你可以下载最新的GTX.Zip版本，阅读用户手册，提出问题并获得技术支持。Github页面不再维护。
 
+[-English Manual-](https://github.com/Genetalks/gtz/blob/master/README.md "Markdown").
 <table style="width:100%">
 <tr>
 	<td>
@@ -14,9 +15,9 @@
 	</td>
 </tr>
 </table>
-Powered by GTXLab of Genetalks.
+Powered by GTXLab of Genetalks.  
 
-[-English Manual-](https://github.com/Genetalks/gtz/blob/master/README.md "Markdown").
+以下内容已经过时  
 
 ## 目录<span id="index"></span>
 - [简介](#intro)  
