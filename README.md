@@ -1,4 +1,8 @@
-# GTX.Zip Professional Version (Latest Version GTZ 3.0.1)
+# GTX.Zip Professional Version (Latest Version GTZ 3.1.0)
+
+
+Please see the [GTX.Zip website](http://www.gtxlab.com/product/zip), where you can download the lastest version of GTX.Zip, read user manual, ask questions, and receive technical support.This github is no longer maintained.
+
 
 [中文说明](https://github.com/Genetalks/gtz/blob/master/README_chs.md "Markdown").
 <table style="width:100%">

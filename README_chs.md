@@ -1,4 +1,6 @@
-# GTX.Zip Professional Version（最新版本 GTZ 3.0.1）
+# GTX.Zip Professional Version（最新版本 GTZ 3.1.0）
+
+访问[GTX.Zip官方网站](http://www.gtxlab.com/product/zip),你可以下载最新的GTX.Zip版本，阅读用户手册，提出问题并获得技术支持。Github页面不再维护。
 
 <table style="width:100%">
 <tr>
