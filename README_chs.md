@@ -17,7 +17,7 @@
 </table>
 Powered by GTXLab of Genetalks.  
 
-以下内容已经过时  
+#以下内容已经过时  
 
 ## 目录<span id="index"></span>
 - [简介](#intro)  
