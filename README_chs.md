@@ -21,7 +21,7 @@ Powered by GTXLab of Genetalks.
   
 产品名称 | 版本 | 描述 | 获得方式
 ----|---- | -------- | --------
-**GTX.Zip**|V4.x|本地测序数据量大的基因公司、研究机构及个人用户|[-安装软件-](http://www.gtxlab.com/product/zip)
+**GTX.Zip**|V4.x|本地测序数据量大的基因公司、研究机构及个人用户|[-下载软件-](http://www.gtxlab.com/product/zip)
   
 [-回顶-](#index)  
 

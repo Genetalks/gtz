@@ -22,7 +22,7 @@ Powered by GTXLab of Genetalks.
   
 Product | Version | Description | How to Get
 ----|---- | -------- | --------
-**GTX.Zip**|V4.x|Companies, Institutions and individual users that with large local sequencing data|[Install](http://www.gtxlab.com/product/zip)
+**GTX.Zip**|V4.x|Companies, Institutions and individual users that with large local sequencing data|[Download](http://www.gtxlab.com/product/zip)
    
 
 
