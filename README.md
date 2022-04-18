@@ -1,8 +1,7 @@
-# GTX.Zip Professional Version (Latest Version GTZ 3.1.0)
+# GTX.Zip Professional Version (Latest Version GTZ 4.x)
 
 
 Please see the [GTX.Zip website](http://www.gtxlab.com/product/zip), where you can download the lastest version of GTX.Zip, read user manual, ask questions, and receive technical support.This github is no longer maintained.
-
 
 [中文说明](https://github.com/Genetalks/gtz/blob/master/README_chs.md "Markdown").
 <table style="width:100%">
@@ -17,7 +16,14 @@ Please see the [GTX.Zip website](http://www.gtxlab.com/product/zip), where you c
 	</td>
 </tr>
 </table>
-Powered by GTXLab of Genetalks.  
+Powered by GTXLab of Genetalks. 
+  
+## Product Series<span id="product-series"></span>
+  
+Product | Version | Description | How to Get
+----|---- | -------- | --------
+**GTX.Zip**|V4.x|Companies, Institutions and individual users that with large local sequencing data|[Install](http://www.gtxlab.com/product/zip)
+   
 
 
 # The following are outdated  

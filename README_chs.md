@@ -1,4 +1,4 @@
-# GTX.Zip Professional Version（最新版本 GTZ 3.1.0）
+# GTX.Zip Professional Version（最新版本 GTZ 4.x）
 
 访问[GTX.Zip官方网站](http://www.gtxlab.com/product/zip),你可以下载最新的GTX.Zip版本，阅读用户手册，提出问题并获得技术支持。Github页面不再维护。
 
@@ -16,6 +16,14 @@
 </tr>
 </table>
 Powered by GTXLab of Genetalks.  
+
+## 产品系列<span id="product"></span>
+  
+产品名称 | 版本 | 描述 | 获得方式
+----|---- | -------- | --------
+**GTX.Zip**|V4.x|本地测序数据量大的基因公司、研究机构及个人用户|[-安装软件-](http://www.gtxlab.com/product/zip)
+  
+[-回顶-](#index)  
 
 # 以下内容已经过时  
 
